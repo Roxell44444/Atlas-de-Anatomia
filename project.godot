@@ -1,0 +1,26 @@
+; ATLAS DE ANATOMÍA — proyecto base Android
+; Motor fijado a Godot 4.7.2 estable.
+config_version=5
+
+[application]
+config/name="ATLAS DE ANATOMÍA"
+run/main_scene="res://scenes/Main.tscn"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+
+[display]
+window/size/viewport_width=1280
+window/size/viewport_height=800
+window/size/window_width_override=900
+window/size/window_height_override=700
+window/stretch/mode="canvas_items"
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=false
+
+[gui]
+theme/default_font_size=16
+
+[application/config]
+version="0.1.0-dev"
