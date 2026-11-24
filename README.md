@@ -32,3 +32,13 @@ No se compran modelos ni licencias. El importador solo acepta CC0, CC BY 4.0, CC
 El paquete fuente 0.9.0 se adjunta en la conversación. **Este repositorio todavía no contiene los archivos de código individuales**, solo esta ficha de estado.
 
 La aplicación es educativa; no diagnostica ni sustituye evaluación profesional.
+
+## Primer paquete de geometría ósea real
+
+Se han incorporado 20 mallas STL de referencia, diez tipos de hueso por cada uno de los dos especímenes Visible Human: mandíbula, C1, C2, clavícula izquierda, escápula izquierda, húmero izquierdo, radio izquierdo, ulna izquierda, fémur izquierdo y tibia izquierda.
+
+- Índice y rutas: `data/visible_human_bone_pack.json`.
+- Atribución y limitaciones: `docs/ATTRIBUTION_VISIBLE_HUMAN.md`.
+- Mallas: `assets/skeleton/visible_human/`.
+
+**Estado:** activos originales gratuitos CC BY 4.0 incorporados al repositorio, pendientes de comprobación de escala, orientación, alineación, mapeo anatómico y revisión independiente. Son vistas previas STL y una muestra piloto, no un esqueleto completo ni contenido anatómico validado por ATLAS. Los dos sujetos son especímenes individuales; no representan promedios poblacionales ni diferencias universales entre sexos.
