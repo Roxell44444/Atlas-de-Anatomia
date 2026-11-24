@@ -11,14 +11,24 @@ La paleta de materiales incorporada en la fase móvil es solo una primera mejora
 | Fuente | Material aprovechable | Licencia indicada por la fuente | Uso previsto |
 |---|---|---|---|
 | BodyParts3D 4.0 | Anatomía corporal masculina y piezas anatómicas | CC BY 4.0 | Referencia de geometría y terminología; ya forma parte de la base actual |
-| HuBMAP / Human Reference Atlas 3D Reference Object Library v1.10 | Órganos de referencia masculinos y femeninos, con jerarquía semántica | CC BY 4.0 | Primera opción para reemplazar o complementar los órganos genéricos |
+| HuBMAP / Human Reference Atlas CCF 3D Reference Object Library (release 2.5; versiones individuales por órgano) | Órganos de referencia masculinos y femeninos, con jerarquía semántica | CC BY 4.0 | Primera opción para reemplazar o complementar los órganos genéricos |
 | Voxel-Man Segmented Inner Organs (Visible Human Male) | Torso y órganos internos segmentados | CC BY 4.0 | Complemento del torso masculino, sujeto a validación de escala y atribución |
 | Z-Anatomy | Modelo masculino detallado, capas y estructuras anatómicas | CC BY-SA 4.0 | Candidato para aumentar el detalle musculoesquelético y de tejidos; su adaptación debe conservar CC BY-SA 4.0 |
 | Allen Human Reference Atlas 3D | Modelo cerebral de referencia | CC BY 4.0 | Fuente especializada para mejorar el encéfalo |
 
+## Cobertura comprobada en las fuentes de referencia
+
+- La página del HRA CCF muestra modelos GLB individuales de corazón, hígado, pulmones, riñones, páncreas, intestinos, piel, vasos, bazo, timo y estructuras reproductoras, con variantes masculinas y femeninas cuando están disponibles. Los modelos los desarrolla un especialista en ilustración médica 3D y los aprueban expertos de cada órgano.
+- El portal HRA v2.5 informa de 71 objetos de referencia y 1.295 estructuras 3D vinculadas a identificadores de ontología. Esto aporta una base mucho más profunda que el catálogo actual de 147 elementos de Open Anatomy 3D.
+- El catálogo de Ana3D publica referencias de BodyParts3D masculino (3.432 estructuras), HRA femenino (1.166) y masculino (1.132), y Z-Anatomy masculino detallado (5.461). Los conteos pertenecen a esos atlas y no deben sumarse como si fueran una sola cobertura.
+- El modelo Voxel-Man/SIO contiene 232 estructuras en el torso masculino, de cuello a muslos superiores, segmentadas a partir de cortes del Visible Human. El propio proveedor advierte que las superficies de objetos pequeños pueden verse escalonadas.
+
 Fuentes y licencias revisadas:
 - Ana3D, *Data sources and licences* (actualizada 9 de octubre de 2026): https://ana3d.app/en/sources-and-licences/
-- Human Reference Atlas 3D Reference Object Library: https://humanatlas.io/3d-reference-library
+- Ana3D, catálogo de atlas y conteos por modelo: https://ana3d.app/en/atlas/
+- Human Reference Atlas / CCF 3D Reference Object Library: https://hubmapconsortium.github.io/ccf/pages/ccf-3d-reference-library.html
+- Voxel-Man, órganos internos segmentados del Visible Human masculino: https://www.virtual-body.org/segmented-internal-organs/
+- Z-Anatomy, repositorio de aplicación y modelos: https://github.com/Z-Anatomy/Unity-app_Z-Anatomy
 - Z-Anatomy, repositorio de aplicación y modelos: https://github.com/Z-Anatomy/Unity-app_Z-Anatomy
 
 ## Restricciones de licencia
