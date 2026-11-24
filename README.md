@@ -30,13 +30,13 @@ La fuente declara 147 entradas; 12 son puntos de referencia articulares y no mal
 
 ## Contenido anatómico educativo
 
-Las cinco fichas iniciales son paráfrasis originales en español basadas en la edición original de OpenStax `Anatomy & Physiology 2e` bajo CC BY 4.0. Se retiraron los borradores basados en la adaptación de Oregon State University, cuya edición enlazada declara CC BY-SA 4.0. El documento `docs/ATTRIBUTION_EDUCATIONAL_DATA.md` identifica las dos ediciones y explica qué fuente se usa.
+Las fichas profundas siguen pendientes de una fuente con licencia clara y compatible con el uso comercial previsto. Se retiraron los borradores que dependían de OpenStax y Oregon State University por avisos contradictorios o licencias ShareAlike/no comerciales. El documento `docs/ATTRIBUTION_EDUCATIONAL_DATA.md` registra las fuentes examinadas y la regla de aprobación.
 
 Los nombres y la indexación de las 263 entradas están disponibles sin conexión. Las 116 entradas añadidas son informativas, no aparecen como mallas del modelo y mantienen la ficha ampliada en estado pendiente. La información profunda aún no está completada para todas las estructuras: las fichas sin contenido ampliado se identifican de forma explícita y no se rellenan con afirmaciones genéricas.
 
 ## Compilación Android
 
-Las cinco fichas iniciales aprobadas se encuentran en `data/anatomy_entries.json`. El resto de las 263 entradas siguen pendientes de documentación y revisión por estructura. Histología y embriología completas todavía no están desarrolladas.\n\nEl flujo `.github/workflows/android-build.yml`:
+No hay fichas profundas aprobadas para distribución todavía. Las 263 entradas siguen pendientes de documentación y revisión por estructura. Histología y embriología completas todavía no están desarrolladas.\n\nEl flujo `.github/workflows/android-build.yml`:
 1. Valida los catálogos y las fichas.
 2. Descarga los dos GLB y comprueba sus hashes.
 3. Decodifica los modelos para compatibilidad con el importador Godot.
