@@ -45,6 +45,21 @@ def main() -> None:
         if item.get("system") == "joints" and item["key"] in set(source_keys):
             assert item["model_mapping_status"] == "anchor_only_no_independent_mesh"
     assert expected_systems.issubset({item["atlas_system_id"] for item in localized}), "Falta un sistema en el índice"
+    mesh_entries = [
+        item for item in localized
+        if item.get("model_mapping_status") not in {
+            "info_only_no_mesh", "anchor_only_no_independent_mesh"
+        } and item["key"] in set(source_keys)
+    ]
+    expected_by_sex = {
+        sex: sum(1 for item in mesh_entries
+                 if item.get("sex", "both") in {"both", sex})
+        for sex in ("male", "female")
+    }
+    assert expected_by_sex == {"male": 128, "female": 133}, (
+        f"Conteo inesperado de mallas seleccionables por modelo: {expected_by_sex}"
+    )
+    assert len(extras) == 116, f"Número inesperado de entradas informativas: {len(extras)}"
 
     metadata = details.get("_metadata", {})
     assert metadata.get("commercial_use_clearance_required") is True, (
