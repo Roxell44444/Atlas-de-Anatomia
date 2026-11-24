@@ -1,5 +1,5 @@
 import { NodeIO } from '@gltf-transform/core';
-import { EXTMeshoptCompression } from '@gltf-transform/extensions';
+import { EXTMeshoptCompression, KHRONOS_EXTENSIONS } from '@gltf-transform/extensions';
 import { dequantize } from '@gltf-transform/functions';
 import { MeshoptDecoder } from 'meshoptimizer';
 
@@ -10,7 +10,7 @@ if (!inputPath || !outputPath) {
 
 await MeshoptDecoder.ready;
 const io = new NodeIO()
-  .registerExtensions([EXTMeshoptCompression])
+  .registerExtensions([...KHRONOS_EXTENSIONS, EXTMeshoptCompression])
   .registerDependencies({ 'meshopt.decoder': MeshoptDecoder });
 
 const document = await io.read(inputPath);
