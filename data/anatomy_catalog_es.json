@@ -1419,7 +1419,10 @@
     "system_label_es": "Sistema endocrino",
     "model_mapping_status": "mesh_expected_name_equals_catalog_key_requires_runtime_check",
     "content_status": "catalog_only_needs_expansion",
-    "atlas_system_id": "endocrine"
+    "atlas_system_id": "endocrine",
+    "secondary_system_ids": [
+      "digestive"
+    ]
   },
   {
     "key": "pharynx",
