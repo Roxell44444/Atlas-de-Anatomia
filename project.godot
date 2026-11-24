@@ -4,15 +4,17 @@ config_version=5
 
 [application]
 config/name="ATLAS DE ANATOMÍA"
+config/icon="res://assets/app_icon.png"
 run/main_scene="res://scenes/Main.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/version="0.1.0-dev"
 
 [display]
-window/size/viewport_width=1280
-window/size/viewport_height=800
-window/size/window_width_override=900
-window/size/window_height_override=700
+window/size/viewport_width=720
+window/size/viewport_height=1280
+window/size/window_width_override=450
+window/size/window_height_override=800
+display/window/handheld/orientation=1
 window/stretch/mode="canvas_items"
 
 [rendering]
