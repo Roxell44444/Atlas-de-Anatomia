@@ -42,8 +42,14 @@ func _ready() -> void:
 	_create_tutor_window()
 
 func _build_interface() -> void:
+	# Mobile-first portrait interface: one vertical reading flow, large touch targets.
+	var app_theme := Theme.new()
+	app_theme.default_font_size = 16
+	app_theme.set_color("font_color", "Label", Color("#183247"))
+	theme = app_theme
+
 	var background := ColorRect.new()
-	background.color = Color("#0b1220")
+	background.color = Color("#eef3f7")
 	background.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	background.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(background)
@@ -51,9 +57,9 @@ func _build_interface() -> void:
 	var margin := MarginContainer.new()
 	margin.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	margin.add_theme_constant_override("margin_left", 16)
-	margin.add_theme_constant_override("margin_top", 12)
+	margin.add_theme_constant_override("margin_top", 14)
 	margin.add_theme_constant_override("margin_right", 16)
-	margin.add_theme_constant_override("margin_bottom", 12)
+	margin.add_theme_constant_override("margin_bottom", 18)
 	add_child(margin)
 
 	var scroll := ScrollContainer.new()
@@ -64,83 +70,146 @@ func _build_interface() -> void:
 
 	var layout := VBoxContainer.new()
 	layout.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	layout.add_theme_constant_override("separation", 8)
+	layout.add_theme_constant_override("separation", 12)
 	scroll.add_child(layout)
 
-	var header := HFlowContainer.new()
+	# Brand row with the new launcher mark.
+	var header := HBoxContainer.new()
 	header.add_theme_constant_override("separation", 10)
 	layout.add_child(header)
+	var app_icon := TextureRect.new()
+	if ResourceLoader.exists("res://assets/app_icon.png"):
+		app_icon.texture = load("res://assets/app_icon.png") as Texture2D
+	app_icon.custom_minimum_size = Vector2(48, 48)
+	app_icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	app_icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	header.add_child(app_icon)
 
 	var brand := VBoxContainer.new()
 	brand.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	brand.add_theme_constant_override("separation", 1)
 	header.add_child(brand)
 	var title := Label.new()
 	title.text = "ATLAS DE ANATOMÍA"
-	title.add_theme_font_size_override("font_size", 24)
-	title.add_theme_color_override("font_color", Color("#f4f7fb"))
+	title.add_theme_font_size_override("font_size", 20)
+	title.add_theme_color_override("font_color", Color("#15364a"))
 	brand.add_child(title)
 	var subtitle := Label.new()
-	subtitle.text = "Exploración anatómica interactiva · Versión de desarrollo"
+	subtitle.text = "Explora el cuerpo humano en 3D"
 	subtitle.add_theme_font_size_override("font_size", 12)
-	subtitle.add_theme_color_override("font_color", Color("#9aabc1"))
+	subtitle.add_theme_color_override("font_color", Color("#597285"))
 	brand.add_child(subtitle)
 
-	male_button = Button.new()
-	male_button.text = "Masculino"
-	male_button.pressed.connect(func(): _set_mode("male", true))
-	header.add_child(male_button)
-	female_button = Button.new()
-	female_button.text = "Femenino"
-	female_button.pressed.connect(func(): _set_mode("female", true))
-	header.add_child(female_button)
 	var tutor_button := Button.new()
 	tutor_button.text = "Tutor"
+	tutor_button.custom_minimum_size = Vector2(68, 44)
+	_style_button(tutor_button, true)
 	tutor_button.pressed.connect(_open_tutor)
 	header.add_child(tutor_button)
+
 	var about_button := Button.new()
-	about_button.text = "Información"
+	about_button.text = "⋯"
+	about_button.tooltip_text = "Información"
+	about_button.custom_minimum_size = Vector2(44, 44)
+	_style_button(about_button, false)
 	about_button.pressed.connect(_show_about)
 	header.add_child(about_button)
 
-	var toolbar := HFlowContainer.new()
-	toolbar.add_theme_constant_override("separation", 8)
-	layout.add_child(toolbar)
+	# Two clear, equally sized body-mode tabs.
+	var mode_row := HBoxContainer.new()
+	mode_row.add_theme_constant_override("separation", 8)
+	layout.add_child(mode_row)
+	male_button = Button.new()
+	male_button.text = "Masculino"
+	male_button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	male_button.custom_minimum_size.y = 46
+	_style_button(male_button, true)
+	male_button.pressed.connect(func(): _set_mode("male", true))
+	mode_row.add_child(male_button)
+	female_button = Button.new()
+	female_button.text = "Femenino"
+	female_button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	female_button.custom_minimum_size.y = 46
+	_style_button(female_button, false)
+	female_button.pressed.connect(func(): _set_mode("female", true))
+	mode_row.add_child(female_button)
 
 	search_box = LineEdit.new()
-	search_box.placeholder_text = "Buscar órgano, hueso, músculo o estructura…"
-	search_box.custom_minimum_size.x = 220
+	search_box.placeholder_text = "Buscar órgano, hueso, músculo…"
+	search_box.custom_minimum_size = Vector2(0, 48)
 	search_box.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	search_box.add_theme_font_size_override("font_size", 15)
+	search_box.add_theme_color_override("font_color", Color("#183247"))
+	search_box.add_theme_color_override("font_placeholder_color", Color("#74899a"))
+	search_box.add_theme_stylebox_override("normal", _make_card_style(Color.WHITE, Color("#d7e1e8"), 13))
 	search_box.text_changed.connect(_on_search_changed)
-	toolbar.add_child(search_box)
+	layout.add_child(search_box)
 
+	var filter_row := HBoxContainer.new()
+	filter_row.add_theme_constant_override("separation", 8)
+	layout.add_child(filter_row)
 	system_dropdown = OptionButton.new()
-	system_dropdown.custom_minimum_size.x = 190
+	system_dropdown.custom_minimum_size = Vector2(0, 44)
+	system_dropdown.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	system_dropdown.add_theme_color_override("font_color", Color("#183247"))
+	system_dropdown.add_theme_stylebox_override("normal", _make_card_style(Color.WHITE, Color("#d7e1e8"), 12))
 	system_dropdown.item_selected.connect(_on_system_changed)
-	toolbar.add_child(system_dropdown)
+	filter_row.add_child(system_dropdown)
 
 	var focus_button := Button.new()
-	focus_button.text = "Centrar cuerpo"
+	focus_button.text = "Centrar 3D"
+	focus_button.custom_minimum_size = Vector2(112, 44)
+	_style_button(focus_button, false)
 	focus_button.pressed.connect(func():
 		if viewer != null:
 			viewer.focus_body()
 	)
-	toolbar.add_child(focus_button)
+	filter_row.add_child(focus_button)
+
+	# Large, dedicated anatomy viewport card.
+	var viewer_card := PanelContainer.new()
+	viewer_card.add_theme_stylebox_override("panel", _make_card_style(Color.WHITE, Color("#d9e4eb"), 18))
+	layout.add_child(viewer_card)
+	var viewer_box := VBoxContainer.new()
+	viewer_box.add_theme_constant_override("separation", 5)
+	viewer_card.add_child(viewer_box)
+
+	var viewer_header := HBoxContainer.new()
+	viewer_box.add_child(viewer_header)
+	var viewer_title := Label.new()
+	viewer_title.text = "MODELO ANATÓMICO 3D"
+	viewer_title.add_theme_font_size_override("font_size", 13)
+	viewer_title.add_theme_color_override("font_color", Color("#22465a"))
+	viewer_header.add_child(viewer_title)
+	var viewer_hint := Label.new()
+	viewer_hint.text = "Arrastra para girar 360°"
+	viewer_hint.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	viewer_hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+	viewer_hint.add_theme_font_size_override("font_size", 11)
+	viewer_hint.add_theme_color_override("font_color", Color("#6a8292"))
+	viewer_header.add_child(viewer_hint)
 
 	viewport = SubViewport.new()
-	viewport.size = Vector2i(1200, 690)
+	viewport.size = Vector2i(720, 640)
 	viewport.own_world_3d = true
 	viewport.render_target_update_mode = SubViewport.UPDATE_ALWAYS
 	var viewport_container := SubViewportContainer.new()
-	viewport_container.custom_minimum_size = Vector2(320, 280)
-	viewport_container.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	viewport_container.custom_minimum_size = Vector2(0, 340)
+	viewport_container.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	viewport_container.stretch = true
+	viewport_container.clip_contents = true
 	viewport_container.add_child(viewport)
-	layout.add_child(viewport_container)
+	viewer_box.add_child(viewport_container)
 
-	var layers_bar := HFlowContainer.new()
-	layers_bar.add_theme_constant_override("h_separation", 8)
-	layers_bar.add_theme_constant_override("v_separation", 2)
-	layout.add_child(layers_bar)
+	# Tissue/system controls scroll horizontally, never squeeze into tiny labels.
+	var layers_scroll := ScrollContainer.new()
+	layers_scroll.custom_minimum_size = Vector2(0, 48)
+	layers_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_AUTO
+	layers_scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	layout.add_child(layers_scroll)
+	var layers_bar := HBoxContainer.new()
+	layers_bar.add_theme_constant_override("separation", 8)
+	layers_scroll.add_child(layers_bar)
 	var layer_specs := [
 		["skin", "Piel", false],
 		["skeleton", "Huesos", true],
@@ -153,6 +222,9 @@ func _build_interface() -> void:
 		var toggle := CheckButton.new()
 		toggle.text = spec[1]
 		toggle.button_pressed = spec[2]
+		toggle.custom_minimum_size = Vector2(96, 42)
+		toggle.add_theme_color_override("font_color", Color("#24465a"))
+		toggle.add_theme_color_override("font_pressed_color", Color("#0f766e"))
 		var system_id: String = spec[0]
 		toggle.toggled.connect(func(enabled: bool):
 			if viewer != null:
@@ -166,54 +238,83 @@ func _build_interface() -> void:
 	viewer.model_status_changed.connect(_on_model_status_changed)
 	viewport.add_child(viewer)
 
-	var lower := HFlowContainer.new()
-	lower.custom_minimum_size = Vector2(0, 205)
-	lower.add_theme_constant_override("separation", 10)
-	layout.add_child(lower)
-
-	var list_panel := PanelContainer.new()
-	list_panel.custom_minimum_size = Vector2(245, 210)
-	list_panel.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	lower.add_child(list_panel)
-	var list_box := VBoxContainer.new()
-	list_box.add_theme_constant_override("separation", 5)
-	list_panel.add_child(list_box)
-	var list_title := Label.new()
-	list_title.text = "ESTRUCTURAS"
-	list_title.add_theme_color_override("font_color", Color("#dce6f4"))
-	list_box.add_child(list_title)
-	item_list = ItemList.new()
-	item_list.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	item_list.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	item_list.item_selected.connect(_on_item_selected)
-	item_list.add_theme_color_override("font_color", Color("#e9eef6"))
-	list_box.add_child(item_list)
-
+	# Detail card appears before the catalogue: selection feedback stays visible.
 	var detail_panel := PanelContainer.new()
-	detail_panel.custom_minimum_size = Vector2(320, 210)
-	detail_panel.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	lower.add_child(detail_panel)
+	detail_panel.add_theme_stylebox_override("panel", _make_card_style(Color.WHITE, Color("#d9e4eb"), 16))
+	layout.add_child(detail_panel)
 	var detail_box := VBoxContainer.new()
+	detail_box.add_theme_constant_override("separation", 6)
 	detail_panel.add_child(detail_box)
 	var detail_heading := Label.new()
 	detail_heading.text = "FICHA ANATÓMICA"
-	detail_heading.add_theme_color_override("font_color", Color("#dce6f4"))
+	detail_heading.add_theme_font_size_override("font_size", 13)
+	detail_heading.add_theme_color_override("font_color", Color("#22465a"))
 	detail_box.add_child(detail_heading)
 	details = RichTextLabel.new()
 	details.bbcode_enabled = true
 	details.fit_content = true
-	details.scroll_active = true
-	details.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	details.add_theme_color_override("default_color", Color("#d7e0ec"))
+	details.scroll_active = false
+	details.custom_minimum_size = Vector2(0, 120)
+	details.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	details.add_theme_color_override("default_color", Color("#324e60"))
 	details.meta_clicked.connect(_on_details_meta_clicked)
 	detail_box.add_child(details)
 
+	# Searchable catalogue list with a useful touch height.
+	var list_panel := PanelContainer.new()
+	list_panel.add_theme_stylebox_override("panel", _make_card_style(Color.WHITE, Color("#d9e4eb"), 16))
+	layout.add_child(list_panel)
+	var list_box := VBoxContainer.new()
+	list_box.add_theme_constant_override("separation", 6)
+	list_panel.add_child(list_box)
+	var list_title := Label.new()
+	list_title.text = "ESTRUCTURAS"
+	list_title.add_theme_font_size_override("font_size", 13)
+	list_title.add_theme_color_override("font_color", Color("#22465a"))
+	list_box.add_child(list_title)
+	item_list = ItemList.new()
+	item_list.custom_minimum_size = Vector2(0, 230)
+	item_list.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	item_list.add_theme_constant_override("icon_margin", 8)
+	item_list.add_theme_color_override("font_color", Color("#244256"))
+	item_list.add_theme_color_override("font_selected_color", Color.WHITE)
+	item_list.add_theme_stylebox_override("panel", _make_card_style(Color("#f7fafc"), Color("#e1e9ee"), 10))
+	item_list.item_selected.connect(_on_item_selected)
+	list_box.add_child(item_list)
+
 	model_status = Label.new()
-	model_status.text = "Preparando catálogo local…"
-	model_status.add_theme_font_size_override("font_size", 12)
-	model_status.add_theme_color_override("font_color", Color("#9aabc1"))
+	model_status.text = "Preparando el atlas…"
+	model_status.add_theme_font_size_override("font_size", 11)
+	model_status.add_theme_color_override("font_color", Color("#527284"))
 	layout.add_child(model_status)
 
+func _make_card_style(fill: Color, outline: Color, corner: int) -> StyleBoxFlat:
+	var style := StyleBoxFlat.new()
+	style.bg_color = fill
+	style.border_color = outline
+	style.set_border_width_all(1)
+	style.set_corner_radius_all(corner)
+	style.content_margin_left = 12
+	style.content_margin_top = 10
+	style.content_margin_right = 12
+	style.content_margin_bottom = 10
+	return style
+
+func _style_button(button: Button, primary: bool) -> void:
+	var fill := Color("#0e7c78") if primary else Color("#e6eef3")
+	var text_color := Color.WHITE if primary else Color("#24465a")
+	var border := Color("#0e7c78") if primary else Color("#d2dfe7")
+	var normal := _make_card_style(fill, border, 12)
+	var hover := _make_card_style(fill.lightened(0.08), border, 12)
+	var pressed := _make_card_style(fill.darkened(0.08), border, 12)
+	button.add_theme_stylebox_override("normal", normal)
+	button.add_theme_stylebox_override("hover", hover)
+	button.add_theme_stylebox_override("pressed", pressed)
+	button.add_theme_stylebox_override("focus", normal)
+	button.add_theme_color_override("font_color", text_color)
+	button.add_theme_color_override("font_hover_color", text_color)
+	button.add_theme_color_override("font_pressed_color", text_color)
+	button.add_theme_font_size_override("font_size", 14)
 func _populate_system_filter() -> void:
 	system_dropdown.clear()
 	system_dropdown.add_item("Todos los sistemas")
@@ -414,7 +515,7 @@ func _on_details_meta_clicked(meta: Variant) -> void:
 func _create_tutor_window() -> void:
 	tutor_window = Window.new()
 	tutor_window.title = "Tutor de anatomía"
-	tutor_window.size = Vector2i(560, 500)
+	tutor_window.size = Vector2i(360, 620)
 	tutor_window.visible = false
 	tutor_window.close_requested.connect(func(): tutor_window.hide())
 	add_child(tutor_window)
@@ -453,7 +554,7 @@ func _create_tutor_window() -> void:
 
 func _open_tutor() -> void:
 	if tutor_window != null:
-		tutor_window.popup_centered(Vector2i(560, 500))
+		tutor_window.popup_centered(Vector2i(360, 620))
 
 func _ask_tutor() -> void:
 	var question := tutor_input.text.strip_edges()
