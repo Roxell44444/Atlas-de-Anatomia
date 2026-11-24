@@ -287,6 +287,23 @@ func _refresh_list() -> void:
 	else:
 		_set_detail_text("Selecciona una estructura en la lista o tócala en el modelo 3D.\n\nEl catálogo local contiene " + str(catalog.entries.size()) + " entradas de la fuente Open Anatomy 3D; algunas son puntos de referencia y no mallas independientes.")
 
+func _show_system_overview(system_id: String) -> void:
+	for system in catalog.systems:
+		if str(system.get("id", "")) != system_id:
+			continue
+		var title := str(system.get("name_es", system_id))
+		var description := str(system.get("description", ""))
+		var count := int(system.get("catalog_entries", 0))
+		var status := str(system.get("coverage_status", "not_yet_catalogued"))
+		var text_value := "[font_size=19][b]" + _escape_bbcode(title) + "[/b][/font_size]\\n"
+		text_value += _escape_bbcode(description) + "\\n\\n"
+		text_value += "[b]Entradas indexadas:[/b] " + str(count) + "\\n"
+		text_value += "[b]Estado:[/b] " + _escape_bbcode(status) + "\\n"
+		text_value += "[color=#e6bd76]La cobertura de este sistema todavía es parcial. Las estructuras sin ficha ampliada se marcarán y completarán con fuentes verificadas.[/color]"
+		_set_detail_text(text_value)
+		return
+	_set_detail_text("No se encontró información del sistema seleccionado.")
+
 func _on_item_selected(index: int) -> void:
 	var key := str(item_list.get_item_metadata(index))
 	_select_structure(key, true)
