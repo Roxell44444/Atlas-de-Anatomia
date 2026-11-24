@@ -10,7 +10,7 @@ Atlas anatómico educativo e interactivo, Android primero, desarrollado con Godo
 - Filtros por sistema y controles de visibilidad de piel, esqueleto, músculos, órganos, vasos y nervios.
 - Índice local con 263 entradas: 147 entradas originales de Open Anatomy 3D y 116 entradas informativas adicionales sin malla 3D, con nombres en español e inglés, claves estables y cobertura organizada en 13 categorías de sistemas.
 - Panel de ficha y guardado local de modo/selección.
-- Cinco fichas anatómicas profundas iniciales aprobadas: corazón, fémur izquierdo/derecho y riñón izquierdo/derecho. Están redactadas como paráfrasis en español, con fuente CC BY 4.0 y atribución específica en cada una.
+- Veinte fichas anatómicas profundas iniciales: corazón, ambos fémures, ambos riñones, piel, sangre, ganglios linfáticos, tiroides, hipófisis, suprarrenales, intestino delgado, hígado, páncreas, vesícula biliar, sistema reproductor, testículos, útero, ovarios, vagina, clítoris y articulación de la cadera. Están redactadas como paráfrasis en español, con fuente CC BY 4.0 y atribución específica en cada una.
 - Panel tutor con búsqueda local. La integración generativa Gemini requiere un servicio seguro configurado; no se incluye ninguna clave en la aplicación.
 - Dedicatoria en Información: “para amorcito de parte de motito que te ama mucho”.
 
@@ -30,7 +30,7 @@ La fuente declara 147 entradas; 12 son puntos de referencia articulares y no mal
 
 ## Contenido anatómico educativo
 
-Las primeras cinco fichas usan *Douglas College Human Anatomy and Physiology I (1st ed.)* y *II (1st ed.)*, que declaran CC BY 4.0. Cada una conserva enlace al capítulo y la atribución digital obligatoria “Download for free at…”. Los borradores anteriores basados en otras ediciones fueron retirados; `docs/ATTRIBUTION_EDUCATIONAL_DATA.md` explica la selección y sus límites.
+Las veinte fichas iniciales usan capítulos específicos de *Douglas College Human Anatomy and Physiology I (1st ed.)* y *II (1st ed.)*, que declaran CC BY 4.0. Cada ficha conserva URL del capítulo y la atribución digital obligatoria “Download for free at…”. Se redactaron como paráfrasis originales en español, sin reutilizar figuras; `docs/ATTRIBUTION_EDUCATIONAL_DATA.md` explica las licencias y sus límites.
 
 Los nombres y la indexación de las 263 entradas están disponibles sin conexión. Las 116 entradas añadidas son informativas, no aparecen como mallas del modelo y mantienen la ficha ampliada en estado pendiente. La información profunda aún no está completada para todas las estructuras: las fichas sin contenido ampliado se identifican de forma explícita y no se rellenan con afirmaciones genéricas.
 
