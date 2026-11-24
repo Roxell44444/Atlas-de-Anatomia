@@ -1,0 +1,1 @@
+Los modelos GLB se descargan en CI, se verifican por hash y se incluyen en la APK para uso sin conexión.
