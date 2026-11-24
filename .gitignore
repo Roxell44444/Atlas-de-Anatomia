@@ -1,0 +1,19 @@
+# Godot editor/import cache
+.godot/
+.import/
+.export/
+
+# Local Android signing data / credentials
+.godot/export_credentials.cfg
+*.keystore
+*.jks
+
+# Generated / downloaded model source files
+build/
+assets/anatomy/open_anatomy_3d/*.glb
+!assets/anatomy/open_anatomy_3d/.gitkeep
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
