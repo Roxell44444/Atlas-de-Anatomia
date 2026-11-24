@@ -1,0 +1,158 @@
+[
+  {
+    "id": "integumentary",
+    "name_es": "Sistema tegumentario",
+    "description": "Piel y anexos: barrera, protección, sensibilidad y regulación térmica.",
+    "catalog_entries": 1,
+    "detailed_entries": 0,
+    "coverage_status": "partial_source_catalog",
+    "mesh_systems": [
+      "skin"
+    ],
+    "scope_note": "El recuento indica entradas localizadas en el catálogo de modelos, no cobertura exhaustiva del sistema."
+  },
+  {
+    "id": "skeletal",
+    "name_es": "Sistema esquelético",
+    "description": "Huesos y articulaciones: soporte, protección, movimiento y reserva mineral.",
+    "catalog_entries": 40,
+    "detailed_entries": 2,
+    "coverage_status": "partial_source_catalog",
+    "mesh_systems": [
+      "skeleton"
+    ],
+    "scope_note": "El recuento indica entradas localizadas en el catálogo de modelos, no cobertura exhaustiva del sistema."
+  },
+  {
+    "id": "muscular",
+    "name_es": "Sistema muscular",
+    "description": "Músculos esqueléticos y estructuras asociadas al movimiento.",
+    "catalog_entries": 41,
+    "detailed_entries": 0,
+    "coverage_status": "partial_source_catalog",
+    "mesh_systems": [
+      "muscles"
+    ],
+    "scope_note": "El recuento indica entradas localizadas en el catálogo de modelos, no cobertura exhaustiva del sistema."
+  },
+  {
+    "id": "nervous",
+    "name_es": "Sistema nervioso",
+    "description": "Encéfalo, médula espinal, nervios y órganos de integración y respuesta.",
+    "catalog_entries": 5,
+    "detailed_entries": 0,
+    "coverage_status": "partial_source_catalog",
+    "mesh_systems": [
+      "nerves",
+      "organs"
+    ],
+    "scope_note": "El recuento indica entradas localizadas en el catálogo de modelos, no cobertura exhaustiva del sistema."
+  },
+  {
+    "id": "endocrine",
+    "name_es": "Sistema endocrino",
+    "description": "Glándulas y tejidos que producen hormonas y regulan funciones corporales.",
+    "catalog_entries": 4,
+    "detailed_entries": 0,
+    "coverage_status": "partial_source_catalog",
+    "mesh_systems": [
+      "organs"
+    ],
+    "scope_note": "El recuento indica entradas localizadas en el catálogo de modelos, no cobertura exhaustiva del sistema."
+  },
+  {
+    "id": "cardiovascular",
+    "name_es": "Sistema cardiovascular",
+    "description": "Corazón, arterias, venas y capilares que transportan sangre.",
+    "catalog_entries": 23,
+    "detailed_entries": 1,
+    "coverage_status": "partial_source_catalog",
+    "mesh_systems": [
+      "organs",
+      "vessels"
+    ],
+    "scope_note": "El recuento indica entradas localizadas en el catálogo de modelos, no cobertura exhaustiva del sistema."
+  },
+  {
+    "id": "lymphatic_immune",
+    "name_es": "Sistema linfático e inmunitario",
+    "description": "Vasos, ganglios, órganos linfoides y componentes de defensa inmunitaria.",
+    "catalog_entries": 2,
+    "detailed_entries": 0,
+    "coverage_status": "partial_source_catalog",
+    "mesh_systems": [
+      "organs"
+    ],
+    "scope_note": "El recuento indica entradas localizadas en el catálogo de modelos, no cobertura exhaustiva del sistema."
+  },
+  {
+    "id": "respiratory",
+    "name_es": "Sistema respiratorio",
+    "description": "Vías respiratorias, pulmones y superficies de intercambio gaseoso.",
+    "catalog_entries": 5,
+    "detailed_entries": 0,
+    "coverage_status": "partial_source_catalog",
+    "mesh_systems": [
+      "organs"
+    ],
+    "scope_note": "El recuento indica entradas localizadas en el catálogo de modelos, no cobertura exhaustiva del sistema."
+  },
+  {
+    "id": "digestive",
+    "name_es": "Sistema digestivo",
+    "description": "Tubo digestivo y órganos accesorios de digestión y absorción.",
+    "catalog_entries": 10,
+    "detailed_entries": 0,
+    "coverage_status": "partial_source_catalog",
+    "mesh_systems": [
+      "organs"
+    ],
+    "scope_note": "El recuento indica entradas localizadas en el catálogo de modelos, no cobertura exhaustiva del sistema."
+  },
+  {
+    "id": "urinary",
+    "name_es": "Sistema urinario",
+    "description": "Riñones, vías urinarias y estructuras de producción y transporte de orina.",
+    "catalog_entries": 5,
+    "detailed_entries": 2,
+    "coverage_status": "partial_source_catalog",
+    "mesh_systems": [
+      "organs"
+    ],
+    "scope_note": "El recuento indica entradas localizadas en el catálogo de modelos, no cobertura exhaustiva del sistema."
+  },
+  {
+    "id": "reproductive",
+    "name_es": "Sistema reproductor",
+    "description": "Órganos reproductores y estructuras asociadas masculinas y femeninas.",
+    "catalog_entries": 9,
+    "detailed_entries": 0,
+    "coverage_status": "partial_source_catalog",
+    "mesh_systems": [
+      "organs"
+    ],
+    "scope_note": "El recuento indica entradas localizadas en el catálogo de modelos, no cobertura exhaustiva del sistema."
+  },
+  {
+    "id": "sensory",
+    "name_es": "Órganos de los sentidos",
+    "description": "Órganos y receptores de visión, audición, equilibrio, olfato, gusto y sensibilidad.",
+    "catalog_entries": 2,
+    "detailed_entries": 0,
+    "coverage_status": "partial_source_catalog",
+    "mesh_systems": [
+      "organs"
+    ],
+    "scope_note": "El recuento indica entradas localizadas en el catálogo de modelos, no cobertura exhaustiva del sistema."
+  },
+  {
+    "id": "hematologic",
+    "name_es": "Sistema sanguíneo y hematopoyético",
+    "description": "Sangre, células sanguíneas, médula ósea y procesos de hematopoyesis.",
+    "catalog_entries": 0,
+    "detailed_entries": 0,
+    "coverage_status": "not_yet_catalogued",
+    "mesh_systems": [],
+    "scope_note": "El recuento indica entradas localizadas en el catálogo de modelos, no cobertura exhaustiva del sistema."
+  }
+]
