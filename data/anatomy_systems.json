@@ -20,7 +20,7 @@
     "name_es": "Sistema esquelético",
     "description": "Huesos y articulaciones: soporte, protección, movimiento y reserva mineral.",
     "catalog_entries": 52,
-    "detailed_entries": 0,
+    "detailed_entries": 2,
     "coverage_status": "partial_source_mesh_and_details_pending",
     "mesh_systems": [
       "skeleton"
@@ -85,7 +85,7 @@
     "name_es": "Sistema cardiovascular",
     "description": "Corazón, arterias, venas y capilares que transportan sangre.",
     "catalog_entries": 30,
-    "detailed_entries": 0,
+    "detailed_entries": 1,
     "coverage_status": "partial_source_mesh_and_details_pending",
     "mesh_systems": [
       "organs",
@@ -150,7 +150,7 @@
     "name_es": "Sistema urinario",
     "description": "Riñones, vías urinarias y estructuras de producción y transporte de orina.",
     "catalog_entries": 12,
-    "detailed_entries": 0,
+    "detailed_entries": 2,
     "coverage_status": "partial_source_mesh_and_details_pending",
     "mesh_systems": [
       "organs"
