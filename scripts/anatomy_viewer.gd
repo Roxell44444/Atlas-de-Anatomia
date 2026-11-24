@@ -22,7 +22,7 @@ var previous_overlays: Array[Material] = []
 var highlight_material: StandardMaterial3D
 var yaw := 0.0
 var pitch := 0.0
-var distance := 3.8
+var distance := 2.85
 var right_dragging := false
 var screen_dragging := false
 var catalog_keys: Dictionary = {}
@@ -41,22 +41,22 @@ func _ready() -> void:
 func _build_world() -> void:
 	var environment := Environment.new()
 	environment.background_mode = Environment.BG_COLOR
-	environment.background_color = Color("#101a2a")
+	environment.background_color = Color("#e8f0f4")
 	environment.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
-	environment.ambient_light_color = Color("#aabbd0")
-	environment.ambient_light_energy = 0.65
+	environment.ambient_light_color = Color("#ffffff")
+	environment.ambient_light_energy = 0.9
 	var world := WorldEnvironment.new()
 	world.environment = environment
 	add_child(world)
 
 	var key_light := DirectionalLight3D.new()
 	key_light.rotation_degrees = Vector3(-32.0, -28.0, 0.0)
-	key_light.light_energy = 1.8
+	key_light.light_energy = 1.35
 	add_child(key_light)
 
 	var fill_light := DirectionalLight3D.new()
 	fill_light.rotation_degrees = Vector3(-18.0, 145.0, 0.0)
-	fill_light.light_energy = 0.65
+	fill_light.light_energy = 0.8
 	add_child(fill_light)
 
 	pivot = Node3D.new()
@@ -66,7 +66,7 @@ func _build_world() -> void:
 	camera = Camera3D.new()
 	camera.position = Vector3(0.0, 0.0, distance)
 	camera.current = true
-	camera.fov = 42.0
+	camera.fov = 38.0
 	pivot.add_child(camera)
 	camera.look_at(Vector3.ZERO, Vector3.UP)
 
@@ -144,6 +144,8 @@ func _index_model() -> void:
 			assigned_system = str(source_system_by_key.get(key, ""))
 		if not assigned_system.is_empty():
 			mesh_systems[key] = assigned_system
+		# Explicit tissue palette because the supplied GLBs import nearly white.
+		mesh_instance.material_override = _anatomy_material(key, assigned_system)
 
 		mesh_instance.create_trimesh_collision()
 		for child in mesh_instance.get_children():
@@ -151,6 +153,64 @@ func _index_model() -> void:
 				child.set_meta("anatomy_key", key)
 				child.collision_layer = 1
 				child.collision_mask = 0
+
+func _anatomy_material(key: String, system_id: String) -> StandardMaterial3D:
+	var material := StandardMaterial3D.new()
+	material.roughness = 0.78
+	material.metallic = 0.0
+	var lower_key := key.to_lower()
+	var color := Color("#d7a17f")
+	match system_id:
+		"skin":
+			color = Color("#d7a17f")
+		"skeleton":
+			color = Color("#e7dcc5")
+		"muscles":
+			color = Color("#a94f55")
+		"nerves":
+			color = Color("#e3bd56")
+		"vessels":
+			if lower_key.contains("vein") or lower_key.contains("vena"):
+				color = Color("#486fae")
+			else:
+				color = Color("#b83d43")
+		"organs":
+			color = _organ_color(lower_key)
+		_:
+			color = Color("#c58f79")
+	material.albedo_color = color
+	return material
+
+func _organ_color(key: String) -> Color:
+	if key.contains("heart"):
+		return Color("#a72e3d")
+	if key.contains("brain") or key.contains("cerebell") or key.contains("cerebr"):
+		return Color("#c78b9b")
+	if key.contains("lung"):
+		return Color("#d88991")
+	if key.contains("liver"):
+		return Color("#75453d")
+	if key.contains("kidney"):
+		return Color("#91464b")
+	if key.contains("stomach"):
+		return Color("#d48b83")
+	if key.contains("intestin") or key.contains("colon") or key.contains("rectum"):
+		return Color("#d69a91")
+	if key.contains("pancreas"):
+		return Color("#d9ad7d")
+	if key.contains("spleen"):
+		return Color("#76506d")
+	if key.contains("bladder"):
+		return Color("#c9828d")
+	if key.contains("thyroid"):
+		return Color("#b9655e")
+	if key.contains("uterus") or key.contains("ovary") or key.contains("vagina") or key.contains("testis") or key.contains("prostate") or key.contains("reproductive"):
+		return Color("#b96d7f")
+	if key.contains("gallbladder"):
+		return Color("#81934c")
+	if key.contains("adrenal") or key.contains("pituitary"):
+		return Color("#c58f69")
+	return Color("#c98078")
 
 func _find_catalog_key(node: Node) -> String:
 	var cursor: Node = node
@@ -253,10 +313,13 @@ func _unhandled_input(event: InputEvent) -> void:
 		var drag := event as InputEventScreenDrag
 		screen_dragging = true
 		_orbit(drag.relative)
+	elif event is InputEventMagnifyGesture:
+		var magnify := event as InputEventMagnifyGesture
+		_zoom(-(magnify.factor - 1.0) * 1.6)
 
 func _orbit(delta: Vector2) -> void:
 	yaw -= delta.x * 0.008
-	pitch = clampf(pitch - delta.y * 0.006, -1.15, 1.15)
+	pitch = clampf(pitch - delta.y * 0.006, -1.38, 1.38)
 	pivot.rotation = Vector3(pitch, yaw, 0.0)
 
 func _zoom(amount: float) -> void:
@@ -281,6 +344,6 @@ func _pick(screen_position: Vector2) -> void:
 func focus_body() -> void:
 	yaw = 0.0
 	pitch = 0.0
-	distance = 3.8
+	distance = 2.85
 	pivot.rotation = Vector3.ZERO
 	camera.position.z = distance
