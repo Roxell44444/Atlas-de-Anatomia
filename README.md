@@ -1,26 +1,27 @@
 # ATLAS DE ANATOMÍA
 
-Aplicación Android-first de exploración anatómica 3D, desarrollada con Godot.
+Aplicación Android-first de exploración anatómica 3D, desarrollada con Godot 4.7.2.
 
-## Estado del repositorio
+## Estado de desarrollo
 
-Esta rama contiene el README y el estado de desarrollo. El código fuente completo de la versión 0.5.0 está preparado en un paquete local de esta sesión; todavía no se ha publicado como archivos de código ni como release binaria en este repositorio.
+La entrega fuente más reciente preparada es **0.7.0**. El paquete descargable se entregó en la conversación; todavía no se ha publicado como árbol de archivos ni como release ZIP en este repositorio. Esta README describe el contenido de esa entrega, no afirma que el código esté ya subido a esta rama.
 
-## Base de desarrollo 0.5.0
+## Cambios 0.7.0
 
-- Visor 3D provisional con selector masculino/femenino, órbita, zoom, selección y aislamiento.
-- Catálogo de 61 fichas iniciales en 13 sistemas anatómicos.
-- Búsqueda, favoritos y navegación secuencial.
-- Biblioteca bibliográfica con 16 fuentes y obras de consulta, lecturas para los 13 sistemas y referencias de histología, embriología y anatomía topográfica.
-- Fuentes específicas registradas para húmero y escápula; ambas fichas continúan pendientes de revisión especializada.
-- Estantería de obras comerciales actuales solo como referencia bibliográfica; no se copian capítulos ni ilustraciones.
-- Backend del Tutor IA que separa fuentes específicas de lecturas generales y conserva la clave Gemini en el Worker.
-- Validadores de catálogo, licencias, modelos y una prueba simulada de recuperación del Tutor.
+- Dedicatoria en **Información de la aplicación**: “para amorcito de parte de motito que te ama mucho”.
+- Icono propio de la aplicación.
+- Visor provisional con selector masculino/femenino, órbita, zoom, búsqueda, favoritos, aislamiento y fichas.
+- Propagación de `anatomy_id`, colisiones para selección por toque y centrado de cámara usando los límites reales de la malla.
+- Política obligatoria de coste cero: adquisición y licencia deben costar 0 USD; el visor solo carga recursos `approved` con SHA-256 coincidente.
+- Pipeline de descarga/importación BodyParts3D 4.0 y registro de GLB HRA en estado `pending_review`; ningún importador aprueba modelos automáticamente.
+- Candidato femenino HRA/NIH 3D “Body, Female” (3DPX-020992) añadido para inspeccionar su segmentación.
 
-## Límites conocidos
+## Fuentes 3D gratuitas candidatas
 
-No se han incorporado todavía mallas anatómicas GLB reales. El maniquí visible es geométrico y provisional. El inventario no es exhaustivo, la mayoría de las fichas no tienen fuentes individuales, el contenido está pendiente de revisión especializada y no se ha generado una APK validada.
+- **BodyParts3D 4.0:** referencia masculina adulta, 2.234 mallas OBJ según el proveedor, CC BY 4.0 con atribución obligatoria. [Ficha oficial](https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/README_e.html).
+- **Human Reference Atlas / NIH 3D:** conjunto femenino “Body, Female” 3DPX-020992, CC BY 4.0 según la biblioteca HRA. [Ficha NIH 3D](https://3d.nih.gov/entries/20992). La jerarquía debe inspeccionarse antes de prometer selección órgano por órgano.
+- **MakeHuman:** recursos gráficos core CC0 para superficie externa solamente; no son anatomía interna.
 
-Las fuentes candidatas de modelos y sus condiciones se documentan en el paquete de desarrollo. No se distribuirá ningún activo 3D, texto o figura sin comprobar su licencia concreta, procedencia y atribución.
+No se comprarán modelos ni licencias. Los candidatos todavía están pendientes de descarga, revisión visual/anatómica y aprobación; el maniquí geométrico provisional continúa activo. No se ha generado una APK validada ni se ha probado la app en un dispositivo físico.
 
-Consulta `docs/BIBLIOGRAFIA_Y_POLITICA_DE_FUENTES.md`, `data/reference_library.json` y `docs/REGISTRO_LICENCIAS.csv` en el paquete fuente 0.5.0 para conocer el alcance de las fuentes y sus límites de reutilización.
+Consulta los documentos de bibliografía y licencias incluidos en el paquete fuente 0.7.0.
