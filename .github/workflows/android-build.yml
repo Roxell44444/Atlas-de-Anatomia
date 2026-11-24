@@ -71,6 +71,9 @@ jobs:
       - name: Import Godot resources
         run: godot --headless --editor --path . --import
 
+      - name: Validate imported male and female anatomy models
+        run: godot --headless --path . --script res://tests/validate_runtime.gd
+
       - name: Run project startup validation
         run: godot --headless --path . --quit
 
