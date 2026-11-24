@@ -1,12 +1,12 @@
 extends Control
 
-const AnatomyCatalog = preload("res://scripts/anatomy_catalog.gd")
-const AnatomyViewer = preload("res://scripts/anatomy_viewer.gd")
+const AnatomyCatalogScript = preload("res://scripts/anatomy_catalog.gd")
+const AnatomyViewerScript = preload("res://scripts/anatomy_viewer.gd")
 const SAVE_PATH := "user://atlas_progress.cfg"
 const TUTOR_BACKEND_URL := ""
 
-var catalog: AnatomyCatalog
-var viewer: AnatomyViewer
+var catalog
+var viewer
 var mode := "male"
 var active_system := "all"
 var search_text := ""
@@ -29,7 +29,7 @@ var layer_controls: Dictionary = {}
 var progress := ConfigFile.new()
 
 func _ready() -> void:
-	catalog = AnatomyCatalog.new()
+	catalog = AnatomyCatalogScript.new()
 	_build_interface()
 	_load_progress()
 	if not catalog.load_all():
@@ -161,7 +161,7 @@ func _build_interface() -> void:
 		layer_controls[system_id] = toggle
 		layers_bar.add_child(toggle)
 
-	viewer = AnatomyViewer.new()
+	viewer = AnatomyViewerScript.new()
 	viewer.structure_selected.connect(_on_viewer_structure_selected)
 	viewer.model_status_changed.connect(_on_model_status_changed)
 	viewport.add_child(viewer)
@@ -205,6 +205,7 @@ func _build_interface() -> void:
 	details.scroll_active = true
 	details.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	details.add_theme_color_override("default_color", Color("#d7e0ec"))
+	details.meta_clicked.connect(_on_details_meta_clicked)
 	detail_box.add_child(details)
 
 	model_status = Label.new()
@@ -392,7 +393,12 @@ func _set_detail_text(text_value: String) -> void:
 	details.append_text(text_value)
 
 func _escape_bbcode(value: String) -> String:
-	return value.replace("[", "\\[").replace("]", "\\]")
+	return value.replace("[", "[lb]").replace("]", "[rb]")
+
+func _on_details_meta_clicked(meta: Variant) -> void:
+	var url := str(meta)
+	if url.begins_with("https://"):
+		OS.shell_open(url)
 
 func _create_tutor_window() -> void:
 	tutor_window = Window.new()
