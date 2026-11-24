@@ -3,156 +3,156 @@
     "id": "integumentary",
     "name_es": "Sistema tegumentario",
     "description": "Piel y anexos: barrera, protección, sensibilidad y regulación térmica.",
-    "catalog_entries": 1,
+    "catalog_entries": 8,
     "detailed_entries": 0,
-    "coverage_status": "partial_source_catalog",
+    "coverage_status": "index_incomplete_content_pending",
     "mesh_systems": [
       "skin"
     ],
-    "scope_note": "El recuento indica entradas localizadas en el catálogo de modelos, no cobertura exhaustiva del sistema."
+    "scope_note": "El recuento incluye entradas informativas que no tienen malla en Open Anatomy 3D; no implica cobertura 3D ni ficha profunda completa."
   },
   {
     "id": "skeletal",
     "name_es": "Sistema esquelético",
     "description": "Huesos y articulaciones: soporte, protección, movimiento y reserva mineral.",
-    "catalog_entries": 40,
+    "catalog_entries": 52,
     "detailed_entries": 2,
-    "coverage_status": "partial_source_catalog",
+    "coverage_status": "index_incomplete_content_pending",
     "mesh_systems": [
       "skeleton"
     ],
-    "scope_note": "El recuento indica entradas localizadas en el catálogo de modelos, no cobertura exhaustiva del sistema."
+    "scope_note": "El recuento incluye entradas informativas que no tienen malla en Open Anatomy 3D; no implica cobertura 3D ni ficha profunda completa."
   },
   {
     "id": "muscular",
     "name_es": "Sistema muscular",
-    "description": "Músculos esqueléticos y estructuras asociadas al movimiento.",
-    "catalog_entries": 41,
+    "description": "Músculos esqueléticos, tendones y estructuras asociadas al movimiento.",
+    "catalog_entries": 51,
     "detailed_entries": 0,
-    "coverage_status": "partial_source_catalog",
+    "coverage_status": "index_incomplete_content_pending",
     "mesh_systems": [
       "muscles"
     ],
-    "scope_note": "El recuento indica entradas localizadas en el catálogo de modelos, no cobertura exhaustiva del sistema."
+    "scope_note": "El recuento incluye entradas informativas que no tienen malla en Open Anatomy 3D; no implica cobertura 3D ni ficha profunda completa."
   },
   {
     "id": "nervous",
     "name_es": "Sistema nervioso",
-    "description": "Encéfalo, médula espinal, nervios y órganos de integración y respuesta.",
-    "catalog_entries": 5,
+    "description": "Encéfalo, médula espinal, nervios y estructuras de integración y respuesta.",
+    "catalog_entries": 16,
     "detailed_entries": 0,
-    "coverage_status": "partial_source_catalog",
+    "coverage_status": "index_incomplete_content_pending",
     "mesh_systems": [
       "nerves",
       "organs"
     ],
-    "scope_note": "El recuento indica entradas localizadas en el catálogo de modelos, no cobertura exhaustiva del sistema."
+    "scope_note": "El recuento incluye entradas informativas que no tienen malla en Open Anatomy 3D; no implica cobertura 3D ni ficha profunda completa."
   },
   {
     "id": "endocrine",
     "name_es": "Sistema endocrino",
     "description": "Glándulas y tejidos que producen hormonas y regulan funciones corporales.",
-    "catalog_entries": 4,
+    "catalog_entries": 9,
     "detailed_entries": 0,
-    "coverage_status": "partial_source_catalog",
+    "coverage_status": "index_incomplete_content_pending",
     "mesh_systems": [
       "organs"
     ],
-    "scope_note": "El recuento indica entradas localizadas en el catálogo de modelos, no cobertura exhaustiva del sistema."
+    "scope_note": "El recuento incluye entradas informativas que no tienen malla en Open Anatomy 3D; no implica cobertura 3D ni ficha profunda completa."
   },
   {
     "id": "cardiovascular",
     "name_es": "Sistema cardiovascular",
     "description": "Corazón, arterias, venas y capilares que transportan sangre.",
-    "catalog_entries": 23,
+    "catalog_entries": 30,
     "detailed_entries": 1,
-    "coverage_status": "partial_source_catalog",
+    "coverage_status": "index_incomplete_content_pending",
     "mesh_systems": [
       "organs",
       "vessels"
     ],
-    "scope_note": "El recuento indica entradas localizadas en el catálogo de modelos, no cobertura exhaustiva del sistema."
+    "scope_note": "El recuento incluye entradas informativas que no tienen malla en Open Anatomy 3D; no implica cobertura 3D ni ficha profunda completa."
   },
   {
     "id": "lymphatic_immune",
     "name_es": "Sistema linfático e inmunitario",
-    "description": "Vasos, ganglios, órganos linfoides y componentes de defensa inmunitaria.",
-    "catalog_entries": 2,
+    "description": "Linfa, vasos y ganglios linfáticos, y órganos de defensa inmunitaria.",
+    "catalog_entries": 10,
     "detailed_entries": 0,
-    "coverage_status": "partial_source_catalog",
+    "coverage_status": "index_incomplete_content_pending",
     "mesh_systems": [
       "organs"
     ],
-    "scope_note": "El recuento indica entradas localizadas en el catálogo de modelos, no cobertura exhaustiva del sistema."
+    "scope_note": "El recuento incluye entradas informativas que no tienen malla en Open Anatomy 3D; no implica cobertura 3D ni ficha profunda completa."
   },
   {
     "id": "respiratory",
     "name_es": "Sistema respiratorio",
     "description": "Vías respiratorias, pulmones y superficies de intercambio gaseoso.",
-    "catalog_entries": 5,
+    "catalog_entries": 12,
     "detailed_entries": 0,
-    "coverage_status": "partial_source_catalog",
+    "coverage_status": "index_incomplete_content_pending",
     "mesh_systems": [
       "organs"
     ],
-    "scope_note": "El recuento indica entradas localizadas en el catálogo de modelos, no cobertura exhaustiva del sistema."
+    "scope_note": "El recuento incluye entradas informativas que no tienen malla en Open Anatomy 3D; no implica cobertura 3D ni ficha profunda completa."
   },
   {
     "id": "digestive",
     "name_es": "Sistema digestivo",
     "description": "Tubo digestivo y órganos accesorios de digestión y absorción.",
-    "catalog_entries": 10,
+    "catalog_entries": 21,
     "detailed_entries": 0,
-    "coverage_status": "partial_source_catalog",
+    "coverage_status": "index_incomplete_content_pending",
     "mesh_systems": [
       "organs"
     ],
-    "scope_note": "El recuento indica entradas localizadas en el catálogo de modelos, no cobertura exhaustiva del sistema."
+    "scope_note": "El recuento incluye entradas informativas que no tienen malla en Open Anatomy 3D; no implica cobertura 3D ni ficha profunda completa."
   },
   {
     "id": "urinary",
     "name_es": "Sistema urinario",
     "description": "Riñones, vías urinarias y estructuras de producción y transporte de orina.",
-    "catalog_entries": 5,
+    "catalog_entries": 12,
     "detailed_entries": 2,
-    "coverage_status": "partial_source_catalog",
+    "coverage_status": "index_incomplete_content_pending",
     "mesh_systems": [
       "organs"
     ],
-    "scope_note": "El recuento indica entradas localizadas en el catálogo de modelos, no cobertura exhaustiva del sistema."
+    "scope_note": "El recuento incluye entradas informativas que no tienen malla en Open Anatomy 3D; no implica cobertura 3D ni ficha profunda completa."
   },
   {
     "id": "reproductive",
     "name_es": "Sistema reproductor",
-    "description": "Órganos reproductores y estructuras asociadas masculinas y femeninas.",
-    "catalog_entries": 9,
+    "description": "Órganos reproductores masculinos y femeninos y sus estructuras asociadas.",
+    "catalog_entries": 26,
     "detailed_entries": 0,
-    "coverage_status": "partial_source_catalog",
+    "coverage_status": "index_incomplete_content_pending",
     "mesh_systems": [
       "organs"
     ],
-    "scope_note": "El recuento indica entradas localizadas en el catálogo de modelos, no cobertura exhaustiva del sistema."
+    "scope_note": "El recuento incluye entradas informativas que no tienen malla en Open Anatomy 3D; no implica cobertura 3D ni ficha profunda completa."
   },
   {
     "id": "sensory",
     "name_es": "Órganos de los sentidos",
-    "description": "Órganos y receptores de visión, audición, equilibrio, olfato, gusto y sensibilidad.",
-    "catalog_entries": 2,
+    "description": "Órganos y receptores especializados de visión, audición, equilibrio, olfato, gusto y sensibilidad.",
+    "catalog_entries": 9,
     "detailed_entries": 0,
-    "coverage_status": "partial_source_catalog",
+    "coverage_status": "index_incomplete_content_pending",
     "mesh_systems": [
       "organs"
     ],
-    "scope_note": "El recuento indica entradas localizadas en el catálogo de modelos, no cobertura exhaustiva del sistema."
+    "scope_note": "El recuento incluye entradas informativas que no tienen malla en Open Anatomy 3D; no implica cobertura 3D ni ficha profunda completa."
   },
   {
     "id": "hematologic",
     "name_es": "Sistema sanguíneo y hematopoyético",
-    "description": "Sangre, células sanguíneas, médula ósea y procesos de hematopoyesis.",
-    "catalog_entries": 0,
+    "description": "Sangre, elementos formes, plasma, médula ósea y procesos hematopoyéticos.",
+    "catalog_entries": 7,
     "detailed_entries": 0,
-    "coverage_status": "not_yet_catalogued",
+    "coverage_status": "index_incomplete_content_pending",
     "mesh_systems": [],
-    "scope_note": "El recuento indica entradas localizadas en el catálogo de modelos, no cobertura exhaustiva del sistema."
+    "scope_note": "El recuento incluye entradas informativas que no tienen malla en Open Anatomy 3D; no implica cobertura 3D ni ficha profunda completa."
   }
 ]
