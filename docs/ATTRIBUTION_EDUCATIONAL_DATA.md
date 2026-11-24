@@ -1,23 +1,22 @@
-# Fuentes de contenido educativo y atribución
+# Control de licencia de las fichas educativas
 
-Las fichas iniciales de corazón, fémur y riñón contienen paráfrasis educativas originales, no reproducciones literales, basadas en capítulos concretos de **Anatomy & Physiology 2e**, recurso educativo de Oregon State University.
+## Fuente excluida del paquete distribuible
 
-## Fuente y licencia
+En una revisión posterior se comprobó que la edición enlazada de **Anatomy & Physiology 2e** de Oregon State University declara licencia **Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0)** en su información editorial. Esta licencia no coincide con la ruta principal prevista para el atlas, que busca distribuir contenido educativo propio bajo fuentes con permisos comerciales claros y sin obligación ShareAlike.
 
-- Recurso: Anatomy & Physiology 2e.
-- Autores del texto: Lindsay M. Biga, Staci Bronson, Sierra Dawson, Amy Harwell, Robin Hopkins, Joel Kaufmann, Mike LeMaster, Philip Matern, Kristen Oja, y colaboradores.
-- Editor: Oregon State University Open Educational Resources.
-- Licencia declarada por la edición enlazada: Creative Commons Attribution 4.0 International (CC BY 4.0).
-- Información editorial/licencia: https://open.oregonstate.education/anatomy2e/
+- Edición y ficha editorial: https://open.oregonstate.education/anatomy2e/
+- Aviso de licencia de la edición: Creative Commons Attribution-ShareAlike 4.0 International.
+- La licencia de cada obra se revisa por separado; no se debe inferir que todas las adaptaciones de una obra conservan la licencia de la fuente upstream.
 
-## Localizadores usados
+## Medida correctiva
 
-- Corazón: 19.1 Heart Anatomy — https://open.oregonstate.education/anatomy2e/chapter/heart-anatomy/
-- Fémur: 8.4 Bones of the Lower Limb — https://open.oregonstate.education/anatomy2e/chapter/bones-lower-limb/
-- Riñón: 25.1 Internal and External Anatomy of the Kidney — https://open.oregonstate.education/anatomy2e/chapter/internal-external-anatomy-kidney/
+- Se retiraron del catálogo distribuible las cinco fichas borrador de corazón, fémur y riñón que se habían redactado usando esa edición.
+- El archivo actual `data/anatomy_entries.json` no contiene esas fichas ni contenido derivado de esa edición.
+- No se incorporan imágenes, figuras ni tablas de esa obra.
+- Las futuras fichas solo se activarán después de identificar la edición exacta, confirmar licencia, autoría, permisos de imágenes por separado y guardar un localizador específico por ficha.
 
-## Cómo se reutiliza
+## Política para el nuevo contenido
 
-Los textos de ATLAS DE ANATOMÍA son resúmenes/paráfrasis redactados para el atlas. Se conserva la referencia a la obra, autoría y enlace. Las imágenes y figuras del libro no se incluyen por esta atribución; cualquier imagen se revisará por separado.
+Se priorizarán recursos CC0, CC BY 4.0 o dominio público con procedencia demostrable. Las fuentes CC BY-SA, CC BY-NC, CC BY-NC-SA, ND u otras licencias incompatibles con el plan de distribución no se incluirán en el paquete principal salvo revisión explícita de compatibilidad legal.
 
-La licencia CC BY 4.0 de esta fuente se evalúa de forma independiente de la licencia de los modelos 3D. Los modelos Open Anatomy 3D mantienen su crédito CC BY 4.0 y sus atribuciones de fuentes originales.
+La aplicación no es un dispositivo médico; su contenido es educativo y no sustituye una evaluación profesional.
