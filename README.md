@@ -50,7 +50,7 @@ El flujo ya está añadido al repositorio, pero su ejecución y la APK resultant
 - El proyecto Godot y su interfaz inicial ya están en el repositorio.
 - Los modelos binarios no se guardan en Git: se descargan y verifican durante la compilación y quedan empaquetados en la APK si el flujo finaliza correctamente.
 - El visor crea colisiones para las mallas con clave coincidente en el catálogo; selección, orientación, capas y rendimiento necesitan validación real en Godot y Android.
-- La ficha ampliada solo está disponible inicialmente para cinco estructuras; la ampliación por estructura necesita fuentes y revisión anatómica.
+- No hay fichas profundas aprobadas para distribución todavía; el esquema está preparado y el contenido debe incorporarse con fuentes y licencias compatibles.
 - El paquete Visible Human previo contiene 20 mallas óseas piloto, no un esqueleto completo.
 - La aplicación principal está diseñada para funcionar offline cuando los recursos descargados estén empaquetados. Tutor Gemini requiere conexión y un backend seguro; el modo local solo busca en el catálogo.
 - Todavía no se ha confirmado una APK funcional ni una prueba de modo avión en un teléfono Android.
