@@ -1,53 +1,60 @@
 # ATLAS DE ANATOMÍA
 
-Aplicación educativa 3D de anatomía humana, prevista para Android y construida con Godot. La ficha de estado del proyecto indica la versión fuente preparada **0.9.0**; la integración de los modelos 3D continúa en fase de preparación.
+Atlas anatómico educativo e interactivo, Android primero, desarrollado con Godot 4.7.2. Versión de trabajo: **0.1.0-dev**.
 
-## Características descritas para la versión 0.9.0
+## Base de aplicación incorporada
 
-- Visor 3D previsto para selección, resaltado y centrado de estructuras.
-- Capas de disección, transparencia y planos sagital, coronal y transversal.
-- Comparador de anatomía masculina y femenina.
-- Academia local, cursos y cuestionarios.
-- Fichas en español, latín e inglés.
-- Tutor HTTPS preparado para contexto anatómico y referencias.
+- Proyecto Godot real: `project.godot`, escena principal y scripts GDScript.
+- Interfaz inicial en español y selector de cuerpo masculino/femenino.
+- Visor 3D con cámara orbital, zoom, selección por rayo de colisión y resaltado de la malla seleccionada.
+- Filtros por sistema y controles de visibilidad de piel, esqueleto, músculos, órganos, vasos y nervios.
+- Índice local con 147 nombres anatómicos en español e inglés y claves originales estables.
+- Panel de ficha y guardado local de modo/selección.
+- Cinco fichas educativas iniciales con contenido y fuentes: corazón, ambos fémures y ambos riñones.
+- Panel tutor con búsqueda local. La integración generativa Gemini requiere un servicio seguro configurado; no se incluye ninguna clave en la aplicación.
 - Dedicatoria en Información: “para amorcito de parte de motito que te ama mucho”.
 
-## Política de coste cero y licencias
+## Modelos 3D y licencias
 
-No se compran modelos ni licencias. La ruta de importación admite recursos CC0, CC BY 4.0, CC BY 3.0 y dominio público de EE. UU. con procedencia y atribución documentadas; se excluyen materiales NC, ND y ShareAlike de la ruta principal.
+La fuente seleccionada es **Open Anatomy 3D 0.1.0**. Sus modelos GLB se descargan durante CI, se verifican mediante tamaño y Git blob SHA-1 upstream, se decodifican para eliminar dependencias de `EXT_meshopt_compression` y se incluyen en la exportación Android.
 
-## Modelos anatómicos: modos masculino y femenino
+- Modelo masculino y femenino: CC BY 4.0.
+- Código de la fuente: MIT.
+- Fuentes de los modelos: BodyParts3D © DBCLS (CC BY 4.0); órganos femeninos del Human Reference Atlas / HuBMAP (CC BY 4.0); superficie corporal femenina MakeHuman (CC0).
+- Atribución y limitaciones: `docs/ATTRIBUTION_OPEN_ANATOMY_3D.md`.
+- Manifiesto y hashes: `data/open_anatomy_3d_manifest.json`.
+- Catálogo original: `data/open_anatomy_3d_catalog.json`.
+- Catálogo localizado: `data/anatomy_catalog_es.json`.
 
-Se ha identificado y revisado una fuente reutilizable que cubre los dos modos corporales:
+La fuente declara 147 entradas; 12 son puntos de referencia articulares y no mallas. Declara 140 estructuras en el modelo masculino y 145 en el femenino. No representa por sí sola todos los órganos ni todos los sistemas del cuerpo.
 
-- **Open Anatomy 3D 0.1.0:** modelos GLB masculino y femenino con piel, esqueleto, músculos, órganos, vasos y nervios, más hotspots articulares.
-- **Catálogo:** 147 entradas; 12 son puntos de referencia articulares y no mallas. La fuente declara 140 estructuras en el cuerpo masculino y 145 en el femenino.
-- **Licencia de modelos y catálogo:** CC BY 4.0, compatible con reutilización y adaptación comercial si se conserva la atribución, se enlaza la licencia y se declaran los cambios.
-- **Atribución obligatoria y límites:** `docs/ATTRIBUTION_OPEN_ANATOMY_3D.md`.
-- **Manifiesto de los modelos, URLs y hashes Git upstream:** `data/open_anatomy_3d_manifest.json`.
-- **Catálogo original de estructuras:** `data/open_anatomy_3d_catalog.json`.
+## Contenido anatómico educativo
 
-La anatomía masculina procede de estructuras BodyParts3D agrupadas; la superficie corporal femenina se basa en una malla media joven-adulta MakeHuman ajustada a la anatomía, y sus órganos reproductores femeninos específicos provienen del Human Reference Atlas. No se deben presentar estas mallas como escaneos clínicos completos ni usar las diferencias de una malla para generalizar a todas las personas.
+Las primeras fichas ampliadas son paráfrasis educativas de **Anatomy & Physiology 2e**, edición de Oregon State University Open Educational Resources bajo CC BY 4.0. Se incluyen referencias específicas por ficha y atribución en `docs/ATTRIBUTION_EDUCATIONAL_DATA.md`.
 
-**Estado real:** la licencia y la procedencia de esta fuente están revisadas y el catálogo se encuentra en el repositorio. Los dos archivos GLB todavía no están empaquetados localmente ni activados en una escena Godot. La compresión `EXT_meshopt_compression`, la escala, orientación, selección por estructura y funcionamiento offline deben validarse antes de declarar los modos operativos.
+Los nombres y la indexación de las 147 entradas están disponibles sin conexión. La información profunda aún no está completada para todas las estructuras: las fichas sin contenido ampliado se identifican de forma explícita y no se rellenan con afirmaciones genéricas.
 
-## Paquete piloto Visible Human
+## Compilación Android
 
-Se conservan 20 mallas STL de referencia, diez tipos de hueso por cada uno de dos especímenes cadavéricos:
+El flujo `.github/workflows/android-build.yml`:
+1. Valida los catálogos y las fichas.
+2. Descarga los dos GLB y comprueba sus hashes.
+3. Decodifica los modelos para compatibilidad con el importador Godot.
+4. Importa el proyecto con Godot 4.7.2.
+5. Intenta exportar una APK Android de depuración y publica el archivo como artefacto de GitHub Actions.
 
-- Índice: `data/visible_human_bone_pack.json`.
-- Atribución y limitaciones: `docs/ATTRIBUTION_VISIBLE_HUMAN.md`.
-- Mallas: `assets/skeleton/visible_human/`.
+El flujo ya está añadido al repositorio, pero su ejecución y la APK resultante todavía deben comprobarse en GitHub Actions.
 
-Este paquete es una muestra piloto, no un esqueleto completo ni una representación poblacional. Los dos sujetos son especímenes individuales; sus diferencias no representan diferencias universales entre sexos.
+## Estado y límites actuales
 
-## Estado real del repositorio
+- El proyecto Godot y su interfaz inicial ya están en el repositorio.
+- Los modelos binarios no se guardan en Git: se descargan y verifican durante la compilación y quedan empaquetados en la APK si el flujo finaliza correctamente.
+- El visor crea colisiones para las mallas con clave coincidente en el catálogo; selección, orientación, capas y rendimiento necesitan validación real en Godot y Android.
+- La ficha ampliada solo está disponible inicialmente para cinco estructuras; la ampliación por estructura necesita fuentes y revisión anatómica.
+- El paquete Visible Human previo contiene 20 mallas óseas piloto, no un esqueleto completo.
+- La aplicación principal está diseñada para funcionar offline cuando los recursos descargados estén empaquetados. Tutor Gemini requiere conexión y un backend seguro; el modo local solo busca en el catálogo.
+- Todavía no se ha confirmado una APK funcional ni una prueba de modo avión en un teléfono Android.
 
-- Hay 13 sistemas y 33 fichas iniciales; el catálogo pedagógico todavía no es exhaustivo y necesita revisión especializada.
-- Los modelos Open Anatomy 3D están aprobados en cuanto a licencia, pero aún no están integrados en el visor.
-- Las capas y los cortes dependen de metadatos y materiales compatibles; los cortes actuales no generan tapas geométricas.
-- El Tutor necesita desplegar su servicio y configurar `GEMINI_API_KEY` como secreto del servidor.
-- No se ha confirmado la importación/ejecución con Godot ni la exportación/prueba APK en Android.
-- **Este repositorio contiene la ficha de estado, catálogos y algunos activos, pero todavía no incluye los archivos de código individuales del proyecto Godot.** No se debe afirmar que el proyecto completo está integrado o compilado hasta que se incorporen esos archivos y se ejecuten pruebas.
+## Regla de calidad
 
-La aplicación es educativa; no diagnostica ni sustituye una evaluación profesional.
+No se marca una función como completada hasta que exista código en el repositorio, importación o prueba reproducible y evidencia de ejecución. La aplicación es educativa: no diagnostica ni sustituye una evaluación profesional.
