@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: atlas-android-build-${{ github.ref }}-${{ github.sha }}
+  group: atlas-android-build-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
