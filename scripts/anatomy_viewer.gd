@@ -13,12 +13,12 @@ const SYSTEM_IDS := ["skin", "skeleton", "muscles", "organs", "vessels", "nerves
 var pivot: Node3D
 var camera: Camera3D
 var current_model: Node3D
-var meshes_by_key: Dictionary = {}
+var meshes_by_key: Dictionary = {} # clave anatómica -> Array[MeshInstance3D]
 var system_nodes: Dictionary = {}
 var mesh_systems: Dictionary = {}
 var selected_key := ""
-var selected_mesh: MeshInstance3D
-var previous_overlay: Material
+var selected_meshes: Array[MeshInstance3D] = []
+var previous_overlays: Array[Material] = []
 var highlight_material: StandardMaterial3D
 var yaw := 0.0
 var pitch := 0.0
@@ -124,23 +124,44 @@ func _index_model() -> void:
 	var mesh_nodes := current_model.find_children("*", "MeshInstance3D", true, false)
 	for node in mesh_nodes:
 		var mesh_instance := node as MeshInstance3D
-		var key := mesh_instance.name.to_lower()
 		if mesh_instance.mesh == null:
 			continue
-		meshes_by_key[key] = mesh_instance
+		# In GLTF a semantic anatomy name can belong to a Node3D parent,
+		# while its renderable geometry is stored in one or more child meshes.
+		var key := _find_catalog_key(mesh_instance)
+		if key.is_empty():
+			continue
+		var related_meshes: Array = meshes_by_key.get(key, [])
+		related_meshes.append(mesh_instance)
+		meshes_by_key[key] = related_meshes
+
+		var assigned_system := ""
 		for system_id in SYSTEM_IDS:
 			if system_nodes.has(system_id) and system_nodes[system_id].is_ancestor_of(mesh_instance):
-				mesh_systems[key] = system_id
+				assigned_system = system_id
 				break
-		if not mesh_systems.has(key) and source_system_by_key.has(key):
-			mesh_systems[key] = source_system_by_key[key]
-		if _is_catalog_structure(key):
-			mesh_instance.create_trimesh_collision()
-			for child in mesh_instance.get_children():
-				if child is StaticBody3D:
-					child.set_meta("anatomy_key", key)
-					child.collision_layer = 1
-					child.collision_mask = 0
+		if assigned_system.is_empty():
+			assigned_system = str(source_system_by_key.get(key, ""))
+		if not assigned_system.is_empty():
+			mesh_systems[key] = assigned_system
+
+		mesh_instance.create_trimesh_collision()
+		for child in mesh_instance.get_children():
+			if child is StaticBody3D:
+				child.set_meta("anatomy_key", key)
+				child.collision_layer = 1
+				child.collision_mask = 0
+
+func _find_catalog_key(node: Node) -> String:
+	var cursor: Node = node
+	while cursor != null:
+		var candidate := str(cursor.name).to_lower()
+		if _is_catalog_structure(candidate):
+			return candidate
+		if cursor == current_model:
+			break
+		cursor = cursor.get_parent()
+	return ""
 
 func _load_catalog_key_index() -> void:
 	var file := FileAccess.open("res://data/anatomy_catalog_es.json", FileAccess.READ)
@@ -163,35 +184,46 @@ func _is_catalog_structure(key: String) -> bool:
 	return catalog_keys.has(key)
 
 func has_mesh(key: String) -> bool:
-	return meshes_by_key.has(key)
+	return meshes_by_key.has(key) and not (meshes_by_key[key] as Array).is_empty()
 
 func select_structure(key: String) -> void:
-	if selected_mesh != null and is_instance_valid(selected_mesh):
-		selected_mesh.material_overlay = previous_overlay
-	selected_mesh = null
+	_restore_selected_meshes()
 	selected_key = key
-	if meshes_by_key.has(key):
-		selected_mesh = meshes_by_key[key] as MeshInstance3D
-		previous_overlay = selected_mesh.material_overlay
-		selected_mesh.material_overlay = highlight_material
+	var related_meshes: Array = meshes_by_key.get(key, [])
+	for value in related_meshes:
+		var mesh_instance := value as MeshInstance3D
+		if mesh_instance == null or not is_instance_valid(mesh_instance):
+			continue
+		selected_meshes.append(mesh_instance)
+		previous_overlays.append(mesh_instance.material_overlay)
+		mesh_instance.material_overlay = highlight_material
 	structure_selected.emit(key)
 
+func _restore_selected_meshes() -> void:
+	for index in range(selected_meshes.size()):
+		var mesh_instance := selected_meshes[index]
+		if is_instance_valid(mesh_instance):
+			mesh_instance.material_overlay = previous_overlays[index]
+	selected_meshes.clear()
+	previous_overlays.clear()
+
 func _clear_selection() -> void:
-	if selected_mesh != null and is_instance_valid(selected_mesh):
-		selected_mesh.material_overlay = previous_overlay
-	selected_mesh = null
+	_restore_selected_meshes()
 	selected_key = ""
 
 func set_system_visibility(system_id: String, enabled: bool) -> void:
-	# Toggle only renderable meshes; imported GLTF group nodes may be plain Node3D.
+	# Toggle every renderable child belonging to an anatomical structure.
 	for key in mesh_systems:
 		if mesh_systems[key] != system_id or not meshes_by_key.has(key):
 			continue
-		var mesh_instance := meshes_by_key[key] as MeshInstance3D
-		mesh_instance.visible = enabled
-		for child in mesh_instance.get_children():
-			if child is StaticBody3D:
-				(child as StaticBody3D).collision_layer = 1 if enabled and mesh_instance.visible else 0
+		for value in meshes_by_key[key]:
+			var mesh_instance := value as MeshInstance3D
+			if mesh_instance == null:
+				continue
+			mesh_instance.visible = enabled
+			for child in mesh_instance.get_children():
+				if child is StaticBody3D:
+					(child as StaticBody3D).collision_layer = 1 if enabled else 0
 
 func _unhandled_input(event: InputEvent) -> void:
 	if camera == null or current_model == null:
