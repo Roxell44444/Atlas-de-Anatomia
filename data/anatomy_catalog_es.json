@@ -2479,5 +2479,2093 @@
     "model_mapping_status": "mesh_expected_name_equals_catalog_key_requires_runtime_check",
     "content_status": "catalog_only_needs_expansion",
     "atlas_system_id": "cardiovascular"
+  },
+  {
+    "key": "blood",
+    "label": "Blood",
+    "system": "organs",
+    "category": "Hematologic",
+    "names": {
+      "es": "Sangre",
+      "en": "Blood",
+      "la": "Sanguis"
+    },
+    "system_label_es": "Sistema sanguíneo y hematopoyético",
+    "atlas_system_id": "hematologic",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "blood_plasma",
+    "label": "Blood plasma",
+    "system": "organs",
+    "category": "Hematologic",
+    "names": {
+      "es": "Plasma sanguíneo",
+      "en": "Blood plasma",
+      "la": "Plasma sanguinis"
+    },
+    "system_label_es": "Sistema sanguíneo y hematopoyético",
+    "atlas_system_id": "hematologic",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "erythrocytes",
+    "label": "Erythrocytes",
+    "system": "organs",
+    "category": "Hematologic",
+    "names": {
+      "es": "Eritrocitos (glóbulos rojos)",
+      "en": "Erythrocytes",
+      "la": "Erythrocyti"
+    },
+    "system_label_es": "Sistema sanguíneo y hematopoyético",
+    "atlas_system_id": "hematologic",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "leukocytes",
+    "label": "Leukocytes",
+    "system": "organs",
+    "category": "Hematologic",
+    "names": {
+      "es": "Leucocitos (glóbulos blancos)",
+      "en": "Leukocytes",
+      "la": "Leukocyti"
+    },
+    "system_label_es": "Sistema sanguíneo y hematopoyético",
+    "atlas_system_id": "hematologic",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "platelets",
+    "label": "Platelets",
+    "system": "organs",
+    "category": "Hematologic",
+    "names": {
+      "es": "Plaquetas",
+      "en": "Platelets",
+      "la": "Thrombocyti"
+    },
+    "system_label_es": "Sistema sanguíneo y hematopoyético",
+    "atlas_system_id": "hematologic",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "red_bone_marrow",
+    "label": "Red bone marrow",
+    "system": "organs",
+    "category": "Hematologic",
+    "names": {
+      "es": "Médula ósea roja",
+      "en": "Red bone marrow",
+      "la": "Medulla ossium rubra"
+    },
+    "system_label_es": "Sistema sanguíneo y hematopoyético",
+    "atlas_system_id": "hematologic",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "hematopoietic_tissue",
+    "label": "Hematopoietic tissue",
+    "system": "organs",
+    "category": "Hematologic",
+    "names": {
+      "es": "Tejido hematopoyético",
+      "en": "Hematopoietic tissue",
+      "la": ""
+    },
+    "system_label_es": "Sistema sanguíneo y hematopoyético",
+    "atlas_system_id": "hematologic",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "lymph",
+    "label": "Lymph",
+    "system": "organs",
+    "category": "Immune / Lymphatic",
+    "names": {
+      "es": "Linfa",
+      "en": "Lymph",
+      "la": "Lympha"
+    },
+    "system_label_es": "Sistema linfático e inmunitario",
+    "atlas_system_id": "lymphatic_immune",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "lymphatic_vessels",
+    "label": "Lymphatic vessels",
+    "system": "organs",
+    "category": "Immune / Lymphatic",
+    "names": {
+      "es": "Vasos linfáticos",
+      "en": "Lymphatic vessels",
+      "la": "Vasa lymphatica"
+    },
+    "system_label_es": "Sistema linfático e inmunitario",
+    "atlas_system_id": "lymphatic_immune",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "lymph_nodes",
+    "label": "Lymph nodes",
+    "system": "organs",
+    "category": "Immune / Lymphatic",
+    "names": {
+      "es": "Ganglios linfáticos",
+      "en": "Lymph nodes",
+      "la": "Nodi lymphoidei"
+    },
+    "system_label_es": "Sistema linfático e inmunitario",
+    "atlas_system_id": "lymphatic_immune",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "thoracic_duct",
+    "label": "Thoracic duct",
+    "system": "organs",
+    "category": "Immune / Lymphatic",
+    "names": {
+      "es": "Conducto torácico",
+      "en": "Thoracic duct",
+      "la": "Ductus thoracicus"
+    },
+    "system_label_es": "Sistema linfático e inmunitario",
+    "atlas_system_id": "lymphatic_immune",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "right_lymphatic_duct",
+    "label": "Right lymphatic duct",
+    "system": "organs",
+    "category": "Immune / Lymphatic",
+    "names": {
+      "es": "Conducto linfático derecho",
+      "en": "Right lymphatic duct",
+      "la": "Ductus lymphaticus dexter"
+    },
+    "system_label_es": "Sistema linfático e inmunitario",
+    "atlas_system_id": "lymphatic_immune",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "palatine_tonsils",
+    "label": "Palatine tonsils",
+    "system": "organs",
+    "category": "Immune / Lymphatic",
+    "names": {
+      "es": "Amígdalas palatinas",
+      "en": "Palatine tonsils",
+      "la": "Tonsillae palatinae"
+    },
+    "system_label_es": "Sistema linfático e inmunitario",
+    "atlas_system_id": "lymphatic_immune",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "pharyngeal_tonsil",
+    "label": "Pharyngeal tonsil",
+    "system": "organs",
+    "category": "Immune / Lymphatic",
+    "names": {
+      "es": "Amígdala faríngea",
+      "en": "Pharyngeal tonsil",
+      "la": "Tonsilla pharyngealis"
+    },
+    "system_label_es": "Sistema linfático e inmunitario",
+    "atlas_system_id": "lymphatic_immune",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "peyer_patches",
+    "label": "Peyer patches",
+    "system": "organs",
+    "category": "Immune / Lymphatic",
+    "names": {
+      "es": "Placas de Peyer",
+      "en": "Peyer patches",
+      "la": "Noduli lymphoidei aggregati"
+    },
+    "system_label_es": "Sistema linfático e inmunitario",
+    "atlas_system_id": "lymphatic_immune",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "thyroid_gland",
+    "label": "Thyroid gland",
+    "system": "organs",
+    "category": "Endocrine",
+    "names": {
+      "es": "Glándula tiroides",
+      "en": "Thyroid gland",
+      "la": "Glandula thyroidea"
+    },
+    "system_label_es": "Sistema endocrino",
+    "atlas_system_id": "endocrine",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "parathyroid_glands",
+    "label": "Parathyroid glands",
+    "system": "organs",
+    "category": "Endocrine",
+    "names": {
+      "es": "Glándulas paratiroides",
+      "en": "Parathyroid glands",
+      "la": "Glandulae parathyroideae"
+    },
+    "system_label_es": "Sistema endocrino",
+    "atlas_system_id": "endocrine",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "pineal_gland",
+    "label": "Pineal gland",
+    "system": "organs",
+    "category": "Endocrine",
+    "names": {
+      "es": "Glándula pineal",
+      "en": "Pineal gland",
+      "la": "Glandula pinealis"
+    },
+    "system_label_es": "Sistema endocrino",
+    "atlas_system_id": "endocrine",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "hypothalamus",
+    "label": "Hypothalamus",
+    "system": "organs",
+    "category": "Neurological",
+    "names": {
+      "es": "Hipotálamo",
+      "en": "Hypothalamus",
+      "la": "Hypothalamus"
+    },
+    "system_label_es": "Sistema nervioso",
+    "atlas_system_id": "nervous",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "islets_of_langerhans",
+    "label": "Pancreatic islets",
+    "system": "organs",
+    "category": "Endocrine",
+    "names": {
+      "es": "Islotes pancreáticos",
+      "en": "Pancreatic islets",
+      "la": "Insulae pancreaticae"
+    },
+    "system_label_es": "Sistema endocrino",
+    "atlas_system_id": "endocrine",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "endocrine_pancreas",
+    "label": "Endocrine pancreas",
+    "system": "organs",
+    "category": "Endocrine",
+    "names": {
+      "es": "Páncreas endocrino",
+      "en": "Endocrine pancreas",
+      "la": "Pancreas endocrinum"
+    },
+    "system_label_es": "Sistema endocrino",
+    "atlas_system_id": "endocrine",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "nasal_cavity",
+    "label": "Nasal cavity",
+    "system": "organs",
+    "category": "Respiratory",
+    "names": {
+      "es": "Cavidad nasal",
+      "en": "Nasal cavity",
+      "la": "Cavitas nasi"
+    },
+    "system_label_es": "Sistema respiratorio",
+    "atlas_system_id": "respiratory",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "paranasal_sinuses",
+    "label": "Paranasal sinuses",
+    "system": "organs",
+    "category": "Respiratory",
+    "names": {
+      "es": "Senos paranasales",
+      "en": "Paranasal sinuses",
+      "la": "Sinus paranasales"
+    },
+    "system_label_es": "Sistema respiratorio",
+    "atlas_system_id": "respiratory",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "bronchioles",
+    "label": "Bronchioles",
+    "system": "organs",
+    "category": "Respiratory",
+    "names": {
+      "es": "Bronquiolos",
+      "en": "Bronchioles",
+      "la": "Bronchioli"
+    },
+    "system_label_es": "Sistema respiratorio",
+    "atlas_system_id": "respiratory",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "pulmonary_alveoli",
+    "label": "Pulmonary alveoli",
+    "system": "organs",
+    "category": "Respiratory",
+    "names": {
+      "es": "Alvéolos pulmonares",
+      "en": "Pulmonary alveoli",
+      "la": "Alveoli pulmonis"
+    },
+    "system_label_es": "Sistema respiratorio",
+    "atlas_system_id": "respiratory",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "pleura",
+    "label": "Pleura",
+    "system": "organs",
+    "category": "Respiratory",
+    "names": {
+      "es": "Pleura",
+      "en": "Pleura",
+      "la": "Pleura"
+    },
+    "system_label_es": "Sistema respiratorio",
+    "atlas_system_id": "respiratory",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "epiglottis",
+    "label": "Epiglottis",
+    "system": "organs",
+    "category": "Respiratory",
+    "names": {
+      "es": "Epiglotis",
+      "en": "Epiglottis",
+      "la": "Epiglottis"
+    },
+    "system_label_es": "Sistema respiratorio",
+    "atlas_system_id": "respiratory",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "respiratory_mucosa",
+    "label": "Respiratory mucosa",
+    "system": "organs",
+    "category": "Respiratory",
+    "names": {
+      "es": "Mucosa respiratoria",
+      "en": "Respiratory mucosa",
+      "la": "Tunica mucosa respiratoria"
+    },
+    "system_label_es": "Sistema respiratorio",
+    "atlas_system_id": "respiratory",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "oral_cavity",
+    "label": "Oral cavity",
+    "system": "organs",
+    "category": "Digestive",
+    "names": {
+      "es": "Cavidad oral",
+      "en": "Oral cavity",
+      "la": "Cavitas oris"
+    },
+    "system_label_es": "Sistema digestivo",
+    "atlas_system_id": "digestive",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "duodenum",
+    "label": "Duodenum",
+    "system": "organs",
+    "category": "Digestive",
+    "names": {
+      "es": "Duodeno",
+      "en": "Duodenum",
+      "la": "Duodenum"
+    },
+    "system_label_es": "Sistema digestivo",
+    "atlas_system_id": "digestive",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "jejunum",
+    "label": "Jejunum",
+    "system": "organs",
+    "category": "Digestive",
+    "names": {
+      "es": "Yeyuno",
+      "en": "Jejunum",
+      "la": "Jejunum"
+    },
+    "system_label_es": "Sistema digestivo",
+    "atlas_system_id": "digestive",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "ileum",
+    "label": "Ileum",
+    "system": "organs",
+    "category": "Digestive",
+    "names": {
+      "es": "Íleon",
+      "en": "Ileum",
+      "la": "Ileum"
+    },
+    "system_label_es": "Sistema digestivo",
+    "atlas_system_id": "digestive",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "cecum",
+    "label": "Cecum",
+    "system": "organs",
+    "category": "Digestive",
+    "names": {
+      "es": "Ciego",
+      "en": "Cecum",
+      "la": "Caecum"
+    },
+    "system_label_es": "Sistema digestivo",
+    "atlas_system_id": "digestive",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "rectum",
+    "label": "Rectum",
+    "system": "organs",
+    "category": "Digestive",
+    "names": {
+      "es": "Recto",
+      "en": "Rectum",
+      "la": "Rectum"
+    },
+    "system_label_es": "Sistema digestivo",
+    "atlas_system_id": "digestive",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "anal_canal",
+    "label": "Anal canal",
+    "system": "organs",
+    "category": "Digestive",
+    "names": {
+      "es": "Conducto anal",
+      "en": "Anal canal",
+      "la": "Canalis analis"
+    },
+    "system_label_es": "Sistema digestivo",
+    "atlas_system_id": "digestive",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "mesentery",
+    "label": "Mesentery",
+    "system": "organs",
+    "category": "Digestive",
+    "names": {
+      "es": "Mesenterio",
+      "en": "Mesentery",
+      "la": "Mesenterium"
+    },
+    "system_label_es": "Sistema digestivo",
+    "atlas_system_id": "digestive",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "greater_omentum",
+    "label": "Greater omentum",
+    "system": "organs",
+    "category": "Digestive",
+    "names": {
+      "es": "Epiplón mayor",
+      "en": "Greater omentum",
+      "la": "Omentum majus"
+    },
+    "system_label_es": "Sistema digestivo",
+    "atlas_system_id": "digestive",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "lesser_omentum",
+    "label": "Lesser omentum",
+    "system": "organs",
+    "category": "Digestive",
+    "names": {
+      "es": "Epiplón menor",
+      "en": "Lesser omentum",
+      "la": "Omentum minus"
+    },
+    "system_label_es": "Sistema digestivo",
+    "atlas_system_id": "digestive",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "bile_duct",
+    "label": "Common bile duct",
+    "system": "organs",
+    "category": "Digestive",
+    "names": {
+      "es": "Conducto colédoco",
+      "en": "Common bile duct",
+      "la": "Ductus choledochus"
+    },
+    "system_label_es": "Sistema digestivo",
+    "atlas_system_id": "digestive",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "renal_cortex",
+    "label": "Renal cortex",
+    "system": "organs",
+    "category": "Renal / Urinary",
+    "names": {
+      "es": "Corteza renal",
+      "en": "Renal cortex",
+      "la": "Cortex renalis"
+    },
+    "system_label_es": "Sistema urinario",
+    "atlas_system_id": "urinary",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "renal_medulla",
+    "label": "Renal medulla",
+    "system": "organs",
+    "category": "Renal / Urinary",
+    "names": {
+      "es": "Médula renal",
+      "en": "Renal medulla",
+      "la": "Medulla renalis"
+    },
+    "system_label_es": "Sistema urinario",
+    "atlas_system_id": "urinary",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "renal_pelvis",
+    "label": "Renal pelvis",
+    "system": "organs",
+    "category": "Renal / Urinary",
+    "names": {
+      "es": "Pelvis renal",
+      "en": "Renal pelvis",
+      "la": "Pelvis renalis"
+    },
+    "system_label_es": "Sistema urinario",
+    "atlas_system_id": "urinary",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "nephron",
+    "label": "Nephron",
+    "system": "organs",
+    "category": "Renal / Urinary",
+    "names": {
+      "es": "Nefrona",
+      "en": "Nephron",
+      "la": "Nephron"
+    },
+    "system_label_es": "Sistema urinario",
+    "atlas_system_id": "urinary",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "glomerulus",
+    "label": "Renal glomerulus",
+    "system": "organs",
+    "category": "Renal / Urinary",
+    "names": {
+      "es": "Glomérulo renal",
+      "en": "Renal glomerulus",
+      "la": "Glomerulus renalis"
+    },
+    "system_label_es": "Sistema urinario",
+    "atlas_system_id": "urinary",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "urethra_male",
+    "label": "Male urethra",
+    "system": "organs",
+    "category": "Renal / Urinary",
+    "names": {
+      "es": "Uretra masculina",
+      "en": "Male urethra",
+      "la": "Urethra masculina"
+    },
+    "system_label_es": "Sistema urinario",
+    "atlas_system_id": "urinary",
+    "sex": "male",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "urethra_female",
+    "label": "Female urethra",
+    "system": "organs",
+    "category": "Renal / Urinary",
+    "names": {
+      "es": "Uretra femenina",
+      "en": "Female urethra",
+      "la": "Urethra feminina"
+    },
+    "system_label_es": "Sistema urinario",
+    "atlas_system_id": "urinary",
+    "sex": "female",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "testis_l",
+    "label": "Left testis",
+    "system": "organs",
+    "category": "Reproductive",
+    "names": {
+      "es": "Testículo izquierdo",
+      "en": "Left testis",
+      "la": "Testis sinister"
+    },
+    "system_label_es": "Sistema reproductor",
+    "atlas_system_id": "reproductive",
+    "sex": "male",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "testis_r",
+    "label": "Right testis",
+    "system": "organs",
+    "category": "Reproductive",
+    "names": {
+      "es": "Testículo derecho",
+      "en": "Right testis",
+      "la": "Testis dexter"
+    },
+    "system_label_es": "Sistema reproductor",
+    "atlas_system_id": "reproductive",
+    "sex": "male",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "epididymis_l",
+    "label": "Left epididymis",
+    "system": "organs",
+    "category": "Reproductive",
+    "names": {
+      "es": "Epidídimo izquierdo",
+      "en": "Left epididymis",
+      "la": "Epididymis sinister"
+    },
+    "system_label_es": "Sistema reproductor",
+    "atlas_system_id": "reproductive",
+    "sex": "male",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "epididymis_r",
+    "label": "Right epididymis",
+    "system": "organs",
+    "category": "Reproductive",
+    "names": {
+      "es": "Epidídimo derecho",
+      "en": "Right epididymis",
+      "la": "Epididymis dexter"
+    },
+    "system_label_es": "Sistema reproductor",
+    "atlas_system_id": "reproductive",
+    "sex": "male",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "ductus_deferens_l",
+    "label": "Left ductus deferens",
+    "system": "organs",
+    "category": "Reproductive",
+    "names": {
+      "es": "Conducto deferente izquierdo",
+      "en": "Left ductus deferens",
+      "la": "Ductus deferens sinister"
+    },
+    "system_label_es": "Sistema reproductor",
+    "atlas_system_id": "reproductive",
+    "sex": "male",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "ductus_deferens_r",
+    "label": "Right ductus deferens",
+    "system": "organs",
+    "category": "Reproductive",
+    "names": {
+      "es": "Conducto deferente derecho",
+      "en": "Right ductus deferens",
+      "la": "Ductus deferens dexter"
+    },
+    "system_label_es": "Sistema reproductor",
+    "atlas_system_id": "reproductive",
+    "sex": "male",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "seminal_vesicle_l",
+    "label": "Left seminal vesicle",
+    "system": "organs",
+    "category": "Reproductive",
+    "names": {
+      "es": "Vesícula seminal izquierda",
+      "en": "Left seminal vesicle",
+      "la": "Vesicula seminalis sinistra"
+    },
+    "system_label_es": "Sistema reproductor",
+    "atlas_system_id": "reproductive",
+    "sex": "male",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "seminal_vesicle_r",
+    "label": "Right seminal vesicle",
+    "system": "organs",
+    "category": "Reproductive",
+    "names": {
+      "es": "Vesícula seminal derecha",
+      "en": "Right seminal vesicle",
+      "la": "Vesicula seminalis dextra"
+    },
+    "system_label_es": "Sistema reproductor",
+    "atlas_system_id": "reproductive",
+    "sex": "male",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "ejaculatory_ducts",
+    "label": "Ejaculatory ducts",
+    "system": "organs",
+    "category": "Reproductive",
+    "names": {
+      "es": "Conductos eyaculadores",
+      "en": "Ejaculatory ducts",
+      "la": "Ductus ejaculatorii"
+    },
+    "system_label_es": "Sistema reproductor",
+    "atlas_system_id": "reproductive",
+    "sex": "male",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "penis",
+    "label": "Penis",
+    "system": "organs",
+    "category": "Reproductive",
+    "names": {
+      "es": "Pene",
+      "en": "Penis",
+      "la": "Penis"
+    },
+    "system_label_es": "Sistema reproductor",
+    "atlas_system_id": "reproductive",
+    "sex": "male",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "scrotum",
+    "label": "Scrotum",
+    "system": "organs",
+    "category": "Reproductive",
+    "names": {
+      "es": "Escroto",
+      "en": "Scrotum",
+      "la": "Scrotum"
+    },
+    "system_label_es": "Sistema reproductor",
+    "atlas_system_id": "reproductive",
+    "sex": "male",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "cervix",
+    "label": "Uterine cervix",
+    "system": "organs",
+    "category": "Reproductive",
+    "names": {
+      "es": "Cuello uterino (cérvix)",
+      "en": "Uterine cervix",
+      "la": "Cervix uteri"
+    },
+    "system_label_es": "Sistema reproductor",
+    "atlas_system_id": "reproductive",
+    "sex": "female",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "vulva",
+    "label": "Vulva",
+    "system": "organs",
+    "category": "Reproductive",
+    "names": {
+      "es": "Vulva",
+      "en": "Vulva",
+      "la": "Vulva"
+    },
+    "system_label_es": "Sistema reproductor",
+    "atlas_system_id": "reproductive",
+    "sex": "female",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "clitoris",
+    "label": "Clitoris",
+    "system": "organs",
+    "category": "Reproductive",
+    "names": {
+      "es": "Clítoris",
+      "en": "Clitoris",
+      "la": "Clitoris"
+    },
+    "system_label_es": "Sistema reproductor",
+    "atlas_system_id": "reproductive",
+    "sex": "female",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "labia_majora",
+    "label": "Labia majora",
+    "system": "organs",
+    "category": "Reproductive",
+    "names": {
+      "es": "Labios mayores",
+      "en": "Labia majora",
+      "la": "Labia majora pudendi"
+    },
+    "system_label_es": "Sistema reproductor",
+    "atlas_system_id": "reproductive",
+    "sex": "female",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "labia_minora",
+    "label": "Labia minora",
+    "system": "organs",
+    "category": "Reproductive",
+    "names": {
+      "es": "Labios menores",
+      "en": "Labia minora",
+      "la": "Labia minora pudendi"
+    },
+    "system_label_es": "Sistema reproductor",
+    "atlas_system_id": "reproductive",
+    "sex": "female",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "mammary_gland",
+    "label": "Mammary gland",
+    "system": "organs",
+    "category": "Reproductive",
+    "names": {
+      "es": "Glándula mamaria",
+      "en": "Mammary gland",
+      "la": "Glandula mammaria"
+    },
+    "system_label_es": "Sistema reproductor",
+    "atlas_system_id": "reproductive",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "retina",
+    "label": "Retina",
+    "system": "organs",
+    "category": "Eye / Sensory",
+    "names": {
+      "es": "Retina",
+      "en": "Retina",
+      "la": "Retina"
+    },
+    "system_label_es": "Órganos de los sentidos",
+    "atlas_system_id": "sensory",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "cornea",
+    "label": "Cornea",
+    "system": "organs",
+    "category": "Eye / Sensory",
+    "names": {
+      "es": "Córnea",
+      "en": "Cornea",
+      "la": "Cornea"
+    },
+    "system_label_es": "Órganos de los sentidos",
+    "atlas_system_id": "sensory",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "crystalline_lens",
+    "label": "Crystalline lens",
+    "system": "organs",
+    "category": "Eye / Sensory",
+    "names": {
+      "es": "Cristalino",
+      "en": "Crystalline lens",
+      "la": "Lens crystallina"
+    },
+    "system_label_es": "Órganos de los sentidos",
+    "atlas_system_id": "sensory",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "cochlea",
+    "label": "Cochlea",
+    "system": "organs",
+    "category": "Eye / Sensory",
+    "names": {
+      "es": "Cóclea",
+      "en": "Cochlea",
+      "la": "Cochlea"
+    },
+    "system_label_es": "Órganos de los sentidos",
+    "atlas_system_id": "sensory",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "vestibular_apparatus",
+    "label": "Vestibular apparatus",
+    "system": "organs",
+    "category": "Eye / Sensory",
+    "names": {
+      "es": "Aparato vestibular",
+      "en": "Vestibular apparatus",
+      "la": "Apparatus vestibularis"
+    },
+    "system_label_es": "Órganos de los sentidos",
+    "atlas_system_id": "sensory",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "olfactory_epithelium",
+    "label": "Olfactory epithelium",
+    "system": "organs",
+    "category": "Eye / Sensory",
+    "names": {
+      "es": "Epitelio olfatorio",
+      "en": "Olfactory epithelium",
+      "la": "Epithelium olfactorium"
+    },
+    "system_label_es": "Órganos de los sentidos",
+    "atlas_system_id": "sensory",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "taste_buds",
+    "label": "Taste buds",
+    "system": "organs",
+    "category": "Eye / Sensory",
+    "names": {
+      "es": "Botones gustativos",
+      "en": "Taste buds",
+      "la": "Caliculi gustatorii"
+    },
+    "system_label_es": "Órganos de los sentidos",
+    "atlas_system_id": "sensory",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "epidermis",
+    "label": "Epidermis",
+    "system": "organs",
+    "category": "Skin",
+    "names": {
+      "es": "Epidermis",
+      "en": "Epidermis",
+      "la": "Epidermis"
+    },
+    "system_label_es": "Sistema tegumentario",
+    "atlas_system_id": "integumentary",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "dermis",
+    "label": "Dermis",
+    "system": "organs",
+    "category": "Skin",
+    "names": {
+      "es": "Dermis",
+      "en": "Dermis",
+      "la": "Dermis"
+    },
+    "system_label_es": "Sistema tegumentario",
+    "atlas_system_id": "integumentary",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "hair_follicle",
+    "label": "Hair follicle",
+    "system": "organs",
+    "category": "Skin",
+    "names": {
+      "es": "Folículo piloso",
+      "en": "Hair follicle",
+      "la": "Folliculus pili"
+    },
+    "system_label_es": "Sistema tegumentario",
+    "atlas_system_id": "integumentary",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "nail_unit",
+    "label": "Nail unit",
+    "system": "organs",
+    "category": "Skin",
+    "names": {
+      "es": "Unidad ungueal",
+      "en": "Nail unit",
+      "la": "Apparatus unguicularis"
+    },
+    "system_label_es": "Sistema tegumentario",
+    "atlas_system_id": "integumentary",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "sebaceous_glands",
+    "label": "Sebaceous glands",
+    "system": "organs",
+    "category": "Skin",
+    "names": {
+      "es": "Glándulas sebáceas",
+      "en": "Sebaceous glands",
+      "la": "Glandulae sebaceae"
+    },
+    "system_label_es": "Sistema tegumentario",
+    "atlas_system_id": "integumentary",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "eccrine_sweat_glands",
+    "label": "Eccrine sweat glands",
+    "system": "organs",
+    "category": "Skin",
+    "names": {
+      "es": "Glándulas sudoríparas ecrinas",
+      "en": "Eccrine sweat glands",
+      "la": "Glandulae sudoriferae eccrinae"
+    },
+    "system_label_es": "Sistema tegumentario",
+    "atlas_system_id": "integumentary",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "apocrine_sweat_glands",
+    "label": "Apocrine sweat glands",
+    "system": "organs",
+    "category": "Skin",
+    "names": {
+      "es": "Glándulas sudoríparas apocrinas",
+      "en": "Apocrine sweat glands",
+      "la": "Glandulae sudoriferae apocrinae"
+    },
+    "system_label_es": "Sistema tegumentario",
+    "atlas_system_id": "integumentary",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "arterioles",
+    "label": "Arterioles",
+    "system": "organs",
+    "category": "Cardiovascular",
+    "names": {
+      "es": "Arteriolas",
+      "en": "Arterioles",
+      "la": "Arteriolae"
+    },
+    "system_label_es": "Sistema cardiovascular",
+    "atlas_system_id": "cardiovascular",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "venules",
+    "label": "Venules",
+    "system": "organs",
+    "category": "Cardiovascular",
+    "names": {
+      "es": "Vénulas",
+      "en": "Venules",
+      "la": "Venulae"
+    },
+    "system_label_es": "Sistema cardiovascular",
+    "atlas_system_id": "cardiovascular",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "capillaries",
+    "label": "Blood capillaries",
+    "system": "organs",
+    "category": "Cardiovascular",
+    "names": {
+      "es": "Capilares sanguíneos",
+      "en": "Blood capillaries",
+      "la": "Vasa capillaria"
+    },
+    "system_label_es": "Sistema cardiovascular",
+    "atlas_system_id": "cardiovascular",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "hepatic_portal_vein",
+    "label": "Hepatic portal vein",
+    "system": "organs",
+    "category": "Cardiovascular",
+    "names": {
+      "es": "Vena porta hepática",
+      "en": "Hepatic portal vein",
+      "la": "Vena portae hepatis"
+    },
+    "system_label_es": "Sistema cardiovascular",
+    "atlas_system_id": "cardiovascular",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "pulmonary_artery",
+    "label": "Pulmonary artery",
+    "system": "organs",
+    "category": "Cardiovascular",
+    "names": {
+      "es": "Arteria pulmonar",
+      "en": "Pulmonary artery",
+      "la": "Arteria pulmonalis"
+    },
+    "system_label_es": "Sistema cardiovascular",
+    "atlas_system_id": "cardiovascular",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "pulmonary_veins",
+    "label": "Pulmonary veins",
+    "system": "organs",
+    "category": "Cardiovascular",
+    "names": {
+      "es": "Venas pulmonares",
+      "en": "Pulmonary veins",
+      "la": "Venae pulmonales"
+    },
+    "system_label_es": "Sistema cardiovascular",
+    "atlas_system_id": "cardiovascular",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "coronary_veins",
+    "label": "Cardiac veins",
+    "system": "organs",
+    "category": "Cardiovascular",
+    "names": {
+      "es": "Venas cardíacas",
+      "en": "Cardiac veins",
+      "la": "Venae cordis"
+    },
+    "system_label_es": "Sistema cardiovascular",
+    "atlas_system_id": "cardiovascular",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "cerebrum",
+    "label": "Cerebrum",
+    "system": "organs",
+    "category": "Neurological",
+    "names": {
+      "es": "Cerebro (telencéfalo)",
+      "en": "Cerebrum",
+      "la": "Cerebrum"
+    },
+    "system_label_es": "Sistema nervioso",
+    "atlas_system_id": "nervous",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "thalamus",
+    "label": "Thalamus",
+    "system": "organs",
+    "category": "Neurological",
+    "names": {
+      "es": "Tálamo",
+      "en": "Thalamus",
+      "la": "Thalamus"
+    },
+    "system_label_es": "Sistema nervioso",
+    "atlas_system_id": "nervous",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "midbrain",
+    "label": "Midbrain",
+    "system": "organs",
+    "category": "Neurological",
+    "names": {
+      "es": "Mesencéfalo",
+      "en": "Midbrain",
+      "la": "Mesencephalon"
+    },
+    "system_label_es": "Sistema nervioso",
+    "atlas_system_id": "nervous",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "pons",
+    "label": "Pons",
+    "system": "organs",
+    "category": "Neurological",
+    "names": {
+      "es": "Puente (protuberancia)",
+      "en": "Pons",
+      "la": "Pons"
+    },
+    "system_label_es": "Sistema nervioso",
+    "atlas_system_id": "nervous",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "medulla_oblongata",
+    "label": "Medulla oblongata",
+    "system": "organs",
+    "category": "Neurological",
+    "names": {
+      "es": "Bulbo raquídeo",
+      "en": "Medulla oblongata",
+      "la": "Medulla oblongata"
+    },
+    "system_label_es": "Sistema nervioso",
+    "atlas_system_id": "nervous",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "corpus_callosum",
+    "label": "Corpus callosum",
+    "system": "organs",
+    "category": "Neurological",
+    "names": {
+      "es": "Cuerpo calloso",
+      "en": "Corpus callosum",
+      "la": "Corpus callosum"
+    },
+    "system_label_es": "Sistema nervioso",
+    "atlas_system_id": "nervous",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "spinal_nerves",
+    "label": "Spinal nerves",
+    "system": "organs",
+    "category": "Neurological",
+    "names": {
+      "es": "Nervios espinales",
+      "en": "Spinal nerves",
+      "la": "Nervi spinales"
+    },
+    "system_label_es": "Sistema nervioso",
+    "atlas_system_id": "nervous",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "sciatic_nerve_l",
+    "label": "Left sciatic nerve",
+    "system": "organs",
+    "category": "Neurological",
+    "names": {
+      "es": "Nervio ciático izquierdo",
+      "en": "Left sciatic nerve",
+      "la": "Nervus ischiadicus sinister"
+    },
+    "system_label_es": "Sistema nervioso",
+    "atlas_system_id": "nervous",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "sciatic_nerve_r",
+    "label": "Right sciatic nerve",
+    "system": "organs",
+    "category": "Neurological",
+    "names": {
+      "es": "Nervio ciático derecho",
+      "en": "Right sciatic nerve",
+      "la": "Nervus ischiadicus dexter"
+    },
+    "system_label_es": "Sistema nervioso",
+    "atlas_system_id": "nervous",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "brachial_plexus",
+    "label": "Brachial plexus",
+    "system": "organs",
+    "category": "Neurological",
+    "names": {
+      "es": "Plexo braquial",
+      "en": "Brachial plexus",
+      "la": "Plexus brachialis"
+    },
+    "system_label_es": "Sistema nervioso",
+    "atlas_system_id": "nervous",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "radius_l",
+    "label": "Left radius",
+    "system": "organs",
+    "category": "Musculoskeletal",
+    "names": {
+      "es": "Radio izquierdo",
+      "en": "Left radius",
+      "la": "Radius sinister"
+    },
+    "system_label_es": "Sistema esquelético",
+    "atlas_system_id": "skeletal",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "radius_r",
+    "label": "Right radius",
+    "system": "organs",
+    "category": "Musculoskeletal",
+    "names": {
+      "es": "Radio derecho",
+      "en": "Right radius",
+      "la": "Radius dexter"
+    },
+    "system_label_es": "Sistema esquelético",
+    "atlas_system_id": "skeletal",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "ulna_l",
+    "label": "Left ulna",
+    "system": "organs",
+    "category": "Musculoskeletal",
+    "names": {
+      "es": "Ulna izquierda",
+      "en": "Left ulna",
+      "la": "Ulna sinistra"
+    },
+    "system_label_es": "Sistema esquelético",
+    "atlas_system_id": "skeletal",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "ulna_r",
+    "label": "Right ulna",
+    "system": "organs",
+    "category": "Musculoskeletal",
+    "names": {
+      "es": "Ulna derecha",
+      "en": "Right ulna",
+      "la": "Ulna dextra"
+    },
+    "system_label_es": "Sistema esquelético",
+    "atlas_system_id": "skeletal",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "tibia_l",
+    "label": "Left tibia",
+    "system": "organs",
+    "category": "Musculoskeletal",
+    "names": {
+      "es": "Tibia izquierda",
+      "en": "Left tibia",
+      "la": "Tibia sinistra"
+    },
+    "system_label_es": "Sistema esquelético",
+    "atlas_system_id": "skeletal",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "tibia_r",
+    "label": "Right tibia",
+    "system": "organs",
+    "category": "Musculoskeletal",
+    "names": {
+      "es": "Tibia derecha",
+      "en": "Right tibia",
+      "la": "Tibia dextra"
+    },
+    "system_label_es": "Sistema esquelético",
+    "atlas_system_id": "skeletal",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "fibula_l",
+    "label": "Left fibula",
+    "system": "organs",
+    "category": "Musculoskeletal",
+    "names": {
+      "es": "Fíbula izquierda",
+      "en": "Left fibula",
+      "la": "Fibula sinistra"
+    },
+    "system_label_es": "Sistema esquelético",
+    "atlas_system_id": "skeletal",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "fibula_r",
+    "label": "Right fibula",
+    "system": "organs",
+    "category": "Musculoskeletal",
+    "names": {
+      "es": "Fíbula derecha",
+      "en": "Right fibula",
+      "la": "Fibula dextra"
+    },
+    "system_label_es": "Sistema esquelético",
+    "atlas_system_id": "skeletal",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "carpal_bones_l",
+    "label": "Left carpal bones",
+    "system": "organs",
+    "category": "Musculoskeletal",
+    "names": {
+      "es": "Huesos del carpo izquierdo",
+      "en": "Left carpal bones",
+      "la": "Ossa carpi sinistra"
+    },
+    "system_label_es": "Sistema esquelético",
+    "atlas_system_id": "skeletal",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "carpal_bones_r",
+    "label": "Right carpal bones",
+    "system": "organs",
+    "category": "Musculoskeletal",
+    "names": {
+      "es": "Huesos del carpo derecho",
+      "en": "Right carpal bones",
+      "la": "Ossa carpi dextra"
+    },
+    "system_label_es": "Sistema esquelético",
+    "atlas_system_id": "skeletal",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "tarsal_bones_l",
+    "label": "Left tarsal bones",
+    "system": "organs",
+    "category": "Musculoskeletal",
+    "names": {
+      "es": "Huesos del tarso izquierdo",
+      "en": "Left tarsal bones",
+      "la": "Ossa tarsi sinistra"
+    },
+    "system_label_es": "Sistema esquelético",
+    "atlas_system_id": "skeletal",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "tarsal_bones_r",
+    "label": "Right tarsal bones",
+    "system": "organs",
+    "category": "Musculoskeletal",
+    "names": {
+      "es": "Huesos del tarso derecho",
+      "en": "Right tarsal bones",
+      "la": "Ossa tarsi dextra"
+    },
+    "system_label_es": "Sistema esquelético",
+    "atlas_system_id": "skeletal",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "biceps_brachii_l",
+    "label": "Left biceps brachii",
+    "system": "organs",
+    "category": "Musculoskeletal",
+    "names": {
+      "es": "Bíceps braquial izquierdo",
+      "en": "Left biceps brachii",
+      "la": "Musculus biceps brachii sinister"
+    },
+    "system_label_es": "Sistema muscular",
+    "atlas_system_id": "muscular",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "biceps_brachii_r",
+    "label": "Right biceps brachii",
+    "system": "organs",
+    "category": "Musculoskeletal",
+    "names": {
+      "es": "Bíceps braquial derecho",
+      "en": "Right biceps brachii",
+      "la": "Musculus biceps brachii dexter"
+    },
+    "system_label_es": "Sistema muscular",
+    "atlas_system_id": "muscular",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "triceps_brachii_l",
+    "label": "Left triceps brachii",
+    "system": "organs",
+    "category": "Musculoskeletal",
+    "names": {
+      "es": "Tríceps braquial izquierdo",
+      "en": "Left triceps brachii",
+      "la": "Musculus triceps brachii sinister"
+    },
+    "system_label_es": "Sistema muscular",
+    "atlas_system_id": "muscular",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "triceps_brachii_r",
+    "label": "Right triceps brachii",
+    "system": "organs",
+    "category": "Musculoskeletal",
+    "names": {
+      "es": "Tríceps braquial derecho",
+      "en": "Right triceps brachii",
+      "la": "Musculus triceps brachii dexter"
+    },
+    "system_label_es": "Sistema muscular",
+    "atlas_system_id": "muscular",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "gastrocnemius_l",
+    "label": "Left gastrocnemius",
+    "system": "organs",
+    "category": "Musculoskeletal",
+    "names": {
+      "es": "Gastrocnemio izquierdo",
+      "en": "Left gastrocnemius",
+      "la": "Musculus gastrocnemius sinister"
+    },
+    "system_label_es": "Sistema muscular",
+    "atlas_system_id": "muscular",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "gastrocnemius_r",
+    "label": "Right gastrocnemius",
+    "system": "organs",
+    "category": "Musculoskeletal",
+    "names": {
+      "es": "Gastrocnemio derecho",
+      "en": "Right gastrocnemius",
+      "la": "Musculus gastrocnemius dexter"
+    },
+    "system_label_es": "Sistema muscular",
+    "atlas_system_id": "muscular",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "soleus_l",
+    "label": "Left soleus",
+    "system": "organs",
+    "category": "Musculoskeletal",
+    "names": {
+      "es": "Sóleo izquierdo",
+      "en": "Left soleus",
+      "la": "Musculus soleus sinister"
+    },
+    "system_label_es": "Sistema muscular",
+    "atlas_system_id": "muscular",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "soleus_r",
+    "label": "Right soleus",
+    "system": "organs",
+    "category": "Musculoskeletal",
+    "names": {
+      "es": "Sóleo derecho",
+      "en": "Right soleus",
+      "la": "Musculus soleus dexter"
+    },
+    "system_label_es": "Sistema muscular",
+    "atlas_system_id": "muscular",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "sternocleidomastoid_l",
+    "label": "Left sternocleidomastoid",
+    "system": "organs",
+    "category": "Musculoskeletal",
+    "names": {
+      "es": "Esternocleidomastoideo izquierdo",
+      "en": "Left sternocleidomastoid",
+      "la": "Musculus sternocleidomastoideus sinister"
+    },
+    "system_label_es": "Sistema muscular",
+    "atlas_system_id": "muscular",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
+  },
+  {
+    "key": "sternocleidomastoid_r",
+    "label": "Right sternocleidomastoid",
+    "system": "organs",
+    "category": "Musculoskeletal",
+    "names": {
+      "es": "Esternocleidomastoideo derecho",
+      "en": "Right sternocleidomastoid",
+      "la": "Musculus sternocleidomastoideus dexter"
+    },
+    "system_label_es": "Sistema muscular",
+    "atlas_system_id": "muscular",
+    "sex": "both",
+    "model_mapping_status": "info_only_no_mesh",
+    "content_status": "planned_needs_research",
+    "review_status": "nomenclature_seed_only",
+    "source_model": "not_present_in_open_anatomy_3d_0_1_0"
   }
 ]
