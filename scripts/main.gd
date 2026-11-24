@@ -368,6 +368,11 @@ func _update_detail(entry: Dictionary) -> void:
 			for line in section.get("items", []):
 				output += "• " + _escape_bbcode(str(line)) + "\n"
 		output += "\n[color=#91a7c3]Fuente: " + _escape_bbcode(str(detail.get("source_title", ""))) + "[/color]"
+		output += "\n[color=#91a7c3]Licencia: " + _escape_bbcode(str(detail.get("license", ""))) + "[/color]"
+		var source_url := str(detail.get("source_url", ""))
+		if source_url.begins_with("https://"):
+			output += "\n[url=" + source_url + "]Abrir capítulo de referencia[/url]"
+		output += "\n[color=#91a7c3]" + _escape_bbcode(str(detail.get("attribution", ""))) + "[/color]"
 	if viewer != null:
 		if viewer.has_mesh(key):
 			output += "\n\n[color=#79d6ad]Malla 3D localizada en el modelo actual.[/color]"
