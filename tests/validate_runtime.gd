@@ -34,14 +34,29 @@ func _run_validation() -> void:
 		var model := packed.instantiate()
 		var names: Dictionary = {}
 		var mesh_nodes := model.find_children("*", "MeshInstance3D", true, false)
-		var matched := 0
 		for node in mesh_nodes:
 			var key := str(node.name).to_lower()
 			names[key] = true
-			if catalog.has_key(key):
-				matched += 1
-		if matched < 100:
-			push_error("FALLO: muy pocas estructuras catalogadas en " + str(scenario["mode"]) + ": " + str(matched))
+
+		var expected_keys: Array[String] = []
+		for entry in catalog.entries:
+			var mapping_status := str(entry.get("model_mapping_status", ""))
+			if mapping_status == "info_only_no_mesh" or mapping_status == "anchor_only_no_independent_mesh":
+				continue
+			var sex_scope := str(entry.get("sex", "both"))
+			if sex_scope != "both" and sex_scope != str(scenario["mode"]):
+				continue
+			var key := str(entry.get("key", ""))
+			expected_keys.append(key)
+			if not names.has(key):
+				push_error("FALLO: la malla esperada " + key + " falta en el modelo " + str(scenario["mode"]))
+				model.free()
+				quit(1)
+				return
+
+		var expected_count := 128 if str(scenario["mode"]) == "male" else 133
+		if expected_keys.size() != expected_count:
+			push_error("FALLO: catálogo espera " + str(expected_count) + " mallas en " + str(scenario["mode"]) + ", pero indexa " + str(expected_keys.size()))
 			model.free()
 			quit(1)
 			return
@@ -51,7 +66,7 @@ func _run_validation() -> void:
 				model.free()
 				quit(1)
 				return
-		print("OK modelo ", scenario["mode"], ": ", matched, " mallas coinciden con el catálogo.")
+		print("OK modelo ", scenario["mode"], ": ", expected_keys.size(), " mallas esperadas presentes.")
 		model.free()
 
 	print("VALIDACIÓN DE MODELOS CORRECTA: masculino, femenino y catálogo local.")
