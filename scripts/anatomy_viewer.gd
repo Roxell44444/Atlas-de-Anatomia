@@ -26,6 +26,7 @@ var distance := 3.8
 var right_dragging := false
 var screen_dragging := false
 var catalog_keys: Dictionary = {}
+var source_system_by_key: Dictionary = {}
 
 func _ready() -> void:
 	_load_catalog_key_index()
@@ -131,6 +132,8 @@ func _index_model() -> void:
 			if system_nodes.has(system_id) and system_nodes[system_id].is_ancestor_of(mesh_instance):
 				mesh_systems[key] = system_id
 				break
+		if not mesh_systems.has(key) and source_system_by_key.has(key):
+			mesh_systems[key] = source_system_by_key[key]
 		if _is_catalog_structure(key):
 			mesh_instance.create_trimesh_collision()
 			for child in mesh_instance.get_children():
@@ -150,7 +153,11 @@ func _load_catalog_key_index() -> void:
 		return
 	for item in parsed:
 		if item is Dictionary:
-			catalog_keys[str(item.get("key", ""))] = true
+			var key := str(item.get("key", ""))
+			catalog_keys[key] = true
+			var model_mapping := str(item.get("model_mapping_status", ""))
+			if model_mapping != "info_only_no_mesh" and model_mapping != "anchor_only_no_independent_mesh":
+				source_system_by_key[key] = str(item.get("system", ""))
 
 func _is_catalog_structure(key: String) -> bool:
 	return catalog_keys.has(key)
@@ -184,7 +191,7 @@ func set_system_visibility(system_id: String, enabled: bool) -> void:
 		mesh_instance.visible = enabled
 		for child in mesh_instance.get_children():
 			if child is StaticBody3D:
-				(child as StaticBody3D).collision_layer = 1 if enabled else 0
+				(child as StaticBody3D).collision_layer = 1 if enabled and mesh_instance.visible else 0
 
 func _unhandled_input(event: InputEvent) -> void:
 	if camera == null or current_model == null:
