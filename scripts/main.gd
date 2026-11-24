@@ -335,7 +335,7 @@ func _update_detail(entry: Dictionary) -> void:
 	output += "\n[b]Categoría:[/b] " + _escape_bbcode(str(entry.get("category", "Anatomía")))
 	output += "\n[b]Clave:[/b] " + _escape_bbcode(key)
 	if detail.is_empty():
-		output += "\n\n[color=#e6bd76]Ficha ampliada pendiente de documentación y revisión.[/color]"
+		output += "\n\n[color=#e6bd76]Ficha ampliada pendiente de documentación anatómica y revisión de licencia.[/color]"
 		output += "\nLa estructura está indexada en el catálogo local, pero todavía no se han incorporado aquí sus detalles anatómicos verificados."
 	else:
 		output += "\n\n[b]Descripción[/b]\n" + _escape_bbcode(str(detail.get("description", "")))
@@ -369,6 +369,7 @@ func _create_tutor_window() -> void:
 	tutor_window = Window.new()
 	tutor_window.title = "Tutor de anatomía"
 	tutor_window.size = Vector2i(560, 500)
+	tutor_window.visible = false
 	tutor_window.close_requested.connect(func(): tutor_window.hide())
 	add_child(tutor_window)
 
