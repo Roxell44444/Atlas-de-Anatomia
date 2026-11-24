@@ -34,9 +34,13 @@ func _run_validation() -> void:
 		var model := packed.instantiate()
 		var names: Dictionary = {}
 		var mesh_nodes := model.find_children("*", "MeshInstance3D", true, false)
+		var imported_names := PackedStringArray()
 		for node in mesh_nodes:
 			var key := str(node.name).to_lower()
 			names[key] = true
+			imported_names.append(key)
+		imported_names.sort()
+		print("NODOS MeshInstance3D ", scenario["mode"], " (", imported_names.size(), "): ", ", ".join(imported_names))
 
 		var expected_keys: Array[String] = []
 		for entry in catalog.entries:
