@@ -98,7 +98,8 @@ func filter_entries(mode: String, system_id: String, query: String) -> Array[Dic
 	var needle := query.strip_edges().to_lower()
 	for item in entries:
 		var system := str(item.get("atlas_system_id", item.get("system", "")))
-		if system_id != "all" and system != system_id:
+		var secondary_systems: Array = item.get("secondary_system_ids", [])
+		if system_id != "all" and system != system_id and not secondary_systems.has(system_id):
 			continue
 		var sex_scope := str(item.get("sex", "both"))
 		if sex_scope != "both" and sex_scope != mode:
