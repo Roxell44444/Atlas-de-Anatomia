@@ -1,24 +1,40 @@
-# Control de licencia de las fichas educativas
+# Atribución y control de licencias del contenido educativo
 
-## Estado actual
+## Fuentes aprobadas para las primeras fichas
 
-No hay fichas profundas derivadas de libros de texto activas en el paquete distribuible. Los borradores iniciales basados en OpenStax y Oregon State University fueron retirados mientras se aclara la licencia exacta de cada edición.
+Las fichas iniciales del corazón, los dos fémures y los dos riñones se redactaron en español como paráfrasis originales basadas en las primeras ediciones de los libros abiertos de Douglas College. Ambas obras declaran expresamente Creative Commons Attribution 4.0 International (CC BY 4.0), permiten copiar, redistribuir y adaptar con atribución, y especifican una línea de descarga que debe conservarse en cada vista digital de partes reutilizadas.
 
-## Fuentes examinadas y no aprobadas para la ruta comercial
+### Volumen I — corazón y fémur
 
-- Oregon State University, *Anatomy & Physiology 2e* (edición 2025): declara CC BY-SA 4.0. No se integra en la ruta comercial prevista sin revisión legal específica.
-  https://open.oregonstate.education/anatomy2e/
-- OpenStax, *Anatomy and Physiology* (2013) y *Anatomy and Physiology 2e* (2022): la información de licencia disponible en sus páginas de prefacio contiene avisos contradictorios y restricciones no comerciales en el apartado de reutilización. Por prudencia, no se reutiliza texto de esas ediciones en la compilación prevista para distribución comercial hasta obtener una aclaración inequívoca.
-  - https://openstax.org/books/anatomy-and-physiology/pages/preface
-  - https://openstax.org/books/anatomy-and-physiology-2e/pages/preface
+- Obra: *Douglas College Human Anatomy and Physiology I (1st ed.)*
+- Autor/editorial: Douglas College; editora Jennifer M. Barker.
+- Copyright de contenido original: © 1999–2016 Rice University; cambios y adiciones de Douglas College Biology Department © 2017.
+- Licencia: CC BY 4.0, excepto donde se indique lo contrario.
+- Libro y licencia: https://pressbooks.bccampus.ca/dcbiol11031109/
+- Sección 19.1 Heart Anatomy: https://pressbooks.bccampus.ca/dcbiol11031109/chapter/19-1-heart-anatomy/
+- Sección 8.4 Bones of the Lower Limb: https://pressbooks.bccampus.ca/dcbiol11031109/chapter/8-4-bones-of-the-lower-limb/
+- Atribución adicional exigida para la reutilización parcial: “Download for free at https://pressbooks.bccampus.ca/dcbiol11031109”.
 
-## Regla para aprobar futuras fichas
+### Volumen II — riñón
 
-Cada ficha deberá tener:
-1. Una fuente específica y accesible para el capítulo o estructura.
-2. Una licencia inequívoca que permita el uso y la adaptación comercial previstos (por ejemplo CC BY 4.0, CC0 o dominio público aplicable).
-3. Atribución, enlace, versión y registro de los cambios.
-4. Verificación de que texto, tablas, imágenes y figuras tienen permisos compatibles por separado.
-5. Revisión anatómica de las afirmaciones y referencias.
+- Obra: *Douglas College Human Anatomy and Physiology II (1st ed.)*
+- Autor/editorial: Douglas College; editora Jennifer M. Barker.
+- Copyright de contenido original: © 1999–2016 Rice University; cambios y adiciones de Douglas College Biology Department © 2017.
+- Licencia: CC BY 4.0, excepto donde se indique lo contrario.
+- Libro y licencia: https://pressbooks.bccampus.ca/dcbiol12031209/
+- Sección 25.3 Gross Anatomy of the Kidney: https://pressbooks.bccampus.ca/dcbiol12031209/chapter/25-3-gross-anatomy-of-the-kidney-1203/
+- Atribución adicional exigida para la reutilización parcial: “Download for free at https://pressbooks.bccampus.ca/dcbiol12031209”.
 
-Las fichas no se activan por el mero hecho de que una fuente sea gratuita o de acceso abierto. El acceso gratuito no implica permiso para reutilizar comercialmente.
+## Alcance de la reutilización
+
+Los textos de ATLAS DE ANATOMÍA son paráfrasis originales, no copias literales. Cada ficha muestra fuente, capítulo, licencia, atribución y línea de descarga. No se reutilizan las figuras, fotos o ilustraciones de los libros; cada activo visual se revisa y licencia por separado.
+
+## Fuentes examinadas y excluidas de la ruta comercial
+
+- *Douglas College Human Anatomy & Physiology 2e* (adaptación de 2019): no se utiliza hasta revisar su licencia específica.
+- Oregon State University *Anatomy & Physiology 2e* (edición 2025): declara CC BY-SA 4.0 y no forma parte de estas fichas.
+- Las páginas de licencia de otras ediciones de OpenStax muestran avisos diferentes; no se presume que sus términos sean idénticos a los de las ediciones Douglas College aprobadas aquí.
+
+## Regla permanente
+
+Cada ficha nueva debe conservar fuente exacta, edición, capítulo, licencia, atribución exigida, URL y estado de revisión. No se habilita contenido derivado de una fuente solo porque sea gratuito o accesible. CC BY 4.0 requiere conservar el crédito, el enlace a la licencia e indicar las modificaciones.
