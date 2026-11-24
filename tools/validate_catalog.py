@@ -77,6 +77,18 @@ def main() -> None:
         assert detail.get("review_status") == "approved_for_distribution", (
             f"Ficha pendiente de revisión: {key}"
         )
+        assert detail.get("source_license") == "CC BY 4.0", (
+            f"Fuente con licencia no aprobada: {key}"
+        )
+        assert "Douglas College Human Anatomy & Physiology" in detail.get("source_edition", ""), (
+            f"Edición de la fuente no verificada: {key}"
+        )
+        assert "Download for free at https://pressbooks.bccampus.ca/dcbiol" in detail.get("attribution", ""), (
+            f"Falta atribución digital obligatoria de la fuente: {key}"
+        )
+        assert detail.get("content_origin") == "original_spanish_paraphrase", (
+            f"Origen del contenido no declarado: {key}"
+        )
 
     assert len(manifest.get("models", [])) == 2, "Deben existir modelos masculino y femenino"
     for model in manifest["models"]:
