@@ -1,44 +1,53 @@
 # ATLAS DE ANATOMÍA
 
-Aplicación educativa Android-first construida con Godot 4.7.2. Versión fuente preparada: **0.9.0**.
+Aplicación educativa 3D de anatomía humana, prevista para Android y construida con Godot. La ficha de estado del proyecto indica la versión fuente preparada **0.9.0**; la integración de los modelos 3D continúa en fase de preparación.
 
-## Mejoras de la versión 0.9.0
+## Características descritas para la versión 0.9.0
 
-- Visor 3D preparado para selección táctil, resaltado y centrado de estructuras aprobadas.
-- Controles para capas de disección, transparencia y recortes sagital, coronal y transversal.
-- Comparador masculino/femenino con dos vistas 3D y notas de diferencias generales.
-- Academia local con seis cursos, cuestionarios y progreso guardado.
-- Fichas con nombres en español, latín e inglés y enlaces a estructuras relacionadas.
-- Tutor HTTPS con contexto de la ficha y referencias enlazadas explícitamente.
-- Perfiles gráficos calidad/equilibrado/batería; catálogo, favoritos y cursos disponibles localmente.
+- Visor 3D previsto para selección, resaltado y centrado de estructuras.
+- Capas de disección, transparencia y planos sagital, coronal y transversal.
+- Comparador de anatomía masculina y femenina.
+- Academia local, cursos y cuestionarios.
+- Fichas en español, latín e inglés.
+- Tutor HTTPS preparado para contexto anatómico y referencias.
 - Dedicatoria en Información: “para amorcito de parte de motito que te ama mucho”.
 
-## Política de coste cero
+## Política de coste cero y licencias
 
-No se compran modelos ni licencias. El importador solo acepta CC0, CC BY 4.0, CC BY 3.0 y dominio público de EE. UU. con procedencia, atribución, hash y revisiones manuales. Se excluyen NC, ND y ShareAlike de esta ruta. BodyParts3D 4.0 y objetos HRA son candidatos gratuitos sujetos a revisión individual.
+No se compran modelos ni licencias. La ruta de importación admite recursos CC0, CC BY 4.0, CC BY 3.0 y dominio público de EE. UU. con procedencia y atribución documentadas; se excluyen materiales NC, ND y ShareAlike de la ruta principal.
 
-## Estado real y límites
+## Modelos anatómicos: modos masculino y femenino
 
-- Hay 13 sistemas y 33 fichas iniciales; el catálogo no es exhaustivo y requiere revisión profesional.
-- El selector busca modelos aprobados por sexo, pero todavía no hay mallas anatómicas reales aprobadas en la entrega. El modelo visible sigue siendo geométrico y provisional.
-- Capas y cortes dependen de metadatos y materiales compatibles; los cortes actuales no generan tapas geométricas.
-- El Tutor requiere desplegar el Worker y configurar GEMINI_API_KEY como secreto de servidor.
-- No se ha confirmado aún ejecución con Godot ni exportación/prueba APK en Android.
+Se ha identificado y revisado una fuente reutilizable que cubre los dos modos corporales:
 
-## Validación local realizada
+- **Open Anatomy 3D 0.1.0:** modelos GLB masculino y femenino con piel, esqueleto, músculos, órganos, vasos y nervios, más hotspots articulares.
+- **Catálogo:** 147 entradas; 12 son puntos de referencia articulares y no mallas. La fuente declara 140 estructuras en el cuerpo masculino y 145 en el femenino.
+- **Licencia de modelos y catálogo:** CC BY 4.0, compatible con reutilización y adaptación comercial si se conserva la atribución, se enlaza la licencia y se declaran los cambios.
+- **Atribución obligatoria y límites:** `docs/ATTRIBUTION_OPEN_ANATOMY_3D.md`.
+- **Manifiesto de los modelos, URLs y hashes Git upstream:** `data/open_anatomy_3d_manifest.json`.
+- **Catálogo original de estructuras:** `data/open_anatomy_3d_catalog.json`.
 
-`python tools/validate_project.py`, 9 pruebas unitarias, `node --check workers/src/index.js` y comprobación de integridad del ZIP. Estas comprobaciones no sustituyen la importación/ejecución del proyecto en Godot ni las pruebas en teléfonos.
+La anatomía masculina procede de estructuras BodyParts3D agrupadas; la superficie corporal femenina se basa en una malla media joven-adulta MakeHuman ajustada a la anatomía, y sus órganos reproductores femeninos específicos provienen del Human Reference Atlas. No se deben presentar estas mallas como escaneos clínicos completos ni usar las diferencias de una malla para generalizar a todas las personas.
 
-El paquete fuente 0.9.0 se adjunta en la conversación. **Este repositorio todavía no contiene los archivos de código individuales**, solo esta ficha de estado.
+**Estado real:** la licencia y la procedencia de esta fuente están revisadas y el catálogo se encuentra en el repositorio. Los dos archivos GLB todavía no están empaquetados localmente ni activados en una escena Godot. La compresión `EXT_meshopt_compression`, la escala, orientación, selección por estructura y funcionamiento offline deben validarse antes de declarar los modos operativos.
 
-La aplicación es educativa; no diagnostica ni sustituye evaluación profesional.
+## Paquete piloto Visible Human
 
-## Primer paquete de geometría ósea real
+Se conservan 20 mallas STL de referencia, diez tipos de hueso por cada uno de dos especímenes cadavéricos:
 
-Se han incorporado 20 mallas STL de referencia, diez tipos de hueso por cada uno de los dos especímenes Visible Human: mandíbula, C1, C2, clavícula izquierda, escápula izquierda, húmero izquierdo, radio izquierdo, ulna izquierda, fémur izquierdo y tibia izquierda.
-
-- Índice y rutas: `data/visible_human_bone_pack.json`.
+- Índice: `data/visible_human_bone_pack.json`.
 - Atribución y limitaciones: `docs/ATTRIBUTION_VISIBLE_HUMAN.md`.
 - Mallas: `assets/skeleton/visible_human/`.
 
-**Estado:** activos originales gratuitos CC BY 4.0 incorporados al repositorio, pendientes de comprobación de escala, orientación, alineación, mapeo anatómico y revisión independiente. Son vistas previas STL y una muestra piloto, no un esqueleto completo ni contenido anatómico validado por ATLAS. Los dos sujetos son especímenes individuales; no representan promedios poblacionales ni diferencias universales entre sexos.
+Este paquete es una muestra piloto, no un esqueleto completo ni una representación poblacional. Los dos sujetos son especímenes individuales; sus diferencias no representan diferencias universales entre sexos.
+
+## Estado real del repositorio
+
+- Hay 13 sistemas y 33 fichas iniciales; el catálogo pedagógico todavía no es exhaustivo y necesita revisión especializada.
+- Los modelos Open Anatomy 3D están aprobados en cuanto a licencia, pero aún no están integrados en el visor.
+- Las capas y los cortes dependen de metadatos y materiales compatibles; los cortes actuales no generan tapas geométricas.
+- El Tutor necesita desplegar su servicio y configurar `GEMINI_API_KEY` como secreto del servidor.
+- No se ha confirmado la importación/ejecución con Godot ni la exportación/prueba APK en Android.
+- **Este repositorio contiene la ficha de estado, catálogos y algunos activos, pero todavía no incluye los archivos de código individuales del proyecto Godot.** No se debe afirmar que el proyecto completo está integrado o compilado hasta que se incorporen esos archivos y se ejecuten pruebas.
+
+La aplicación es educativa; no diagnostica ni sustituye una evaluación profesional.
