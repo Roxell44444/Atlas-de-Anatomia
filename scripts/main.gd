@@ -78,8 +78,8 @@ func _build_interface() -> void:
 	header.add_theme_constant_override("separation", 10)
 	layout.add_child(header)
 	var app_icon := TextureRect.new()
-	if ResourceLoader.exists("res://assets/app_icon.png"):
-		app_icon.texture = load("res://assets/app_icon.png") as Texture2D
+	if ResourceLoader.exists("res://assets/app_icon.svg"):
+		app_icon.texture = load("res://assets/app_icon.svg") as Texture2D
 	app_icon.custom_minimum_size = Vector2(48, 48)
 	app_icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	app_icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
