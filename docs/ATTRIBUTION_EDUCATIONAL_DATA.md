@@ -1,22 +1,33 @@
-# Control de licencia de las fichas educativas
+# Atribución y revisión de fuentes de contenido educativo
 
-## Fuente excluida del paquete distribuible
+## Fuente aprobada para las primeras fichas
 
-En una revisión posterior se comprobó que la edición enlazada de **Anatomy & Physiology 2e** de Oregon State University declara licencia **Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0)** en su información editorial. Esta licencia no coincide con la ruta principal prevista para el atlas, que busca distribuir contenido educativo propio bajo fuentes con permisos comerciales claros y sin obligación ShareAlike.
+Las fichas iniciales de corazón, fémur y riñón se redactaron como paráfrasis originales en español a partir de la edición original de **Anatomy & Physiology 2e**, publicada por OpenStax / Rice University.
 
-- Edición y ficha editorial: https://open.oregonstate.education/anatomy2e/
-- Aviso de licencia de la edición: Creative Commons Attribution-ShareAlike 4.0 International.
-- La licencia de cada obra se revisa por separado; no se debe inferir que todas las adaptaciones de una obra conservan la licencia de la fuente upstream.
+- Recurso y licencia oficial: https://openstax.org/subjects/anatomy-and-physiology
+- Prefacio y licencia del libro original: https://openstax.org/books/anatomy-and-physiology/pages/preface
+- Licencia: Creative Commons Attribution 4.0 International (CC BY 4.0).
+- Autores principales: J. Gordon Betts, Peter Desaix, Eddie Johnson, Jody E. Johnson, Oksana Korol, Dean Kruse, Brandon Poe, James A. Wise, Mark Womble y Kelly A. Young, con colaboradores adicionales indicados por OpenStax.
 
-## Medida correctiva
+## Secciones consultadas
 
-- Se retiraron del catálogo distribuible las cinco fichas borrador de corazón, fémur y riñón que se habían redactado usando esa edición.
-- El archivo actual `data/anatomy_entries.json` no contiene esas fichas ni contenido derivado de esa edición.
-- No se incorporan imágenes, figuras ni tablas de esa obra.
-- Las futuras fichas solo se activarán después de identificar la edición exacta, confirmar licencia, autoría, permisos de imágenes por separado y guardar un localizador específico por ficha.
+- Corazón: 19.1 Heart Anatomy — https://openstax.org/books/anatomy-and-physiology-2e/pages/19-1-heart-anatomy
+- Fémur: 8.4 Bones of the Lower Limb — https://openstax.org/books/anatomy-and-physiology-2e/pages/8-4-bones-of-the-lower-limb
+- Riñón: 25.3 Gross Anatomy of the Kidney y 25.4 Microscopic Anatomy of the Kidney:
+  - https://openstax.org/books/anatomy-and-physiology-2e/pages/25-3-gross-anatomy-of-the-kidney
+  - https://openstax.org/books/anatomy-and-physiology-2e/pages/25-4-microscopic-anatomy-of-the-kidney
 
-## Política para el nuevo contenido
+## Cómo se reutiliza
 
-Se priorizarán recursos CC0, CC BY 4.0 o dominio público con procedencia demostrable. Las fuentes CC BY-SA, CC BY-NC, CC BY-NC-SA, ND u otras licencias incompatibles con el plan de distribución no se incluirán en el paquete principal salvo revisión explícita de compatibilidad legal.
+Los textos de ATLAS DE ANATOMÍA son paráfrasis educativas originales, no copias literales. Se conserva el crédito a OpenStax / Rice University, se identifica la licencia CC BY 4.0 y se enlazan los capítulos usados. No se han incorporado figuras, fotografías ni microfotografías de esos capítulos; sus créditos de terceros se revisarán por separado antes de añadir imágenes.
 
-La aplicación no es un dispositivo médico; su contenido es educativo y no sustituye una evaluación profesional.
+## Fuente excluida: adaptación de Oregon State University
+
+La edición de 2025 de **Anatomy & Physiology 2e** alojada por Oregon State University es una adaptación distinta y declara CC BY-SA 4.0, salvo excepciones específicas. No debe confundirse con la obra original de OpenStax CC BY 4.0. Los borradores iniciales basados en la adaptación de Oregon State se retiraron antes de distribución.
+
+- Oregon State University, edición 2025 y licencia: https://open.oregonstate.education/anatomy2e/
+- Este repositorio usa la fuente original de OpenStax indicada arriba, no la adaptación CC BY-SA de Oregon State.
+
+## Control continuo
+
+Cada ficha debe registrar fuente exacta, localizador del capítulo, licencia, atribución, origen del contenido y estado de revisión. Las imágenes y microfotografías se licencian individualmente; la licencia del texto no se presume para activos de terceros.
