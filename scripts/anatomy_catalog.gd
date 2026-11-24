@@ -105,12 +105,12 @@ func filter_entries(mode: String, system_id: String, query: String) -> Array[Dic
 			continue
 		if not needle.is_empty():
 			var names: Dictionary = item.get("names", {})
-			var haystack := " ".join([
+			var haystack := " ".join(PackedStringArray([
 				str(item.get("key", "")),
 				str(item.get("label", "")),
 				str(names.get("es", "")),
 				str(names.get("la", ""))
-			]).to_lower()
+			])).to_lower()
 			if not haystack.contains(needle):
 				continue
 		result.append(item)
