@@ -1,0 +1,83 @@
+{
+  "pack_version": "0.1.0",
+  "title": "Open Anatomy 3D — modelos corporales masculino y femenino",
+  "status": "license_review_approved_local_import_and_godot_validation_pending",
+  "cost_usd": 0,
+  "source": {
+    "repository": "https://github.com/MervinR07/open-anatomy-3d",
+    "package": "open-anatomy-3d",
+    "package_version": "0.1.0",
+    "catalog_path": "data/open_anatomy_3d_catalog.json",
+    "license_models": "CC BY 4.0",
+    "license_code": "MIT",
+    "attribution_document": "docs/ATTRIBUTION_OPEN_ANATOMY_3D.md"
+  },
+  "models": [
+    {
+      "id": "open_anatomy_male",
+      "mode": "male",
+      "label_es": "Modelo anatómico masculino",
+      "format": "glb",
+      "download_url": "https://cdn.jsdelivr.net/npm/open-anatomy-3d@0.1.0/models/anatomy-male.glb",
+      "upstream_git_blob_sha1": "f173c5a08e93fb3eef85c64859680b94ad7c2aed",
+      "size_bytes": 7614076,
+      "license": "CC BY 4.0",
+      "intended_local_path": "assets/anatomy/open_anatomy_3d/anatomy-male.glb",
+      "integration_status": "not_yet_bundled_or_activated"
+    },
+    {
+      "id": "open_anatomy_female",
+      "mode": "female",
+      "label_es": "Modelo anatómico femenino",
+      "format": "glb",
+      "download_url": "https://cdn.jsdelivr.net/npm/open-anatomy-3d@0.1.0/models/anatomy-female.glb",
+      "upstream_git_blob_sha1": "53a6203083490251fd7bb6421f5698db9bccd4c9",
+      "size_bytes": 8134732,
+      "license": "CC BY 4.0",
+      "intended_local_path": "assets/anatomy/open_anatomy_3d/anatomy-female.glb",
+      "integration_status": "not_yet_bundled_or_activated"
+    }
+  ],
+  "anatomy": {
+    "coordinate_system": "metres; Y-up; feet at y=0",
+    "gltf_extension": "EXT_meshopt_compression",
+    "model_structure_counts_reported_upstream": {
+      "male": 140,
+      "female": 145,
+      "catalog_entries": 147,
+      "catalog_system_counts": {
+        "joints": 12,
+        "muscles": 41,
+        "nerves": 2,
+        "organs": 41,
+        "skeleton": 28,
+        "skin": 1,
+        "vessels": 22
+      },
+      "joint_hotspots": 12,
+      "joint_hotspots_are_meshes": false
+    },
+    "systems": [
+      "skin",
+      "skeleton",
+      "muscles",
+      "organs",
+      "vessels",
+      "nerves",
+      "joints"
+    ],
+    "notes": [
+      "The source describes approximately one million triangles per body.",
+      "The catalogue uses English labels; the app must display reviewed Spanish names.",
+      "The 12 joint hotspots are anchor points, not independent mesh structures.",
+      "The female skin surface is based on an average young-adult MakeHuman body fitted to anatomy; it is not a scan of a female cadaver.",
+      "The models are educational visualisations, not diagnostic references."
+    ]
+  },
+  "runtime_policy": {
+    "preferred_distribution": "Bundle both GLB files locally in the app for offline use; do not depend on a runtime CDN request.",
+    "godot_validation_required": true,
+    "meshopt_validation_required": true,
+    "fallback_conversion_if_importer_incompatible": "Create a decompressed/dequantized GLB using gltf-transform before Godot import; preserve upstream source files and document the conversion."
+  }
+}
