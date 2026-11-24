@@ -241,7 +241,10 @@ func _set_mode(next_mode: String, save: bool) -> void:
 		_apply_default_layers()
 	_refresh_list()
 	if selected_key in visible_keys:
-		_update_detail(catalog.get_entry(selected_key))
+		if viewer != null:
+			viewer.select_structure(selected_key)
+		else:
+			_update_detail(catalog.get_entry(selected_key))
 	else:
 		selected_key = ""
 		_save_progress()
@@ -298,6 +301,7 @@ func _refresh_list() -> void:
 	if selected_key in visible_keys:
 		var index := visible_keys.find(selected_key)
 		item_list.select(index)
+		_update_detail(catalog.get_entry(selected_key))
 	elif active_system == "all":
 		_set_detail_text("Selecciona una estructura en la lista o tócala en el modelo 3D.\n\nEl índice local contiene " + str(catalog.entries.size()) + " entradas, entre estructuras de los modelos y entradas informativas sin malla 3D.")
 	else:
