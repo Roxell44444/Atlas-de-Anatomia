@@ -42,6 +42,9 @@ def main() -> None:
         assert item.get("names", {}).get("en", "").strip(), f"Falta nombre inglés: {item['key']}"
         assert item.get("system_label_es", "").strip(), f"Falta sistema traducido: {item['key']}"
         assert item.get("atlas_system_id") in expected_systems, f"Sistema desconocido: {item['key']}"
+        assert set(item.get("secondary_system_ids", [])).issubset(expected_systems), (
+            f"Sistema secundario desconocido: {item['key']}"
+        )
         if item.get("system") == "joints" and item["key"] in set(source_keys):
             assert item["model_mapping_status"] == "anchor_only_no_independent_mesh"
     assert expected_systems.issubset({item["atlas_system_id"] for item in localized}), "Falta un sistema en el índice"
