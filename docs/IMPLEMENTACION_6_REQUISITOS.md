@@ -144,12 +144,15 @@ Los IDs no cambian al traducir. Las mallas se enlazan mediante IDs verificados, 
 
 ## Bloqueos y límites actuales confirmados
 
-- El repositorio tiene catálogos y documentación, pero no contiene todavía los archivos fuente individuales de un proyecto Godot ni una escena ejecutable.
-- El catálogo Open Anatomy 3D tiene 147 entradas: 12 son hotspots articulares y no mallas; declara 140 estructuras masculinas y 145 femeninas. No representa todos los órganos y sistemas del cuerpo.
-- Los dos GLB aún no están empaquetados ni validados en Godot/Android.
+- El repositorio ya contiene un proyecto Godot inicial: `project.godot`, escena principal y scripts GDScript de catálogo, interfaz y visor. La importación y ejecución del proyecto todavía no se han validado con el motor.
+- El catálogo de origen Open Anatomy 3D tiene 147 entradas: 12 son hotspots articulares y no mallas; declara 140 estructuras masculinas y 145 femeninas. Se amplió el índice de la aplicación a 263 entradas (147 de la fuente y 116 informativas sin malla 3D), distribuidas en 13 categorías de sistemas. Las entradas adicionales están marcadas con contenido pendiente; no se presentan como mallas.
+- El flujo de CI descarga, comprueba y convierte los dos GLB para empaquetarlos con la exportación Android. La descarga y la importación aún necesitan un resultado de CI satisfactorio.
 - El paquete Visible Human es un piloto de 20 mallas óseas y no un esqueleto completo.
 - La cobertura exhaustiva de todo el cuerpo requiere incorporar más fuentes abiertas, revisar licencias y validar cada estructura; no puede declararse terminada por el mero hecho de listar sistemas.
-- No hay todavía APK validada ni pruebas de modo avión.
+- Hay un flujo GitHub Actions para validar catálogo, importar los modelos y exportar una APK de depuración; su ejecución y resultado no están confirmados. No hay todavía APK validada ni pruebas de modo avión.
+- Hay cinco fichas ampliadas iniciales (corazón, ambos fémures y ambos riñones); las restantes entradas muestran el estado de contenido pendiente. Histología y embriología todavía no están desarrolladas.
+- La base del tutor ofrece búsqueda local; la conexión segura a Gemini y su servicio todavía no están configurados.
+
 
 ## Regla de finalización
 
