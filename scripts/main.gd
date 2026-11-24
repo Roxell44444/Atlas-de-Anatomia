@@ -25,6 +25,7 @@ var tutor_window: Window
 var tutor_input: LineEdit
 var tutor_output: RichTextLabel
 var tutor_http: HTTPRequest
+var layer_controls: Dictionary = {}
 var progress := ConfigFile.new()
 
 func _ready() -> void:
@@ -122,11 +123,35 @@ func _build_interface() -> void:
 	viewport.own_world_3d = true
 	viewport.render_target_update_mode = SubViewport.UPDATE_ALWAYS
 	var viewport_container := SubViewportContainer.new()
-	viewport_container.custom_minimum_size = Vector2(320, 310)
+	viewport_container.custom_minimum_size = Vector2(320, 280)
 	viewport_container.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	viewport_container.stretch = true
 	viewport_container.add_child(viewport)
 	layout.add_child(viewport_container)
+
+	var layers_bar := HFlowContainer.new()
+	layers_bar.add_theme_constant_override("h_separation", 8)
+	layers_bar.add_theme_constant_override("v_separation", 2)
+	layout.add_child(layers_bar)
+	var layer_specs := [
+		["skin", "Piel", false],
+		["skeleton", "Huesos", true],
+		["muscles", "Músculos", true],
+		["organs", "Órganos", true],
+		["vessels", "Vasos", false],
+		["nerves", "Nervios", false]
+	]
+	for spec in layer_specs:
+		var toggle := CheckButton.new()
+		toggle.text = spec[1]
+		toggle.button_pressed = spec[2]
+		var system_id: String = spec[0]
+		toggle.toggled.connect(func(enabled: bool):
+			if viewer != null:
+				viewer.set_system_visibility(system_id, enabled)
+		)
+		layer_controls[system_id] = toggle
+		layers_bar.add_child(toggle)
 
 	viewer = AnatomyViewer.new()
 	viewer.structure_selected.connect(_on_viewer_structure_selected)
@@ -207,15 +232,32 @@ func _save_progress() -> void:
 
 func _set_mode(next_mode: String, save: bool) -> void:
 	mode = next_mode
-	male_button.button_pressed = mode == "male"
-	female_button.button_pressed = mode == "female"
 	male_button.text = "✓ Masculino" if mode == "male" else "Masculino"
 	female_button.text = "✓ Femenino" if mode == "female" else "Femenino"
 	if viewer != null:
 		viewer.load_body(mode)
+		_apply_default_layers()
 	_refresh_list()
+	if selected_key in catalog.by_key:
+		_update_detail(catalog.get_entry(selected_key))
 	if save:
 		_save_progress()
+
+func _apply_default_layers() -> void:
+	var defaults := {
+		"skin": false,
+		"skeleton": true,
+		"muscles": true,
+		"organs": true,
+		"vessels": false,
+		"nerves": false
+	}
+	for system_id in defaults:
+		var enabled: bool = defaults[system_id]
+		if layer_controls.has(system_id):
+			(layer_controls[system_id] as CheckButton).button_pressed = enabled
+		if viewer != null:
+			viewer.set_system_visibility(system_id, enabled)
 
 func _on_model_status_changed(message: String, ready: bool) -> void:
 	model_status.text = message
@@ -408,6 +450,6 @@ func _show_about() -> void:
 	dialog.title = "Información de la aplicación"
 	dialog.dialog_text = "ATLAS DE ANATOMÍA\n\npara amorcito de parte de motito que te ama mucho\n\nAtlas educativo en desarrollo. No diagnostica ni sustituye una evaluación profesional.\n\nModelos Open Anatomy 3D: BodyParts3D © DBCLS (CC BY 4.0); órganos femeninos: Human Reference Atlas / HuBMAP (CC BY 4.0); superficie femenina: MakeHuman (CC0). Adaptación: Open Anatomy 3D (CC BY 4.0)."
 	add_child(dialog)
-	dialog.confirmed.connect(dialog.queue_free)
-	dialog.canceled.connect(dialog.queue_free)
+	dialog.confirmed.connect(func(): dialog.queue_free())
+	dialog.close_requested.connect(func(): dialog.queue_free())
 	dialog.popup_centered()
