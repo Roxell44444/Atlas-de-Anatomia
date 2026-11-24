@@ -276,8 +276,10 @@ func _refresh_list() -> void:
 	for entry in matches:
 		var key := str(entry.get("key", ""))
 		var display := catalog.get_name(entry)
-		if str(entry.get("system", "")) == "joints":
-			display += "  ·  referencia"
+		if str(entry.get("model_mapping_status", "")) == "info_only_no_mesh":
+			display += "  ·  sin malla 3D"
+		elif str(entry.get("system", "")) == "joints":
+			display += "  ·  punto de referencia"
 		item_list.add_item(display)
 		item_list.set_item_metadata(item_list.item_count - 1, key)
 		visible_keys.append(key)
