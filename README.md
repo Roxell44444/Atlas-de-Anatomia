@@ -10,7 +10,7 @@ Atlas anatómico educativo e interactivo, Android primero, desarrollado con Godo
 - Filtros por sistema y controles de visibilidad de piel, esqueleto, músculos, órganos, vasos y nervios.
 - Índice local con 263 entradas: 147 entradas originales de Open Anatomy 3D y 116 entradas informativas adicionales sin malla 3D, con nombres en español e inglés, claves estables y cobertura organizada en 13 categorías de sistemas.
 - Panel de ficha y guardado local de modo/selección.
-- Esquema local para fichas profundas. El contenido de ejemplo anterior fue retirado tras detectar incompatibilidad ShareAlike en la edición fuente; no se distribuyen fichas profundas hasta revisar una fuente adecuada.
+- Cinco fichas anatómicas profundas iniciales aprobadas: corazón, fémur izquierdo/derecho y riñón izquierdo/derecho. Están redactadas como paráfrasis en español, con fuente CC BY 4.0 y atribución específica en cada una.
 - Panel tutor con búsqueda local. La integración generativa Gemini requiere un servicio seguro configurado; no se incluye ninguna clave en la aplicación.
 - Dedicatoria en Información: “para amorcito de parte de motito que te ama mucho”.
 
@@ -50,7 +50,7 @@ El flujo ya está añadido al repositorio, pero su ejecución y la APK resultant
 - El proyecto Godot y su interfaz inicial ya están en el repositorio.
 - Los modelos binarios no se guardan en Git: se descargan y verifican durante la compilación y quedan empaquetados en la APK si el flujo finaliza correctamente.
 - El visor crea colisiones para las mallas con clave coincidente en el catálogo; selección, orientación, capas y rendimiento necesitan validación real en Godot y Android.
-- No hay fichas profundas aprobadas para distribución todavía; el esquema está preparado y el contenido debe incorporarse con fuentes y licencias compatibles.
+- Hay cinco fichas profundas iniciales aprobadas con fuentes CC BY 4.0; las otras 258 entradas siguen pendientes de documentación.
 - El paquete Visible Human previo contiene 20 mallas óseas piloto, no un esqueleto completo.
 - La aplicación principal está diseñada para funcionar offline cuando los recursos descargados estén empaquetados. Tutor Gemini requiere conexión y un backend seguro; el modo local solo busca en el catálogo.
 - Todavía no se ha confirmado una APK funcional ni una prueba de modo avión en un teléfono Android.
