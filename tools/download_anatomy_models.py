@@ -8,13 +8,15 @@ import json
 import struct
 import subprocess
 import sys
+import tempfile
 import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "data" / "open_anatomy_3d_manifest.json"
 DESTINATION = ROOT / "assets" / "anatomy" / "open_anatomy_3d"
-WORK = ROOT / "build" / "model_sources"
+# Keep source GLBs outside res:// so Godot only imports converted runtime assets.
+WORK = Path(tempfile.gettempdir()) / "atlas-anatomy-model-sources"
 
 
 def git_blob_sha1(data: bytes) -> str:
