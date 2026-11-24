@@ -8,7 +8,7 @@ Atlas anatómico educativo e interactivo, Android primero, desarrollado con Godo
 - Interfaz en español rediseñada para móvil vertical: navegación en una sola columna, tarjetas claras, controles táctiles amplios, selector masculino/femenino y búsqueda visible.
 - Identidad visual propia: icono vectorial principal y capas adaptativas de Android (fondo, primer plano y monocromo), generadas a PNG de alta resolución durante CI.
 - Visor 3D con cámara más cercana, giro horizontal continuo de 360°, inclinación vertical, zoom por gesto y selección táctil/clic con resaltado.
-- Materiales diferenciados por piel, huesos, músculos, órganos (tinte por órgano cuando la clave lo permite), vasos y nervios; es una paleta anatómica base, no texturas fotográficas ni una sustitución de modelos médicos especializados.
+- Materiales diferenciados por piel, huesos, músculos, órganos (tinte por órgano cuando la clave lo permite), vasos y nervios. La piel se muestra por defecto y los sistemas profundos se activan como capas. Es una paleta anatómica base, no texturas fotográficas ni una sustitución de modelos médicos especializados.
 - Filtros por sistema y controles de visibilidad de piel, esqueleto, músculos, órganos, vasos y nervios.
 - Índice local con 263 entradas: 147 entradas originales de Open Anatomy 3D y 116 entradas informativas adicionales sin malla 3D, con nombres en español e inglés, claves estables y cobertura organizada en 13 categorías de sistemas.
 - Panel de ficha y guardado local de modo/selección.
@@ -61,7 +61,7 @@ La paleta por tejidos mejora la lectura, pero no equivale a materiales PBR ni a 
 - Hay 25 fichas profundas con fuente y atribución CC BY 4.0. Las demás entradas del índice continúan pendientes de documentación anatómica profunda.
 - El paquete Visible Human previo contiene 20 mallas óseas piloto, no un esqueleto completo.
 - La aplicación principal está diseñada para funcionar offline cuando los recursos descargados estén empaquetados. Tutor Gemini requiere conexión y un backend seguro; el modo local solo busca en el catálogo.
-- **APK de depuración móvil generada y validada por CI el 24 de noviembre de 2026.** La ejecución [45488379607](https://github.com/Roxell44444/Atlas-de-Anatomia/actions/runs/45488379607) terminó en verde y publicó `atlas-anatomia-android-debug` (retención hasta el 8 de diciembre de 2026). Incluye iconos Android personalizados, los dos modelos 3D y los datos locales.
+- **APK de depuración móvil generada y validada por CI el 24 de noviembre de 2026.** La ejecución [45489466787](https://github.com/Roxell44444/Atlas-de-Anatomia/actions/runs/45488379607) terminó en verde y publicó `atlas-anatomia-android-debug` (retención hasta el 8 de diciembre de 2026). Incluye iconos Android personalizados, los dos modelos 3D y los datos locales.
 - La orientación vertical y los iconos se comprobaron dentro del paquete APK; el visor importó ambos modelos y superó las pruebas automáticas. Todavía falta probar la experiencia visual, los gestos y el rendimiento en un teléfono Android físico. El tutor generativo Gemini tampoco está conectado: la búsqueda local funciona sin red y la generación requiere backend y conexión.
 
 ## Regla de calidad
