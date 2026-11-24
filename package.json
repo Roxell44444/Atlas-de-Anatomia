@@ -1,0 +1,16 @@
+{
+  "name": "atlas-anatomia-model-pipeline",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Pipeline de verificación y conversión offline de modelos glTF para Godot.",
+  "devDependencies": {
+    "@gltf-transform/core": "4.5.1",
+    "@gltf-transform/extensions": "4.5.1",
+    "@gltf-transform/functions": "4.5.1",
+    "meshoptimizer": "0.23.0"
+  },
+  "scripts": {
+    "models:validate-data": "python tools/validate_catalog.py"
+  }
+}
