@@ -5,8 +5,10 @@ Atlas anatómico educativo e interactivo, Android primero, desarrollado con Godo
 ## Base de aplicación incorporada
 
 - Proyecto Godot real: `project.godot`, escena principal y scripts GDScript.
-- Interfaz inicial en español y selector de cuerpo masculino/femenino.
-- Visor 3D con cámara orbital, zoom, selección por rayo de colisión y resaltado de la malla seleccionada.
+- Interfaz en español rediseñada para móvil vertical: navegación en una sola columna, tarjetas claras, controles táctiles amplios, selector masculino/femenino y búsqueda visible.
+- Identidad visual propia: icono vectorial principal y capas adaptativas de Android (fondo, primer plano y monocromo), generadas a PNG de alta resolución durante CI.
+- Visor 3D con cámara más cercana, giro horizontal continuo de 360°, inclinación vertical, zoom por gesto y selección táctil/clic con resaltado.
+- Materiales diferenciados por piel, huesos, músculos, órganos (tinte por órgano cuando la clave lo permite), vasos y nervios; es una paleta anatómica base, no texturas fotográficas ni una sustitución de modelos médicos especializados.
 - Filtros por sistema y controles de visibilidad de piel, esqueleto, músculos, órganos, vasos y nervios.
 - Índice local con 263 entradas: 147 entradas originales de Open Anatomy 3D y 116 entradas informativas adicionales sin malla 3D, con nombres en español e inglés, claves estables y cobertura organizada en 13 categorías de sistemas.
 - Panel de ficha y guardado local de modo/selección.
@@ -47,6 +49,10 @@ El flujo `.github/workflows/android-build.yml` realiza estos pasos:
 
 Las pruebas de ejecución inspeccionan la jerarquía importada de cada GLB: una estructura se considera seleccionable cuando su clave anatómica identifica un nodo que contiene una o más mallas descendientes. La exportación de Android y la publicación del artefacto solo se ejecutan después de superar la importación, la comprobación de los dos modelos y el arranque del proyecto. Una ejecución fallida no produce una APK válida.
 
+## Siguiente fase: modelos anatómicos más realistas
+
+La paleta por tejidos mejora la lectura, pero no equivale a materiales PBR ni a texturas de atlas médico. El plan de incorporación de geometrías de órganos más detalladas, con fuentes y licencias abiertas verificadas, está en `docs/PLAN_ASSETS_3D_REALISTAS.md`.
+
 ## Estado y límites actuales
 
 - El proyecto Godot y su interfaz inicial ya están en el repositorio.
@@ -55,8 +61,8 @@ Las pruebas de ejecución inspeccionan la jerarquía importada de cada GLB: una 
 - Hay 25 fichas profundas con fuente y atribución CC BY 4.0. Las demás entradas del índice continúan pendientes de documentación anatómica profunda.
 - El paquete Visible Human previo contiene 20 mallas óseas piloto, no un esqueleto completo.
 - La aplicación principal está diseñada para funcionar offline cuando los recursos descargados estén empaquetados. Tutor Gemini requiere conexión y un backend seguro; el modo local solo busca en el catálogo.
-- **APK de depuración generada y validada por CI el 24 de noviembre de 2026.** La ejecución [45484652325](https://github.com/Roxell44444/Atlas-de-Anatomia/actions/runs/45484652325) terminó en verde y publicó el artefacto `atlas-anatomia-android-debug` (retención hasta el 8 de diciembre de 2026). La APK incluye ambos modelos 3D importados y los archivos del catálogo/fichas locales.
-- La compilación y el arranque headless pasaron; todavía no se ha realizado una instalación y prueba manual en un dispositivo Android físico. El tutor generativo Gemini tampoco está conectado: la búsqueda local funciona sin red y la generación requiere backend y conexión.
+- **APK de depuración móvil generada y validada por CI el 24 de noviembre de 2026.** La ejecución [45488379607](https://github.com/Roxell44444/Atlas-de-Anatomia/actions/runs/45488379607) terminó en verde y publicó `atlas-anatomia-android-debug` (retención hasta el 8 de diciembre de 2026). Incluye iconos Android personalizados, los dos modelos 3D y los datos locales.
+- La orientación vertical y los iconos se comprobaron dentro del paquete APK; el visor importó ambos modelos y superó las pruebas automáticas. Todavía falta probar la experiencia visual, los gestos y el rendimiento en un teléfono Android físico. El tutor generativo Gemini tampoco está conectado: la búsqueda local funciona sin red y la generación requiere backend y conexión.
 
 ## Regla de calidad
 
