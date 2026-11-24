@@ -374,6 +374,14 @@ func _update_detail(entry: Dictionary) -> void:
 		if source_url.begins_with("https://"):
 			output += "\n[url=" + source_url + "]Abrir capítulo de referencia[/url]"
 		output += "\n[color=#91a7c3]" + _escape_bbcode(str(detail.get("attribution", ""))) + "[/color]"
+		var related_ids: Array = detail.get("related_structures", [])
+		if not related_ids.is_empty():
+			output += "\n\n[b]Estructuras relacionadas[/b]\n"
+			for related_value in related_ids:
+				var related_key := str(related_value)
+				var related_entry := catalog.get_entry(related_key)
+				if not related_entry.is_empty():
+					output += "[url=atlas://structure/" + related_key + "]" + _escape_bbcode(catalog.get_name(related_entry)) + "[/url]  "
 	if viewer != null:
 		if viewer.has_mesh(key):
 			output += "\n\n[color=#79d6ad]Malla 3D localizada en el modelo actual.[/color]"
@@ -399,6 +407,9 @@ func _on_details_meta_clicked(meta: Variant) -> void:
 	var url := str(meta)
 	if url.begins_with("https://"):
 		OS.shell_open(url)
+	elif url.begins_with("atlas://structure/"):
+		var key := url.trim_prefix("atlas://structure/")
+		_select_structure(key, true)
 
 func _create_tutor_window() -> void:
 	tutor_window = Window.new()
