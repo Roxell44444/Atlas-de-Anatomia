@@ -320,5 +320,1207 @@
     "content_origin": "original_spanish_paraphrase",
     "review_status": "approved_for_distribution",
     "review_scope": "Paráfrasis comprobada con la sección de la primera edición indicada. No equivale a validación clínica."
+  },
+  "skin": {
+    "id": "skin",
+    "names": {
+      "es": "Piel",
+      "la": "Cutis",
+      "en": "Skin"
+    },
+    "description": "Órgano externo del sistema tegumentario. La piel forma una barrera protectora, participa en la sensibilidad y contribuye a la regulación de la temperatura.",
+    "sections": [
+      {
+        "title": "Organización general",
+        "items": [
+          "La piel propiamente dicha está formada por epidermis y dermis. La hipodermis o tejido subcutáneo se sitúa profunda a la dermis y la conecta con los tejidos subyacentes; no se considera una de las dos capas de la piel.",
+          "La epidermis es un epitelio plano estratificado queratinizado y no contiene vasos sanguíneos propios.",
+          "La dermis es tejido conectivo vascularizado que proporciona resistencia, elasticidad y soporte a la epidermis."
+        ]
+      },
+      {
+        "title": "Epidermis y estratos",
+        "items": [
+          "En la piel gruesa se reconocen cinco estratos: basal, espinoso, granuloso, lúcido y córneo.",
+          "El estrato basal contiene células proliferativas que renuevan la epidermis y melanocitos que producen melanina.",
+          "El estrato espinoso contiene queratinocitos unidos por desmosomas; el granuloso muestra gránulos asociados a la queratinización.",
+          "El estrato lúcido se distingue en piel gruesa, como palmas y plantas. El estrato córneo está formado por células aplanadas queratinizadas que se descaman de manera continua."
+        ]
+      },
+      {
+        "title": "Dermis y anexos",
+        "items": [
+          "La dermis tiene una capa papilar superficial de tejido conectivo laxo y una capa reticular profunda de tejido conectivo denso irregular.",
+          "Las papilas dérmicas aumentan la unión entre dermis y epidermis y contienen capilares y terminaciones nerviosas.",
+          "Los anexos cutáneos incluyen folículos pilosos, uñas, glándulas sebáceas y glándulas sudoríparas.",
+          "Los músculos erectores del pelo se insertan en los folículos y producen piloerección al contraerse."
+        ]
+      },
+      {
+        "title": "Funciones e histología",
+        "items": [
+          "La piel constituye una barrera frente a agentes físicos, químicos y microorganismos; reduce la pérdida de agua y participa en la defensa inmunitaria.",
+          "Los receptores cutáneos detectan estímulos mecánicos, térmicos y dolorosos.",
+          "La vascularización dérmica participa en el intercambio nutritivo de la epidermis por difusión y en la disipación o conservación del calor.",
+          "Los queratinocitos producen queratina; los melanocitos sintetizan melanina y la transfieren a queratinocitos vecinos."
+        ]
+      }
+    ],
+    "source_title": "Douglas College Human Anatomy & Physiology I (1st ed.) — 5.1 Layers of the Skin",
+    "source_url": "https://pressbooks.bccampus.ca/dcbiol11031109/chapter/5-1-layers-of-the-skin/",
+    "source_edition": "Douglas College Human Anatomy & Physiology I (1st ed.)",
+    "source_publisher": "Douglas College, New Westminster, BC",
+    "source_editor": "Jennifer M. Barker",
+    "source_license": "CC BY 4.0",
+    "license": "CC BY 4.0",
+    "attribution": "Paráfrasis original en español adaptada de Douglas College Human Anatomy & Physiology I (1st ed.), editado por Jennifer M. Barker, Douglas College, bajo Creative Commons Attribution 4.0 International (CC BY 4.0). No se reutilizan figuras ni imágenes. Download for free at https://pressbooks.bccampus.ca/dcbiol11031109",
+    "content_origin": "original_spanish_paraphrase",
+    "review_status": "approved_for_distribution",
+    "review_scope": "Comprobada con 5.1 Layers of the Skin de la primera edición indicada. Contenido educativo, no diagnóstico.",
+    "related_structures": [
+      "epidermis",
+      "dermis",
+      "hair_follicle",
+      "nail_unit",
+      "sebaceous_glands",
+      "eccrine_sweat_glands"
+    ]
+  },
+  "blood": {
+    "id": "blood",
+    "names": {
+      "es": "Sangre",
+      "la": "Sanguis",
+      "en": "Blood"
+    },
+    "description": "Tejido conectivo especializado de matriz extracelular líquida. Transporta sustancias, participa en la defensa, distribuye calor y contribuye al mantenimiento de la homeostasis.",
+    "sections": [
+      {
+        "title": "Composición",
+        "items": [
+          "La sangre está formada por plasma y elementos formes suspendidos en él.",
+          "El plasma es la matriz líquida y contiene agua, proteínas plasmáticas, electrolitos, nutrientes, gases disueltos, hormonas y productos de desecho.",
+          "Los elementos formes son eritrocitos, leucocitos y plaquetas. Los eritrocitos transportan principalmente oxígeno; los leucocitos participan en la defensa; las plaquetas intervienen en la hemostasia."
+        ]
+      },
+      {
+        "title": "Plasma",
+        "items": [
+          "La albúmina es la proteína plasmática más abundante y contribuye a la presión oncótica y al transporte de moléculas.",
+          "Las globulinas incluyen proteínas de transporte y componentes inmunitarios; las inmunoglobulinas son producidas por células plasmáticas derivadas de linfocitos B.",
+          "El fibrinógeno es una proteína soluble que se convierte en fibrina durante la coagulación."
+        ]
+      },
+      {
+        "title": "Elementos formes",
+        "items": [
+          "Los eritrocitos maduros humanos carecen de núcleo y contienen hemoglobina, que permite transportar oxígeno y parte del dióxido de carbono.",
+          "Los leucocitos incluyen granulocitos y agranulocitos con funciones inmunitarias distintas; su distribución y morfología se estudian en hematología.",
+          "Las plaquetas son fragmentos celulares derivados de megacariocitos y forman el tapón plaquetario inicial en la hemostasia."
+        ]
+      },
+      {
+        "title": "Funciones",
+        "items": [
+          "La sangre transporta gases respiratorios, nutrientes, hormonas y residuos metabólicos hacia los órganos encargados de procesarlos o eliminarlos.",
+          "Los leucocitos y las proteínas plasmáticas colaboran en la defensa inmunitaria.",
+          "La sangre distribuye calor y contribuye a regular el pH, el volumen de líquido y la composición del medio interno."
+        ]
+      }
+    ],
+    "source_title": "Douglas College Human Anatomy & Physiology I (1st ed.) — 18.1 An Overview of Blood",
+    "source_url": "https://pressbooks.bccampus.ca/dcbiol11031109/chapter/18-1-an-overview-of-blood/",
+    "source_edition": "Douglas College Human Anatomy & Physiology I (1st ed.)",
+    "source_publisher": "Douglas College, New Westminster, BC",
+    "source_editor": "Jennifer M. Barker",
+    "source_license": "CC BY 4.0",
+    "license": "CC BY 4.0",
+    "attribution": "Paráfrasis original en español adaptada de Douglas College Human Anatomy & Physiology I (1st ed.), editado por Jennifer M. Barker, Douglas College, bajo Creative Commons Attribution 4.0 International (CC BY 4.0). No se reutilizan figuras ni imágenes. Download for free at https://pressbooks.bccampus.ca/dcbiol11031109",
+    "content_origin": "original_spanish_paraphrase",
+    "review_status": "approved_for_distribution",
+    "review_scope": "Comprobada con 18.1 An Overview of Blood de la primera edición indicada. Contenido educativo, no diagnóstico.",
+    "related_structures": [
+      "erythrocytes",
+      "leukocytes",
+      "platelets",
+      "blood_plasma",
+      "red_bone_marrow"
+    ]
+  },
+  "lymph_nodes": {
+    "id": "lymph_nodes",
+    "names": {
+      "es": "Ganglios linfáticos",
+      "la": "Nodi lymphoidei",
+      "en": "Lymph nodes"
+    },
+    "description": "Pequeños órganos linfoides encapsulados situados a lo largo de los vasos linfáticos. Filtran la linfa y proporcionan un entorno para la activación y coordinación de respuestas inmunitarias.",
+    "sections": [
+      {
+        "title": "Ubicación y forma",
+        "items": [
+          "Los ganglios se distribuyen en cadenas y grupos a lo largo de vasos linfáticos, especialmente en regiones cervicales, axilares, torácicas, abdominales, pélvicas e inguinales.",
+          "Tienen forma aproximadamente arriñonada y una cápsula externa de tejido conectivo.",
+          "Los vasos linfáticos aferentes entran por la superficie convexa; el vaso eferente sale por el hilio, donde también pasan vasos sanguíneos."
+        ]
+      },
+      {
+        "title": "Estructura interna",
+        "items": [
+          "La cápsula emite trabéculas que penetran en el órgano y contribuyen a su sostén.",
+          "Una red de fibras reticulares y células estromales sostiene el tejido linfoide.",
+          "La corteza contiene folículos con abundantes linfocitos B; la región paracortical es rica en linfocitos T; la médula contiene cordones y senos medulares por donde circula la linfa."
+        ]
+      },
+      {
+        "title": "Circulación de la linfa y función",
+        "items": [
+          "La linfa entra por varios vasos aferentes, atraviesa senos subcapsulares, corticales y medulares y abandona el ganglio por el vaso eferente.",
+          "Macrófagos y células dendríticas capturan partículas y microorganismos transportados por la linfa.",
+          "Los ganglios son lugares de presentación de antígenos y activación de linfocitos B y T; las células plasmáticas derivadas de linfocitos B pueden secretar anticuerpos."
+        ]
+      },
+      {
+        "title": "Histología",
+        "items": [
+          "La cápsula y las trabéculas son de tejido conectivo; el estroma reticular sostiene las poblaciones celulares.",
+          "Los folículos pueden mostrar centros germinales cuando los linfocitos B se están proliferando y diferenciando.",
+          "Las microfotografías y la identificación de poblaciones celulares específicas deben ampliarse con un atlas histológico licenciado por separado."
+        ]
+      }
+    ],
+    "source_title": "Douglas College Human Anatomy & Physiology I (1st ed.) — 21.1 Anatomy of the Lymphatic and Immune Systems",
+    "source_url": "https://pressbooks.bccampus.ca/dcbiol11031109/chapter/21-1-anatomy-of-the-lymphatic-and-immune-systems/",
+    "source_edition": "Douglas College Human Anatomy & Physiology I (1st ed.)",
+    "source_publisher": "Douglas College, New Westminster, BC",
+    "source_editor": "Jennifer M. Barker",
+    "source_license": "CC BY 4.0",
+    "license": "CC BY 4.0",
+    "attribution": "Paráfrasis original en español adaptada de Douglas College Human Anatomy & Physiology I (1st ed.), editado por Jennifer M. Barker, Douglas College, bajo Creative Commons Attribution 4.0 International (CC BY 4.0). No se reutilizan figuras ni imágenes. Download for free at https://pressbooks.bccampus.ca/dcbiol11031109",
+    "content_origin": "original_spanish_paraphrase",
+    "review_status": "approved_for_distribution",
+    "review_scope": "Comprobada con 21.1 Anatomy of the Lymphatic and Immune Systems de la primera edición indicada. Contenido educativo, no diagnóstico.",
+    "related_structures": [
+      "lymphatic_vessels",
+      "lymph",
+      "spleen",
+      "thymus"
+    ]
+  },
+  "thyroid_gland": {
+    "id": "thyroid_gland",
+    "names": {
+      "es": "Glándula tiroides",
+      "la": "Glandula thyroidea",
+      "en": "Thyroid gland"
+    },
+    "description": "Glándula endocrina bilobulada del cuello anterior, situada delante de la tráquea e inferior a la laringe. Sus folículos sintetizan y almacenan precursores de hormonas tiroideas.",
+    "sections": [
+      {
+        "title": "Ubicación y morfología",
+        "items": [
+          "La glándula se localiza en la región anterior del cuello, por delante de la tráquea y justo por debajo de la laringe.",
+          "Tiene dos lóbulos, derecho e izquierdo, unidos por una porción media denominada istmo.",
+          "Las glándulas paratiroides suelen encontrarse en la cara posterior de los lóbulos tiroideos, pero son órganos endocrinos distintos."
+        ]
+      },
+      {
+        "title": "Histología",
+        "items": [
+          "El parénquima está organizado en folículos tiroideos, estructuras esféricas revestidas por epitelio simple cuya altura varía según su actividad.",
+          "La luz folicular contiene coloide, rico en tiroglobulina, donde se almacenan precursores hormonales.",
+          "Las células foliculares producen tiroxina (T4) y triyodotironina (T3); las células parafoliculares o C producen calcitonina."
+        ]
+      },
+      {
+        "title": "Fisiología endocrina",
+        "items": [
+          "Las hormonas tiroideas influyen en el metabolismo basal, el consumo de oxígeno, la producción de calor, el crecimiento y el desarrollo.",
+          "La secreción tiroidea está regulada por la TSH de la adenohipófisis, bajo control hipotalámico mediante TRH.",
+          "La calcitonina participa en la regulación del calcio sanguíneo, aunque no es el principal mecanismo homeostático en el adulto."
+        ]
+      },
+      {
+        "title": "Relaciones vasculares",
+        "items": [
+          "La glándula recibe sangre de arterias tiroideas superiores e inferiores; la descripción de variantes y ramas segmentarias requiere una ficha vascular específica.",
+          "Las venas tiroideas drenan hacia los troncos venosos cervicales y torácicos superiores."
+        ]
+      }
+    ],
+    "source_title": "Douglas College Human Anatomy & Physiology II (1st ed.) — 17.4 The Thyroid Gland",
+    "source_url": "https://pressbooks.bccampus.ca/dcbiol12031209/chapter/17-4-the-thyroid-gland/",
+    "source_edition": "Douglas College Human Anatomy & Physiology II (1st ed.)",
+    "source_publisher": "Douglas College, New Westminster, BC",
+    "source_editor": "Jennifer M. Barker",
+    "source_license": "CC BY 4.0",
+    "license": "CC BY 4.0",
+    "attribution": "Paráfrasis original en español adaptada de Douglas College Human Anatomy & Physiology II (1st ed.), editado por Jennifer M. Barker, Douglas College, bajo Creative Commons Attribution 4.0 International (CC BY 4.0). No se reutilizan figuras ni imágenes. Download for free at https://pressbooks.bccampus.ca/dcbiol12031209",
+    "content_origin": "original_spanish_paraphrase",
+    "review_status": "approved_for_distribution",
+    "review_scope": "Comprobada con 17.4 The Thyroid Gland de la primera edición indicada. Contenido educativo, no diagnóstico.",
+    "related_structures": [
+      "parathyroid_glands",
+      "pituitary",
+      "hypothalamus"
+    ]
+  },
+  "pituitary": {
+    "id": "pituitary",
+    "names": {
+      "es": "Hipófisis",
+      "la": "Hypophysis cerebri",
+      "en": "Pituitary gland"
+    },
+    "description": "Glándula endocrina situada en la base del encéfalo y unida al hipotálamo por el infundíbulo. Sus lóbulos anterior y posterior tienen orígenes y mecanismos de control diferentes.",
+    "sections": [
+      {
+        "title": "Ubicación y relaciones",
+        "items": [
+          "La hipófisis ocupa la fosa hipofisaria de la silla turca del hueso esfenoides.",
+          "Se conecta con el hipotálamo mediante el infundíbulo, un tallo que contiene axones y vasos del sistema porta hipofisario.",
+          "El quiasma óptico se encuentra superior y anterior a la región hipofisaria; la proximidad anatómica explica por qué las lesiones expansivas pueden afectar campos visuales."
+        ]
+      },
+      {
+        "title": "Partes y origen",
+        "items": [
+          "La adenohipófisis o lóbulo anterior es tejido glandular derivado del ectodermo oral embrionario.",
+          "La neurohipófisis o lóbulo posterior es una prolongación neural conectada al hipotálamo.",
+          "La pars distalis constituye la mayor parte del lóbulo anterior; la pars intermedia es una región más pequeña entre las porciones anterior y posterior."
+        ]
+      },
+      {
+        "title": "Control y secreciones",
+        "items": [
+          "El hipotálamo regula la adenohipófisis mediante hormonas liberadoras e inhibidoras que llegan por el sistema porta hipofisario.",
+          "La adenohipófisis secreta GH, TSH, ACTH, FSH, LH y prolactina.",
+          "La neurohipófisis almacena y libera oxitocina y hormona antidiurética sintetizadas en neuronas hipotalámicas.",
+          "La hipófisis coordina funciones endocrinas, crecimiento, reproducción, respuesta al estrés y balance hídrico."
+        ]
+      },
+      {
+        "title": "Histología esencial",
+        "items": [
+          "La adenohipófisis contiene células endocrinas organizadas en cordones y asociadas a capilares fenestrados.",
+          "La neurohipófisis contiene axones amielínicos, terminaciones nerviosas y células gliales especializadas llamadas pituicitos.",
+          "El estudio de tipos celulares hipofisarios y técnicas inmunohistoquímicas se ampliará en el módulo de histología."
+        ]
+      }
+    ],
+    "source_title": "Douglas College Human Anatomy & Physiology II (1st ed.) — 17.3 The Pituitary Gland and Hypothalamus",
+    "source_url": "https://pressbooks.bccampus.ca/dcbiol12031209/chapter/17-3-the-pituitary-gland-and-hypothalamus/",
+    "source_edition": "Douglas College Human Anatomy & Physiology II (1st ed.)",
+    "source_publisher": "Douglas College, New Westminster, BC",
+    "source_editor": "Jennifer M. Barker",
+    "source_license": "CC BY 4.0",
+    "license": "CC BY 4.0",
+    "attribution": "Paráfrasis original en español adaptada de Douglas College Human Anatomy & Physiology II (1st ed.), editado por Jennifer M. Barker, Douglas College, bajo Creative Commons Attribution 4.0 International (CC BY 4.0). No se reutilizan figuras ni imágenes. Download for free at https://pressbooks.bccampus.ca/dcbiol12031209",
+    "content_origin": "original_spanish_paraphrase",
+    "review_status": "approved_for_distribution",
+    "review_scope": "Comprobada con 17.3 The Pituitary Gland and Hypothalamus de la primera edición indicada. Contenido educativo, no diagnóstico.",
+    "related_structures": [
+      "thyroid_gland",
+      "adrenal_l",
+      "adrenal_r",
+      "endocrine_pancreas"
+    ]
+  },
+  "adrenal_l": {
+    "id": "adrenal_l",
+    "names": {
+      "es": "Glándula suprarrenal izquierda",
+      "la": "Glandula suprarenalis sinistra",
+      "en": "Left adrenal gland"
+    },
+    "description": "Glándula endocrina situada sobre el polo superior del riñón izquierdo, rodeada por una cápsula fibrosa. Se compone de una corteza glandular y una médula neuroendocrina.",
+    "sections": [
+      {
+        "title": "Ubicación y estructura externa",
+        "items": [
+          "La suprarrenal izquierda se sitúa en el espacio retroperitoneal, superomedial al polo superior del riñón izquierdo.",
+          "La glándula tiene forma semilunar y está fijada por tejido conectivo y una cápsula fibrosa.",
+          "El órgano se divide en una corteza periférica y una médula central."
+        ]
+      },
+      {
+        "title": "Corteza suprarrenal",
+        "items": [
+          "La zona glomerulosa es la capa más externa y produce mineralocorticoides, principalmente aldosterona.",
+          "La zona fasciculada es la capa media y produce glucocorticoides, entre ellos cortisol.",
+          "La zona reticular es la capa interna y produce andrógenos suprarrenales.",
+          "Las tres zonas se distinguen por la disposición celular y por los productos hormonales que sintetizan."
+        ]
+      },
+      {
+        "title": "Médula e inervación",
+        "items": [
+          "La médula está formada por células cromafines, relacionadas funcionalmente con neuronas simpáticas posganglionares modificadas.",
+          "La estimulación simpática preganglionar provoca la liberación de catecolaminas, principalmente adrenalina y noradrenalina.",
+          "La médula participa en la respuesta fisiológica rápida ante situaciones de estrés."
+        ]
+      },
+      {
+        "title": "Vascularización",
+        "items": [
+          "La glándula recibe múltiples arterias suprarrenales que pueden proceder de ramas frénicas inferiores, aorta y arterias renales.",
+          "Los vasos forman una red cortical y medular; el drenaje venoso de la suprarrenal izquierda suele dirigirse a la vena renal izquierda.",
+          "La irrigación es abundante en relación con el tamaño de la glándula."
+        ]
+      }
+    ],
+    "source_title": "Douglas College Human Anatomy & Physiology II (1st ed.) — 17.6 The Adrenal Glands",
+    "source_url": "https://pressbooks.bccampus.ca/dcbiol12031209/chapter/17-6-the-adrenal-glands/",
+    "source_edition": "Douglas College Human Anatomy & Physiology II (1st ed.)",
+    "source_publisher": "Douglas College, New Westminster, BC",
+    "source_editor": "Jennifer M. Barker",
+    "source_license": "CC BY 4.0",
+    "license": "CC BY 4.0",
+    "attribution": "Paráfrasis original en español adaptada de Douglas College Human Anatomy & Physiology II (1st ed.), editado por Jennifer M. Barker, Douglas College, bajo Creative Commons Attribution 4.0 International (CC BY 4.0). No se reutilizan figuras ni imágenes. Download for free at https://pressbooks.bccampus.ca/dcbiol12031209",
+    "content_origin": "original_spanish_paraphrase",
+    "review_status": "approved_for_distribution",
+    "review_scope": "Comprobada con 17.6 The Adrenal Glands de la primera edición indicada. Contenido educativo, no diagnóstico.",
+    "related_structures": [
+      "adrenal_r",
+      "kidney_l",
+      "pituitary"
+    ]
+  },
+  "adrenal_r": {
+    "id": "adrenal_r",
+    "names": {
+      "es": "Glándula suprarrenal derecha",
+      "la": "Glandula suprarenalis dextra",
+      "en": "Right adrenal gland"
+    },
+    "description": "Glándula endocrina situada sobre el polo superior del riñón derecho, dentro del espacio retroperitoneal. Su organización es la misma que la suprarrenal izquierda, aunque su forma y drenaje venoso difieren.",
+    "sections": [
+      {
+        "title": "Ubicación y forma",
+        "items": [
+          "La glándula suprarrenal derecha se apoya en el polo superior del riñón derecho y se relaciona posteriormente con el diafragma.",
+          "Suele presentar una forma más triangular o piramidal que la suprarrenal izquierda, que suele ser semilunar.",
+          "Está rodeada por una cápsula fibrosa y por tejido adiposo retroperitoneal."
+        ]
+      },
+      {
+        "title": "Corteza",
+        "items": [
+          "La corteza tiene tres zonas concéntricas: glomerulosa, fasciculada y reticular.",
+          "La zona glomerulosa secreta aldosterona; la fasciculada, cortisol y otros glucocorticoides; la reticular, andrógenos suprarrenales.",
+          "La regulación de la secreción cortical varía según el grupo hormonal; la aldosterona responde especialmente a los sistemas de control del volumen y potasio."
+        ]
+      },
+      {
+        "title": "Médula",
+        "items": [
+          "La médula contiene células cromafines, que reciben inervación simpática preganglionar.",
+          "Libera catecolaminas a la circulación para modular respuestas cardiovasculares y metabólicas rápidas."
+        ]
+      },
+      {
+        "title": "Vascularización y drenaje",
+        "items": [
+          "Las arterias suprarrenales superiores, medias e inferiores forman una red vascular abundante.",
+          "La vena suprarrenal derecha suele desembocar directamente en la vena cava inferior, a diferencia del drenaje izquierdo habitual hacia la vena renal izquierda."
+        ]
+      }
+    ],
+    "source_title": "Douglas College Human Anatomy & Physiology II (1st ed.) — 17.6 The Adrenal Glands",
+    "source_url": "https://pressbooks.bccampus.ca/dcbiol12031209/chapter/17-6-the-adrenal-glands/",
+    "source_edition": "Douglas College Human Anatomy & Physiology II (1st ed.)",
+    "source_publisher": "Douglas College, New Westminster, BC",
+    "source_editor": "Jennifer M. Barker",
+    "source_license": "CC BY 4.0",
+    "license": "CC BY 4.0",
+    "attribution": "Paráfrasis original en español adaptada de Douglas College Human Anatomy & Physiology II (1st ed.), editado por Jennifer M. Barker, Douglas College, bajo Creative Commons Attribution 4.0 International (CC BY 4.0). No se reutilizan figuras ni imágenes. Download for free at https://pressbooks.bccampus.ca/dcbiol12031209",
+    "content_origin": "original_spanish_paraphrase",
+    "review_status": "approved_for_distribution",
+    "review_scope": "Comprobada con 17.6 The Adrenal Glands de la primera edición indicada. Contenido educativo, no diagnóstico.",
+    "related_structures": [
+      "adrenal_l",
+      "kidney_r",
+      "pituitary"
+    ]
+  },
+  "small_intestine": {
+    "id": "small_intestine",
+    "names": {
+      "es": "Intestino delgado",
+      "la": "Intestinum tenue",
+      "en": "Small intestine"
+    },
+    "description": "Segmento del tubo digestivo comprendido entre el píloro gástrico y la válvula ileocecal. Se divide en duodeno, yeyuno e íleon y constituye la principal región de digestión y absorción.",
+    "sections": [
+      {
+        "title": "Divisiones y topografía",
+        "items": [
+          "El duodeno es la porción inicial, corta y en forma de C, que rodea la cabeza del páncreas; se divide en segmentos superior, descendente, horizontal y ascendente.",
+          "El yeyuno ocupa principalmente la región superior izquierda del abdomen y continúa con el íleon sin una frontera macroscópica nítida.",
+          "El íleon es la porción distal y termina en la unión ileocecal, donde se comunica con el ciego.",
+          "El duodeno es en gran parte retroperitoneal; yeyuno e íleon están suspendidos por el mesenterio."
+        ]
+      },
+      {
+        "title": "Morfología de la pared",
+        "items": [
+          "La mucosa presenta pliegues circulares, vellosidades y microvellosidades que aumentan la superficie de absorción.",
+          "Las vellosidades contienen capilares sanguíneos y un vaso linfático central denominado quilífero.",
+          "Las criptas intestinales se sitúan entre las vellosidades y contienen células secretoras y progenitoras.",
+          "La pared intestinal sigue el plan general del tubo digestivo: mucosa, submucosa, muscular externa y serosa o adventicia según el segmento."
+        ]
+      },
+      {
+        "title": "Regiones y rasgos",
+        "items": [
+          "El duodeno recibe bilis y jugo pancreático a través de la papila duodenal mayor, donde desembocan los conductos hepatopancreáticos.",
+          "Las glándulas duodenales submucosas ayudan a proteger la mucosa mediante secreciones alcalinas.",
+          "El yeyuno suele mostrar pliegues circulares prominentes y vellosidades altas.",
+          "El íleon contiene agregados linfoides como las placas de Peyer, relacionados con la vigilancia inmunitaria intestinal."
+        ]
+      },
+      {
+        "title": "Vascularización y función",
+        "items": [
+          "La irrigación procede de ramas del tronco celíaco y de la arteria mesentérica superior según la región intestinal.",
+          "La sangre venosa drena principalmente hacia el sistema porta hepático, que conduce los nutrientes absorbidos al hígado.",
+          "Los vasos quilíferos transportan lípidos absorbidos hacia la circulación linfática.",
+          "El intestino delgado completa gran parte de la digestión química y absorbe la mayoría de nutrientes, agua y electrolitos."
+        ]
+      }
+    ],
+    "source_title": "Douglas College Human Anatomy & Physiology II (1st ed.) — 23.5 The Small and Large Intestines",
+    "source_url": "https://pressbooks.bccampus.ca/dcbiol12031209/chapter/23-5-the-small-and-large-intestines/",
+    "source_edition": "Douglas College Human Anatomy & Physiology II (1st ed.)",
+    "source_publisher": "Douglas College, New Westminster, BC",
+    "source_editor": "Jennifer M. Barker",
+    "source_license": "CC BY 4.0",
+    "license": "CC BY 4.0",
+    "attribution": "Paráfrasis original en español adaptada de Douglas College Human Anatomy & Physiology II (1st ed.), editado por Jennifer M. Barker, Douglas College, bajo Creative Commons Attribution 4.0 International (CC BY 4.0). No se reutilizan figuras ni imágenes. Download for free at https://pressbooks.bccampus.ca/dcbiol12031209",
+    "content_origin": "original_spanish_paraphrase",
+    "review_status": "approved_for_distribution",
+    "review_scope": "Comprobada con 23.5 The Small and Large Intestines de la primera edición indicada. Contenido educativo, no diagnóstico.",
+    "related_structures": [
+      "duodenum",
+      "jejunum",
+      "ileum",
+      "liver",
+      "pancreas",
+      "gallbladder"
+    ]
+  },
+  "liver": {
+    "id": "liver",
+    "names": {
+      "es": "Hígado",
+      "la": "Hepar",
+      "en": "Liver"
+    },
+    "description": "Gran órgano glandular del cuadrante superior derecho del abdomen, inferior al diafragma. Produce bilis y realiza funciones metabólicas, de almacenamiento, síntesis y transformación de sustancias.",
+    "sections": [
+      {
+        "title": "Ubicación y superficies",
+        "items": [
+          "Se localiza principalmente en el hipocondrio derecho y el epigastrio, bajo el diafragma.",
+          "La superficie diafragmática es convexa y se adapta a la cara inferior del diafragma; la superficie visceral se relaciona con estómago, duodeno, colon, riñón derecho y vesícula biliar.",
+          "El ligamento falciforme marca externamente una división anatómica entre los lóbulos derecho e izquierdo en la cara anterior.",
+          "La cara visceral contiene la porta hepatis, por donde entran o salen estructuras vasculares, biliares, linfáticas y nerviosas."
+        ]
+      },
+      {
+        "title": "Lóbulos y organización interna",
+        "items": [
+          "La división anatómica clásica reconoce lóbulos derecho e izquierdo, además de los lóbulos cuadrado y caudado en la cara visceral.",
+          "El parénquima se organiza en lobulillos hepáticos alrededor de una vena central.",
+          "Los hepatocitos se disponen en placas separadas por sinusoides; las células de Kupffer forman parte del sistema fagocítico hepático.",
+          "En los espacios porta se agrupan ramas de la vena porta, de la arteria hepática y conductillos biliares."
+        ]
+      },
+      {
+        "title": "Irrigación y drenaje",
+        "items": [
+          "El hígado posee doble aporte sanguíneo: la vena porta hepática transporta sangre rica en sustancias absorbidas en el tubo digestivo y la arteria hepática aporta sangre oxigenada.",
+          "La sangre atraviesa los sinusoides y drena hacia las venas centrales, venas hepáticas y finalmente la vena cava inferior.",
+          "Las venas hepáticas principales drenan directamente a la vena cava inferior."
+        ]
+      },
+      {
+        "title": "Sistema biliar y funciones",
+        "items": [
+          "Los hepatocitos producen bilis, que se recoge en canalículos biliares y conductos intrahepáticos.",
+          "Los conductos hepáticos derecho e izquierdo se unen para formar el conducto hepático común, que se continúa con el sistema biliar extrahepático.",
+          "La bilis facilita la emulsificación y absorción de lípidos; el hígado también procesa nutrientes, sintetiza proteínas plasmáticas y participa en la detoxificación y almacenamiento."
+        ]
+      }
+    ],
+    "source_title": "Douglas College Human Anatomy & Physiology II (1st ed.) — 23.6 Accessory Organs in Digestion: The Liver, Pancreas, and Gallbladder",
+    "source_url": "https://pressbooks.bccampus.ca/dcbiol12031209/chapter/23-6-accessory-organs-in-digestion-the-liver-pancreas-and-gallbladder/",
+    "source_edition": "Douglas College Human Anatomy & Physiology II (1st ed.)",
+    "source_publisher": "Douglas College, New Westminster, BC",
+    "source_editor": "Jennifer M. Barker",
+    "source_license": "CC BY 4.0",
+    "license": "CC BY 4.0",
+    "attribution": "Paráfrasis original en español adaptada de Douglas College Human Anatomy & Physiology II (1st ed.), editado por Jennifer M. Barker, Douglas College, bajo Creative Commons Attribution 4.0 International (CC BY 4.0). No se reutilizan figuras ni imágenes. Download for free at https://pressbooks.bccampus.ca/dcbiol12031209",
+    "content_origin": "original_spanish_paraphrase",
+    "review_status": "approved_for_distribution",
+    "review_scope": "Comprobada con 23.6 Accessory Organs in Digestion: The Liver, Pancreas, and Gallbladder de la primera edición indicada. Contenido educativo, no diagnóstico.",
+    "related_structures": [
+      "gallbladder",
+      "pancreas",
+      "hepatic_portal_vein"
+    ]
+  },
+  "pancreas": {
+    "id": "pancreas",
+    "names": {
+      "es": "Páncreas",
+      "la": "Pancreas",
+      "en": "Pancreas"
+    },
+    "description": "Glándula mixta retroperitoneal situada posterior al estómago, entre el duodeno y el bazo. Combina una función exocrina digestiva con una función endocrina reguladora de la glucemia.",
+    "sections": [
+      {
+        "title": "Ubicación y partes",
+        "items": [
+          "El páncreas se sitúa en la región superior del abdomen, posterior al estómago y en relación estrecha con el duodeno.",
+          "La cabeza se acomoda dentro de la curva en C del duodeno; el cuello se continúa con el cuerpo, que cruza hacia la izquierda, y la cola se aproxima al hilio esplénico.",
+          "La mayor parte de la glándula es retroperitoneal; la cola se relaciona con el ligamento esplenorrenal."
+        ]
+      },
+      {
+        "title": "Porción exocrina",
+        "items": [
+          "Los acinos pancreáticos producen enzimas digestivas que se transportan por conductos hacia el duodeno.",
+          "El conducto pancreático principal recorre la glándula y suele unirse al conducto colédoco antes de abrirse en la papila duodenal mayor.",
+          "Las células ductales secretan bicarbonato, que contribuye a neutralizar el contenido ácido que llega desde el estómago."
+        ]
+      },
+      {
+        "title": "Porción endocrina",
+        "items": [
+          "Los islotes pancreáticos son agrupaciones celulares endocrinas dispersas entre el tejido exocrino.",
+          "Las células beta producen insulina, las alfa glucagón y las delta somatostatina, entre otras poblaciones celulares.",
+          "Las hormonas pancreáticas participan en el control de la disponibilidad y almacenamiento de nutrientes."
+        ]
+      },
+      {
+        "title": "Vascularización y relaciones",
+        "items": [
+          "La cabeza recibe ramas pancreatoduodenales superiores e inferiores; el cuerpo y la cola reciben ramas de la arteria esplénica.",
+          "El drenaje venoso se dirige a los sistemas esplénico y mesentérico superior y de ahí al sistema porta hepático.",
+          "La relación anatómica con el duodeno, la vía biliar y los vasos mesentéricos debe distinguirse en vistas de disección."
+        ]
+      }
+    ],
+    "source_title": "Douglas College Human Anatomy & Physiology II (1st ed.) — 23.6 Accessory Organs in Digestion: The Liver, Pancreas, and Gallbladder",
+    "source_url": "https://pressbooks.bccampus.ca/dcbiol12031209/chapter/23-6-accessory-organs-in-digestion-the-liver-pancreas-and-gallbladder/",
+    "source_edition": "Douglas College Human Anatomy & Physiology II (1st ed.)",
+    "source_publisher": "Douglas College, New Westminster, BC",
+    "source_editor": "Jennifer M. Barker",
+    "source_license": "CC BY 4.0",
+    "license": "CC BY 4.0",
+    "attribution": "Paráfrasis original en español adaptada de Douglas College Human Anatomy & Physiology II (1st ed.), editado por Jennifer M. Barker, Douglas College, bajo Creative Commons Attribution 4.0 International (CC BY 4.0). No se reutilizan figuras ni imágenes. Download for free at https://pressbooks.bccampus.ca/dcbiol12031209",
+    "content_origin": "original_spanish_paraphrase",
+    "review_status": "approved_for_distribution",
+    "review_scope": "Comprobada con 23.6 Accessory Organs in Digestion: The Liver, Pancreas, and Gallbladder de la primera edición indicada. Contenido educativo, no diagnóstico.",
+    "related_structures": [
+      "small_intestine",
+      "gallbladder",
+      "endocrine_pancreas"
+    ]
+  },
+  "gallbladder": {
+    "id": "gallbladder",
+    "names": {
+      "es": "Vesícula biliar",
+      "la": "Vesica biliaris",
+      "en": "Gallbladder"
+    },
+    "description": "Saco muscular pequeño adosado a la cara visceral del hígado. Almacena y concentra la bilis y la libera hacia el duodeno cuando se requiere para la digestión de grasas.",
+    "sections": [
+      {
+        "title": "Ubicación y partes",
+        "items": [
+          "Se localiza en una fosa de la cara visceral del hígado, por debajo del lóbulo derecho.",
+          "Se describen fondo, cuerpo y cuello; el cuello se continúa con el conducto cístico.",
+          "El conducto cístico se une al conducto hepático común para formar el conducto colédoco."
+        ]
+      },
+      {
+        "title": "Pared y microanatomía",
+        "items": [
+          "La mucosa presenta pliegues y está revestida por epitelio cilíndrico simple especializado en absorción.",
+          "La pared contiene una capa muscular de músculo liso; al contraerse, expulsa la bilis hacia el conducto cístico y el colédoco.",
+          "La cubierta externa se relaciona con el peritoneo visceral y con la cápsula hepática."
+        ]
+      },
+      {
+        "title": "Función y flujo biliar",
+        "items": [
+          "La vesícula almacena bilis producida continuamente por el hígado y puede concentrarla al absorber agua e iones.",
+          "Durante la digestión, la contracción de su pared impulsa la bilis a través del conducto cístico hacia el colédoco y el duodeno.",
+          "La bilis ayuda a emulsificar lípidos y facilita su digestión y absorción."
+        ]
+      },
+      {
+        "title": "Vascularización y relaciones",
+        "items": [
+          "La irrigación suele proceder de la arteria cística, habitualmente rama de la arteria hepática derecha; pueden existir variaciones anatómicas.",
+          "La vesícula se relaciona con hígado, duodeno y colon transverso.",
+          "La vía biliar debe estudiarse como una continuidad de conductos intrahepáticos, hepáticos, cístico y colédoco."
+        ]
+      }
+    ],
+    "source_title": "Douglas College Human Anatomy & Physiology II (1st ed.) — 23.6 Accessory Organs in Digestion: The Liver, Pancreas, and Gallbladder",
+    "source_url": "https://pressbooks.bccampus.ca/dcbiol12031209/chapter/23-6-accessory-organs-in-digestion-the-liver-pancreas-and-gallbladder/",
+    "source_edition": "Douglas College Human Anatomy & Physiology II (1st ed.)",
+    "source_publisher": "Douglas College, New Westminster, BC",
+    "source_editor": "Jennifer M. Barker",
+    "source_license": "CC BY 4.0",
+    "license": "CC BY 4.0",
+    "attribution": "Paráfrasis original en español adaptada de Douglas College Human Anatomy & Physiology II (1st ed.), editado por Jennifer M. Barker, Douglas College, bajo Creative Commons Attribution 4.0 International (CC BY 4.0). No se reutilizan figuras ni imágenes. Download for free at https://pressbooks.bccampus.ca/dcbiol12031209",
+    "content_origin": "original_spanish_paraphrase",
+    "review_status": "approved_for_distribution",
+    "review_scope": "Comprobada con 23.6 Accessory Organs in Digestion: The Liver, Pancreas, and Gallbladder de la primera edición indicada. Contenido educativo, no diagnóstico.",
+    "related_structures": [
+      "liver",
+      "pancreas",
+      "small_intestine"
+    ]
+  },
+  "reproductive": {
+    "id": "reproductive",
+    "names": {
+      "es": "Sistema reproductor masculino",
+      "la": "Systema genitale masculinum",
+      "en": "Male reproductive system"
+    },
+    "description": "Conjunto de órganos que producen espermatozoides, sintetizan hormonas sexuales y permiten el transporte y depósito del semen en el tracto reproductor femenino.",
+    "sections": [
+      {
+        "title": "Componentes",
+        "items": [
+          "Los testículos son las gónadas masculinas y producen espermatozoides y testosterona.",
+          "Los conductos del sistema incluyen túbulos seminíferos, túbulos rectos, rete testis, conductillos eferentes, epidídimo, conducto deferente y conductos eyaculadores.",
+          "Las glándulas accesorias incluyen vesículas seminales, próstata y glándulas bulbouretrales; sus secreciones contribuyen al semen.",
+          "El pene es el órgano copulador y contiene tejido eréctil; el escroto aloja los testículos fuera de la cavidad pélvica."
+        ]
+      },
+      {
+        "title": "Ruta de los espermatozoides",
+        "items": [
+          "Los espermatozoides se forman en los túbulos seminíferos y pasan a los túbulos rectos y rete testis.",
+          "Después atraviesan los conductillos eferentes y llegan al epidídimo, donde completan la maduración funcional.",
+          "Durante la eyaculación recorren el conducto deferente, los conductos eyaculadores y la uretra.",
+          "Las secreciones de vesículas seminales, próstata y glándulas bulbouretrales se incorporan al fluido seminal."
+        ]
+      },
+      {
+        "title": "Regulación y función endocrina",
+        "items": [
+          "La GnRH hipotalámica regula la secreción hipofisaria de FSH y LH.",
+          "La LH estimula las células intersticiales de Leydig para producir testosterona; la FSH actúa sobre células de Sertoli y apoya la espermatogénesis.",
+          "La testosterona contribuye al desarrollo y mantenimiento de estructuras y caracteres sexuales secundarios."
+        ]
+      },
+      {
+        "title": "Diferencias de temperatura y desarrollo",
+        "items": [
+          "Los testículos descienden durante el desarrollo fetal desde la región abdominal hasta el escroto.",
+          "La posición escrotal ayuda a mantener la temperatura testicular por debajo de la temperatura central, condición favorable para la espermatogénesis.",
+          "La anatomía del sistema reproductor presenta variaciones individuales; las dimensiones no se deben inferir de una única malla 3D."
+        ]
+      }
+    ],
+    "source_title": "Douglas College Human Anatomy & Physiology II (1st ed.) — 27.1 Anatomy and Physiology of the Male Reproductive System",
+    "source_url": "https://pressbooks.bccampus.ca/dcbiol12031209/chapter/27-1-anatomy-and-physiology-of-the-male-reproductive-system/",
+    "source_edition": "Douglas College Human Anatomy & Physiology II (1st ed.)",
+    "source_publisher": "Douglas College, New Westminster, BC",
+    "source_editor": "Jennifer M. Barker",
+    "source_license": "CC BY 4.0",
+    "license": "CC BY 4.0",
+    "attribution": "Paráfrasis original en español adaptada de Douglas College Human Anatomy & Physiology II (1st ed.), editado por Jennifer M. Barker, Douglas College, bajo Creative Commons Attribution 4.0 International (CC BY 4.0). No se reutilizan figuras ni imágenes. Download for free at https://pressbooks.bccampus.ca/dcbiol12031209",
+    "content_origin": "original_spanish_paraphrase",
+    "review_status": "approved_for_distribution",
+    "review_scope": "Comprobada con 27.1 Anatomy and Physiology of the Male Reproductive System de la primera edición indicada. Contenido educativo, no diagnóstico.",
+    "related_structures": [
+      "testis_l",
+      "testis_r",
+      "epididymis_l",
+      "epididymis_r",
+      "ductus_deferens_l",
+      "prostate",
+      "penis",
+      "scrotum"
+    ]
+  },
+  "testis_l": {
+    "id": "testis_l",
+    "names": {
+      "es": "Testículo izquierdo",
+      "la": "Testis sinister",
+      "en": "Left testis"
+    },
+    "description": "Gónada masculina izquierda, alojada en el escroto. Contiene túbulos seminíferos donde se desarrollan los espermatozoides y células endocrinas que producen testosterona.",
+    "sections": [
+      {
+        "title": "Cubiertas y organización",
+        "items": [
+          "El testículo está recubierto por una túnica vaginal serosa y una cápsula fibrosa densa llamada túnica albugínea.",
+          "La túnica albugínea emite tabiques que dividen el parénquima en lobulillos.",
+          "Cada lobulillo contiene túbulos seminíferos muy enrollados, donde se desarrolla la línea germinal masculina."
+        ]
+      },
+      {
+        "title": "Túbulos y vía espermática",
+        "items": [
+          "La luz de los túbulos seminíferos recibe espermatozoides en desarrollo y células de Sertoli que sostienen la espermatogénesis.",
+          "Los túbulos seminíferos continúan con túbulos rectos y la rete testis.",
+          "Los conductillos eferentes transportan los espermatozoides hacia la cabeza del epidídimo; después pasan por el cuerpo y la cola epididimaria."
+        ]
+      },
+      {
+        "title": "Células e histología",
+        "items": [
+          "Las células de Sertoli sostienen y nutren las células germinales, forman parte de la barrera hematotesticular y responden a FSH.",
+          "Las células intersticiales de Leydig se localizan entre túbulos seminíferos y producen testosterona bajo estimulación de LH.",
+          "La espermatogénesis ocurre en el epitelio seminífero, desde la periferia del túbulo hacia la luz."
+        ]
+      },
+      {
+        "title": "Irrigación y relaciones",
+        "items": [
+          "La arteria testicular nace de la aorta abdominal y desciende por el cordón espermático.",
+          "El plexo pampiniforme rodea la arteria testicular y participa en el intercambio térmico contracorriente.",
+          "El drenaje venoso suele desembocar directamente en la vena renal izquierda desde la vena testicular izquierda."
+        ]
+      }
+    ],
+    "source_title": "Douglas College Human Anatomy & Physiology II (1st ed.) — 27.1 Anatomy and Physiology of the Male Reproductive System",
+    "source_url": "https://pressbooks.bccampus.ca/dcbiol12031209/chapter/27-1-anatomy-and-physiology-of-the-male-reproductive-system/",
+    "source_edition": "Douglas College Human Anatomy & Physiology II (1st ed.)",
+    "source_publisher": "Douglas College, New Westminster, BC",
+    "source_editor": "Jennifer M. Barker",
+    "source_license": "CC BY 4.0",
+    "license": "CC BY 4.0",
+    "attribution": "Paráfrasis original en español adaptada de Douglas College Human Anatomy & Physiology II (1st ed.), editado por Jennifer M. Barker, Douglas College, bajo Creative Commons Attribution 4.0 International (CC BY 4.0). No se reutilizan figuras ni imágenes. Download for free at https://pressbooks.bccampus.ca/dcbiol12031209",
+    "content_origin": "original_spanish_paraphrase",
+    "review_status": "approved_for_distribution",
+    "review_scope": "Comprobada con 27.1 Anatomy and Physiology of the Male Reproductive System de la primera edición indicada. Contenido educativo, no diagnóstico.",
+    "related_structures": [
+      "testis_r",
+      "epididymis_l",
+      "reproductive"
+    ]
+  },
+  "testis_r": {
+    "id": "testis_r",
+    "names": {
+      "es": "Testículo derecho",
+      "la": "Testis dexter",
+      "en": "Right testis"
+    },
+    "description": "Gónada masculina derecha, situada en el escroto. Produce espermatozoides en los túbulos seminíferos y testosterona mediante células intersticiales.",
+    "sections": [
+      {
+        "title": "Cubiertas y lobulillos",
+        "items": [
+          "La túnica vaginal rodea externamente al testículo y la túnica albugínea forma su cápsula fibrosa.",
+          "Los tabiques que parten de la túnica albugínea subdividen el parénquima en lobulillos.",
+          "Cada lobulillo contiene túbulos seminíferos donde se desarrolla la espermatogénesis."
+        ]
+      },
+      {
+        "title": "Vía espermática",
+        "items": [
+          "Los espermatozoides pasan de los túbulos seminíferos a túbulos rectos, rete testis y conductillos eferentes.",
+          "Los conductillos eferentes descargan en la cabeza del epidídimo, que continúa con el cuerpo y la cola.",
+          "Desde la cola del epidídimo, el conducto deferente lleva los espermatozoides hacia la pelvis."
+        ]
+      },
+      {
+        "title": "Microanatomía y función endocrina",
+        "items": [
+          "Las células de Sertoli rodean y sostienen las células germinales dentro de los túbulos seminíferos.",
+          "Las células de Leydig se ubican en el intersticio y producen testosterona bajo la influencia de LH.",
+          "La FSH participa en la regulación de células de Sertoli y de la espermatogénesis."
+        ]
+      },
+      {
+        "title": "Irrigación y drenaje",
+        "items": [
+          "La irrigación procede de la arteria testicular, rama directa de la aorta abdominal.",
+          "El plexo pampiniforme del cordón espermático participa en el intercambio de calor.",
+          "La vena testicular derecha suele desembocar directamente en la vena cava inferior; la izquierda suele hacerlo en la vena renal izquierda."
+        ]
+      }
+    ],
+    "source_title": "Douglas College Human Anatomy & Physiology II (1st ed.) — 27.1 Anatomy and Physiology of the Male Reproductive System",
+    "source_url": "https://pressbooks.bccampus.ca/dcbiol12031209/chapter/27-1-anatomy-and-physiology-of-the-male-reproductive-system/",
+    "source_edition": "Douglas College Human Anatomy & Physiology II (1st ed.)",
+    "source_publisher": "Douglas College, New Westminster, BC",
+    "source_editor": "Jennifer M. Barker",
+    "source_license": "CC BY 4.0",
+    "license": "CC BY 4.0",
+    "attribution": "Paráfrasis original en español adaptada de Douglas College Human Anatomy & Physiology II (1st ed.), editado por Jennifer M. Barker, Douglas College, bajo Creative Commons Attribution 4.0 International (CC BY 4.0). No se reutilizan figuras ni imágenes. Download for free at https://pressbooks.bccampus.ca/dcbiol12031209",
+    "content_origin": "original_spanish_paraphrase",
+    "review_status": "approved_for_distribution",
+    "review_scope": "Comprobada con 27.1 Anatomy and Physiology of the Male Reproductive System de la primera edición indicada. Contenido educativo, no diagnóstico.",
+    "related_structures": [
+      "testis_l",
+      "epididymis_r",
+      "reproductive"
+    ]
+  },
+  "uterus": {
+    "id": "uterus",
+    "names": {
+      "es": "Útero",
+      "la": "Uterus",
+      "en": "Uterus"
+    },
+    "description": "Órgano muscular hueco del aparato reproductor femenino, situado en la pelvis menor entre la vejiga urinaria y el recto. Recibe el embrión y aloja su desarrollo durante la gestación.",
+    "sections": [
+      {
+        "title": "Ubicación y partes",
+        "items": [
+          "El útero se sitúa en la pelvis menor, posterior a la vejiga y anterior al recto.",
+          "Sus partes principales son fondo, cuerpo, istmo y cuello uterino o cérvix.",
+          "El fondo es la porción superior, por encima de la entrada de las trompas uterinas; el cuerpo constituye la mayor parte del órgano.",
+          "El cuello uterino se proyecta hacia la vagina y se comunica con ella mediante el orificio cervical externo."
+        ]
+      },
+      {
+        "title": "Cavidad y capas",
+        "items": [
+          "La cavidad uterina es estrecha y se continúa superiormente con las trompas uterinas e inferiormente con el canal cervical.",
+          "El endometrio es la mucosa interna y cambia durante el ciclo uterino; su capa funcional se desprende durante la menstruación cuando no ocurre implantación.",
+          "El miometrio es la gruesa capa de músculo liso que produce contracciones uterinas.",
+          "El perimetrio es la cubierta externa serosa en las regiones revestidas por peritoneo."
+        ]
+      },
+      {
+        "title": "Relaciones y sostén",
+        "items": [
+          "El útero se relaciona anteriormente con la vejiga y posteriormente con el recto y el fondo de saco rectouterino.",
+          "El cuello uterino se continúa con la vagina; las trompas uterinas se abren cerca del fondo uterino.",
+          "Su posición habitual es antevertida y anteflexionada, aunque existe variación anatómica normal."
+        ]
+      },
+      {
+        "title": "Vascularización y función",
+        "items": [
+          "La irrigación procede principalmente de las arterias uterinas, ramas de la división anterior de la arteria ilíaca interna; se anastomosan con ramas ováricas.",
+          "Las venas uterinas forman plexos que drenan hacia las venas ilíacas internas.",
+          "El útero participa en menstruación, implantación, gestación y parto mediante cambios del endometrio y contracción del miometrio."
+        ]
+      }
+    ],
+    "source_title": "Douglas College Human Anatomy & Physiology II (1st ed.) — 27.2 Anatomy and Physiology of the Female Reproductive System",
+    "source_url": "https://pressbooks.bccampus.ca/dcbiol12031209/chapter/27-2-anatomy-and-physiology-of-the-female-reproductive-system/",
+    "source_edition": "Douglas College Human Anatomy & Physiology II (1st ed.)",
+    "source_publisher": "Douglas College, New Westminster, BC",
+    "source_editor": "Jennifer M. Barker",
+    "source_license": "CC BY 4.0",
+    "license": "CC BY 4.0",
+    "attribution": "Paráfrasis original en español adaptada de Douglas College Human Anatomy & Physiology II (1st ed.), editado por Jennifer M. Barker, Douglas College, bajo Creative Commons Attribution 4.0 International (CC BY 4.0). No se reutilizan figuras ni imágenes. Download for free at https://pressbooks.bccampus.ca/dcbiol12031209",
+    "content_origin": "original_spanish_paraphrase",
+    "review_status": "approved_for_distribution",
+    "review_scope": "Comprobada con 27.2 Anatomy and Physiology of the Female Reproductive System de la primera edición indicada. Contenido educativo, no diagnóstico.",
+    "related_structures": [
+      "ovary_l",
+      "ovary_r",
+      "fallopian_tubes",
+      "vagina",
+      "clitoris"
+    ]
+  },
+  "ovary_l": {
+    "id": "ovary_l",
+    "names": {
+      "es": "Ovario izquierdo",
+      "la": "Ovarium sinistrum",
+      "en": "Left ovary"
+    },
+    "description": "Gónada femenina izquierda situada en la pelvis menor. Contiene folículos ováricos, libera ovocitos y produce hormonas sexuales.",
+    "sections": [
+      {
+        "title": "Morfología y ubicación",
+        "items": [
+          "El ovario tiene forma ovoide y se sitúa en la pared lateral de la pelvis, unido al ligamento ancho mediante el mesovario.",
+          "Presenta una superficie recubierta por epitelio superficial y una cápsula de tejido conectivo denso llamada túnica albugínea.",
+          "El hilio ovárico es la región por donde entran y salen vasos, nervios y linfáticos a través del mesovario."
+        ]
+      },
+      {
+        "title": "Corteza y médula",
+        "items": [
+          "La corteza es la región periférica que contiene estroma y folículos ováricos en distintas etapas de desarrollo.",
+          "Cada folículo está formado por un ovocito rodeado por células de sostén; durante el ciclo ovárico algunos folículos crecen y uno puede llegar a ovular.",
+          "La médula central contiene tejido conectivo laxo, vasos sanguíneos, vasos linfáticos y nervios."
+        ]
+      },
+      {
+        "title": "Ciclo y función",
+        "items": [
+          "La ovulación libera un ovocito desde un folículo maduro hacia la cavidad peritoneal próxima al infundíbulo de la trompa uterina.",
+          "Después de la ovulación, los restos del folículo forman el cuerpo lúteo, una estructura endocrina temporal.",
+          "Los ovarios secretan principalmente estrógenos y progesterona, que participan en el ciclo ovárico, el ciclo uterino y la regulación del aparato reproductor."
+        ]
+      },
+      {
+        "title": "Relaciones, irrigación y drenaje",
+        "items": [
+          "La trompa uterina se encuentra próxima al ovario, pero no está directamente fusionada con él; las fimbrias del infundíbulo se orientan hacia la superficie ovárica.",
+          "El ligamento propio del ovario lo conecta con el útero y el ligamento suspensorio lo relaciona con la pared lateral de la pelvis.",
+          "La arteria ovárica nace de la aorta abdominal y la vena ovárica izquierda suele drenar en la vena renal izquierda."
+        ]
+      }
+    ],
+    "source_title": "Douglas College Human Anatomy & Physiology II (1st ed.) — 27.2 Anatomy and Physiology of the Female Reproductive System",
+    "source_url": "https://pressbooks.bccampus.ca/dcbiol12031209/chapter/27-2-anatomy-and-physiology-of-the-female-reproductive-system/",
+    "source_edition": "Douglas College Human Anatomy & Physiology II (1st ed.)",
+    "source_publisher": "Douglas College, New Westminster, BC",
+    "source_editor": "Jennifer M. Barker",
+    "source_license": "CC BY 4.0",
+    "license": "CC BY 4.0",
+    "attribution": "Paráfrasis original en español adaptada de Douglas College Human Anatomy & Physiology II (1st ed.), editado por Jennifer M. Barker, Douglas College, bajo Creative Commons Attribution 4.0 International (CC BY 4.0). No se reutilizan figuras ni imágenes. Download for free at https://pressbooks.bccampus.ca/dcbiol12031209",
+    "content_origin": "original_spanish_paraphrase",
+    "review_status": "approved_for_distribution",
+    "review_scope": "Comprobada con 27.2 Anatomy and Physiology of the Female Reproductive System de la primera edición indicada. Contenido educativo, no diagnóstico.",
+    "related_structures": [
+      "ovary_r",
+      "uterus",
+      "fallopian_tubes"
+    ]
+  },
+  "ovary_r": {
+    "id": "ovary_r",
+    "names": {
+      "es": "Ovario derecho",
+      "la": "Ovarium dextrum",
+      "en": "Right ovary"
+    },
+    "description": "Gónada femenina derecha de la pelvis menor. Contiene folículos, participa en la ovulación y secreta hormonas sexuales.",
+    "sections": [
+      {
+        "title": "Morfología y ubicación",
+        "items": [
+          "El ovario se sitúa en la pared lateral de la pelvis menor y se une al ligamento ancho mediante el mesovario.",
+          "La superficie está cubierta por epitelio ovárico y debajo se encuentra una cápsula de tejido conectivo denso llamada túnica albugínea.",
+          "El hilio es el punto de entrada y salida de vasos, nervios y linfáticos."
+        ]
+      },
+      {
+        "title": "Organización interna",
+        "items": [
+          "La corteza periférica contiene estroma y folículos ováricos.",
+          "El ovocito se encuentra rodeado por células foliculares que forman el folículo y cambian de organización durante su maduración.",
+          "La médula central contiene tejido conectivo laxo, vasos sanguíneos, linfáticos y nervios."
+        ]
+      },
+      {
+        "title": "Función reproductora y endocrina",
+        "items": [
+          "La ovulación libera un ovocito que es captado por las fimbrias de la trompa uterina.",
+          "El folículo después de ovular se transforma en cuerpo lúteo, que secreta progesterona y otros esteroides.",
+          "Los ovarios producen estrógenos y progesterona y responden a FSH y LH de la adenohipófisis."
+        ]
+      },
+      {
+        "title": "Relaciones y vascularización",
+        "items": [
+          "El ovario está próximo al infundíbulo de la trompa uterina, pero no existe continuidad directa entre ambos.",
+          "El ligamento propio del ovario lo conecta con el útero; el ligamento suspensorio llega a la pared lateral de la pelvis.",
+          "La arteria ovárica derecha nace de la aorta abdominal y la vena ovárica derecha suele desembocar en la vena cava inferior."
+        ]
+      }
+    ],
+    "source_title": "Douglas College Human Anatomy & Physiology II (1st ed.) — 27.2 Anatomy and Physiology of the Female Reproductive System",
+    "source_url": "https://pressbooks.bccampus.ca/dcbiol12031209/chapter/27-2-anatomy-and-physiology-of-the-female-reproductive-system/",
+    "source_edition": "Douglas College Human Anatomy & Physiology II (1st ed.)",
+    "source_publisher": "Douglas College, New Westminster, BC",
+    "source_editor": "Jennifer M. Barker",
+    "source_license": "CC BY 4.0",
+    "license": "CC BY 4.0",
+    "attribution": "Paráfrasis original en español adaptada de Douglas College Human Anatomy & Physiology II (1st ed.), editado por Jennifer M. Barker, Douglas College, bajo Creative Commons Attribution 4.0 International (CC BY 4.0). No se reutilizan figuras ni imágenes. Download for free at https://pressbooks.bccampus.ca/dcbiol12031209",
+    "content_origin": "original_spanish_paraphrase",
+    "review_status": "approved_for_distribution",
+    "review_scope": "Comprobada con 27.2 Anatomy and Physiology of the Female Reproductive System de la primera edición indicada. Contenido educativo, no diagnóstico.",
+    "related_structures": [
+      "ovary_l",
+      "uterus",
+      "fallopian_tubes"
+    ]
+  },
+  "vagina": {
+    "id": "vagina",
+    "names": {
+      "es": "Vagina",
+      "la": "Vagina",
+      "en": "Vagina"
+    },
+    "description": "Conducto fibromuscular distensible que se extiende desde el cuello uterino hasta el vestíbulo vaginal. Funciona como canal del parto y recibe el pene y el semen durante el coito.",
+    "sections": [
+      {
+        "title": "Ubicación y relaciones",
+        "items": [
+          "La vagina se extiende desde el cuello uterino hasta el vestíbulo de la vulva.",
+          "Se sitúa posterior a la vejiga y la uretra y anterior al recto.",
+          "El cuello uterino protruye en la porción superior de la vagina y queda rodeado por los fórnices vaginales anterior, posterior y laterales."
+        ]
+      },
+      {
+        "title": "Pared y capas",
+        "items": [
+          "La mucosa vaginal presenta pliegues transversales y un epitelio plano estratificado no queratinizado.",
+          "La pared muscular contiene capas de músculo liso orientadas longitudinal y circularmente.",
+          "La capa externa de tejido conectivo adventicial fija la vagina a estructuras vecinas.",
+          "La mucosa no presenta glándulas propias; la lubricación procede de secreciones cervicales y transudado de la pared, además de glándulas vestibulares externas."
+        ]
+      },
+      {
+        "title": "Extremos y función",
+        "items": [
+          "El extremo superior rodea el cérvix y forma los fórnices; el extremo inferior se abre en el vestíbulo vaginal.",
+          "El himen puede formar un pliegue variable alrededor del orificio vaginal, con morfología individual diversa.",
+          "La vagina participa en la cópula, la salida del flujo menstrual y el canal del parto."
+        ]
+      },
+      {
+        "title": "Soporte y vascularización",
+        "items": [
+          "La fascia endopélvica, el suelo pélvico y los tejidos de soporte circundantes contribuyen a mantener la posición vaginal.",
+          "La irrigación procede de ramas vaginales, uterinas y pudendas internas según el nivel.",
+          "El drenaje venoso se realiza mediante plexos que se comunican con las venas uterinas y pudendas."
+        ]
+      }
+    ],
+    "source_title": "Douglas College Human Anatomy & Physiology II (1st ed.) — 27.2 Anatomy and Physiology of the Female Reproductive System",
+    "source_url": "https://pressbooks.bccampus.ca/dcbiol12031209/chapter/27-2-anatomy-and-physiology-of-the-female-reproductive-system/",
+    "source_edition": "Douglas College Human Anatomy & Physiology II (1st ed.)",
+    "source_publisher": "Douglas College, New Westminster, BC",
+    "source_editor": "Jennifer M. Barker",
+    "source_license": "CC BY 4.0",
+    "license": "CC BY 4.0",
+    "attribution": "Paráfrasis original en español adaptada de Douglas College Human Anatomy & Physiology II (1st ed.), editado por Jennifer M. Barker, Douglas College, bajo Creative Commons Attribution 4.0 International (CC BY 4.0). No se reutilizan figuras ni imágenes. Download for free at https://pressbooks.bccampus.ca/dcbiol12031209",
+    "content_origin": "original_spanish_paraphrase",
+    "review_status": "approved_for_distribution",
+    "review_scope": "Comprobada con 27.2 Anatomy and Physiology of the Female Reproductive System de la primera edición indicada. Contenido educativo, no diagnóstico.",
+    "related_structures": [
+      "uterus",
+      "clitoris",
+      "ovary_l"
+    ]
+  },
+  "clitoris": {
+    "id": "clitoris",
+    "names": {
+      "es": "Clítoris",
+      "la": "Clitoris",
+      "en": "Clitoris"
+    },
+    "description": "Órgano eréctil externo del aparato reproductor femenino, formado por tejido eréctil y situado en la región anterior de la vulva.",
+    "sections": [
+      {
+        "title": "Partes y orientación",
+        "items": [
+          "El clítoris tiene un glande visible en la unión anterior de los labios menores, un cuerpo y dos raíces o cruras.",
+          "Las cruras se fijan a las ramas isquiopúbicas y el cuerpo se dirige anteriormente bajo el arco púbico.",
+          "El glande está cubierto parcialmente por el prepucio del clítoris, formado por pliegues de los labios menores."
+        ]
+      },
+      {
+        "title": "Tejido eréctil y función",
+        "items": [
+          "El cuerpo y las cruras contienen cuerpos cavernosos de tejido eréctil.",
+          "La congestión vascular del tejido eréctil produce aumento de volumen durante la excitación sexual.",
+          "El clítoris es una estructura sensorial especializada; su función no es conducir orina ni formar parte de la vía del parto."
+        ]
+      },
+      {
+        "title": "Relaciones",
+        "items": [
+          "Se relaciona con el monte del pubis, la sínfisis púbica, los labios menores y el vestíbulo vaginal.",
+          "Las estructuras eréctiles vestibulares se extienden a ambos lados del orificio vaginal y son anatómicamente distintas del cuerpo del clítoris.",
+          "Las dimensiones y la visibilidad externa presentan variación individual amplia."
+        ]
+      }
+    ],
+    "source_title": "Douglas College Human Anatomy & Physiology II (1st ed.) — 27.2 Anatomy and Physiology of the Female Reproductive System",
+    "source_url": "https://pressbooks.bccampus.ca/dcbiol12031209/chapter/27-2-anatomy-and-physiology-of-the-female-reproductive-system/",
+    "source_edition": "Douglas College Human Anatomy & Physiology II (1st ed.)",
+    "source_publisher": "Douglas College, New Westminster, BC",
+    "source_editor": "Jennifer M. Barker",
+    "source_license": "CC BY 4.0",
+    "license": "CC BY 4.0",
+    "attribution": "Paráfrasis original en español adaptada de Douglas College Human Anatomy & Physiology II (1st ed.), editado por Jennifer M. Barker, Douglas College, bajo Creative Commons Attribution 4.0 International (CC BY 4.0). No se reutilizan figuras ni imágenes. Download for free at https://pressbooks.bccampus.ca/dcbiol12031209",
+    "content_origin": "original_spanish_paraphrase",
+    "review_status": "approved_for_distribution",
+    "review_scope": "Comprobada con 27.2 Anatomy and Physiology of the Female Reproductive System de la primera edición indicada. Contenido educativo, no diagnóstico.",
+    "related_structures": [
+      "uterus",
+      "vagina",
+      "ovary_l"
+    ]
+  },
+  "hip_l": {
+    "id": "hip_l",
+    "names": {
+      "es": "Articulación coxofemoral izquierda",
+      "la": "Articulatio coxae sinistra",
+      "en": "Left hip joint"
+    },
+    "description": "Articulación sinovial esferoidea entre la cabeza del fémur y el acetábulo del hueso coxal. Permite movilidad en varios ejes y transmite cargas entre el tronco y el miembro inferior.",
+    "sections": [
+      {
+        "title": "Superficies articulares",
+        "items": [
+          "La cabeza del fémur forma una esfera recubierta de cartílago hialino, excepto en la fóvea capitis.",
+          "El acetábulo es una cavidad del hueso coxal formada por la contribución de ilion, isquion y pubis.",
+          "El labrum acetabular es un anillo fibrocartilaginoso que profundiza el acetábulo y aumenta la congruencia articular."
+        ]
+      },
+      {
+        "title": "Cápsula y ligamentos",
+        "items": [
+          "La cápsula fibrosa se fija alrededor del borde acetabular y se continúa distalmente con el cuello femoral.",
+          "Los ligamentos iliofemoral, pubofemoral e isquiofemoral refuerzan la cápsula y limitan movimientos extremos.",
+          "El ligamento de la cabeza del fémur se extiende desde la fóvea capitis hacia el acetábulo y puede transportar una pequeña rama arterial."
+        ]
+      },
+      {
+        "title": "Movimientos y estabilidad",
+        "items": [
+          "La articulación permite flexión, extensión, abducción, aducción, rotación medial y lateral y circunducción.",
+          "La profundidad del acetábulo, el labrum, la cápsula y los ligamentos proporcionan estabilidad.",
+          "Los músculos glúteos, iliopsoas, rotadores profundos y músculos del muslo actúan sobre la articulación."
+        ]
+      },
+      {
+        "title": "Relaciones",
+        "items": [
+          "La cabeza femoral se encuentra medial al trocánter mayor y se mantiene dentro del acetábulo mediante la cápsula, labrum y ligamentos.",
+          "La orientación y la amplitud de movimiento dependen de la geometría individual de pelvis, fémur y tejidos blandos."
+        ]
+      }
+    ],
+    "source_title": "Douglas College Human Anatomy & Physiology I (1st ed.) — 9.4 Synovial Joints",
+    "source_url": "https://pressbooks.bccampus.ca/dcbiol11031109/chapter/9-4-synovial-joints/",
+    "source_edition": "Douglas College Human Anatomy & Physiology I (1st ed.)",
+    "source_publisher": "Douglas College, New Westminster, BC",
+    "source_editor": "Jennifer M. Barker",
+    "source_license": "CC BY 4.0",
+    "license": "CC BY 4.0",
+    "attribution": "Paráfrasis original en español adaptada de Douglas College Human Anatomy & Physiology I (1st ed.), editado por Jennifer M. Barker, Douglas College, bajo Creative Commons Attribution 4.0 International (CC BY 4.0). No se reutilizan figuras ni imágenes. Download for free at https://pressbooks.bccampus.ca/dcbiol11031109",
+    "content_origin": "original_spanish_paraphrase",
+    "review_status": "approved_for_distribution",
+    "review_scope": "Comprobada con 9.4 Synovial Joints de la primera edición indicada. Contenido educativo, no diagnóstico.",
+    "related_structures": [
+      "femur_l",
+      "pelvis",
+      "gluteal_l",
+      "iliopsoas_l"
+    ]
   }
 }
