@@ -4,7 +4,7 @@
     "name_es": "Sistema tegumentario",
     "description": "Piel y anexos: barrera, protección, sensibilidad y regulación térmica.",
     "catalog_entries": 8,
-    "detailed_entries": 0,
+    "detailed_entries": 1,
     "coverage_status": "partial_source_mesh_and_details_pending",
     "mesh_systems": [
       "skin"
@@ -20,7 +20,7 @@
     "name_es": "Sistema esquelético",
     "description": "Huesos y articulaciones: soporte, protección, movimiento y reserva mineral.",
     "catalog_entries": 52,
-    "detailed_entries": 2,
+    "detailed_entries": 3,
     "coverage_status": "partial_source_mesh_and_details_pending",
     "mesh_systems": [
       "skeleton"
@@ -69,7 +69,7 @@
     "name_es": "Sistema endocrino",
     "description": "Glándulas y tejidos que producen hormonas y regulan funciones corporales.",
     "catalog_entries": 9,
-    "detailed_entries": 0,
+    "detailed_entries": 4,
     "coverage_status": "partial_source_mesh_and_details_pending",
     "mesh_systems": [
       "organs"
@@ -85,7 +85,7 @@
     "name_es": "Sistema cardiovascular",
     "description": "Corazón, arterias, venas y capilares que transportan sangre.",
     "catalog_entries": 30,
-    "detailed_entries": 1,
+    "detailed_entries": 2,
     "coverage_status": "partial_source_mesh_and_details_pending",
     "mesh_systems": [
       "organs",
@@ -102,7 +102,7 @@
     "name_es": "Sistema linfático e inmunitario",
     "description": "Linfa, vasos y ganglios linfáticos, y órganos de defensa inmunitaria.",
     "catalog_entries": 10,
-    "detailed_entries": 0,
+    "detailed_entries": 1,
     "coverage_status": "partial_source_mesh_and_details_pending",
     "mesh_systems": [
       "organs"
@@ -134,7 +134,7 @@
     "name_es": "Sistema digestivo",
     "description": "Tubo digestivo y órganos accesorios de digestión y absorción.",
     "catalog_entries": 21,
-    "detailed_entries": 0,
+    "detailed_entries": 4,
     "coverage_status": "partial_source_mesh_and_details_pending",
     "mesh_systems": [
       "organs"
@@ -166,7 +166,7 @@
     "name_es": "Sistema reproductor",
     "description": "Órganos reproductores masculinos y femeninos y sus estructuras asociadas.",
     "catalog_entries": 26,
-    "detailed_entries": 0,
+    "detailed_entries": 8,
     "coverage_status": "partial_source_mesh_and_details_pending",
     "mesh_systems": [
       "organs"
