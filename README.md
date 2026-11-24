@@ -45,7 +45,7 @@ El flujo `.github/workflows/android-build.yml` realiza estos pasos:
 5. Comprueba que las mallas esperadas se pueden localizar en ambos modelos.
 6. Exporta una APK Android de depuración y la publica como artefacto.
 
-La primera ejecución llegó a pasar la validación del catálogo y de las cinco fichas, pero falló al leer `KHR_mesh_quantization`, que no se había registrado. Esa corrección ya está en el repositorio y hay una nueva ejecución de Actions en curso. Todavía no hay una APK validada.
+Las pruebas de ejecución inspeccionan la jerarquía importada de cada GLB: una estructura se considera seleccionable cuando su clave anatómica identifica un nodo que contiene una o más mallas descendientes. La exportación de Android y la publicación del artefacto solo se ejecutan después de superar la importación, la comprobación de los dos modelos y el arranque del proyecto. Una ejecución fallida no produce una APK válida.
 
 ## Estado y límites actuales
 
