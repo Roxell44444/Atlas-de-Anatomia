@@ -1,16 +1,25 @@
 # ATLAS DE ANATOMÍA
 
-Aplicación Android-first de exploración anatómica 3D. La primera entrega del proyecto se distribuye como paquete fuente para Godot.
+Aplicación Android-first de exploración anatómica 3D, desarrollada con Godot.
 
-## Paquete de código fuente 0.2.0
+## Estado del repositorio
 
-[Descargar atlas_anatomia_0_2_0_source.zip](releases/atlas_anatomia_0_2_0_source.zip)
+Esta rama todavía no contiene el código completo de la aplicación. El paquete fuente 0.4.0 fue preparado y validado localmente, pero no está publicado en este repositorio.
 
-Incluye proyecto Godot 4.7.x, visor 3D provisional, selector masculino/femenino, catálogo inicial de 61 fichas en 13 sistemas, fichas con campos anatómicos ampliados, aislamiento de estructuras, configuración del Tutor IA, backend Cloudflare Worker, documentación y registro de licencias.
+El archivo de paquete 0.2.0 que figuraba anteriormente aquí no superó la verificación de integridad ZIP y se retiró para evitar descargas defectuosas.
 
-## Estado honesto del proyecto
+## Última base de desarrollo
 
-Esta es una base de desarrollo, no una APK final. El maniquí visible es geométrico y temporal; todavía no se han incorporado modelos GLB hiperrealistas, no está completo el inventario anatómico, y las fichas están pendientes de revisión especializada. Histología, microanatomía, embriología y anatomía topográfica están definidas como módulos pendientes. El Tutor IA requiere desplegar el Worker y configurar su secreto.
+El paquete 0.4.0 incluye:
+- Visor 3D con modelo temporal, selección, órbita y zoom.
+- Selector masculino/femenino.
+- Catálogo inicial de 61 fichas en 13 sistemas.
+- Favoritos, búsqueda y navegación secuencial.
+- Manifiesto de modelos con licencias, procedencia y validación SHA-256.
+- Backend de tutor IA y validadores locales.
 
-Consulta el README dentro del ZIP para instrucciones de instalación, arquitectura, licencias y límites actuales.
+## Límites conocidos
 
+No se han incorporado todavía mallas anatómicas GLB reales; el maniquí es provisional. El inventario no es exhaustivo, el contenido está pendiente de revisión científica y no se ha generado una APK.
+
+Las fuentes candidatas de modelos y sus condiciones se documentan en el paquete de desarrollo. No se distribuirá ningún activo 3D sin comprobar su licencia concreta y atribución.
