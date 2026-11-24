@@ -36,14 +36,16 @@ Los nombres y la indexación de las 263 entradas están disponibles sin conexió
 
 ## Compilación Android
 
-Hay cinco fichas profundas aprobadas; las 258 entradas restantes siguen pendientes de documentación y revisión por estructura. Histología y embriología completas todavía no están desarrolladas. Histología y embriología completas todavía no están desarrolladas.\n\nEl flujo `.github/workflows/android-build.yml`:
-1. Valida los catálogos y las fichas.
-2. Descarga los dos GLB y comprueba sus hashes.
-3. Decodifica los modelos para compatibilidad con el importador Godot.
-4. Importa el proyecto con Godot 4.7.2.
-5. Intenta exportar una APK Android de depuración y publica el archivo como artefacto de GitHub Actions.
+El flujo `.github/workflows/android-build.yml` realiza estos pasos:
 
-El flujo ya está añadido al repositorio, pero su ejecución y la APK resultante todavía deben comprobarse en GitHub Actions.
+1. Valida el catálogo, los sistemas y las fichas con sus licencias.
+2. Descarga los GLB masculino y femenino y comprueba su tamaño y hash.
+3. Registra extensiones Khronos, descomprime meshopt y desquantiza la geometría para preparar el formato GLB.
+4. Importa el proyecto con Godot 4.7.2.
+5. Comprueba que las mallas esperadas se pueden localizar en ambos modelos.
+6. Exporta una APK Android de depuración y la publica como artefacto.
+
+La primera ejecución llegó a pasar la validación del catálogo y de las cinco fichas, pero falló al leer `KHR_mesh_quantization`, que no se había registrado. Esa corrección ya está en el repositorio y hay una nueva ejecución de Actions en curso. Todavía no hay una APK validada.
 
 ## Estado y límites actuales
 
