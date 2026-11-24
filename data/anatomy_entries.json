@@ -1,0 +1,214 @@
+{
+  "_metadata": {
+    "schema_version": "1.0",
+    "language": "es",
+    "policy": "No completar campos ausentes con suposiciones. Cada ficha debe conservar fuentes y licencia."
+  },
+  "heart": {
+    "id": "heart",
+    "names": {
+      "es": "Corazón",
+      "la": "Cor",
+      "en": "Heart"
+    },
+    "description": "Órgano muscular hueco situado en el mediastino medio, dentro del saco pericárdico. Su contracción impulsa la sangre hacia los circuitos pulmonar y sistémico.",
+    "sections": [
+      {
+        "title": "Ubicación y relaciones",
+        "items": [
+          "Se encuentra entre los pulmones, detrás del esternón y por delante de las estructuras vertebrales mediastínicas.",
+          "La base se orienta principalmente hacia posterior y superior; el vértice se dirige hacia inferior, anterior y a la izquierda.",
+          "Se apoya sobre el diafragma y está rodeado por el pericardio."
+        ]
+      },
+      {
+        "title": "Partes externas y cavidades",
+        "items": [
+          "Presenta cuatro cavidades: atrio derecho, ventrículo derecho, atrio izquierdo y ventrículo izquierdo.",
+          "La base recibe las grandes venas y se continúa con los grandes vasos arteriales; el vértice corresponde principalmente al ventrículo izquierdo.",
+          "Los surcos coronario e interventriculares marcan externamente límites entre cavidades y alojan vasos coronarios."
+        ]
+      },
+      {
+        "title": "Válvulas y recorrido sanguíneo",
+        "items": [
+          "Las válvulas tricúspide, pulmonar, mitral y aórtica dirigen el flujo y reducen el reflujo.",
+          "El lado derecho recibe sangre venosa sistémica y la envía al tronco pulmonar; el lado izquierdo recibe sangre oxigenada de las venas pulmonares y la envía a la aorta."
+        ]
+      },
+      {
+        "title": "Capas de la pared",
+        "items": [
+          "Epicardio: capa externa de la pared y hoja visceral del pericardio seroso.",
+          "Miocardio: capa muscular responsable de la contracción; es más gruesa en el ventrículo izquierdo.",
+          "Endocardio: revestimiento interno de cavidades y válvulas."
+        ]
+      },
+      {
+        "title": "Irrigación, drenaje e inervación",
+        "items": [
+          "La irrigación miocárdica procede principalmente de las arterias coronarias derecha e izquierda, originadas en la aorta ascendente.",
+          "El drenaje venoso se realiza en gran parte por el seno coronario, además de venas cardíacas que desembocan directamente en cavidades.",
+          "La regulación autónoma llega a través del plexo cardíaco, con componentes simpáticos y parasimpáticos."
+        ]
+      }
+    ],
+    "source_title": "Anatomy & Physiology 2e, 19.1 Heart Anatomy — Oregon State University Open Educational Resources",
+    "source_url": "https://open.oregonstate.education/anatomy2e/chapter/heart-anatomy/",
+    "license": "CC BY 4.0",
+    "review_status": "educational_paraphrase_source_checked"
+  },
+  "femur_l": {
+    "id": "femur_l",
+    "names": {
+      "es": "Fémur izquierdo",
+      "la": "Femur",
+      "en": "Left femur"
+    },
+    "description": "Hueso largo del muslo. Es el único hueso del muslo y transmite cargas entre la pelvis y la pierna; se articula proximalmente con el acetábulo y distalmente con la tibia y la patela.",
+    "sections": [
+      {
+        "title": "Extremo proximal",
+        "items": [
+          "La cabeza femoral, redondeada, se articula con el acetábulo; la fóvea de la cabeza recibe el ligamento de la cabeza del fémur.",
+          "El cuello conecta la cabeza con la diáfisis.",
+          "Los trocánteres mayor y menor son prominencias de inserción muscular; la línea intertrocantérica es anterior y la cresta intertrocantérica posterior."
+        ]
+      },
+      {
+        "title": "Diáfisis",
+        "items": [
+          "La diáfisis presenta una curvatura anterior suave.",
+          "En la cara posterior se encuentra la tuberosidad glútea y, más distalmente, la línea áspera, una cresta de inserción para músculos del muslo."
+        ]
+      },
+      {
+        "title": "Extremo distal",
+        "items": [
+          "Los cóndilos medial y lateral se articulan con los cóndilos tibiales.",
+          "Los epicóndilos medial y lateral proporcionan zonas de fijación para ligamentos y músculos.",
+          "Posteriormente, los cóndilos delimitan la fosa intercondílea; anteriormente forman la superficie patelar para la articulación con la patela.",
+          "El tubérculo del aductor se sitúa por encima del epicóndilo medial."
+        ]
+      },
+      {
+        "title": "Articulaciones y relaciones",
+        "items": [
+          "La cabeza participa en la articulación coxofemoral con el acetábulo.",
+          "Los cóndilos participan en la articulación de la rodilla con la tibia; la superficie patelar contacta con la patela."
+        ]
+      }
+    ],
+    "source_title": "Anatomy & Physiology 2e, 8.4 Bones of the Lower Limb — Oregon State University Open Educational Resources",
+    "source_url": "https://open.oregonstate.education/anatomy2e/chapter/bones-lower-limb/",
+    "license": "CC BY 4.0",
+    "review_status": "educational_paraphrase_source_checked"
+  },
+  "femur_r": {
+    "id": "femur_r",
+    "names": {
+      "es": "Fémur derecho",
+      "la": "Femur",
+      "en": "Right femur"
+    },
+    "description": "Hueso largo del muslo derecho. Comparte la organización anatómica general del fémur; la orientación y lateralidad de sus superficies se describen desde la posición anatómica.",
+    "sections": [
+      {
+        "title": "Extremo proximal",
+        "items": [
+          "Cabeza femoral para el acetábulo, con fóvea para el ligamento de la cabeza.",
+          "Cuello femoral y trocánteres mayor y menor; línea intertrocantérica anterior y cresta intertrocantérica posterior."
+        ]
+      },
+      {
+        "title": "Diáfisis y extremo distal",
+        "items": [
+          "La cara posterior de la diáfisis presenta tuberosidad glútea y línea áspera.",
+          "Los cóndilos medial y lateral se articulan con la tibia; la superficie patelar se articula con la patela; posteriormente se encuentra la fosa intercondílea."
+        ]
+      },
+      {
+        "title": "Articulaciones",
+        "items": [
+          "Articulación coxofemoral con el acetábulo y articulación de la rodilla con la tibia y la patela."
+        ]
+      }
+    ],
+    "source_title": "Anatomy & Physiology 2e, 8.4 Bones of the Lower Limb — Oregon State University Open Educational Resources",
+    "source_url": "https://open.oregonstate.education/anatomy2e/chapter/bones-lower-limb/",
+    "license": "CC BY 4.0",
+    "review_status": "educational_paraphrase_source_checked"
+  },
+  "kidney_l": {
+    "id": "kidney_l",
+    "names": {
+      "es": "Riñón izquierdo",
+      "la": "Ren",
+      "en": "Left kidney"
+    },
+    "description": "Órgano par retroperitoneal del sistema urinario. Filtra el plasma, regula el balance de agua y electrolitos y produce orina mediante la actividad de las nefronas.",
+    "sections": [
+      {
+        "title": "Ubicación y relaciones",
+        "items": [
+          "Se sitúa en el espacio retroperitoneal, a un lado de la columna vertebral y en relación con la pared abdominal posterior.",
+          "El riñón izquierdo suele ocupar una posición algo más alta que el derecho por la presencia del hígado en el lado derecho."
+        ]
+      },
+      {
+        "title": "Morfología externa e interna",
+        "items": [
+          "Presenta polos superior e inferior, caras anterior y posterior y un borde medial con hilio renal.",
+          "En el interior se distinguen corteza y médula; las pirámides medulares desembocan en papilas, cálices menores y mayores y pelvis renal, que continúa con el uréter."
+        ]
+      },
+      {
+        "title": "Irrigación y unidad funcional",
+        "items": [
+          "La arteria renal lleva sangre al riñón y la vena renal devuelve la sangre a la circulación venosa.",
+          "La nefrona es la unidad funcional: incluye corpúsculo renal y túbulos, asociados a una red capilar especializada."
+        ]
+      }
+    ],
+    "source_title": "Anatomy & Physiology 2e, 25.1 Internal and External Anatomy of the Kidney — Oregon State University Open Educational Resources",
+    "source_url": "https://open.oregonstate.education/anatomy2e/chapter/internal-external-anatomy-kidney/",
+    "license": "CC BY 4.0",
+    "review_status": "educational_paraphrase_source_checked"
+  },
+  "kidney_r": {
+    "id": "kidney_r",
+    "names": {
+      "es": "Riñón derecho",
+      "la": "Ren",
+      "en": "Right kidney"
+    },
+    "description": "Órgano par retroperitoneal del sistema urinario. Su anatomía general coincide con la del riñón izquierdo; habitualmente se encuentra algo más inferior por la relación con el hígado.",
+    "sections": [
+      {
+        "title": "Ubicación y relaciones",
+        "items": [
+          "Se ubica en el espacio retroperitoneal, a la derecha de la columna vertebral, posterior al peritoneo parietal.",
+          "En comparación con el izquierdo suele estar algo más bajo por la relación anatómica con el hígado."
+        ]
+      },
+      {
+        "title": "Morfología interna",
+        "items": [
+          "Presenta hilio renal, corteza, médula, pirámides, papilas, cálices menores y mayores y pelvis renal.",
+          "La pelvis renal se continúa con el uréter."
+        ]
+      },
+      {
+        "title": "Irrigación y unidad funcional",
+        "items": [
+          "La arteria renal aporta la irrigación y la vena renal drena hacia la circulación venosa.",
+          "La nefrona es la unidad funcional y comprende un corpúsculo renal y segmentos tubulares."
+        ]
+      }
+    ],
+    "source_title": "Anatomy & Physiology 2e, 25.1 Internal and External Anatomy of the Kidney — Oregon State University Open Educational Resources",
+    "source_url": "https://open.oregonstate.education/anatomy2e/chapter/internal-external-anatomy-kidney/",
+    "license": "CC BY 4.0",
+    "review_status": "educational_paraphrase_source_checked"
+  }
+}
