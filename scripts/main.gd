@@ -288,10 +288,10 @@ func _refresh_list() -> void:
 		return
 	item_list.clear()
 	visible_keys.clear()
-	var matches := catalog.filter_entries(mode, active_system, search_text)
+	var matches: Array[Dictionary] = catalog.filter_entries(mode, active_system, search_text)
 	for entry in matches:
 		var key := str(entry.get("key", ""))
-		var display := catalog.get_name(entry)
+		var display: String = catalog.get_name(entry)
 		if str(entry.get("model_mapping_status", "")) == "info_only_no_mesh":
 			display += "  ·  sin malla 3D"
 		elif str(entry.get("system", "")) == "joints":
@@ -342,7 +342,7 @@ func _select_structure(key: String, update_viewer: bool) -> void:
 	if not catalog.has_key(key):
 		return
 	selected_key = key
-	var entry := catalog.get_entry(key)
+	var entry: Dictionary = catalog.get_entry(key)
 	if update_viewer and viewer != null:
 		viewer.select_structure(key)
 	_update_detail(entry)
@@ -353,7 +353,7 @@ func _select_structure(key: String, update_viewer: bool) -> void:
 func _update_detail(entry: Dictionary) -> void:
 	var key := str(entry.get("key", ""))
 	var names: Dictionary = entry.get("names", {})
-	var detail := catalog.get_detail(key)
+	var detail: Dictionary = catalog.get_detail(key)
 	var output := "[font_size=19][b]" + _escape_bbcode(catalog.get_name(entry)) + "[/b][/font_size]\n"
 	output += "[color=#91a7c3]" + _escape_bbcode(str(names.get("la", ""))) + " · " + _escape_bbcode(str(entry.get("label", ""))) + "[/color]\n\n"
 	output += "[b]Sistema:[/b] " + _escape_bbcode(str(entry.get("system_label_es", catalog.get_system_label(str(entry.get("system", ""))))))
@@ -379,7 +379,7 @@ func _update_detail(entry: Dictionary) -> void:
 			output += "\n\n[b]Estructuras relacionadas[/b]\n"
 			for related_value in related_ids:
 				var related_key := str(related_value)
-				var related_entry := catalog.get_entry(related_key)
+				var related_entry: Dictionary = catalog.get_entry(related_key)
 				if not related_entry.is_empty():
 					output += "[url=atlas://structure/" + related_key + "]" + _escape_bbcode(catalog.get_name(related_entry)) + "[/url]  "
 	if viewer != null:
@@ -459,7 +459,7 @@ func _ask_tutor() -> void:
 	var question := tutor_input.text.strip_edges()
 	if question.is_empty():
 		return
-	var selected := catalog.get_entry(selected_key)
+	var selected: Dictionary = catalog.get_entry(selected_key)
 	var payload := {
 		"question": question,
 		"selected_structure": selected,
@@ -490,7 +490,7 @@ func _on_tutor_http_completed(result: int, response_code: int, _headers: PackedS
 		_show_local_tutor_answer(tutor_input.text)
 
 func _show_local_tutor_answer(question: String) -> void:
-	var matches := catalog.filter_entries(mode, "all", question)
+	var matches: Array[Dictionary] = catalog.filter_entries(mode, "all", question)
 	var lines := PackedStringArray()
 	for entry in matches.slice(0, 8):
 		lines.append("• " + catalog.get_name(entry) + " (" + str(entry.get("system_label_es", "")) + ")")
