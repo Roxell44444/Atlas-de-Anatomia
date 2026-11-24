@@ -25,8 +25,10 @@ var pitch := 0.0
 var distance := 3.8
 var right_dragging := false
 var screen_dragging := false
+var catalog_keys: Dictionary = {}
 
 func _ready() -> void:
+	_load_catalog_key_index()
 	_build_world()
 	highlight_material = StandardMaterial3D.new()
 	highlight_material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
@@ -137,20 +139,21 @@ func _index_model() -> void:
 					child.collision_layer = 1
 					child.collision_mask = 0
 
-func _is_catalog_structure(key: String) -> bool:
-	return ResourceLoader.exists("res://data/anatomy_catalog_es.json") and _catalog_key_exists(key)
-
-func _catalog_key_exists(key: String) -> bool:
+func _load_catalog_key_index() -> void:
 	var file := FileAccess.open("res://data/anatomy_catalog_es.json", FileAccess.READ)
 	if file == null:
-		return false
+		push_error("No se pudo abrir el índice local de estructuras.")
+		return
 	var parsed: Variant = JSON.parse_string(file.get_as_text())
 	if not parsed is Array:
-		return false
+		push_error("El índice local de estructuras no tiene formato de lista.")
+		return
 	for item in parsed:
-		if item is Dictionary and str(item.get("key", "")) == key:
-			return true
-	return false
+		if item is Dictionary:
+			catalog_keys[str(item.get("key", ""))] = true
+
+func _is_catalog_structure(key: String) -> bool:
+	return catalog_keys.has(key)
 
 func has_mesh(key: String) -> bool:
 	return meshes_by_key.has(key)
@@ -175,10 +178,14 @@ func _clear_selection() -> void:
 func set_system_visibility(system_id: String, enabled: bool) -> void:
 	if system_nodes.has(system_id):
 		(system_nodes[system_id] as Node).visible = enabled
-		return
 	for key in mesh_systems:
-		if mesh_systems[key] == system_id and meshes_by_key.has(key):
-			(meshes_by_key[key] as MeshInstance3D).visible = enabled
+		if mesh_systems[key] != system_id or not meshes_by_key.has(key):
+			continue
+		var mesh_instance := meshes_by_key[key] as MeshInstance3D
+		mesh_instance.visible = enabled
+		for child in mesh_instance.get_children():
+			if child is StaticBody3D:
+				(child as StaticBody3D).collision_layer = 1 if enabled else 0
 
 func _unhandled_input(event: InputEvent) -> void:
 	if camera == null or current_model == null:
