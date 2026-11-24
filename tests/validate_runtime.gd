@@ -32,15 +32,13 @@ func _run_validation() -> void:
 			quit(1)
 			return
 		var model := packed.instantiate()
-		var names: Dictionary = {}
-		var mesh_nodes := model.find_children("*", "MeshInstance3D", true, false)
-		var imported_names := PackedStringArray()
-		for node in mesh_nodes:
-			var key := str(node.name).to_lower()
-			names[key] = true
-			imported_names.append(key)
-		imported_names.sort()
-		print("NODOS MeshInstance3D ", scenario["mode"], " (", imported_names.size(), "): ", ", ".join(imported_names))
+		var node_by_name: Dictionary = {}
+		var stack: Array[Node] = [model]
+		while not stack.is_empty():
+			var current: Node = stack.pop_back()
+			node_by_name[str(current.name).to_lower()] = current
+			for child in current.get_children():
+				stack.append(child)
 
 		var expected_keys: Array[String] = []
 		for entry in catalog.entries:
@@ -52,8 +50,17 @@ func _run_validation() -> void:
 				continue
 			var key := str(entry.get("key", ""))
 			expected_keys.append(key)
-			if not names.has(key):
-				push_error("FALLO: la malla esperada " + key + " falta en el modelo " + str(scenario["mode"]))
+			if not node_by_name.has(key):
+				push_error("FALLO: no existe un nodo con clave anatómica " + key + " en el modelo " + str(scenario["mode"]))
+				model.free()
+				quit(1)
+				return
+			var structure_node := node_by_name[key] as Node
+			var structure_meshes := structure_node.find_children("*", "MeshInstance3D", true, false)
+			if structure_node is MeshInstance3D:
+				structure_meshes.append(structure_node)
+			if structure_meshes.is_empty():
+				push_error("FALLO: el nodo " + key + " no contiene malla 3D en el modelo " + str(scenario["mode"]))
 				model.free()
 				quit(1)
 				return
@@ -65,12 +72,12 @@ func _run_validation() -> void:
 			quit(1)
 			return
 		for required_key in scenario["required"]:
-			if not names.has(required_key):
+			if not node_by_name.has(str(required_key)):
 				push_error("FALLO: falta " + str(required_key) + " en el modelo " + str(scenario["mode"]))
 				model.free()
 				quit(1)
 				return
-		print("OK modelo ", scenario["mode"], ": ", expected_keys.size(), " mallas esperadas presentes.")
+		print("OK modelo ", scenario["mode"], ": ", expected_keys.size(), " estructuras seleccionables con malla en jerarquía.")
 		model.free()
 
 	print("VALIDACIÓN DE MODELOS CORRECTA: masculino, femenino y catálogo local.")
