@@ -4,27 +4,36 @@ class_name AnatomyCatalog
 const SOURCE_CATALOG := "res://data/open_anatomy_3d_catalog.json"
 const LOCAL_CATALOG := "res://data/anatomy_catalog_es.json"
 const DETAILS_FILE := "res://data/anatomy_entries.json"
+const SYSTEMS_FILE := "res://data/anatomy_systems.json"
 
 const SYSTEM_LABELS := {
 	"all": "Todos los sistemas",
-	"skin": "Tegumentario",
-	"skeleton": "Esquelético",
-	"muscles": "Muscular",
-	"joints": "Articulaciones",
-	"nerves": "Nervioso",
-	"organs": "Órganos",
-	"vessels": "Vasos sanguíneos"
+	"integumentary": "Sistema tegumentario",
+	"skeletal": "Sistema esquelético",
+	"muscular": "Sistema muscular",
+	"nervous": "Sistema nervioso",
+	"endocrine": "Sistema endocrino",
+	"cardiovascular": "Sistema cardiovascular",
+	"lymphatic_immune": "Sistema linfático e inmunitario",
+	"respiratory": "Sistema respiratorio",
+	"digestive": "Sistema digestivo",
+	"urinary": "Sistema urinario",
+	"reproductive": "Sistema reproductor",
+	"sensory": "Órganos de los sentidos",
+	"hematologic": "Sistema sanguíneo y hematopoyético"
 }
 
 var entries: Array[Dictionary] = []
 var by_key: Dictionary = {}
 var details: Dictionary = {}
+var systems: Array[Dictionary] = []
 var load_errors: Array[String] = []
 
 func load_all() -> bool:
 	entries.clear()
 	by_key.clear()
 	details.clear()
+	systems.clear()
 	load_errors.clear()
 
 	var local_data: Variant = _read_json(LOCAL_CATALOG)
@@ -42,6 +51,14 @@ func load_all() -> bool:
 			continue
 		entries.append(item)
 		by_key[key] = item
+
+	var systems_data: Variant = _read_json(SYSTEMS_FILE)
+	if systems_data is Array:
+		for system_value in systems_data:
+			if system_value is Dictionary:
+				systems.append(system_value)
+	else:
+		load_errors.append("No se pudo leer el índice local de sistemas.")
 
 	var detail_data: Variant = _read_json(DETAILS_FILE)
 	if detail_data is Dictionary:
@@ -80,7 +97,7 @@ func filter_entries(mode: String, system_id: String, query: String) -> Array[Dic
 	var result: Array[Dictionary] = []
 	var needle := query.strip_edges().to_lower()
 	for item in entries:
-		var system := str(item.get("system", ""))
+		var system := str(item.get("atlas_system_id", item.get("system", "")))
 		if system_id != "all" and system != system_id:
 			continue
 		var sex_scope := str(item.get("sex", "both"))
