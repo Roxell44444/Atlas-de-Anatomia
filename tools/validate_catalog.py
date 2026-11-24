@@ -19,6 +19,27 @@ def main() -> None:
     details = read_json("data/anatomy_entries.json")
     manifest = read_json("data/open_anatomy_3d_manifest.json")
 
+    project_settings = (ROOT / "project.godot").read_text(encoding="utf-8")
+    android_preset = (ROOT / "export_presets.cfg").read_text(encoding="utf-8")
+    assert "window/handheld/orientation=1" in project_settings, (
+        "La aplicación debe iniciar en orientación vertical (Portrait)."
+    )
+    assert "window/size/viewport_width=720" in project_settings
+    assert "window/size/viewport_height=1280" in project_settings
+    assert 'config/icon="res://assets/app_icon.svg"' in project_settings
+    assert "screen/orientation=1" in android_preset, (
+        "El preset Android debe forzar orientación vertical."
+    )
+    assert "launcher_icons/main_192x192=" in android_preset
+    assert "launcher_icons/adaptive_foreground_432x432=" in android_preset
+    for icon_name in (
+        "app_icon.svg",
+        "app_icon_foreground.svg",
+        "app_icon_background.svg",
+        "app_icon_monochrome.svg",
+    ):
+        assert (ROOT / "assets" / icon_name).is_file(), f"Falta el icono {icon_name}"
+
     source_keys = [item["key"] for item in source]
     localized_keys = [item["key"] for item in localized]
     assert len(source) == 147, f"El catálogo de origen cambió: {len(source)} entradas"
