@@ -1,9 +1,324 @@
 {
   "_metadata": {
-    "schema_version": "1.2",
+    "schema_version": "1.3",
     "language": "es",
-    "status": "no_detailed_entries_cleared_for_distribution",
+    "status": "initial_douglas_college_cc_by_4_0_paraphrases",
     "commercial_use_clearance_required": true,
-    "note": "No hay fichas profundas activas en el paquete. Se exige una licencia comercialmente compatible, coherente y documentada antes de habilitar contenido derivado de cualquier fuente."
+    "note": "Paráfrasis originales en español con licencia de la fuente y atribución visibles. Las imágenes y figuras no se reutilizan; se licencian por separado."
+  },
+  "heart": {
+    "id": "heart",
+    "names": {
+      "es": "Corazón",
+      "la": "Cor",
+      "en": "Heart"
+    },
+    "description": "Órgano muscular hueco del mediastino, entre los pulmones, que funciona como bomba doble para impulsar la sangre por los circuitos pulmonar y sistémico.",
+    "sections": [
+      {
+        "title": "Ubicación, orientación y forma",
+        "items": [
+          "Se sitúa en la cavidad torácica, en el mediastino, entre los pulmones y dentro del saco pericárdico.",
+          "La superficie anterior queda profunda al esternón y a los cartílagos costales; la superficie posterior se relaciona con los cuerpos vertebrales.",
+          "La base es la región superior donde se conectan las venas cavas, la aorta y el tronco pulmonar. El vértice es la punta inferior, orientada hacia la izquierda, próxima al esternón entre las costillas cuarta y quinta.",
+          "El lado derecho del corazón se proyecta más anteriormente y el izquierdo más posteriormente."
+        ]
+      },
+      {
+        "title": "Cavidades y función",
+        "items": [
+          "Tiene cuatro cavidades: atrio derecho, ventrículo derecho, atrio izquierdo y ventrículo izquierdo.",
+          "Los atrios son cámaras receptoras y conducen sangre a los ventrículos; los ventrículos son las principales cámaras de impulsión.",
+          "El ventrículo derecho envía sangre hacia el circuito pulmonar; el ventrículo izquierdo la impulsa hacia el circuito sistémico.",
+          "El ventrículo izquierdo tiene una pared muscular más gruesa que el derecho porque debe generar presión suficiente para el circuito sistémico."
+        ]
+      },
+      {
+        "title": "Membranas y capas",
+        "items": [
+          "El pericardio es el saco que rodea el corazón y las raíces de los grandes vasos. Está formado por una capa fibrosa externa y una serosa interna.",
+          "La serosa tiene una hoja parietal y una hoja visceral; esta última corresponde al epicardio y se adhiere a la pared cardíaca.",
+          "La cavidad pericárdica contiene líquido seroso que reduce la fricción durante los movimientos cardíacos.",
+          "La pared cardíaca tiene tres capas: epicardio externo, miocardio medio y endocardio interno.",
+          "El miocardio está formado principalmente por músculo cardíaco y contiene vasos y fibras nerviosas que participan en su regulación."
+        ]
+      },
+      {
+        "title": "Superficies y accidentes externos",
+        "items": [
+          "Las aurículas son prolongaciones del atrio, con aspecto de pequeñas orejas, que pueden almacenar sangre y vaciarla en la cavidad correspondiente.",
+          "El surco coronario o auriculoventricular separa externamente atrios y ventrículos y contiene vasos coronarios.",
+          "El surco interventricular anterior se encuentra en la cara anterior; el posterior, en la cara posterior, entre los ventrículos.",
+          "Los surcos contienen grasa y vasos coronarios principales."
+        ]
+      },
+      {
+        "title": "Circulación",
+        "items": [
+          "El circuito pulmonar conduce sangre desde el ventrículo derecho hacia los pulmones para el intercambio gaseoso y la devuelve al atrio izquierdo.",
+          "El circuito sistémico distribuye sangre oxigenada desde el ventrículo izquierdo a los tejidos y devuelve sangre con menor contenido de oxígeno al atrio derecho.",
+          "Recorrido general: atrio derecho → ventrículo derecho → tronco y arterias pulmonares → capilares pulmonares → venas pulmonares → atrio izquierdo → ventrículo izquierdo → aorta → tejidos → venas cavas → atrio derecho.",
+          "Las arterias pulmonares transportan sangre relativamente desoxigenada y las venas pulmonares transportan sangre oxigenada."
+        ]
+      },
+      {
+        "title": "Sistema valvular",
+        "items": [
+          "Las cuatro válvulas aseguran el flujo unidireccional entre atrios, ventrículos y grandes vasos.",
+          "Las válvulas auriculoventriculares se ubican entre cada atrio y su ventrículo; las válvulas semilunares se sitúan en las salidas hacia el tronco pulmonar y la aorta.",
+          "La apertura y el cierre valvular dependen de los gradientes de presión entre cavidades y vasos."
+        ]
+      }
+    ],
+    "source_title": "Douglas College Human Anatomy & Physiology I (1st ed.) — 19.1 Heart Anatomy",
+    "source_url": "https://pressbooks.bccampus.ca/dcbiol11031109/chapter/19-1-heart-anatomy/",
+    "source_edition": "Douglas College Human Anatomy & Physiology I (1st ed.)",
+    "source_publisher": "Douglas College, New Westminster, BC",
+    "source_editor": "Jennifer M. Barker",
+    "source_license": "CC BY 4.0",
+    "license": "CC BY 4.0",
+    "attribution": "Adaptado de Douglas College Human Anatomy & Physiology I (1st ed.), ed. Jennifer M. Barker, Douglas College, bajo licencia Creative Commons Attribution 4.0 International (CC BY 4.0). Texto en español redactado como paráfrasis original; no se reutilizan imágenes. Download for free at https://pressbooks.bccampus.ca/dcbiol11031109",
+    "content_origin": "original_spanish_paraphrase",
+    "review_status": "approved_for_distribution",
+    "review_scope": "Paráfrasis comprobada con la sección de la primera edición indicada. No equivale a validación clínica."
+  },
+  "femur_l": {
+    "id": "femur_l",
+    "names": {
+      "es": "Fémur izquierdo",
+      "la": "Femur",
+      "en": "Left femur"
+    },
+    "description": "Hueso largo del muslo izquierdo. Forma el armazón óseo del muslo y participa en las articulaciones de la cadera y la rodilla.",
+    "sections": [
+      {
+        "title": "Extremo proximal",
+        "items": [
+          "La cabeza femoral es redondeada y se articula con el acetábulo del hueso coxal para formar la articulación de la cadera.",
+          "La fóvea de la cabeza femoral es una pequeña depresión medial donde se fija el ligamento de la cabeza del fémur.",
+          "El cuello es la región estrechada situada debajo de la cabeza.",
+          "El trocánter mayor es una gran proyección ósea situada por encima de la base del cuello; varios músculos que actúan sobre la cadera se fijan en él.",
+          "El trocánter menor es una prominencia menor de la cara medial, inferior al cuello.",
+          "La línea intertrocantérica conecta los trocánteres por delante; la cresta intertrocantérica los conecta por detrás."
+        ]
+      },
+      {
+        "title": "Diáfisis y relieves posteriores",
+        "items": [
+          "La diáfisis presenta una ligera curvatura anterior.",
+          "En el extremo proximal posterior de la diáfisis se encuentra la tuberosidad glútea, una zona rugosa que desciende desde el trocánter mayor.",
+          "La tuberosidad glútea continúa inferiormente con la línea áspera, una cresta rugosa longitudinal de la cara posterior del cuerpo femoral.",
+          "A lo largo de la línea áspera se fijan músculos de la cadera y del muslo."
+        ]
+      },
+      {
+        "title": "Extremo distal",
+        "items": [
+          "El extremo distal se ensancha en los cóndilos medial y lateral, cuyas superficies lisas se articulan con la tibia.",
+          "Los epicóndilos medial y lateral son regiones rugosas externas a los cóndilos y sirven de fijación a músculos y ligamentos de soporte de la rodilla.",
+          "El tubérculo del aductor es una pequeña prominencia en el margen superior del epicóndilo medial.",
+          "La fosa intercondílea es una depresión profunda posterior situada entre ambos cóndilos.",
+          "En la cara anterior, las superficies de los cóndilos se unen para formar la superficie patelar, que se articula con la patela."
+        ]
+      },
+      {
+        "title": "Articulaciones y función",
+        "items": [
+          "La cabeza femoral participa en la articulación coxofemoral con el acetábulo.",
+          "Los cóndilos medial y lateral se articulan con la tibia para formar la articulación de la rodilla.",
+          "La superficie patelar se articula con la patela; la patela no se articula con la tibia.",
+          "El fémur transmite cargas entre la pelvis y la pierna y proporciona superficies de fijación y palancas para músculos de la cadera y el muslo."
+        ]
+      }
+    ],
+    "source_title": "Douglas College Human Anatomy & Physiology I (1st ed.) — 8.4 Bones of the Lower Limb",
+    "source_url": "https://pressbooks.bccampus.ca/dcbiol11031109/chapter/8-4-bones-of-the-lower-limb/",
+    "source_edition": "Douglas College Human Anatomy & Physiology I (1st ed.)",
+    "source_publisher": "Douglas College, New Westminster, BC",
+    "source_editor": "Jennifer M. Barker",
+    "source_license": "CC BY 4.0",
+    "license": "CC BY 4.0",
+    "attribution": "Adaptado de Douglas College Human Anatomy & Physiology I (1st ed.), ed. Jennifer M. Barker, Douglas College, bajo licencia Creative Commons Attribution 4.0 International (CC BY 4.0). Texto en español redactado como paráfrasis original; no se reutilizan imágenes. Download for free at https://pressbooks.bccampus.ca/dcbiol11031109",
+    "content_origin": "original_spanish_paraphrase",
+    "review_status": "approved_for_distribution",
+    "review_scope": "Paráfrasis comprobada con la sección de la primera edición indicada. No equivale a validación clínica."
+  },
+  "femur_r": {
+    "id": "femur_r",
+    "names": {
+      "es": "Fémur derecho",
+      "la": "Femur",
+      "en": "Right femur"
+    },
+    "description": "Hueso largo del muslo derecho. Comparte la organización anatómica general del fémur y se orienta con lateralidad derecha en posición anatómica.",
+    "sections": [
+      {
+        "title": "Extremo proximal",
+        "items": [
+          "La cabeza femoral se dirige medialmente y se articula con el acetábulo del hueso coxal.",
+          "La fóvea de la cabeza femoral es el punto de fijación del ligamento de la cabeza del fémur.",
+          "El cuello conecta la cabeza con el cuerpo femoral.",
+          "El trocánter mayor se proyecta proximal y lateralmente; el trocánter menor se sitúa inferior y medialmente.",
+          "La línea intertrocantérica es anterior y la cresta intertrocantérica es posterior."
+        ]
+      },
+      {
+        "title": "Diáfisis y relieves posteriores",
+        "items": [
+          "La diáfisis posee una curvatura anterior ligera.",
+          "En su cara posterior proximal aparece la tuberosidad glútea, que continúa con la línea áspera.",
+          "La línea áspera es una cresta longitudinal rugosa de fijación para músculos de la cadera y el muslo."
+        ]
+      },
+      {
+        "title": "Extremo distal",
+        "items": [
+          "Los cóndilos medial y lateral se articulan con la tibia.",
+          "Los epicóndilos medial y lateral son relieves rugosos para inserciones musculares y ligamentosas.",
+          "El tubérculo del aductor se sitúa en el margen superior del epicóndilo medial.",
+          "La fosa intercondílea se encuentra en la cara posterior entre los cóndilos.",
+          "La superficie patelar se encuentra en la cara anterior y articula con la patela."
+        ]
+      },
+      {
+        "title": "Articulaciones y función",
+        "items": [
+          "La cabeza forma parte de la articulación coxofemoral con el acetábulo.",
+          "Los cóndilos se articulan con la tibia; la superficie patelar se articula con la patela.",
+          "El fémur transmite las cargas entre pelvis y pierna y sirve como brazo de palanca para músculos que actúan en cadera y rodilla."
+        ]
+      }
+    ],
+    "source_title": "Douglas College Human Anatomy & Physiology I (1st ed.) — 8.4 Bones of the Lower Limb",
+    "source_url": "https://pressbooks.bccampus.ca/dcbiol11031109/chapter/8-4-bones-of-the-lower-limb/",
+    "source_edition": "Douglas College Human Anatomy & Physiology I (1st ed.)",
+    "source_publisher": "Douglas College, New Westminster, BC",
+    "source_editor": "Jennifer M. Barker",
+    "source_license": "CC BY 4.0",
+    "license": "CC BY 4.0",
+    "attribution": "Adaptado de Douglas College Human Anatomy & Physiology I (1st ed.), ed. Jennifer M. Barker, Douglas College, bajo licencia Creative Commons Attribution 4.0 International (CC BY 4.0). Texto en español redactado como paráfrasis original; no se reutilizan imágenes. Download for free at https://pressbooks.bccampus.ca/dcbiol11031109",
+    "content_origin": "original_spanish_paraphrase",
+    "review_status": "approved_for_distribution",
+    "review_scope": "Paráfrasis comprobada con la sección de la primera edición indicada. No equivale a validación clínica."
+  },
+  "kidney_l": {
+    "id": "kidney_l",
+    "names": {
+      "es": "Riñón izquierdo",
+      "la": "Ren",
+      "en": "Left kidney"
+    },
+    "description": "Órgano urinario par situado en el espacio retroperitoneal izquierdo. Filtra la sangre y participa en la formación de orina y en el mantenimiento de la composición del medio interno.",
+    "sections": [
+      {
+        "title": "Topografía y relaciones",
+        "items": [
+          "Los riñones se localizan a ambos lados de la columna vertebral, en el espacio retroperitoneal entre el peritoneo parietal y la pared abdominal posterior.",
+          "El riñón izquierdo se sitúa aproximadamente entre las vértebras T12 y L3.",
+          "Las porciones superiores están parcialmente protegidas por las costillas undécima y duodécima.",
+          "Cada riñón está cubierto por una cápsula fibrosa de tejido conectivo denso irregular; externamente hay una almohadilla de grasa renal y una fascia renal que ayuda a fijarlo a la pared posterior."
+        ]
+      },
+      {
+        "title": "Morfología externa e interna",
+        "items": [
+          "El hilio renal está en el borde medial y permite el paso de vasos, nervios, linfáticos y uréter.",
+          "En un corte frontal se distinguen una corteza renal externa y una médula renal interna.",
+          "Las columnas renales son prolongaciones de tejido cortical que separan las pirámides de la médula.",
+          "Las pirámides terminan en papilas renales, que conducen la orina hacia los cálices menores y mayores.",
+          "Los cálices se reúnen en la pelvis renal, cuya musculatura lisa impulsa la orina hacia el uréter mediante peristalsis."
+        ]
+      },
+      {
+        "title": "Irrigación y drenaje",
+        "items": [
+          "La arteria renal nace directamente de la aorta descendente; la vena renal devuelve la sangre hacia la vena cava inferior.",
+          "En el hilio, la arteria, la vena y la pelvis renal se ordenan en sentido anteroposterior según la descripción de la fuente.",
+          "La arteria renal se divide en arterias segmentarias, después en arterias interlobares, arcuatas y corticales radiadas.",
+          "Las arterias corticales radiadas originan arteriolas aferentes que llevan sangre a los glomérulos.",
+          "Las arteriolas eferentes originan una segunda red capilar: capilares peritubulares y vasos rectos; estos retornan luego al sistema venoso."
+        ]
+      },
+      {
+        "title": "Nefrona y función",
+        "items": [
+          "La nefrona es la unidad funcional que depura la sangre y ayuda a equilibrar los componentes del medio interno.",
+          "La arteriola aferente forma un ovillo de capilares denominado glomérulo.",
+          "El glomérulo está rodeado por la cápsula de Bowman; juntos forman el corpúsculo renal.",
+          "Después del corpúsculo, la sangre sale por la arteriola eferente y alcanza los capilares peritubulares y los vasos rectos.",
+          "Las redes capilares recuperan agua y solutos desde el filtrado tubular y los devuelven a la circulación.",
+          "Las nefronas corticales presentan asas de Henle cortas; las yuxtamedulares tienen asas largas que penetran profundamente en la médula."
+        ]
+      }
+    ],
+    "source_title": "Douglas College Human Anatomy & Physiology II (1st ed.) — 25.3 Gross Anatomy of the Kidney",
+    "source_url": "https://pressbooks.bccampus.ca/dcbiol12031209/chapter/25-3-gross-anatomy-of-the-kidney-1203/",
+    "source_edition": "Douglas College Human Anatomy & Physiology II (1st ed.)",
+    "source_publisher": "Douglas College, New Westminster, BC",
+    "source_editor": "Jennifer M. Barker",
+    "source_license": "CC BY 4.0",
+    "license": "CC BY 4.0",
+    "attribution": "Adaptado de Douglas College Human Anatomy & Physiology II (1st ed.), ed. Jennifer M. Barker, Douglas College, bajo licencia Creative Commons Attribution 4.0 International (CC BY 4.0). Texto en español redactado como paráfrasis original; no se reutilizan imágenes. Download for free at https://pressbooks.bccampus.ca/dcbiol12031209",
+    "content_origin": "original_spanish_paraphrase",
+    "review_status": "approved_for_distribution",
+    "review_scope": "Paráfrasis comprobada con la sección de la primera edición indicada. No equivale a validación clínica."
+  },
+  "kidney_r": {
+    "id": "kidney_r",
+    "names": {
+      "es": "Riñón derecho",
+      "la": "Ren",
+      "en": "Right kidney"
+    },
+    "description": "Órgano urinario par situado en el espacio retroperitoneal derecho. Se encuentra algo más inferior que el izquierdo por el desplazamiento asociado al hígado.",
+    "sections": [
+      {
+        "title": "Topografía y relaciones",
+        "items": [
+          "Los riñones se ubican a ambos lados de la columna, detrás del peritoneo parietal y delante de la pared abdominal posterior.",
+          "El riñón derecho se sitúa ligeramente más bajo que el izquierdo debido a la posición del hígado.",
+          "Las costillas undécima y duodécima protegen parcialmente la porción superior.",
+          "La cápsula fibrosa rodea directamente el órgano; por fuera se encuentran la almohadilla adiposa renal y la fascia renal."
+        ]
+      },
+      {
+        "title": "Morfología externa e interna",
+        "items": [
+          "El hilio está en el borde medial y constituye la puerta de entrada y salida de vasos, nervios, linfáticos y uréter.",
+          "La corteza renal forma la región externa y la médula la región interna.",
+          "Las columnas renales separan las pirámides medulares; las papilas de las pirámides descargan en cálices menores y mayores.",
+          "Los cálices confluyen en la pelvis renal, que se continúa con el uréter y conduce la orina mediante contracciones peristálticas."
+        ]
+      },
+      {
+        "title": "Irrigación y drenaje",
+        "items": [
+          "La arteria renal derecha nace de la aorta descendente; la vena renal derecha drena hacia la vena cava inferior.",
+          "El árbol arterial se organiza en ramas segmentarias, interlobares, arcuatas y corticales radiadas.",
+          "Las arterias corticales radiadas originan arteriolas aferentes que llevan sangre a los glomérulos.",
+          "Las arteriolas eferentes forman capilares peritubulares y vasos rectos, que participan en el intercambio con los túbulos antes de regresar al sistema venoso."
+        ]
+      },
+      {
+        "title": "Nefrona y función",
+        "items": [
+          "La nefrona es la unidad funcional renal; comprende el corpúsculo renal y el túbulo asociado.",
+          "El glomérulo es un conjunto de capilares derivado de la arteriola aferente; junto con la cápsula de Bowman forma el corpúsculo renal.",
+          "La sangre abandona los capilares glomerulares por la arteriola eferente y pasa a capilares peritubulares y vasos rectos.",
+          "Las nefronas corticales tienen asas de Henle cortas; las yuxtamedulares poseen asas largas que penetran en la médula."
+        ]
+      }
+    ],
+    "source_title": "Douglas College Human Anatomy & Physiology II (1st ed.) — 25.3 Gross Anatomy of the Kidney",
+    "source_url": "https://pressbooks.bccampus.ca/dcbiol12031209/chapter/25-3-gross-anatomy-of-the-kidney-1203/",
+    "source_edition": "Douglas College Human Anatomy & Physiology II (1st ed.)",
+    "source_publisher": "Douglas College, New Westminster, BC",
+    "source_editor": "Jennifer M. Barker",
+    "source_license": "CC BY 4.0",
+    "license": "CC BY 4.0",
+    "attribution": "Adaptado de Douglas College Human Anatomy & Physiology II (1st ed.), ed. Jennifer M. Barker, Douglas College, bajo licencia Creative Commons Attribution 4.0 International (CC BY 4.0). Texto en español redactado como paráfrasis original; no se reutilizan imágenes. Download for free at https://pressbooks.bccampus.ca/dcbiol12031209",
+    "content_origin": "original_spanish_paraphrase",
+    "review_status": "approved_for_distribution",
+    "review_scope": "Paráfrasis comprobada con la sección de la primera edición indicada. No equivale a validación clínica."
   }
 }
