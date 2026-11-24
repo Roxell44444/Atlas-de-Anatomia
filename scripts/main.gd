@@ -206,19 +206,12 @@ func _build_interface() -> void:
 
 func _populate_system_filter() -> void:
 	system_dropdown.clear()
-	var options := [
-		["Todos los sistemas", "all"],
-		["Tegumentario", "skin"],
-		["Esquelético", "skeleton"],
-		["Muscular", "muscles"],
-		["Articulaciones", "joints"],
-		["Nervioso", "nerves"],
-		["Órganos", "organs"],
-		["Vasos sanguíneos", "vessels"]
-	]
-	for option in options:
-		system_dropdown.add_item(option[0])
-		system_dropdown.set_item_metadata(system_dropdown.item_count - 1, option[1])
+	system_dropdown.add_item("Todos los sistemas")
+	system_dropdown.set_item_metadata(0, "all")
+	for system in catalog.systems:
+		var system_id := str(system.get("id", ""))
+		system_dropdown.add_item(str(system.get("name_es", system_id)))
+		system_dropdown.set_item_metadata(system_dropdown.item_count - 1, system_id)
 
 func _load_progress() -> void:
 	if progress.load(SAVE_PATH) == OK:
