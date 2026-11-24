@@ -8,7 +8,7 @@ Atlas anatómico educativo e interactivo, Android primero, desarrollado con Godo
 - Interfaz inicial en español y selector de cuerpo masculino/femenino.
 - Visor 3D con cámara orbital, zoom, selección por rayo de colisión y resaltado de la malla seleccionada.
 - Filtros por sistema y controles de visibilidad de piel, esqueleto, músculos, órganos, vasos y nervios.
-- Índice local con 147 nombres anatómicos en español e inglés y claves originales estables.
+- Índice local con 263 entradas: 147 entradas originales de Open Anatomy 3D y 116 entradas informativas adicionales sin malla 3D, con nombres en español e inglés, claves estables y cobertura organizada en 13 categorías de sistemas.
 - Panel de ficha y guardado local de modo/selección.
 - Cinco fichas educativas iniciales con contenido y fuentes: corazón, ambos fémures y ambos riñones.
 - Panel tutor con búsqueda local. La integración generativa Gemini requiere un servicio seguro configurado; no se incluye ninguna clave en la aplicación.
@@ -32,7 +32,7 @@ La fuente declara 147 entradas; 12 son puntos de referencia articulares y no mal
 
 Las primeras fichas ampliadas son paráfrasis educativas de **Anatomy & Physiology 2e**, edición de Oregon State University Open Educational Resources bajo CC BY 4.0. Se incluyen referencias específicas por ficha y atribución en `docs/ATTRIBUTION_EDUCATIONAL_DATA.md`.
 
-Los nombres y la indexación de las 147 entradas están disponibles sin conexión. La información profunda aún no está completada para todas las estructuras: las fichas sin contenido ampliado se identifican de forma explícita y no se rellenan con afirmaciones genéricas.
+Los nombres y la indexación de las 263 entradas están disponibles sin conexión. Las 116 entradas añadidas son informativas, no aparecen como mallas del modelo y mantienen la ficha ampliada en estado pendiente. La información profunda aún no está completada para todas las estructuras: las fichas sin contenido ampliado se identifican de forma explícita y no se rellenan con afirmaciones genéricas.
 
 ## Compilación Android
 
