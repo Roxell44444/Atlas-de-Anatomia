@@ -56,11 +56,18 @@ func _build_interface() -> void:
 	margin.add_theme_constant_override("margin_bottom", 12)
 	add_child(margin)
 
-	var layout := VBoxContainer.new()
-	layout.add_theme_constant_override("separation", 8)
-	margin.add_child(layout)
+	var scroll := ScrollContainer.new()
+	scroll.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	margin.add_child(scroll)
 
-	var header := HBoxContainer.new()
+	var layout := VBoxContainer.new()
+	layout.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	layout.add_theme_constant_override("separation", 8)
+	scroll.add_child(layout)
+
+	var header := HFlowContainer.new()
 	header.add_theme_constant_override("separation", 10)
 	layout.add_child(header)
 
@@ -95,12 +102,13 @@ func _build_interface() -> void:
 	about_button.pressed.connect(_show_about)
 	header.add_child(about_button)
 
-	var toolbar := HBoxContainer.new()
+	var toolbar := HFlowContainer.new()
 	toolbar.add_theme_constant_override("separation", 8)
 	layout.add_child(toolbar)
 
 	search_box = LineEdit.new()
 	search_box.placeholder_text = "Buscar órgano, hueso, músculo o estructura…"
+	search_box.custom_minimum_size.x = 220
 	search_box.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	search_box.text_changed.connect(_on_search_changed)
 	toolbar.add_child(search_box)
@@ -158,13 +166,13 @@ func _build_interface() -> void:
 	viewer.model_status_changed.connect(_on_model_status_changed)
 	viewport.add_child(viewer)
 
-	var lower := HBoxContainer.new()
+	var lower := HFlowContainer.new()
 	lower.custom_minimum_size = Vector2(0, 205)
 	lower.add_theme_constant_override("separation", 10)
 	layout.add_child(lower)
 
 	var list_panel := PanelContainer.new()
-	list_panel.custom_minimum_size.x = 235
+	list_panel.custom_minimum_size = Vector2(245, 210)
 	list_panel.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	lower.add_child(list_panel)
 	var list_box := VBoxContainer.new()
@@ -182,6 +190,7 @@ func _build_interface() -> void:
 	list_box.add_child(item_list)
 
 	var detail_panel := PanelContainer.new()
+	detail_panel.custom_minimum_size = Vector2(320, 210)
 	detail_panel.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	lower.add_child(detail_panel)
 	var detail_box := VBoxContainer.new()
@@ -231,8 +240,11 @@ func _set_mode(next_mode: String, save: bool) -> void:
 		viewer.load_body(mode)
 		_apply_default_layers()
 	_refresh_list()
-	if selected_key in catalog.by_key:
+	if selected_key in visible_keys:
 		_update_detail(catalog.get_entry(selected_key))
+	else:
+		selected_key = ""
+		_save_progress()
 	if save:
 		_save_progress()
 
@@ -286,8 +298,10 @@ func _refresh_list() -> void:
 	if selected_key in visible_keys:
 		var index := visible_keys.find(selected_key)
 		item_list.select(index)
+	elif active_system == "all":
+		_set_detail_text("Selecciona una estructura en la lista o tócala en el modelo 3D.\n\nEl índice local contiene " + str(catalog.entries.size()) + " entradas, entre estructuras de los modelos y entradas informativas sin malla 3D.")
 	else:
-		_set_detail_text("Selecciona una estructura en la lista o tócala en el modelo 3D.\n\nEl catálogo local contiene " + str(catalog.entries.size()) + " entradas de la fuente Open Anatomy 3D; algunas son puntos de referencia y no mallas independientes.")
+		_show_system_overview(active_system)
 
 func _show_system_overview(system_id: String) -> void:
 	for system in catalog.systems:
@@ -296,12 +310,16 @@ func _show_system_overview(system_id: String) -> void:
 		var title := str(system.get("name_es", system_id))
 		var description := str(system.get("description", ""))
 		var count := int(system.get("catalog_entries", 0))
-		var status := str(system.get("coverage_status", "not_yet_catalogued"))
-		var text_value := "[font_size=19][b]" + _escape_bbcode(title) + "[/b][/font_size]\\n"
-		text_value += _escape_bbcode(description) + "\\n\\n"
-		text_value += "[b]Entradas indexadas:[/b] " + str(count) + "\\n"
-		text_value += "[b]Estado:[/b] " + _escape_bbcode(status) + "\\n"
-		text_value += "[color=#e6bd76]La cobertura de este sistema todavía es parcial. Las estructuras sin ficha ampliada se marcarán y completarán con fuentes verificadas.[/color]"
+		var mesh_count := int(system.get("mesh_entries", 0))
+		var info_count := int(system.get("info_only_entries", 0))
+		var detail_count := int(system.get("detailed_entries", 0))
+		var text_value := "[font_size=19][b]" + _escape_bbcode(title) + "[/b][/font_size]\n"
+		text_value += _escape_bbcode(description) + "\n\n"
+		text_value += "[b]Entradas indexadas:[/b] " + str(count) + "\n"
+		text_value += "[b]Estructuras con malla de origen:[/b] " + str(mesh_count) + "\n"
+		text_value += "[b]Entradas informativas sin malla:[/b] " + str(info_count) + "\n"
+		text_value += "[b]Fichas profundas aprobadas:[/b] " + str(detail_count) + "\n\n"
+		text_value += "[color=#e6bd76]La cobertura es parcial. Las entradas sin malla no se pueden seleccionar en 3D, y las fichas profundas deben completarse con fuentes y licencias verificadas.[/color]"
 		_set_detail_text(text_value)
 		return
 	_set_detail_text("No se encontró información del sistema seleccionado.")
