@@ -150,7 +150,7 @@ Los IDs no cambian al traducir. Las mallas se enlazan mediante IDs verificados, 
 - El paquete Visible Human es un piloto de 20 mallas óseas y no un esqueleto completo.
 - La cobertura exhaustiva de todo el cuerpo requiere incorporar más fuentes abiertas, revisar licencias y validar cada estructura; no puede declararse terminada por el mero hecho de listar sistemas.
 - Hay un flujo GitHub Actions para validar catálogo, importar los modelos y exportar una APK de depuración; su ejecución y resultado no están confirmados. No hay todavía APK validada ni pruebas de modo avión.
-- Hay veinte fichas profundas iniciales activas, basadas en capítulos específicos de las primeras ediciones de Douglas College I y II, que declaran CC BY 4.0. Cada ficha incluye la atribución digital exigida. Las demás entradas siguen pendientes de documentación. Histología y embriología completas todavía no están desarrolladas.
+- Hay veinticinco fichas profundas iniciales activas, basadas en capítulos específicos de las primeras ediciones de Douglas College I y II, que declaran CC BY 4.0. Cada ficha incluye la atribución digital exigida. Las demás entradas siguen pendientes de documentación. Histología y embriología completas todavía no están desarrolladas.
 - La base del tutor ofrece búsqueda local; la conexión segura a Gemini y su servicio todavía no están configurados.
 
 
