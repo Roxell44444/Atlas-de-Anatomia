@@ -79,6 +79,9 @@ jobs:
       - name: Import Godot resources
         run: godot --headless --editor --path . --import
 
+      - name: Prepare custom Android launcher icons
+        run: godot --headless --path . --script res://tools/prepare_app_icons.gd
+
       - name: Validate imported male and female anatomy models
         run: godot --headless --path . --script res://tests/validate_runtime.gd
 
