@@ -1,9 +1,302 @@
 {
   "_metadata": {
-    "schema_version": "1.0",
+    "schema_version": "1.1",
     "language": "es",
-    "status": "no_detailed_entries_cleared_for_distribution",
+    "status": "initial_openstax_cc_by_4_0_paraphrases",
     "commercial_use_clearance_required": true,
-    "note": "Los borradores anteriores se retiraron del paquete de la aplicación al comprobar que la edición de Oregon State University usada como fuente declara CC BY-SA 4.0. Solo se incluirán futuras fichas cuando su fuente y licencia permitan la distribución prevista y queden registradas."
+    "note": "Contenido educativo redactado como paráfrasis original. Cada ficha conserva fuente exacta, capítulo, licencia y atribución. No se incluyen imágenes de terceros."
+  },
+  "heart": {
+    "id": "heart",
+    "names": {
+      "es": "Corazón",
+      "la": "Cor",
+      "en": "Heart"
+    },
+    "description": "El corazón es un órgano muscular hueco con cuatro cavidades que impulsa la sangre por los circuitos pulmonar y sistémico.",
+    "sections": [
+      {
+        "title": "Ubicación y orientación",
+        "items": [
+          "Se localiza en la cavidad torácica, en el mediastino, entre los pulmones y dentro del saco pericárdico.",
+          "La superficie anterior se encuentra profunda al esternón y a los cartílagos costales; la superficie posterior se relaciona con los cuerpos vertebrales.",
+          "La base se orienta hacia superior y posterior y recibe los grandes vasos. El vértice se dirige inferiormente y hacia la izquierda, próximo al esternón entre la cuarta y quinta costillas."
+        ]
+      },
+      {
+        "title": "Morfología externa",
+        "items": [
+          "Se describen las superficies esternocostal, diafragmática y pulmonares.",
+          "El surco coronario marca externamente la separación entre atrios y ventrículos.",
+          "Los surcos interventriculares anterior y posterior señalan externamente la separación de ambos ventrículos y alojan vasos coronarios.",
+          "Las aurículas son prolongaciones de los atrios; sus paredes internas presentan músculos pectíneos."
+        ]
+      },
+      {
+        "title": "Cavidades, tabiques y relieves",
+        "items": [
+          "El atrio derecho recibe sangre de las venas cavas superior e inferior y del seno coronario; contiene la fosa oval en el tabique interatrial.",
+          "El ventrículo derecho recibe sangre a través de la válvula tricúspide y la expulsa al tronco pulmonar; contiene trabéculas carnosas, músculos papilares y banda moderadora.",
+          "El atrio izquierdo recibe sangre de las cuatro venas pulmonares y la conduce al ventrículo izquierdo por la válvula mitral.",
+          "El ventrículo izquierdo es la principal cámara de impulsión sistémica y su miocardio es más grueso que el del derecho.",
+          "Los tabiques interatrial e interventricular separan las cavidades derechas e izquierdas."
+        ]
+      },
+      {
+        "title": "Válvulas y recorrido",
+        "items": [
+          "La válvula tricúspide está entre atrio y ventrículo derechos; la mitral, entre atrio y ventrículo izquierdos.",
+          "La válvula pulmonar se sitúa en la salida del ventrículo derecho; la aórtica, en la salida del ventrículo izquierdo.",
+          "Las válvulas auriculoventriculares se unen a músculos papilares mediante cuerdas tendinosas; las semilunares no tienen ese sistema.",
+          "Recorrido: venas cavas y seno coronario → atrio derecho → tricúspide → ventrículo derecho → válvula pulmonar → pulmones → venas pulmonares → atrio izquierdo → mitral → ventrículo izquierdo → válvula aórtica → aorta."
+        ]
+      },
+      {
+        "title": "Capas, irrigación y drenaje",
+        "items": [
+          "El epicardio es la capa externa de la pared; el miocardio es la capa muscular contráctil y el endocardio reviste cavidades y válvulas.",
+          "El saco pericárdico está formado por pericardio fibroso y seroso; la cavidad pericárdica contiene líquido lubricante.",
+          "Las arterias coronarias derecha e izquierda nacen en los senos aórticos, inmediatamente superiores a la válvula aórtica, y suministran sangre al miocardio.",
+          "El seno coronario recibe gran parte del retorno venoso del miocardio y desemboca en el atrio derecho."
+        ]
+      }
+    ],
+    "source_title": "OpenStax — 19.1 Heart Anatomy",
+    "source_url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-1-heart-anatomy",
+    "license": "CC BY 4.0",
+    "source_edition": "OpenStax Anatomy & Physiology 2e",
+    "attribution": "Paráfrasis original en español basada en Anatomy & Physiology 2e, OpenStax / Rice University, CC BY 4.0. No se reutilizan figuras ni imágenes.",
+    "content_origin": "original_spanish_paraphrase",
+    "review_status": "approved_for_distribution",
+    "review_scope": "Comprobación del contenido con el capítulo fuente indicado; no es una validación clínica."
+  },
+  "femur_l": {
+    "id": "femur_l",
+    "names": {
+      "es": "Fémur izquierdo",
+      "la": "Femur",
+      "en": "Left femur"
+    },
+    "description": "Hueso largo del muslo izquierdo; articula proximalmente con el acetábulo y distalmente con la tibia y la patela.",
+    "sections": [
+      {
+        "title": "Extremo proximal",
+        "items": [
+          "La cabeza femoral se dirige medialmente y se articula con el acetábulo; la fóvea capitis es una pequeña depresión donde se fija el ligamento de la cabeza del fémur.",
+          "El cuello conecta la cabeza con la región trocantérica.",
+          "El trocánter mayor es una prominencia grande y lateral que sirve de fijación a músculos que actúan sobre la cadera; el trocánter menor es una prominencia menor, medial e inferior al cuello.",
+          "La línea intertrocantérica se extiende por la cara anterior entre los trocánteres; la cresta intertrocantérica los conecta posteriormente."
+        ]
+      },
+      {
+        "title": "Diáfisis y relieves posteriores",
+        "items": [
+          "La diáfisis presenta una curvatura anterior ligera.",
+          "En la región proximal posterior se encuentra la tuberosidad glútea, que continúa inferiormente con la línea áspera.",
+          "La línea áspera es una cresta rugosa longitudinal de la cara posterior que sirve de fijación para músculos del muslo y de la cadera."
+        ]
+      },
+      {
+        "title": "Extremo distal",
+        "items": [
+          "El extremo distal se ensancha en cóndilos medial y lateral, cuyas superficies articulares se relacionan con la tibia.",
+          "Los epicóndilos medial y lateral son relieves rugosos externos a los cóndilos y sirven de fijación a músculos y ligamentos.",
+          "El tubérculo del aductor se ubica en el margen superior del epicóndilo medial.",
+          "La fosa intercondílea es una depresión profunda posterior entre los cóndilos; en la cara anterior, la superficie patelar articula con la patela."
+        ]
+      },
+      {
+        "title": "Articulaciones y función",
+        "items": [
+          "La cabeza femoral participa en la articulación coxofemoral con el acetábulo.",
+          "Los cóndilos femorales se articulan con la tibia y la superficie patelar con la patela.",
+          "El fémur transmite cargas entre la pelvis y la pierna y proporciona palancas óseas para músculos de la cadera y la rodilla.",
+          "La ficha no asigna una lista exhaustiva de músculos a cada inserción; las relaciones músculo-hueso se documentarán en fichas enlazadas."
+        ]
+      }
+    ],
+    "source_title": "OpenStax — 8.4 Bones of the Lower Limb",
+    "source_url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-4-bones-of-the-lower-limb",
+    "license": "CC BY 4.0",
+    "source_edition": "OpenStax Anatomy & Physiology 2e",
+    "attribution": "Paráfrasis original en español basada en Anatomy & Physiology 2e, OpenStax / Rice University, CC BY 4.0. No se reutilizan figuras ni imágenes.",
+    "content_origin": "original_spanish_paraphrase",
+    "review_status": "approved_for_distribution",
+    "review_scope": "Comprobación del contenido con el capítulo fuente indicado; no es una validación clínica."
+  },
+  "femur_r": {
+    "id": "femur_r",
+    "names": {
+      "es": "Fémur derecho",
+      "la": "Femur",
+      "en": "Right femur"
+    },
+    "description": "Hueso largo del muslo derecho; su organización general coincide con la del fémur izquierdo, con lateralidad descrita desde la posición anatómica.",
+    "sections": [
+      {
+        "title": "Extremo proximal",
+        "items": [
+          "La cabeza femoral se dirige medialmente para articularse con el acetábulo; la fóvea capitis recibe el ligamento de la cabeza del fémur.",
+          "El cuello conecta la cabeza con el resto del hueso.",
+          "El trocánter mayor se proyecta proximal y lateralmente; el trocánter menor se sitúa inferior y medialmente.",
+          "La línea intertrocantérica es anterior y la cresta intertrocantérica posterior."
+        ]
+      },
+      {
+        "title": "Diáfisis",
+        "items": [
+          "La diáfisis tiene una curvatura anterior suave.",
+          "En la cara posterior, la tuberosidad glútea continúa con la línea áspera, una cresta longitudinal de fijación muscular."
+        ]
+      },
+      {
+        "title": "Extremo distal",
+        "items": [
+          "Los cóndilos medial y lateral se articulan con la tibia.",
+          "Los epicóndilos medial y lateral son relieves rugosos para fijaciones musculares y ligamentosas.",
+          "El tubérculo del aductor se encuentra en el margen superior del epicóndilo medial.",
+          "La fosa intercondílea ocupa la región posterior entre los cóndilos; la superficie patelar está en la cara anterior y articula con la patela."
+        ]
+      },
+      {
+        "title": "Articulaciones y función",
+        "items": [
+          "Participa proximalmente en la articulación coxofemoral y distalmente en las articulaciones femorotibial y femoropatelar.",
+          "Transmite cargas desde la pelvis a la pierna y proporciona palancas óseas para los músculos del muslo y la cadera.",
+          "Las variaciones de orientación femoral y del ángulo Q no deben generalizarse a partir de un modelo digital individual."
+        ]
+      }
+    ],
+    "source_title": "OpenStax — 8.4 Bones of the Lower Limb",
+    "source_url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/8-4-bones-of-the-lower-limb",
+    "license": "CC BY 4.0",
+    "source_edition": "OpenStax Anatomy & Physiology 2e",
+    "attribution": "Paráfrasis original en español basada en Anatomy & Physiology 2e, OpenStax / Rice University, CC BY 4.0. No se reutilizan figuras ni imágenes.",
+    "content_origin": "original_spanish_paraphrase",
+    "review_status": "approved_for_distribution",
+    "review_scope": "Comprobación del contenido con el capítulo fuente indicado; no es una validación clínica."
+  },
+  "kidney_l": {
+    "id": "kidney_l",
+    "names": {
+      "es": "Riñón izquierdo",
+      "la": "Ren",
+      "en": "Left kidney"
+    },
+    "description": "Órgano par retroperitoneal del sistema urinario izquierdo; filtra la sangre, produce orina y participa en la regulación del volumen, los electrolitos y la presión sanguínea.",
+    "sections": [
+      {
+        "title": "Topografía y relaciones",
+        "items": [
+          "Se localiza en el espacio retroperitoneal, entre el peritoneo parietal y la pared abdominal posterior, protegido por músculo, grasa y costillas.",
+          "El riñón izquierdo se proyecta aproximadamente entre T12 y L3.",
+          "El hilio renal, en el borde medial, constituye la entrada y salida de vasos, nervios, linfáticos y uréter.",
+          "La arteria renal, la vena renal y la pelvis renal se disponen en una secuencia anteroposterior descrita por la fuente."
+        ]
+      },
+      {
+        "title": "Morfología interna",
+        "items": [
+          "Se distinguen una corteza periférica y una médula central.",
+          "Las columnas renales son prolongaciones corticales que se introducen entre las pirámides medulares.",
+          "Las pirámides terminan en papilas; los conductos colectores descargan en cálices menores, que confluyen en cálices mayores y pelvis renal.",
+          "La pelvis renal se continúa con el uréter."
+        ]
+      },
+      {
+        "title": "Vascularización",
+        "items": [
+          "La arteria renal nace de la aorta abdominal y se ramifica en arterias segmentarias, interlobares, arcuatas y corticales radiadas antes de originar arteriolas aferentes.",
+          "Las arteriolas aferentes llevan sangre a los glomérulos; las eferentes originan capilares peritubulares y vasos rectos.",
+          "El retorno venoso se reúne hacia la vena renal, que desemboca en la vena cava inferior.",
+          "La fuente describe que los riñones reciben aproximadamente una cuarta parte del gasto cardíaco en reposo."
+        ]
+      },
+      {
+        "title": "Nefrona y función",
+        "items": [
+          "La nefrona es la unidad funcional e incluye el corpúsculo renal y el túbulo renal.",
+          "El corpúsculo renal está formado por el glomérulo y la cápsula glomerular (de Bowman).",
+          "El filtrado pasa por el túbulo contorneado proximal, el asa de Henle y el túbulo contorneado distal; varios nefrones drenan a conductos colectores.",
+          "Las nefronas corticales tienen asas más cortas; las yuxtamedulares presentan asas largas que penetran en la médula."
+        ]
+      },
+      {
+        "title": "Histología esencial",
+        "items": [
+          "La barrera de filtración glomerular incluye endotelio capilar, membrana basal y prolongaciones de podocitos.",
+          "Los corpúsculos renales y túbulos contorneados se encuentran en la corteza; las pirámides y segmentos tubulares largos se extienden en la médula.",
+          "Las estructuras microscópicas de cada segmento se ampliarán con recursos histológicos licenciados por separado."
+        ]
+      }
+    ],
+    "source_title": "OpenStax — 25.3 Gross Anatomy of the Kidney y 25.4 Microscopic Anatomy of the Kidney",
+    "source_url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/25-3-gross-anatomy-of-the-kidney",
+    "license": "CC BY 4.0",
+    "source_edition": "OpenStax Anatomy & Physiology 2e",
+    "attribution": "Paráfrasis original en español basada en Anatomy & Physiology 2e, OpenStax / Rice University, CC BY 4.0. No se reutilizan figuras ni imágenes.",
+    "content_origin": "original_spanish_paraphrase",
+    "review_status": "approved_for_distribution",
+    "review_scope": "Comprobación del contenido con el capítulo fuente indicado; no es una validación clínica."
+  },
+  "kidney_r": {
+    "id": "kidney_r",
+    "names": {
+      "es": "Riñón derecho",
+      "la": "Ren",
+      "en": "Right kidney"
+    },
+    "description": "Órgano par retroperitoneal del sistema urinario derecho, generalmente más inferior que el izquierdo por su relación con el hígado; filtra la sangre y participa en la homeostasis hidroelectrolítica.",
+    "sections": [
+      {
+        "title": "Topografía y relaciones",
+        "items": [
+          "Se ubica en el espacio retroperitoneal, entre el peritoneo parietal y la pared abdominal posterior, protegido por músculo, grasa y costillas.",
+          "El riñón derecho ocupa normalmente una posición algo más baja que el izquierdo por el desplazamiento relacionado con el hígado.",
+          "El hilio renal, en el borde medial, permite el paso de vasos, nervios, linfáticos y uréter."
+        ]
+      },
+      {
+        "title": "Morfología interna",
+        "items": [
+          "Se distinguen corteza renal periférica y médula renal central.",
+          "Las columnas renales separan las pirámides medulares; sus papilas descargan en cálices menores y mayores, que confluyen en la pelvis renal.",
+          "La pelvis renal continúa con el uréter, que conduce la orina hacia la vejiga."
+        ]
+      },
+      {
+        "title": "Vascularización",
+        "items": [
+          "La arteria renal derecha nace de la aorta abdominal y suele ser más larga que la izquierda porque la aorta está situada a la izquierda de la columna.",
+          "La arteria se ramifica en arterias segmentarias, interlobares, arcuatas y corticales radiadas, que originan arteriolas aferentes para los glomérulos.",
+          "Las arteriolas eferentes forman capilares peritubulares y vasos rectos; la sangre retorna por las venas renales hacia la vena cava inferior."
+        ]
+      },
+      {
+        "title": "Nefrona y función",
+        "items": [
+          "La nefrona está formada por corpúsculo renal y túbulo renal; el corpúsculo comprende glomérulo y cápsula glomerular.",
+          "El filtrado atraviesa el túbulo proximal, el asa de Henle y el túbulo distal antes de incorporarse a los conductos colectores.",
+          "Las nefronas corticales poseen asas cortas y las yuxtamedulares asas largas que se extienden hacia la médula.",
+          "Los capilares peritubulares y los vasos rectos participan en la recuperación de agua y solutos."
+        ]
+      },
+      {
+        "title": "Histología esencial",
+        "items": [
+          "La barrera de filtración del glomérulo incluye endotelio capilar, membrana basal y podocitos de la cápsula glomerular.",
+          "Los corpúsculos renales y los túbulos contorneados se encuentran en la corteza; la médula contiene pirámides, conductos colectores y segmentos de asas de Henle.",
+          "La información histológica más fina se ampliará con recursos microscópicos de licencia independiente."
+        ]
+      }
+    ],
+    "source_title": "OpenStax — 25.3 Gross Anatomy of the Kidney y 25.4 Microscopic Anatomy of the Kidney",
+    "source_url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/25-3-gross-anatomy-of-the-kidney",
+    "license": "CC BY 4.0",
+    "source_edition": "OpenStax Anatomy & Physiology 2e",
+    "attribution": "Paráfrasis original en español basada en Anatomy & Physiology 2e, OpenStax / Rice University, CC BY 4.0. No se reutilizan figuras ni imágenes.",
+    "content_origin": "original_spanish_paraphrase",
+    "review_status": "approved_for_distribution",
+    "review_scope": "Comprobación del contenido con el capítulo fuente indicado; no es una validación clínica."
   }
 }
