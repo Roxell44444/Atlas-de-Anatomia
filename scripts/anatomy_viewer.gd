@@ -176,8 +176,7 @@ func _clear_selection() -> void:
 	selected_key = ""
 
 func set_system_visibility(system_id: String, enabled: bool) -> void:
-	if system_nodes.has(system_id):
-		(system_nodes[system_id] as Node).visible = enabled
+	# Toggle only renderable meshes; imported GLTF group nodes may be plain Node3D.
 	for key in mesh_systems:
 		if mesh_systems[key] != system_id or not meshes_by_key.has(key):
 			continue
