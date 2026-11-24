@@ -347,10 +347,12 @@ func _update_detail(entry: Dictionary) -> void:
 	if viewer != null:
 		if viewer.has_mesh(key):
 			output += "\n\n[color=#79d6ad]Malla 3D localizada en el modelo actual.[/color]"
+		elif str(entry.get("model_mapping_status", "")) == "info_only_no_mesh":
+			output += "\n\n[color=#91a7c3]Entrada informativa sin malla 3D en los modelos actuales. La ficha profunda está pendiente de documentación.[/color]"
 		elif str(entry.get("system", "")) == "joints":
 			output += "\n\n[color=#91a7c3]Punto de referencia: no es una malla independiente en esta fuente.[/color]"
 		else:
-			output += "\n\n[color=#e6bd76]La malla no se ha localizado o el modelo todavía no está cargado.[/color]"
+			output += "\n\n[color=#e6bd76]La malla no se ha localizado en el modelo actual.[/color]"
 	details.clear()
 	details.append_text(output)
 
