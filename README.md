@@ -51,11 +51,12 @@ Las pruebas de ejecución inspeccionan la jerarquía importada de cada GLB: una 
 
 - El proyecto Godot y su interfaz inicial ya están en el repositorio.
 - Los modelos binarios no se guardan en Git: se descargan y verifican durante la compilación y quedan empaquetados en la APK si el flujo finaliza correctamente.
-- El visor crea colisiones para las mallas con clave coincidente en el catálogo; selección, orientación, capas y rendimiento necesitan validación real en Godot y Android.
-- Hay cinco fichas profundas iniciales aprobadas con fuentes CC BY 4.0; las otras 258 entradas siguen pendientes de documentación.
+- El visor reconoce las claves anatómicas en la jerarquía importada y crea colisiones en sus mallas descendientes. La prueba de CI confirmó 128 estructuras seleccionables en el cuerpo masculino y 133 en el femenino. La interacción táctil, las capas y el rendimiento todavía requieren prueba en un teléfono Android real.
+- Hay 25 fichas profundas con fuente y atribución CC BY 4.0. Las demás entradas del índice continúan pendientes de documentación anatómica profunda.
 - El paquete Visible Human previo contiene 20 mallas óseas piloto, no un esqueleto completo.
 - La aplicación principal está diseñada para funcionar offline cuando los recursos descargados estén empaquetados. Tutor Gemini requiere conexión y un backend seguro; el modo local solo busca en el catálogo.
-- Todavía no se ha confirmado una APK funcional ni una prueba de modo avión en un teléfono Android.
+- **APK de depuración generada y validada por CI el 24 de noviembre de 2026.** La ejecución [45484652325](https://github.com/Roxell44444/Atlas-de-Anatomia/actions/runs/45484652325) terminó en verde y publicó el artefacto `atlas-anatomia-android-debug` (retención hasta el 8 de diciembre de 2026). La APK incluye ambos modelos 3D importados y los archivos del catálogo/fichas locales.
+- La compilación y el arranque headless pasaron; todavía no se ha realizado una instalación y prueba manual en un dispositivo Android físico. El tutor generativo Gemini tampoco está conectado: la búsqueda local funciona sin red y la generación requiere backend y conexión.
 
 ## Regla de calidad
 
