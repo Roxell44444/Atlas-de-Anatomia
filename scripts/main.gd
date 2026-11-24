@@ -211,10 +211,10 @@ func _build_interface() -> void:
 	layers_bar.add_theme_constant_override("separation", 8)
 	layers_scroll.add_child(layers_bar)
 	var layer_specs := [
-		["skin", "Piel", false],
-		["skeleton", "Huesos", true],
-		["muscles", "Músculos", true],
-		["organs", "Órganos", true],
+		["skin", "Piel", true],
+		["skeleton", "Huesos", false],
+		["muscles", "Músculos", false],
+		["organs", "Órganos", false],
 		["vessels", "Vasos", false],
 		["nerves", "Nervios", false]
 	]
@@ -355,10 +355,10 @@ func _set_mode(next_mode: String, save: bool) -> void:
 
 func _apply_default_layers() -> void:
 	var defaults := {
-		"skin": false,
-		"skeleton": true,
-		"muscles": true,
-		"organs": true,
+		"skin": true,
+		"skeleton": false,
+		"muscles": false,
+		"organs": false,
 		"vessels": false,
 		"nerves": false
 	}
