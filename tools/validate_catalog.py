@@ -24,14 +24,27 @@ def main() -> None:
     assert len(source) == 147, f"El catálogo de origen cambió: {len(source)} entradas"
     assert len(source_keys) == len(set(source_keys)), "Claves repetidas en catálogo fuente"
     assert len(localized_keys) == len(set(localized_keys)), "Claves repetidas en catálogo ES"
-    assert set(source_keys) == set(localized_keys), "El catálogo español no corresponde al original"
+    assert set(source_keys).issubset(set(localized_keys)), "Faltan claves de la fuente en el catálogo español"
+    extras = set(localized_keys) - set(source_keys)
+    for item in localized:
+        if item["key"] in extras:
+            assert item.get("model_mapping_status") == "info_only_no_mesh", f"Extra debe declararse sin malla: {item['key']}"
+            assert item.get("content_status") == "planned_needs_research", f"Extra debe declarar contenido pendiente: {item['key']}"
+            assert item.get("review_status") == "nomenclature_seed_only", f"Extra debe indicar revisión de nomenclatura pendiente: {item['key']}"
 
+    expected_systems = {
+        "integumentary", "skeletal", "muscular", "nervous", "endocrine",
+        "cardiovascular", "lymphatic_immune", "respiratory", "digestive",
+        "urinary", "reproductive", "sensory", "hematologic"
+    }
     for item in localized:
         assert item.get("names", {}).get("es", "").strip(), f"Falta traducción: {item['key']}"
         assert item.get("names", {}).get("en", "").strip(), f"Falta nombre inglés: {item['key']}"
         assert item.get("system_label_es", "").strip(), f"Falta sistema traducido: {item['key']}"
-        if item.get("system") == "joints":
+        assert item.get("atlas_system_id") in expected_systems, f"Sistema desconocido: {item['key']}"
+        if item.get("system") == "joints" and item["key"] in set(source_keys):
             assert item["model_mapping_status"] == "anchor_only_no_independent_mesh"
+    assert expected_systems.issubset({item["atlas_system_id"] for item in localized}), "Falta un sistema en el índice"
 
     for key, detail in details.items():
         if key == "_metadata":
@@ -50,7 +63,8 @@ def main() -> None:
 
     print(
         "VALIDACIÓN CORRECTA: "
-        f"{len(source)} claves únicas, 147 nombres ES, "
+        f"{len(source)} mallas/hotspots de origen, {len(localized)} entradas indexadas "
+        f"({len(extras)} informativas sin malla), 13 sistemas, "
         f"{len(details) - 1} fichas educativas con fuentes, 2 modelos declarados."
     )
 
