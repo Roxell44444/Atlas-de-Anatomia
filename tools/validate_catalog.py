@@ -46,14 +46,22 @@ def main() -> None:
             assert item["model_mapping_status"] == "anchor_only_no_independent_mesh"
     assert expected_systems.issubset({item["atlas_system_id"] for item in localized}), "Falta un sistema en el índice"
 
+    metadata = details.get("_metadata", {})
+    assert metadata.get("commercial_use_clearance_required") is True, (
+        "El catálogo de fichas debe exigir revisión de licencia antes de distribución."
+    )
+    allowed_licenses = {"CC BY 4.0", "CC0 1.0", "Public Domain"}
     for key, detail in details.items():
         if key == "_metadata":
             continue
         assert key == detail.get("id"), f"ID interno incorrecto en {key}"
         assert detail.get("description", "").strip(), f"Falta descripción en {key}"
         assert detail.get("source_url", "").startswith("https://"), f"Falta fuente en {key}"
-        assert detail.get("license") == "CC BY 4.0", f"Licencia inesperada en {key}"
+        assert detail.get("license") in allowed_licenses, f"Licencia no aprobada: {key}"
         assert detail.get("sections"), f"Ficha sin apartados: {key}"
+        assert detail.get("review_status") == "approved_for_distribution", (
+            f"Ficha pendiente de revisión: {key}"
+        )
 
     assert len(manifest.get("models", [])) == 2, "Deben existir modelos masculino y femenino"
     for model in manifest["models"]:
