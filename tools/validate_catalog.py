@@ -19,6 +19,18 @@ def main() -> None:
     details = read_json("data/anatomy_entries.json")
     manifest = read_json("data/open_anatomy_3d_manifest.json")
 
+    external_sources = read_json("data/third_party_anatomy_sources.json")
+    source_by_id = {item["id"]: item for item in external_sources["sources"]}
+    assert set(source_by_id) == {"z_anatomy_male", "hubmap_hra_female", "voxel_man_sio"}
+    assert source_by_id["z_anatomy_male"]["license"] == "CC BY-SA 4.0"
+    assert len(source_by_id["z_anatomy_male"]["models"]) == 13
+    assert source_by_id["hubmap_hra_female"]["license"] == "CC BY 4.0"
+    assert source_by_id["hubmap_hra_female"]["structures"] == 264
+    assert len(source_by_id["hubmap_hra_female"]["models"]) == 7
+    assert source_by_id["voxel_man_sio"]["license"] == "CC BY 4.0"
+    assert source_by_id["voxel_man_sio"]["structures"] == 232
+    assert "TIFF" in source_by_id["voxel_man_sio"]["format"]
+
     project_settings = (ROOT / "project.godot").read_text(encoding="utf-8")
     android_preset = (ROOT / "export_presets.cfg").read_text(encoding="utf-8")
     assert "window/handheld/orientation=1" in project_settings, (
