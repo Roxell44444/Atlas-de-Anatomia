@@ -17,7 +17,7 @@ const io = new NodeIO()
 
 const document = await io.read(inputPath);
 for (const extension of document.getRoot().listExtensionsUsed()) {
-  if (extension.extensionName === 'EXT_meshopt_compression') {
+  if (extension.extensionName === 'EXT_meshopt_compression' || extension.extensionName === 'KHR_draco_mesh_compression') {
     extension.dispose();
   }
 }
