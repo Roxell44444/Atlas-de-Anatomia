@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 import json
 import struct
+import subprocess
 import sys
 import tempfile
 import urllib.request
@@ -83,6 +84,13 @@ def main() -> None:
             if len(data) != int(expected_size):
                 raise RuntimeError(f"Tamaño inesperado para {filename}: {len(data)}")
             validate_glb(data, filename)
+            decoded_path = source_dir / (filename.replace(".glb", ".godot.glb"))
+            subprocess.run(
+                ["node", str(ROOT / "tools" / "decode_glb.mjs"), str(source_dir / filename), str(decoded_path)],
+                cwd=ROOT,
+                check=True,
+            )
+            validate_glb(decoded_path.read_bytes(), decoded_path.name)
         # Conservar los avisos/licencias junto a cada atlas.
         for name, url in (("NOTICE", source["license_notice_url"]), ("LICENSE", source["license_file_url"])):
             write_verified(url, source_dir / name)
