@@ -49,9 +49,18 @@ El flujo `.github/workflows/android-build.yml` realiza estos pasos:
 
 Las pruebas de ejecución inspeccionan la jerarquía importada de cada GLB: una estructura se considera seleccionable cuando su clave anatómica identifica un nodo que contiene una o más mallas descendientes. La exportación de Android y la publicación del artefacto solo se ejecutan después de superar la importación, la comprobación de los dos modelos y el arranque del proyecto. Una ejecución fallida no produce una APK válida.
 
-## Siguiente fase: modelos anatómicos más realistas
+## Atlas externos y licencias independientes
 
-La paleta por tejidos mejora la lectura, pero no equivale a materiales PBR ni a texturas de atlas médico. El plan de incorporación de geometrías de órganos más detalladas, con fuentes y licencias abiertas verificadas, está en `docs/PLAN_ASSETS_3D_REALISTAS.md`.
+Se incorporó un registro verificable de tres fuentes externas en `data/third_party_anatomy_sources.json` y su análisis en `docs/LICENCIAS_Y_MODELOS_3D_EXTERNOS.md`:
+
+- Z-Anatomy / BodyParts3D: 3.478 estructuras masculinas, 13 GLB por sistema, CC BY-SA 4.0.
+- HuBMAP / Human Reference Atlas: 264 estructuras del tronco femenino, siete GLB por sistema, CC BY 4.0. No es un cuerpo femenino completo.
+- VOXEL-MAN / Visible Human Male: 232 objetos de torso, CC BY 4.0; la fuente original es un volumen TIFF etiquetado, no una malla lista para importar.
+
+El flujo CI descarga y verifica hashes, manifiestos y licencias de los GLB de Z-Anatomy/HRA en un directorio temporal. Esto confirma la procedencia e integridad de los archivos, pero **todavía no los activa en el visor ni los empaqueta en la APK**. Se requiere descompresión Draco, correspondencia de nombres, alineación espacial y pruebas de selección. VOXEL-MAN requiere además extracción de superficies desde el volumen etiquetado.
+
+Los tres atlas se mantienen separados: Z-Anatomy es CC BY-SA 4.0; HRA y VOXEL-MAN son CC BY 4.0. No se fusionan ni se relicencian como una sola obra.
+
 
 ## Estado y límites actuales
 
@@ -61,7 +70,7 @@ La paleta por tejidos mejora la lectura, pero no equivale a materiales PBR ni a 
 - Hay 25 fichas profundas con fuente y atribución CC BY 4.0. Las demás entradas del índice continúan pendientes de documentación anatómica profunda.
 - El paquete Visible Human previo contiene 20 mallas óseas piloto, no un esqueleto completo.
 - La aplicación principal está diseñada para funcionar offline cuando los recursos descargados estén empaquetados. Tutor Gemini requiere conexión y un backend seguro; el modo local solo busca en el catálogo.
-- **APK de depuración móvil generada y validada por CI el 24 de noviembre de 2026.** La ejecución [45489466787](https://github.com/Roxell44444/Atlas-de-Anatomia/actions/runs/45488379607) terminó en verde y publicó `atlas-anatomia-android-debug` (retención hasta el 8 de diciembre de 2026). Incluye iconos Android personalizados, los dos modelos 3D y los datos locales.
+- **APK de depuración móvil generada y validada por CI el 24 de noviembre de 2026.** La ejecución [45489466787](https://github.com/Roxell44444/Atlas-de-Anatomia/actions/runs/45489466787) terminó en verde y publicó `atlas-anatomia-android-debug` (retención hasta el 8 de diciembre de 2026). Incluye iconos Android personalizados, los dos modelos 3D y los datos locales.
 - La orientación vertical y los iconos se comprobaron dentro del paquete APK; el visor importó ambos modelos y superó las pruebas automáticas. Todavía falta probar la experiencia visual, los gestos y el rendimiento en un teléfono Android físico. El tutor generativo Gemini tampoco está conectado: la búsqueda local funciona sin red y la generación requiere backend y conexión.
 
 ## Regla de calidad
