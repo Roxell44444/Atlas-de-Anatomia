@@ -8,7 +8,8 @@
     "@gltf-transform/core": "4.5.1",
     "@gltf-transform/extensions": "4.5.1",
     "@gltf-transform/functions": "4.5.1",
-    "meshoptimizer": "0.23.0"
+    "meshoptimizer": "0.23.0",
+    "draco3dgltf": "1.5.9"
   },
   "scripts": {
     "models:validate-data": "python tools/validate_catalog.py"
