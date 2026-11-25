@@ -1,0 +1,4211 @@
+{
+  "schema_version": 1,
+  "atlas_id": "hubmap_hra_female",
+  "sex": "female",
+  "source_credit": "NIH Human Reference Atlas / Visible Human Female (NLM)",
+  "source_version": "v1.5",
+  "license": "CC BY 4.0",
+  "attribution": "Meshes from the Human Reference Atlas (HRA) 3D Reference Organ Library, HuBMAP Consortium / NIH (CC BY 4.0), derived from the Visible Human Female dataset of the U.S. National Library of Medicine. See NOTICE.",
+  "source_manifest_url": "https://raw.githubusercontent.com/Nurkan1/Anatria-3D/main/public/anatomy/manifest_female.json",
+  "systems": [
+    {
+      "system": "cardiovascular",
+      "organ_count": 60,
+      "load_on_start": true
+    },
+    {
+      "system": "digestive",
+      "organ_count": 50,
+      "load_on_start": true
+    },
+    {
+      "system": "integumentary",
+      "organ_count": 16,
+      "load_on_start": true
+    },
+    {
+      "system": "lymphatic",
+      "organ_count": 5,
+      "load_on_start": true
+    },
+    {
+      "system": "renal",
+      "organ_count": 58,
+      "load_on_start": true
+    },
+    {
+      "system": "reproductive",
+      "organ_count": 36,
+      "load_on_start": true
+    },
+    {
+      "system": "skeletal",
+      "organ_count": 39,
+      "load_on_start": true
+    }
+  ],
+  "structures": [
+    {
+      "key": "hepatopancreatic_ampulla",
+      "names": {
+        "en": "Hepatopancreatic ampulla",
+        "la": "Ampulla hepatopancreatica",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_hepatopancreatic_ampulla",
+      "path": [
+        "Biliary tract"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "ampulla_of_uterine_tube_l",
+      "names": {
+        "en": "Ampulla of uterine tube (left)",
+        "la": "Ampulla tubae uterinae",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_ampulla_of_uterine_tube_L",
+      "path": [
+        "Uterine tube"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "ampulla_of_uterine_tube_r",
+      "names": {
+        "en": "Ampulla of uterine tube (right)",
+        "la": "Ampulla tubae uterinae",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_ampulla_of_uterine_tube_R",
+      "path": [
+        "Uterine tube"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "descending_aorta_lower",
+      "names": {
+        "en": "Descending aorta, lower",
+        "la": "Aorta descendens",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_descending_aorta_b",
+      "path": [
+        "Abdominal vessels",
+        "Arteries"
+      ],
+      "qualifier": "lower"
+    },
+    {
+      "key": "descending_aorta_upper",
+      "names": {
+        "en": "Descending aorta, upper",
+        "la": "Aorta descendens",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_descending_aorta_a",
+      "path": [
+        "Abdominal vessels",
+        "Arteries"
+      ],
+      "qualifier": "upper"
+    },
+    {
+      "key": "vermiform_appendix",
+      "names": {
+        "en": "Vermiform appendix",
+        "la": "Appendix vermiformis",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_vermiform_appendix",
+      "path": [
+        "Large intestine"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "bare_area_of_liver",
+      "names": {
+        "en": "Bare area of liver",
+        "la": "Area nuda hepatis",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_bare_area_of_liver",
+      "path": [
+        "Liver"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "areola_l",
+      "names": {
+        "en": "Areola (left)",
+        "la": "Areola mammae",
+        "es": ""
+      },
+      "system_id": "integumentary",
+      "mesh_file": "integumentary_female.glb",
+      "node_name": "VH_F_areola_L",
+      "path": [
+        "Breast",
+        "Nipple and areola"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "areola_r",
+      "names": {
+        "en": "Areola (right)",
+        "la": "Areola mammae",
+        "es": ""
+      },
+      "system_id": "integumentary",
+      "mesh_file": "integumentary_female.glb",
+      "node_name": "VH_F_areola_R",
+      "path": [
+        "Breast",
+        "Nipple and areola"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "superior_anorectal_artery",
+      "names": {
+        "en": "Superior anorectal artery",
+        "la": "Arteria anorectalis superior",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_superior_rectal_artery",
+      "path": [
+        "Pelvic vessels",
+        "Arteries"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "right_colic_artery",
+      "names": {
+        "en": "Right colic artery",
+        "la": "Arteria colica dextra",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_right_colic_artery",
+      "path": [
+        "Abdominal vessels",
+        "Arteries"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "middle_colic_artery",
+      "names": {
+        "en": "Middle colic artery",
+        "la": "Arteria colica media",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_middle_colic_artery",
+      "path": [
+        "Abdominal vessels",
+        "Arteries"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "left_colic_artery",
+      "names": {
+        "en": "Left colic artery",
+        "la": "Arteria colica sinistra",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_left_colic_artery",
+      "path": [
+        "Abdominal vessels",
+        "Arteries"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "cystic_artery",
+      "names": {
+        "en": "Cystic artery",
+        "la": "Arteria cystica",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_cystic_artery",
+      "path": [
+        "Abdominal vessels",
+        "Arteries"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "common_hepatic_artery",
+      "names": {
+        "en": "Common hepatic artery",
+        "la": "Arteria hepatica communis",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_common_hepatic_artery",
+      "path": [
+        "Abdominal vessels",
+        "Arteries"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "right_hepatic_artery",
+      "names": {
+        "en": "Right hepatic artery",
+        "la": "Arteria hepatica dextra",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_right_hepatic_artery",
+      "path": [
+        "Abdominal vessels",
+        "Arteries"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "proper_hepatic_artery",
+      "names": {
+        "en": "Proper hepatic artery",
+        "la": "Arteria hepatica propria",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_proper_hepatic_artery",
+      "path": [
+        "Abdominal vessels",
+        "Arteries"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "left_hepatic_artery",
+      "names": {
+        "en": "Left hepatic artery",
+        "la": "Arteria hepatica sinistra",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_left_hepatic_artery",
+      "path": [
+        "Abdominal vessels",
+        "Arteries"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "ileocolic_artery",
+      "names": {
+        "en": "Ileocolic artery",
+        "la": "Arteria ileocolica",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_ileocolic_artery",
+      "path": [
+        "Abdominal vessels",
+        "Arteries"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "marginal_artery",
+      "names": {
+        "en": "Marginal artery",
+        "la": "Arteria marginalis coli",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_marginal_artery_of_Drummond",
+      "path": [
+        "Abdominal vessels",
+        "Arteries"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "inferior_mesenteric_artery",
+      "names": {
+        "en": "Inferior mesenteric artery",
+        "la": "Arteria mesenterica inferior",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_inferior_mesenteric_artery",
+      "path": [
+        "Abdominal vessels",
+        "Arteries"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "superior_mesenteric_artery",
+      "names": {
+        "en": "Superior mesenteric artery",
+        "la": "Arteria mesenterica superior",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_superior_mesenteric_artery",
+      "path": [
+        "Abdominal vessels",
+        "Arteries"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "left_renal_artery",
+      "names": {
+        "en": "Left renal artery",
+        "la": "Arteria renalis",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_left_renal_artery",
+      "path": [
+        "Abdominal vessels",
+        "Arteries"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "right_renal_artery",
+      "names": {
+        "en": "Right renal artery",
+        "la": "Arteria renalis",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_right_renal_artery",
+      "path": [
+        "Abdominal vessels",
+        "Arteries"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "splenic_artery",
+      "names": {
+        "en": "Splenic artery",
+        "la": "Arteria splenica",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_splenic_artery",
+      "path": [
+        "Abdominal vessels",
+        "Arteries"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "uterine_artery_l",
+      "names": {
+        "en": "Uterine artery (left)",
+        "la": "Arteria uterina",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_left_uterine_artery",
+      "path": [
+        "Pelvic vessels",
+        "Arteries"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "uterine_artery_r",
+      "names": {
+        "en": "Uterine artery (right)",
+        "la": "Arteria uterina",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_right_uterine_artery",
+      "path": [
+        "Pelvic vessels",
+        "Arteries"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "sigmoid_arteries_1",
+      "names": {
+        "en": "Sigmoid arteries, 1",
+        "la": "Arteriae sigmoideae",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_sigmoid_artery_a",
+      "path": [
+        "Abdominal vessels",
+        "Arteries"
+      ],
+      "qualifier": "1"
+    },
+    {
+      "key": "sigmoid_arteries_2",
+      "names": {
+        "en": "Sigmoid arteries, 2",
+        "la": "Arteriae sigmoideae",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_sigmoid_artery_b",
+      "path": [
+        "Abdominal vessels",
+        "Arteries"
+      ],
+      "qualifier": "2"
+    },
+    {
+      "key": "sigmoid_arteries_3",
+      "names": {
+        "en": "Sigmoid arteries, 3",
+        "la": "Arteriae sigmoideae",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_sigmoid_artery_c",
+      "path": [
+        "Abdominal vessels",
+        "Arteries"
+      ],
+      "qualifier": "3"
+    },
+    {
+      "key": "atlas_c1",
+      "names": {
+        "en": "Atlas (C1)",
+        "la": "Atlas (C1)",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_cervical_vertebra_1",
+      "path": [
+        "Vertebral column",
+        "Cervical vertebrae"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "axis_c2",
+      "names": {
+        "en": "Axis (C2)",
+        "la": "Axis (C2)",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_cervical_vertebra_2",
+      "path": [
+        "Vertebral column",
+        "Cervical vertebrae"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "caecum",
+      "names": {
+        "en": "Caecum",
+        "la": "Caecum",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_caecum",
+      "path": [
+        "Large intestine"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "fibrous_capsule_of_kidney_l",
+      "names": {
+        "en": "Fibrous capsule of kidney (left)",
+        "la": "Capsula fibrosa renis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_kidney_capsule_L",
+      "path": [
+        "Kidney"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "fibrous_capsule_of_kidney_r",
+      "names": {
+        "en": "Fibrous capsule of kidney (right)",
+        "la": "Capsula fibrosa renis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_kidney_capsule_R",
+      "path": [
+        "Kidney"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "head_of_pancreas",
+      "names": {
+        "en": "Head of pancreas",
+        "la": "Caput pancreatis",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_head_of_pancreas",
+      "path": [
+        "Pancreas"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "tail_of_pancreas",
+      "names": {
+        "en": "Tail of pancreas",
+        "la": "Cauda pancreatis",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_tail_of_pancreas",
+      "path": [
+        "Pancreas"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "cervix_of_uterus",
+      "names": {
+        "en": "Cervix of uterus",
+        "la": "Cervix uteri",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_cervix",
+      "path": [
+        "Uterus"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "neck_of_bladder",
+      "names": {
+        "en": "Neck of bladder",
+        "la": "Cervix vesicae",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_urinary_bladder_neck_smooth_muscle",
+      "path": [
+        "Urinary bladder"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "neck_of_pancreas",
+      "names": {
+        "en": "Neck of pancreas",
+        "la": "Collum pancreatis",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_neck_of_pancreas",
+      "path": [
+        "Pancreas"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "ascending_colon",
+      "names": {
+        "en": "Ascending colon",
+        "la": "Colon ascendens",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_ascending_colon",
+      "path": [
+        "Large intestine",
+        "Colon"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "descending_colon",
+      "names": {
+        "en": "Descending colon",
+        "la": "Colon descendens",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_descending_colon",
+      "path": [
+        "Large intestine",
+        "Colon"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "sigmoid_colon",
+      "names": {
+        "en": "Sigmoid colon",
+        "la": "Colon sigmoideum",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_sigmoid_colon",
+      "path": [
+        "Large intestine"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "transverse_colon",
+      "names": {
+        "en": "Transverse colon",
+        "la": "Colon transversum",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_transverse_colon",
+      "path": [
+        "Large intestine",
+        "Colon"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "renal_columns_l",
+      "names": {
+        "en": "Renal columns (left)",
+        "la": "Columnae renales",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_column_L",
+      "path": [
+        "Kidney"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "renal_columns_r",
+      "names": {
+        "en": "Renal columns (right)",
+        "la": "Columnae renales",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_column_R",
+      "path": [
+        "Kidney"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "body_of_breast_l",
+      "names": {
+        "en": "Body of breast (left)",
+        "la": "Corpus mammae",
+        "es": ""
+      },
+      "system_id": "integumentary",
+      "mesh_file": "integumentary_female.glb",
+      "node_name": "VH_F_fat_L",
+      "path": [
+        "Breast"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "body_of_breast_r",
+      "names": {
+        "en": "Body of breast (right)",
+        "la": "Corpus mammae",
+        "es": ""
+      },
+      "system_id": "integumentary",
+      "mesh_file": "integumentary_female.glb",
+      "node_name": "VH_F_fat_R",
+      "path": [
+        "Breast"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "body_of_pancreas",
+      "names": {
+        "en": "Body of pancreas",
+        "la": "Corpus pancreatis",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_body_of_pancreas",
+      "path": [
+        "Pancreas"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "body_of_uterus",
+      "names": {
+        "en": "Body of uterus",
+        "la": "Corpus uteri",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_body_of_uterus",
+      "path": [
+        "Uterus"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "renal_cortex_l",
+      "names": {
+        "en": "Renal cortex (left)",
+        "la": "Cortex renis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_outer_cortex_of_kidney_L",
+      "path": [
+        "Kidney"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "renal_cortex_r",
+      "names": {
+        "en": "Renal cortex (right)",
+        "la": "Cortex renis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_outer_cortex_of_kidney_R",
+      "path": [
+        "Kidney"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "bile_duct",
+      "names": {
+        "en": "Bile duct",
+        "la": "Ductus biliaris",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_common_bile_duct",
+      "path": [
+        "Biliary tract"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "cystic_duct",
+      "names": {
+        "en": "Cystic duct",
+        "la": "Ductus cysticus",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_cystic_duct",
+      "path": [
+        "Biliary tract"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "common_hepatic_duct",
+      "names": {
+        "en": "Common hepatic duct",
+        "la": "Ductus hepaticus communis",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_common_hepatic_duct",
+      "path": [
+        "Biliary tract"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "right_hepatic_duct",
+      "names": {
+        "en": "Right hepatic duct",
+        "la": "Ductus hepaticus dexter",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_right_hepatic_duct",
+      "path": [
+        "Biliary tract"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "left_hepatic_duct",
+      "names": {
+        "en": "Left hepatic duct",
+        "la": "Ductus hepaticus sinister",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_left_hepatic_duct",
+      "path": [
+        "Biliary tract"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "lactiferous_ducts_l",
+      "names": {
+        "en": "Lactiferous ducts (left)",
+        "la": "Ductus lactiferi",
+        "es": ""
+      },
+      "system_id": "integumentary",
+      "mesh_file": "integumentary_female.glb",
+      "node_name": "VH_F_main_lactiferous_ducts_L",
+      "path": [
+        "Breast"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "lactiferous_ducts_r",
+      "names": {
+        "en": "Lactiferous ducts (right)",
+        "la": "Ductus lactiferi",
+        "es": ""
+      },
+      "system_id": "integumentary",
+      "mesh_file": "integumentary_female.glb",
+      "node_name": "VH_F_main_lactiferous_ducts_R",
+      "path": [
+        "Breast"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "pancreatic_duct",
+      "names": {
+        "en": "Pancreatic duct",
+        "la": "Ductus pancreaticus",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_ventral_pancreatic_duct",
+      "path": [
+        "Pancreas"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "accessory_pancreatic_duct",
+      "names": {
+        "en": "Accessory pancreatic duct",
+        "la": "Ductus pancreaticus accessorius",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_dorsal_pancreatic_duct",
+      "path": [
+        "Pancreas"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "vesico_uterine_pouch",
+      "names": {
+        "en": "Vesico-uterine pouch",
+        "la": "Excavatio vesicouterina",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_uterovesical_pouch",
+      "path": [
+        "Ligaments of uterus and ovary"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "anterior_surface_of_uterus",
+      "names": {
+        "en": "Anterior surface of uterus",
+        "la": "Facies anterior uteri",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_anterior_wall_of_uterus",
+      "path": [
+        "Uterus"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "colic_impression_of_spleen",
+      "names": {
+        "en": "Colic impression of spleen",
+        "la": "Facies colica splenis",
+        "es": ""
+      },
+      "system_id": "lymphatic",
+      "mesh_file": "lymphatic_female.glb",
+      "node_name": "VH_F_colic_surface_of_spleen",
+      "path": [
+        "Spleen"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "diaphragmatic_surface_of_liver",
+      "names": {
+        "en": "Diaphragmatic surface of liver",
+        "la": "Facies diaphragmatica hepatis",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_diaphragmatic_surface_of_liver",
+      "path": [
+        "Liver"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "diaphragmatic_surface_of_spleen",
+      "names": {
+        "en": "Diaphragmatic surface of spleen",
+        "la": "Facies diaphragmatica splenis",
+        "es": ""
+      },
+      "system_id": "lymphatic",
+      "mesh_file": "lymphatic_female.glb",
+      "node_name": "VH_F_diaphragmatic_surface_of_spleen",
+      "path": [
+        "Spleen"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "gastric_impression_of_spleen",
+      "names": {
+        "en": "Gastric impression of spleen",
+        "la": "Facies gastrica splenis",
+        "es": ""
+      },
+      "system_id": "lymphatic",
+      "mesh_file": "lymphatic_female.glb",
+      "node_name": "VH_F_gastric_surface_of_spleen",
+      "path": [
+        "Spleen"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "posterior_surface_of_uterus",
+      "names": {
+        "en": "Posterior surface of uterus",
+        "la": "Facies posterior uteri",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_posterior_wall_of_uterus",
+      "path": [
+        "Uterus"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "renal_impression_of_spleen",
+      "names": {
+        "en": "Renal impression of spleen",
+        "la": "Facies renalis splenis",
+        "es": ""
+      },
+      "system_id": "lymphatic",
+      "mesh_file": "lymphatic_female.glb",
+      "node_name": "VH_F_renal_surface_of_spleen",
+      "path": [
+        "Spleen"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "fimbriae_of_uterine_tube_l",
+      "names": {
+        "en": "Fimbriae of uterine tube (left)",
+        "la": "Fimbriae tubae uterinae",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_fibria_of_uterine_tube_L",
+      "path": [
+        "Uterine tube"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "fimbriae_of_uterine_tube_r",
+      "names": {
+        "en": "Fimbriae of uterine tube (right)",
+        "la": "Fimbriae tubae uterinae",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_fibria_of_uterine_tube_R",
+      "path": [
+        "Uterine tube"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "right_colic_flexure",
+      "names": {
+        "en": "Right colic flexure",
+        "la": "Flexura dextra coli",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_hepatic_flexure_of_colon",
+      "path": [
+        "Large intestine",
+        "Colon"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "left_colic_flexure",
+      "names": {
+        "en": "Left colic flexure",
+        "la": "Flexura sinistra coli",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_splenic_flexure_of_colon",
+      "path": [
+        "Large intestine",
+        "Colon"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "fundus_of_uterus",
+      "names": {
+        "en": "Fundus of uterus",
+        "la": "Fundus uteri",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_fundus_of_uterus",
+      "path": [
+        "Uterus"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "fundus_of_bladder_base",
+      "names": {
+        "en": "Fundus of bladder, base",
+        "la": "Fundus vesicae",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_fundus_of_urinary_bladder_base",
+      "path": [
+        "Urinary bladder"
+      ],
+      "qualifier": "base"
+    },
+    {
+      "key": "fundus_of_bladder_dome",
+      "names": {
+        "en": "Fundus of bladder, dome",
+        "la": "Fundus vesicae",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_fundus_of_urinary_bladder_dome",
+      "path": [
+        "Urinary bladder"
+      ],
+      "qualifier": "dome"
+    },
+    {
+      "key": "hilum_of_kidney_l",
+      "names": {
+        "en": "Hilum of kidney (left)",
+        "la": "Hilum renis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_hilum_of_kidney_L",
+      "path": [
+        "Kidney"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "hilum_of_kidney_r",
+      "names": {
+        "en": "Hilum of kidney (right)",
+        "la": "Hilum renis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_hilum_of_kidney_R",
+      "path": [
+        "Kidney"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "hilum_of_spleen",
+      "names": {
+        "en": "Hilum of spleen",
+        "la": "Hilum splenis",
+        "es": ""
+      },
+      "system_id": "lymphatic",
+      "mesh_file": "lymphatic_female.glb",
+      "node_name": "VH_F_hilum_of_spleen",
+      "path": [
+        "Spleen"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "ileum",
+      "names": {
+        "en": "Ileum",
+        "la": "Ileum",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_ileum",
+      "path": [
+        "Small intestine"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "colic_impression_of_liver",
+      "names": {
+        "en": "Colic impression of liver",
+        "la": "Impressio colica hepatis",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_colic_impression_of_liver",
+      "path": [
+        "Liver",
+        "Impressions"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "duodenal_impression_of_liver",
+      "names": {
+        "en": "Duodenal impression of liver",
+        "la": "Impressio duodenalis hepatis",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_duodenal_impression_of_liver",
+      "path": [
+        "Liver",
+        "Impressions"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "gastric_impression_of_liver",
+      "names": {
+        "en": "Gastric impression of liver",
+        "la": "Impressio gastrica hepatis",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_gastric_impression_of_liver",
+      "path": [
+        "Liver",
+        "Impressions"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "oesophageal_impression_of_liver",
+      "names": {
+        "en": "Oesophageal impression of liver",
+        "la": "Impressio oesophagea hepatis",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_esophageal_impression_of_liver",
+      "path": [
+        "Liver",
+        "Impressions"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "renal_impression_of_liver",
+      "names": {
+        "en": "Renal impression of liver",
+        "la": "Impressio renalis hepatis",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_renal_impression_of_liver",
+      "path": [
+        "Liver",
+        "Impressions"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "suprarenal_impression_of_liver",
+      "names": {
+        "en": "Suprarenal impression of liver",
+        "la": "Impressio suprarenalis hepatis",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_suprarenal_impression_of_liver",
+      "path": [
+        "Liver",
+        "Impressions"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "infundibulum_of_uterine_tube_l",
+      "names": {
+        "en": "Infundibulum of uterine tube (left)",
+        "la": "Infundibulum tubae uterinae",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_uterine_tube_infundibulum_L",
+      "path": [
+        "Uterine tube"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "infundibulum_of_uterine_tube_r",
+      "names": {
+        "en": "Infundibulum of uterine tube (right)",
+        "la": "Infundibulum tubae uterinae",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_uterine_tube_infundibulum_R",
+      "path": [
+        "Uterine tube"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "isthmus_of_uterine_tube_l",
+      "names": {
+        "en": "Isthmus of uterine tube (left)",
+        "la": "Isthmus tubae uterinae",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_isthmus_of_fallopian_tube_L",
+      "path": [
+        "Uterine tube"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "isthmus_of_uterine_tube_r",
+      "names": {
+        "en": "Isthmus of uterine tube (right)",
+        "la": "Isthmus tubae uterinae",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_isthmus_of_fallopian_tube_R",
+      "path": [
+        "Uterine tube"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "isthmus_of_uterus",
+      "names": {
+        "en": "Isthmus of uterus",
+        "la": "Isthmus uteri",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_lower_uterine_segment",
+      "path": [
+        "Uterus"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "jejunum",
+      "names": {
+        "en": "Jejunum",
+        "la": "Jejunum",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_jejenum",
+      "path": [
+        "Small intestine"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "suspensory_ligaments_of_breast_l",
+      "names": {
+        "en": "Suspensory ligaments of breast (left)",
+        "la": "Ligamenta suspensoria mammaria",
+        "es": ""
+      },
+      "system_id": "integumentary",
+      "mesh_file": "integumentary_female.glb",
+      "node_name": "VH_F_suspensory_ligaments_L",
+      "path": [
+        "Breast"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "suspensory_ligaments_of_breast_r",
+      "names": {
+        "en": "Suspensory ligaments of breast (right)",
+        "la": "Ligamenta suspensoria mammaria",
+        "es": ""
+      },
+      "system_id": "integumentary",
+      "mesh_file": "integumentary_female.glb",
+      "node_name": "VH_F_suspensory_ligaments_R",
+      "path": [
+        "Breast"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "cardinal_ligament_l",
+      "names": {
+        "en": "Cardinal ligament (left)",
+        "la": "Ligamentum cardinale",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_left_cardinal_ligament_of_uterus",
+      "path": [
+        "Ligaments of uterus and ovary"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "cardinal_ligament_r",
+      "names": {
+        "en": "Cardinal ligament (right)",
+        "la": "Ligamentum cardinale",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_right_cardinal_ligament_of_uterus",
+      "path": [
+        "Ligaments of uterus and ovary"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "coronary_ligament",
+      "names": {
+        "en": "Coronary ligament",
+        "la": "Ligamentum coronarium",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_coronary_ligament_of_liver",
+      "path": [
+        "Liver",
+        "Ligaments"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "falciform_ligament",
+      "names": {
+        "en": "Falciform ligament",
+        "la": "Ligamentum falciforme",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_falciform_ligament",
+      "path": [
+        "Liver",
+        "Ligaments"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "hepatoduodenal_ligament",
+      "names": {
+        "en": "Hepatoduodenal ligament",
+        "la": "Ligamentum hepatoduodenale",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_hepataduodenal_ligament",
+      "path": [
+        "Liver",
+        "Ligaments"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "broad_ligament_of_uterus",
+      "names": {
+        "en": "Broad ligament of uterus",
+        "la": "Ligamentum latum uteri",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_broad_ligament",
+      "path": [
+        "Ligaments of uterus and ovary"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "proper_ovarian_ligament_l",
+      "names": {
+        "en": "Proper ovarian ligament (left)",
+        "la": "Ligamentum proprium ovarii",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_ovarian_ligament_L",
+      "path": [
+        "Ligaments of uterus and ovary"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "proper_ovarian_ligament_r",
+      "names": {
+        "en": "Proper ovarian ligament (right)",
+        "la": "Ligamentum proprium ovarii",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_ovarian_ligament_R",
+      "path": [
+        "Ligaments of uterus and ovary"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "suspensory_ligament_of_ovary_l",
+      "names": {
+        "en": "Suspensory ligament of ovary (left)",
+        "la": "Ligamentum suspensorium ovarii",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_suspensory_ligament_of_ovary_L",
+      "path": [
+        "Ligaments of uterus and ovary"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "suspensory_ligament_of_ovary_r",
+      "names": {
+        "en": "Suspensory ligament of ovary (right)",
+        "la": "Ligamentum suspensorium ovarii",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_suspensory_ligament_of_ovary_R",
+      "path": [
+        "Ligaments of uterus and ovary"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "round_ligament_of_liver",
+      "names": {
+        "en": "Round ligament of liver",
+        "la": "Ligamentum teres hepatis",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_round_ligament_of_liver",
+      "path": [
+        "Liver",
+        "Ligaments"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "round_ligament_of_uterus_l",
+      "names": {
+        "en": "Round ligament of uterus (left)",
+        "la": "Ligamentum teres uteri",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_left_round_ligament_of_uterus",
+      "path": [
+        "Ligaments of uterus and ovary"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "round_ligament_of_uterus_r",
+      "names": {
+        "en": "Round ligament of uterus (right)",
+        "la": "Ligamentum teres uteri",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_right_round_ligament_of_uterus",
+      "path": [
+        "Ligaments of uterus and ovary"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "left_triangular_ligament",
+      "names": {
+        "en": "Left triangular ligament",
+        "la": "Ligamentum triangulare sinistrum",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_triangular_ligament_of_liver",
+      "path": [
+        "Liver",
+        "Ligaments"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "uterosacral_ligament_l",
+      "names": {
+        "en": "Uterosacral ligament (left)",
+        "la": "Ligamentum uterosacrale",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_left_uterosacral_ligament",
+      "path": [
+        "Ligaments of uterus and ovary"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "uterosacral_ligament_r",
+      "names": {
+        "en": "Uterosacral ligament (right)",
+        "la": "Ligamentum uterosacrale",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_right_uterosacral_ligament",
+      "path": [
+        "Ligaments of uterus and ovary"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "ligamentum_venosum",
+      "names": {
+        "en": "Ligamentum venosum",
+        "la": "Ligamentum venosum",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_ligamentum_venosum",
+      "path": [
+        "Liver",
+        "Ligaments"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "lobes_of_mammary_gland_l",
+      "names": {
+        "en": "Lobes of mammary gland (left)",
+        "la": "Lobi glandulae mammariae",
+        "es": ""
+      },
+      "system_id": "integumentary",
+      "mesh_file": "integumentary_female.glb",
+      "node_name": "VH_F_mammary_lobes_L",
+      "path": [
+        "Breast"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "lobes_of_mammary_gland_r",
+      "names": {
+        "en": "Lobes of mammary gland (right)",
+        "la": "Lobi glandulae mammariae",
+        "es": ""
+      },
+      "system_id": "integumentary",
+      "mesh_file": "integumentary_female.glb",
+      "node_name": "VH_F_mammary_lobes_R",
+      "path": [
+        "Breast"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "caudate_lobe_of_liver",
+      "names": {
+        "en": "Caudate lobe",
+        "la": "Lobus caudatus",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_caudate_lobe",
+      "path": [
+        "Liver",
+        "Lobes"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "quadrate_lobe_of_liver",
+      "names": {
+        "en": "Quadrate lobe",
+        "la": "Lobus quadratus",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_quadrate_lobe",
+      "path": [
+        "Liver",
+        "Lobes"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "mesosalpinx_l",
+      "names": {
+        "en": "Mesosalpinx (left)",
+        "la": "Mesosalpinx",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_mesosalpinx_L",
+      "path": [
+        "Ligaments of uterus and ovary",
+        "Broad ligament of uterus"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "mesosalpinx_r",
+      "names": {
+        "en": "Mesosalpinx (right)",
+        "la": "Mesosalpinx",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_mesosalpinx_R",
+      "path": [
+        "Ligaments of uterus and ovary",
+        "Broad ligament of uterus"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "mesovarium_l",
+      "names": {
+        "en": "Mesovarium (left)",
+        "la": "Mesovarium",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_mesovarium_L",
+      "path": [
+        "Ligaments of uterus and ovary",
+        "Broad ligament of uterus"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "mesovarium_r",
+      "names": {
+        "en": "Mesovarium (right)",
+        "la": "Mesovarium",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_mesovarium_R",
+      "path": [
+        "Ligaments of uterus and ovary",
+        "Broad ligament of uterus"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "coccyx",
+      "names": {
+        "en": "Coccyx",
+        "la": "Os coccygis",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_coccyx",
+      "path": [
+        "Pelvic girdle"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "ilium_compact_bone_l",
+      "names": {
+        "en": "Ilium, compact bone (left)",
+        "la": "Os ilium",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_ilium_compact_bone_L",
+      "path": [
+        "Pelvic girdle",
+        "Hip bone",
+        "Ilium"
+      ],
+      "qualifier": "compact bone"
+    },
+    {
+      "key": "ilium_compact_bone_r",
+      "names": {
+        "en": "Ilium, compact bone (right)",
+        "la": "Os ilium",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_ilium_compact_bone_R",
+      "path": [
+        "Pelvic girdle",
+        "Hip bone",
+        "Ilium"
+      ],
+      "qualifier": "compact bone"
+    },
+    {
+      "key": "ilium_spongy_bone_l",
+      "names": {
+        "en": "Ilium, spongy bone (left)",
+        "la": "Os ilium",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_ilium_spongy_bone_L",
+      "path": [
+        "Pelvic girdle",
+        "Hip bone",
+        "Ilium"
+      ],
+      "qualifier": "spongy bone"
+    },
+    {
+      "key": "ilium_spongy_bone_r",
+      "names": {
+        "en": "Ilium, spongy bone (right)",
+        "la": "Os ilium",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_ilium_spongy_bone_R",
+      "path": [
+        "Pelvic girdle",
+        "Hip bone",
+        "Ilium"
+      ],
+      "qualifier": "spongy bone"
+    },
+    {
+      "key": "ischium_compact_bone_l",
+      "names": {
+        "en": "Ischium, compact bone (left)",
+        "la": "Os ischii",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_ischium_compact_bone_L",
+      "path": [
+        "Pelvic girdle",
+        "Hip bone",
+        "Ischium"
+      ],
+      "qualifier": "compact bone"
+    },
+    {
+      "key": "ischium_compact_bone_r",
+      "names": {
+        "en": "Ischium, compact bone (right)",
+        "la": "Os ischii",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_ischium_compact_bone_R",
+      "path": [
+        "Pelvic girdle",
+        "Hip bone",
+        "Ischium"
+      ],
+      "qualifier": "compact bone"
+    },
+    {
+      "key": "ischium_spongy_bone_l",
+      "names": {
+        "en": "Ischium, spongy bone (left)",
+        "la": "Os ischii",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_ischium_spongy_bone_L",
+      "path": [
+        "Pelvic girdle",
+        "Hip bone",
+        "Ischium"
+      ],
+      "qualifier": "spongy bone"
+    },
+    {
+      "key": "ischium_spongy_bone_r",
+      "names": {
+        "en": "Ischium, spongy bone (right)",
+        "la": "Os ischii",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_ischium_spongy_bone_R",
+      "path": [
+        "Pelvic girdle",
+        "Hip bone",
+        "Ischium"
+      ],
+      "qualifier": "spongy bone"
+    },
+    {
+      "key": "pubis_compact_bone_l",
+      "names": {
+        "en": "Pubis, compact bone (left)",
+        "la": "Os pubis",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_pubis_compact_bone_L",
+      "path": [
+        "Pelvic girdle",
+        "Hip bone",
+        "Pubis"
+      ],
+      "qualifier": "compact bone"
+    },
+    {
+      "key": "pubis_compact_bone_r",
+      "names": {
+        "en": "Pubis, compact bone (right)",
+        "la": "Os pubis",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_pubis_compact_bone_R",
+      "path": [
+        "Pelvic girdle",
+        "Hip bone",
+        "Pubis"
+      ],
+      "qualifier": "compact bone"
+    },
+    {
+      "key": "pubis_spongy_bone_l",
+      "names": {
+        "en": "Pubis, spongy bone (left)",
+        "la": "Os pubis",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_pubis_spongy_bone_L",
+      "path": [
+        "Pelvic girdle",
+        "Hip bone",
+        "Pubis"
+      ],
+      "qualifier": "spongy bone"
+    },
+    {
+      "key": "pubis_spongy_bone_r",
+      "names": {
+        "en": "Pubis, spongy bone (right)",
+        "la": "Os pubis",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_pubis_spongy_bone_R",
+      "path": [
+        "Pelvic girdle",
+        "Hip bone",
+        "Pubis"
+      ],
+      "qualifier": "spongy bone"
+    },
+    {
+      "key": "sacrum",
+      "names": {
+        "en": "Sacrum",
+        "la": "Os sacrum",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_sacrum",
+      "path": [
+        "Pelvic girdle"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "abdominal_ostium_of_uterine_tube",
+      "names": {
+        "en": "Abdominal ostium of uterine tube",
+        "la": "Ostium abdominale tubae uterinae",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_abdominal_ostium_of_uterine_tube",
+      "path": [
+        "Uterine tube"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "external_os_of_uterus",
+      "names": {
+        "en": "External os of uterus",
+        "la": "Ostium externum uteri",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_external_cervical_os",
+      "path": [
+        "Uterus",
+        "Cervix of uterus"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "internal_os_of_uterus",
+      "names": {
+        "en": "Internal os of uterus",
+        "la": "Ostium internum uteri",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_internal_cervical_os",
+      "path": [
+        "Uterus",
+        "Cervix of uterus"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "ureteric_orifice_l",
+      "names": {
+        "en": "Ureteric orifice (left)",
+        "la": "Ostium ureteris",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_ureteral_orifice_L",
+      "path": [
+        "Urinary bladder",
+        "Trigone of bladder"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "ureteric_orifice_r",
+      "names": {
+        "en": "Ureteric orifice (right)",
+        "la": "Ostium ureteris",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_ureteral_orifice_R",
+      "path": [
+        "Urinary bladder",
+        "Trigone of bladder"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "ovary_l",
+      "names": {
+        "en": "Ovary (left)",
+        "la": "Ovarium",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_left_ovary",
+      "path": [
+        "Ovary"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "ovary_r",
+      "names": {
+        "en": "Ovary (right)",
+        "la": "Ovarium",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_right_ovary",
+      "path": [
+        "Ovary"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "ileal_papilla",
+      "names": {
+        "en": "Ileal papilla",
+        "la": "Papilla ilealis",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_ileocecal_valve",
+      "path": [
+        "Large intestine"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "nipple_l",
+      "names": {
+        "en": "Nipple (left)",
+        "la": "Papilla mammaria",
+        "es": ""
+      },
+      "system_id": "integumentary",
+      "mesh_file": "integumentary_female.glb",
+      "node_name": "VH_F_nipple_L",
+      "path": [
+        "Breast",
+        "Nipple and areola"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "nipple_r",
+      "names": {
+        "en": "Nipple (right)",
+        "la": "Papilla mammaria",
+        "es": ""
+      },
+      "system_id": "integumentary",
+      "mesh_file": "integumentary_female.glb",
+      "node_name": "VH_F_nipple_R",
+      "path": [
+        "Breast",
+        "Nipple and areola"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "renal_papilla_1_l",
+      "names": {
+        "en": "Renal papilla, 1 (left)",
+        "la": "Papilla renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_papilla_L_a",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "1"
+    },
+    {
+      "key": "renal_papilla_1_r",
+      "names": {
+        "en": "Renal papilla, 1 (right)",
+        "la": "Papilla renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_papilla_R_a",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "1"
+    },
+    {
+      "key": "renal_papilla_10_l",
+      "names": {
+        "en": "Renal papilla, 10 (left)",
+        "la": "Papilla renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_papilla_L_j",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "10"
+    },
+    {
+      "key": "renal_papilla_10_r",
+      "names": {
+        "en": "Renal papilla, 10 (right)",
+        "la": "Papilla renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_papilla_R_j",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "10"
+    },
+    {
+      "key": "renal_papilla_11_l",
+      "names": {
+        "en": "Renal papilla, 11 (left)",
+        "la": "Papilla renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_papilla_L_k",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "11"
+    },
+    {
+      "key": "renal_papilla_2_l",
+      "names": {
+        "en": "Renal papilla, 2 (left)",
+        "la": "Papilla renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_papilla_L_b",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "2"
+    },
+    {
+      "key": "renal_papilla_2_r",
+      "names": {
+        "en": "Renal papilla, 2 (right)",
+        "la": "Papilla renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_papilla_R_b",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "2"
+    },
+    {
+      "key": "renal_papilla_3_l",
+      "names": {
+        "en": "Renal papilla, 3 (left)",
+        "la": "Papilla renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_papilla_L_c",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "3"
+    },
+    {
+      "key": "renal_papilla_3_r",
+      "names": {
+        "en": "Renal papilla, 3 (right)",
+        "la": "Papilla renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_papilla_R_c",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "3"
+    },
+    {
+      "key": "renal_papilla_4_l",
+      "names": {
+        "en": "Renal papilla, 4 (left)",
+        "la": "Papilla renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_papilla_L_d",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "4"
+    },
+    {
+      "key": "renal_papilla_4_r",
+      "names": {
+        "en": "Renal papilla, 4 (right)",
+        "la": "Papilla renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_papilla_R_d",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "4"
+    },
+    {
+      "key": "renal_papilla_5_l",
+      "names": {
+        "en": "Renal papilla, 5 (left)",
+        "la": "Papilla renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_papilla_L_e",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "5"
+    },
+    {
+      "key": "renal_papilla_5_r",
+      "names": {
+        "en": "Renal papilla, 5 (right)",
+        "la": "Papilla renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_papilla_R_e",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "5"
+    },
+    {
+      "key": "renal_papilla_6_l",
+      "names": {
+        "en": "Renal papilla, 6 (left)",
+        "la": "Papilla renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_papilla_L_f",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "6"
+    },
+    {
+      "key": "renal_papilla_6_r",
+      "names": {
+        "en": "Renal papilla, 6 (right)",
+        "la": "Papilla renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_papilla_R_f",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "6"
+    },
+    {
+      "key": "renal_papilla_7_l",
+      "names": {
+        "en": "Renal papilla, 7 (left)",
+        "la": "Papilla renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_papilla_L_g",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "7"
+    },
+    {
+      "key": "renal_papilla_7_r",
+      "names": {
+        "en": "Renal papilla, 7 (right)",
+        "la": "Papilla renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_papilla_R_g",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "7"
+    },
+    {
+      "key": "renal_papilla_8_l",
+      "names": {
+        "en": "Renal papilla, 8 (left)",
+        "la": "Papilla renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_papilla_L_h",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "8"
+    },
+    {
+      "key": "renal_papilla_8_r",
+      "names": {
+        "en": "Renal papilla, 8 (right)",
+        "la": "Papilla renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_papilla_R_h",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "8"
+    },
+    {
+      "key": "renal_papilla_9_l",
+      "names": {
+        "en": "Renal papilla, 9 (left)",
+        "la": "Papilla renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_papilla_L_i",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "9"
+    },
+    {
+      "key": "renal_papilla_9_r",
+      "names": {
+        "en": "Renal papilla, 9 (right)",
+        "la": "Papilla renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_papilla_R_i",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "9"
+    },
+    {
+      "key": "ascending_part_of_duodenum",
+      "names": {
+        "en": "Ascending part of duodenum",
+        "la": "Pars ascendens duodeni",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_duodenum_ascending",
+      "path": [
+        "Small intestine",
+        "Duodenum"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "descending_part_of_duodenum",
+      "names": {
+        "en": "Descending part of duodenum",
+        "la": "Pars descendens duodeni",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_duodenum_descending",
+      "path": [
+        "Small intestine",
+        "Duodenum"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "horizontal_part_of_duodenum",
+      "names": {
+        "en": "Horizontal part of duodenum",
+        "la": "Pars horizontalis duodeni",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_duodenum_horizontal",
+      "path": [
+        "Small intestine",
+        "Duodenum"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "superior_part_of_duodenum",
+      "names": {
+        "en": "Superior part of duodenum",
+        "la": "Pars superior duodeni",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_duodenum_superior",
+      "path": [
+        "Small intestine",
+        "Duodenum"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "terminal_ileum",
+      "names": {
+        "en": "Terminal ileum",
+        "la": "Pars terminalis ilei",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_ileum_terminal",
+      "path": [
+        "Small intestine"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "porta_hepatis",
+      "names": {
+        "en": "Porta hepatis",
+        "la": "Porta hepatis",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_porta_hepatis",
+      "path": [
+        "Liver"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "uncinate_process_of_pancreas",
+      "names": {
+        "en": "Uncinate process of pancreas",
+        "la": "Processus uncinatus pancreatis",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_ucinate_process1",
+      "path": [
+        "Pancreas"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "renal_pyramid_1_l",
+      "names": {
+        "en": "Renal pyramid, 1 (left)",
+        "la": "Pyramis renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_pyramid_L_a",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "1"
+    },
+    {
+      "key": "renal_pyramid_1_r",
+      "names": {
+        "en": "Renal pyramid, 1 (right)",
+        "la": "Pyramis renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_pyramid_R_a",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "1"
+    },
+    {
+      "key": "renal_pyramid_10_l",
+      "names": {
+        "en": "Renal pyramid, 10 (left)",
+        "la": "Pyramis renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_pyramid_L_j",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "10"
+    },
+    {
+      "key": "renal_pyramid_10_r",
+      "names": {
+        "en": "Renal pyramid, 10 (right)",
+        "la": "Pyramis renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_pyramid_R_j",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "10"
+    },
+    {
+      "key": "renal_pyramid_11_l",
+      "names": {
+        "en": "Renal pyramid, 11 (left)",
+        "la": "Pyramis renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_pyramid_L_k",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "11"
+    },
+    {
+      "key": "renal_pyramid_2_l",
+      "names": {
+        "en": "Renal pyramid, 2 (left)",
+        "la": "Pyramis renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_pyramid_L_b",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "2"
+    },
+    {
+      "key": "renal_pyramid_2_r",
+      "names": {
+        "en": "Renal pyramid, 2 (right)",
+        "la": "Pyramis renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_pyramid_R_b",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "2"
+    },
+    {
+      "key": "renal_pyramid_3_l",
+      "names": {
+        "en": "Renal pyramid, 3 (left)",
+        "la": "Pyramis renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_pyramid_L_c",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "3"
+    },
+    {
+      "key": "renal_pyramid_3_r",
+      "names": {
+        "en": "Renal pyramid, 3 (right)",
+        "la": "Pyramis renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_pyramid_R_c",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "3"
+    },
+    {
+      "key": "renal_pyramid_4_l",
+      "names": {
+        "en": "Renal pyramid, 4 (left)",
+        "la": "Pyramis renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_pyramid_L_d",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "4"
+    },
+    {
+      "key": "renal_pyramid_4_r",
+      "names": {
+        "en": "Renal pyramid, 4 (right)",
+        "la": "Pyramis renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_pyramid_R_d",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "4"
+    },
+    {
+      "key": "renal_pyramid_5_l",
+      "names": {
+        "en": "Renal pyramid, 5 (left)",
+        "la": "Pyramis renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_pyramid_L_e",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "5"
+    },
+    {
+      "key": "renal_pyramid_5_r",
+      "names": {
+        "en": "Renal pyramid, 5 (right)",
+        "la": "Pyramis renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_pyramid_R_e",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "5"
+    },
+    {
+      "key": "renal_pyramid_6_l",
+      "names": {
+        "en": "Renal pyramid, 6 (left)",
+        "la": "Pyramis renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_pyramid_L_f",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "6"
+    },
+    {
+      "key": "renal_pyramid_6_r",
+      "names": {
+        "en": "Renal pyramid, 6 (right)",
+        "la": "Pyramis renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_pyramid_R_f",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "6"
+    },
+    {
+      "key": "renal_pyramid_7_l",
+      "names": {
+        "en": "Renal pyramid, 7 (left)",
+        "la": "Pyramis renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_pyramid_L_g",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "7"
+    },
+    {
+      "key": "renal_pyramid_7_r",
+      "names": {
+        "en": "Renal pyramid, 7 (right)",
+        "la": "Pyramis renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_pyramid_R_g",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "7"
+    },
+    {
+      "key": "renal_pyramid_8_l",
+      "names": {
+        "en": "Renal pyramid, 8 (left)",
+        "la": "Pyramis renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_pyramid_L_h",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "8"
+    },
+    {
+      "key": "renal_pyramid_8_r",
+      "names": {
+        "en": "Renal pyramid, 8 (right)",
+        "la": "Pyramis renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_pyramid_R_h",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "8"
+    },
+    {
+      "key": "renal_pyramid_9_l",
+      "names": {
+        "en": "Renal pyramid, 9 (left)",
+        "la": "Pyramis renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_pyramid_L_i",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "9"
+    },
+    {
+      "key": "renal_pyramid_9_r",
+      "names": {
+        "en": "Renal pyramid, 9 (right)",
+        "la": "Pyramis renalis",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_renal_pyramid_R_i",
+      "path": [
+        "Kidney",
+        "Medulla"
+      ],
+      "qualifier": "9"
+    },
+    {
+      "key": "right_branch_of_hepatic_portal_vein",
+      "names": {
+        "en": "Right branch of hepatic portal vein",
+        "la": "Ramus dexter venae portae hepatis",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_right_branch_of_portal_vein",
+      "path": [
+        "Abdominal vessels",
+        "Veins",
+        "Portal system"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "intermediate_branch_of_left_hepatic_artery",
+      "names": {
+        "en": "Intermediate branch of left hepatic artery",
+        "la": "Ramus intermedius arteriae hepaticae sinistrae",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_middle_hepatic_artery_branch_of_left_hepatic_artery",
+      "path": [
+        "Abdominal vessels",
+        "Arteries"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "left_branch_of_hepatic_portal_vein",
+      "names": {
+        "en": "Left branch of hepatic portal vein",
+        "la": "Ramus sinister venae portae hepatis",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_left_branch_of_portal_vein",
+      "path": [
+        "Abdominal vessels",
+        "Veins",
+        "Portal system"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "rectum",
+      "names": {
+        "en": "Rectum",
+        "la": "Rectum",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_rectum",
+      "path": [
+        "Large intestine"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "lactiferous_sinuses_l",
+      "names": {
+        "en": "Lactiferous sinuses (left)",
+        "la": "Sinus lactiferi",
+        "es": ""
+      },
+      "system_id": "integumentary",
+      "mesh_file": "integumentary_female.glb",
+      "node_name": "VH_F_main_lactiferous_sinuses_L",
+      "path": [
+        "Breast"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "lactiferous_sinuses_r",
+      "names": {
+        "en": "Lactiferous sinuses (right)",
+        "la": "Sinus lactiferi",
+        "es": ""
+      },
+      "system_id": "integumentary",
+      "mesh_file": "integumentary_female.glb",
+      "node_name": "VH_F_main_lactiferous_sinuses_R",
+      "path": [
+        "Breast"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "sphincter_of_ampulla",
+      "names": {
+        "en": "Sphincter of ampulla",
+        "la": "Sphincter ampullae",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_sphincter_of_heptopancreatic_ampulla",
+      "path": [
+        "Biliary tract"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "trigone_of_bladder",
+      "names": {
+        "en": "Trigone of bladder",
+        "la": "Trigonum vesicae",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_trigone_of_urinary_bladder",
+      "path": [
+        "Urinary bladder"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "coeliac_trunk",
+      "names": {
+        "en": "Coeliac trunk",
+        "la": "Truncus coeliacus",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_celiac_trunk",
+      "path": [
+        "Abdominal vessels",
+        "Arteries"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "areolar_tubercles_l",
+      "names": {
+        "en": "Areolar tubercles (left)",
+        "la": "Tubercula areolae",
+        "es": ""
+      },
+      "system_id": "integumentary",
+      "mesh_file": "integumentary_female.glb",
+      "node_name": "VH_F_areolar_tubercles_L",
+      "path": [
+        "Breast",
+        "Nipple and areola"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "areolar_tubercles_r",
+      "names": {
+        "en": "Areolar tubercles (right)",
+        "la": "Tubercula areolae",
+        "es": ""
+      },
+      "system_id": "integumentary",
+      "mesh_file": "integumentary_female.glb",
+      "node_name": "VH_F_areolar_tubercles_R",
+      "path": [
+        "Breast",
+        "Nipple and areola"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "fibrous_capsule_of_liver",
+      "names": {
+        "en": "Fibrous capsule of liver",
+        "la": "Tunica fibrosa hepatis",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_capsule_of_the_liver",
+      "path": [
+        "Liver"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "ureter_l",
+      "names": {
+        "en": "Ureter (left)",
+        "la": "Ureter",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_left_ureter",
+      "path": [
+        "Ureter"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "ureter_r",
+      "names": {
+        "en": "Ureter (right)",
+        "la": "Ureter",
+        "es": ""
+      },
+      "system_id": "renal",
+      "mesh_file": "renal_female.glb",
+      "node_name": "VH_F_right_ureter",
+      "path": [
+        "Ureter"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "vagina",
+      "names": {
+        "en": "Vagina",
+        "la": "Vagina",
+        "es": ""
+      },
+      "system_id": "reproductive",
+      "mesh_file": "reproductive_female.glb",
+      "node_name": "VH_F_vagina",
+      "path": [
+        "Vagina"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "superior_anorectal_vein",
+      "names": {
+        "en": "Superior anorectal vein",
+        "la": "Vena anorectalis superior",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_superior_rectal_vein",
+      "path": [
+        "Pelvic vessels",
+        "Veins"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "inferior_vena_cava_lower",
+      "names": {
+        "en": "Inferior vena cava, lower",
+        "la": "Vena cava inferior",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_inferior_vena_cava_b",
+      "path": [
+        "Abdominal vessels",
+        "Veins"
+      ],
+      "qualifier": "lower"
+    },
+    {
+      "key": "inferior_vena_cava_upper",
+      "names": {
+        "en": "Inferior vena cava, upper",
+        "la": "Vena cava inferior",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_inferior_vena_cava_a",
+      "path": [
+        "Abdominal vessels",
+        "Veins"
+      ],
+      "qualifier": "upper"
+    },
+    {
+      "key": "right_colic_vein",
+      "names": {
+        "en": "Right colic vein",
+        "la": "Vena colica dextra",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_right_colic_vein",
+      "path": [
+        "Abdominal vessels",
+        "Veins",
+        "Portal system"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "middle_colic_vein",
+      "names": {
+        "en": "Middle colic vein",
+        "la": "Vena colica media",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_middle_colic_vein",
+      "path": [
+        "Abdominal vessels",
+        "Veins",
+        "Portal system"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "left_colic_vein",
+      "names": {
+        "en": "Left colic vein",
+        "la": "Vena colica sinistra",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_left_colic_vein",
+      "path": [
+        "Abdominal vessels",
+        "Veins",
+        "Portal system"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "right_hepatic_vein",
+      "names": {
+        "en": "Right hepatic vein",
+        "la": "Vena hepatica dextra",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_right_hepatic_vein",
+      "path": [
+        "Abdominal vessels",
+        "Veins"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "intermediate_hepatic_vein",
+      "names": {
+        "en": "Intermediate hepatic vein",
+        "la": "Vena hepatica intermedia",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_middle_hepatic_vein",
+      "path": [
+        "Abdominal vessels",
+        "Veins"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "left_hepatic_vein",
+      "names": {
+        "en": "Left hepatic vein",
+        "la": "Vena hepatica sinistra",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_left_hepatic_vein",
+      "path": [
+        "Abdominal vessels",
+        "Veins"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "ileocolic_vein",
+      "names": {
+        "en": "Ileocolic vein",
+        "la": "Vena ileocolica",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_ileocolic_vein",
+      "path": [
+        "Abdominal vessels",
+        "Veins",
+        "Portal system"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "common_iliac_vein_l",
+      "names": {
+        "en": "Common iliac vein (left)",
+        "la": "Vena iliaca communis",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_left_common_iliac_vein",
+      "path": [
+        "Pelvic vessels",
+        "Veins"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "common_iliac_vein_r",
+      "names": {
+        "en": "Common iliac vein (right)",
+        "la": "Vena iliaca communis",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_right_common_iliac_vein",
+      "path": [
+        "Pelvic vessels",
+        "Veins"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "internal_iliac_vein_l",
+      "names": {
+        "en": "Internal iliac vein (left)",
+        "la": "Vena iliaca interna",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_internal_iliac_vein_L",
+      "path": [
+        "Pelvic vessels",
+        "Veins"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "internal_iliac_vein_r",
+      "names": {
+        "en": "Internal iliac vein (right)",
+        "la": "Vena iliaca interna",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_internal_iliac_vein_R",
+      "path": [
+        "Pelvic vessels",
+        "Veins"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "inferior_mesenteric_vein",
+      "names": {
+        "en": "Inferior mesenteric vein",
+        "la": "Vena mesenterica inferior",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_inferior_mesenteric_vein",
+      "path": [
+        "Abdominal vessels",
+        "Veins",
+        "Portal system"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "superior_mesenteric_vein",
+      "names": {
+        "en": "Superior mesenteric vein",
+        "la": "Vena mesenterica superior",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_superior_mesenteric_vein",
+      "path": [
+        "Abdominal vessels",
+        "Veins",
+        "Portal system"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "hepatic_portal_vein",
+      "names": {
+        "en": "Hepatic portal vein",
+        "la": "Vena portae hepatis",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_hepatic_portal_vein",
+      "path": [
+        "Abdominal vessels",
+        "Veins",
+        "Portal system"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "internal_pudendal_vein_l",
+      "names": {
+        "en": "Internal pudendal vein (left)",
+        "la": "Vena pudendalis interna",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_internal_pudendal_vein_L",
+      "path": [
+        "Pelvic vessels",
+        "Veins"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "internal_pudendal_vein_r",
+      "names": {
+        "en": "Internal pudendal vein (right)",
+        "la": "Vena pudendalis interna",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_internal_pudendal_vein_R",
+      "path": [
+        "Pelvic vessels",
+        "Veins"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "right_renal_vein",
+      "names": {
+        "en": "Right renal vein",
+        "la": "Vena renalis dextra",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_right_renal_vein",
+      "path": [
+        "Abdominal vessels",
+        "Veins"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "left_renal_vein",
+      "names": {
+        "en": "Left renal vein",
+        "la": "Vena renalis sinistra",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_left_renal_vein",
+      "path": [
+        "Abdominal vessels",
+        "Veins"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "median_sacral_vein",
+      "names": {
+        "en": "Median sacral vein",
+        "la": "Vena sacralis mediana",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_median_sacral_vein",
+      "path": [
+        "Pelvic vessels",
+        "Veins"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "splenic_vein",
+      "names": {
+        "en": "Splenic vein",
+        "la": "Vena splenica",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_splenic_vein",
+      "path": [
+        "Abdominal vessels",
+        "Veins",
+        "Portal system"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "inferior_anorectal_veins_l",
+      "names": {
+        "en": "Inferior anorectal veins (left)",
+        "la": "Venae anorectales inferiores",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_inferior_rectal_vein_L",
+      "path": [
+        "Pelvic vessels",
+        "Veins"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "inferior_anorectal_veins_r",
+      "names": {
+        "en": "Inferior anorectal veins (right)",
+        "la": "Venae anorectales inferiores",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_inferior_rectal_vein_R",
+      "path": [
+        "Pelvic vessels",
+        "Veins"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "middle_anorectal_veins_l",
+      "names": {
+        "en": "Middle anorectal veins (left)",
+        "la": "Venae anorectales mediae",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_middle_rectal_vein_L",
+      "path": [
+        "Pelvic vessels",
+        "Veins"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "middle_anorectal_veins_r",
+      "names": {
+        "en": "Middle anorectal veins (right)",
+        "la": "Venae anorectales mediae",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_middle_rectal_vein_R",
+      "path": [
+        "Pelvic vessels",
+        "Veins"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "cystic_veins",
+      "names": {
+        "en": "Cystic veins",
+        "la": "Venae cysticae",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_cystic_vein",
+      "path": [
+        "Abdominal vessels",
+        "Veins",
+        "Portal system"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "sigmoid_veins_1",
+      "names": {
+        "en": "Sigmoid veins, 1",
+        "la": "Venae sigmoideae",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_sigmoid_vein_a",
+      "path": [
+        "Abdominal vessels",
+        "Veins",
+        "Portal system"
+      ],
+      "qualifier": "1"
+    },
+    {
+      "key": "sigmoid_veins_2",
+      "names": {
+        "en": "Sigmoid veins, 2",
+        "la": "Venae sigmoideae",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_sigmoid_vein_b",
+      "path": [
+        "Abdominal vessels",
+        "Veins",
+        "Portal system"
+      ],
+      "qualifier": "2"
+    },
+    {
+      "key": "sigmoid_veins_3",
+      "names": {
+        "en": "Sigmoid veins, 3",
+        "la": "Venae sigmoideae",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_sigmoid_vein_c",
+      "path": [
+        "Abdominal vessels",
+        "Veins",
+        "Portal system"
+      ],
+      "qualifier": "3"
+    },
+    {
+      "key": "uterine_veins_l",
+      "names": {
+        "en": "Uterine veins (left)",
+        "la": "Venae uterinae",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_left_uterine_vein",
+      "path": [
+        "Pelvic vessels",
+        "Veins"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "uterine_veins_r",
+      "names": {
+        "en": "Uterine veins (right)",
+        "la": "Venae uterinae",
+        "es": ""
+      },
+      "system_id": "cardiovascular",
+      "mesh_file": "cardiovascular_female.glb",
+      "node_name": "VH_F_right_uterine_vein",
+      "path": [
+        "Pelvic vessels",
+        "Veins"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "vertebra_c3",
+      "names": {
+        "en": "Vertebra C3",
+        "la": "Vertebra cervicalis III",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_cervical_vertebra_3",
+      "path": [
+        "Vertebral column",
+        "Cervical vertebrae"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "vertebra_c4",
+      "names": {
+        "en": "Vertebra C4",
+        "la": "Vertebra cervicalis IV",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_cervical_vertebra_4",
+      "path": [
+        "Vertebral column",
+        "Cervical vertebrae"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "vertebra_c5",
+      "names": {
+        "en": "Vertebra C5",
+        "la": "Vertebra cervicalis V",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_cervical_vertebra_5",
+      "path": [
+        "Vertebral column",
+        "Cervical vertebrae"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "vertebra_c6",
+      "names": {
+        "en": "Vertebra C6",
+        "la": "Vertebra cervicalis VI",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_cervical_vertebra_6",
+      "path": [
+        "Vertebral column",
+        "Cervical vertebrae"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "vertebra_c7",
+      "names": {
+        "en": "Vertebra C7",
+        "la": "Vertebra cervicalis VII",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_cervical_vertebra_7",
+      "path": [
+        "Vertebral column",
+        "Cervical vertebrae"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "vertebra_l6",
+      "names": {
+        "en": "Lumbar vertebra, L6",
+        "la": "Vertebra lumbalis",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_lumbar_vertebra_6",
+      "path": [
+        "Vertebral column",
+        "Lumbar vertebrae"
+      ],
+      "qualifier": "L6"
+    },
+    {
+      "key": "vertebra_l1",
+      "names": {
+        "en": "Vertebra L1",
+        "la": "Vertebra lumborum I",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_lumbar_vertebra_1",
+      "path": [
+        "Vertebral column",
+        "Lumbar vertebrae"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "vertebra_l2",
+      "names": {
+        "en": "Vertebra L2",
+        "la": "Vertebra lumborum II",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_lumbar_vertebra_2",
+      "path": [
+        "Vertebral column",
+        "Lumbar vertebrae"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "vertebra_l3",
+      "names": {
+        "en": "Vertebra L3",
+        "la": "Vertebra lumborum III",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_lumbar_vertebra_3",
+      "path": [
+        "Vertebral column",
+        "Lumbar vertebrae"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "vertebra_l4",
+      "names": {
+        "en": "Vertebra L4",
+        "la": "Vertebra lumborum IV",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_lumbar_vertebra_4",
+      "path": [
+        "Vertebral column",
+        "Lumbar vertebrae"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "vertebra_l5",
+      "names": {
+        "en": "Vertebra L5",
+        "la": "Vertebra lumborum V",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_lumbar_vertebra_5",
+      "path": [
+        "Vertebral column",
+        "Lumbar vertebrae"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "vertebra_t1",
+      "names": {
+        "en": "Vertebra T1",
+        "la": "Vertebra thoracis I",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_thoracic_vertebra_1",
+      "path": [
+        "Vertebral column",
+        "Thoracic vertebrae"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "vertebra_t2",
+      "names": {
+        "en": "Vertebra T2",
+        "la": "Vertebra thoracis II",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_thoracic_vertebra_2",
+      "path": [
+        "Vertebral column",
+        "Thoracic vertebrae"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "vertebra_t3",
+      "names": {
+        "en": "Vertebra T3",
+        "la": "Vertebra thoracis III",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_thoracic_vertebra_3",
+      "path": [
+        "Vertebral column",
+        "Thoracic vertebrae"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "vertebra_t4",
+      "names": {
+        "en": "Vertebra T4",
+        "la": "Vertebra thoracis IV",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_thoracic_vertebra_4",
+      "path": [
+        "Vertebral column",
+        "Thoracic vertebrae"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "vertebra_t9",
+      "names": {
+        "en": "Vertebra T9",
+        "la": "Vertebra thoracis IX",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_thoracic_vertebra_9",
+      "path": [
+        "Vertebral column",
+        "Thoracic vertebrae"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "vertebra_t5",
+      "names": {
+        "en": "Vertebra T5",
+        "la": "Vertebra thoracis V",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_thoracic_vertebra_5",
+      "path": [
+        "Vertebral column",
+        "Thoracic vertebrae"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "vertebra_t6",
+      "names": {
+        "en": "Vertebra T6",
+        "la": "Vertebra thoracis VI",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_thoracic_vertebra_6",
+      "path": [
+        "Vertebral column",
+        "Thoracic vertebrae"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "vertebra_t7",
+      "names": {
+        "en": "Vertebra T7",
+        "la": "Vertebra thoracis VII",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_thoracic_vertebra_7",
+      "path": [
+        "Vertebral column",
+        "Thoracic vertebrae"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "vertebra_t8",
+      "names": {
+        "en": "Vertebra T8",
+        "la": "Vertebra thoracis VIII",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_thoracic_vertebra_8",
+      "path": [
+        "Vertebral column",
+        "Thoracic vertebrae"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "vertebra_t10",
+      "names": {
+        "en": "Vertebra T10",
+        "la": "Vertebra thoracis X",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_thoracic_vertebra_10",
+      "path": [
+        "Vertebral column",
+        "Thoracic vertebrae"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "vertebra_t11",
+      "names": {
+        "en": "Vertebra T11",
+        "la": "Vertebra thoracis XI",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_thoracic_vertebra_11",
+      "path": [
+        "Vertebral column",
+        "Thoracic vertebrae"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "vertebra_t12",
+      "names": {
+        "en": "Vertebra T12",
+        "la": "Vertebra thoracis XII",
+        "es": ""
+      },
+      "system_id": "skeletal",
+      "mesh_file": "skeletal_female.glb",
+      "node_name": "VH_F_thoracic_vertebra_12",
+      "path": [
+        "Vertebral column",
+        "Thoracic vertebrae"
+      ],
+      "qualifier": ""
+    },
+    {
+      "key": "gallbladder",
+      "names": {
+        "en": "Gallbladder",
+        "la": "Vesica biliaris",
+        "es": ""
+      },
+      "system_id": "digestive",
+      "mesh_file": "digestive_female.glb",
+      "node_name": "VH_F_gallbladder",
+      "path": [
+        "Biliary tract"
+      ],
+      "qualifier": ""
+    }
+  ]
+}
