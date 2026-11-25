@@ -6,12 +6,13 @@ import hashlib
 import json
 import struct
 import sys
+import tempfile
 import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = ROOT / "data" / "third_party_anatomy_sources.json"
-DEST = ROOT / "build" / "third_party_atlases"
+DEST = Path(tempfile.gettempdir()) / "atlas-third-party-atlases"
 BASE = "https://raw.githubusercontent.com/Nurkan1/Anatria-3D/main/public/anatomy/"
 
 def fetch(url: str) -> bytes:
