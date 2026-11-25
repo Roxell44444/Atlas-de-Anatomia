@@ -2,6 +2,7 @@ import { NodeIO } from '@gltf-transform/core';
 import { EXTMeshoptCompression, KHRONOS_EXTENSIONS } from '@gltf-transform/extensions';
 import { dequantize } from '@gltf-transform/functions';
 import { MeshoptDecoder } from 'meshoptimizer';
+import draco3d from 'draco3dgltf';
 
 const [inputPath, outputPath] = process.argv.slice(2);
 if (!inputPath || !outputPath) {
@@ -9,9 +10,10 @@ if (!inputPath || !outputPath) {
 }
 
 await MeshoptDecoder.ready;
+const dracoDecoder = await draco3d.createDecoderModule();
 const io = new NodeIO()
   .registerExtensions([...KHRONOS_EXTENSIONS, EXTMeshoptCompression])
-  .registerDependencies({ 'meshopt.decoder': MeshoptDecoder });
+  .registerDependencies({ 'meshopt.decoder': MeshoptDecoder, 'draco3d.decoder': dracoDecoder });
 
 const document = await io.read(inputPath);
 for (const extension of document.getRoot().listExtensionsUsed()) {
@@ -23,8 +25,8 @@ await document.transform(dequantize());
 
 const remaining = document.getRoot().listExtensionsUsed()
   .map((extension) => extension.extensionName);
-if (remaining.includes('EXT_meshopt_compression')) {
-  throw new Error('El archivo de salida todavía declara EXT_meshopt_compression.');
+if (remaining.includes('EXT_meshopt_compression') || remaining.includes('KHR_draco_mesh_compression')) {
+  throw new Error('El archivo de salida todavía declara una extensión de geometría comprimida.');
 }
 
 await io.write(outputPath, document);
