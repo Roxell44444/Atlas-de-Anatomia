@@ -39,6 +39,9 @@ jobs:
       - name: Validate offline catalog and educational entries
         run: python tools/validate_catalog.py
 
+      - name: Download and verify separate Z-Anatomy and HRA atlas assets
+        run: python tools/download_third_party_atlases.py
+
       - name: Download and verify licensed male and female GLB models
         run: python tools/download_anatomy_models.py
 
