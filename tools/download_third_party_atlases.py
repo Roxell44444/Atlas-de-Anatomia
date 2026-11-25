@@ -20,7 +20,7 @@ def fetch(url: str) -> bytes:
         return response.read()
 
 def git_blob_sha1(data: bytes) -> str:
-    return hashlib.sha1(f"blob {len(data)}\\0".encode("ascii") + data).hexdigest()
+    return hashlib.sha1(f"blob {len(data)}\0".encode("ascii") + data).hexdigest()
 
 def write_verified(url: str, path: Path, expected_sha: str | None = None) -> bytes:
     data = fetch(url)
@@ -44,7 +44,7 @@ def validate_glb(data: bytes, name: str) -> None:
         if len(chunk) != length:
             raise RuntimeError(f"Chunk truncado: {name}")
         if kind == b"JSON":
-            doc = json.loads(chunk.decode("utf-8").rstrip("\\x00 \\t\\r\\n"))
+            doc = json.loads(chunk.decode("utf-8").rstrip("\x00 \t\r\n"))
             used = set(doc.get("extensionsUsed", []))
             if "KHR_draco_mesh_compression" in used:
                 print(f"AVISO {name}: requiere descompresión Draco antes de importarse en Godot.")
