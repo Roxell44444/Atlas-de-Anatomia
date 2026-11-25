@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "purpose": "Registro verificable de atlas 3D externos; cada fuente conserva su licencia y su espacio anatómico.",
+  "sources": [
+    {
+      "id": "z_anatomy_male",
+      "name": "Z-Anatomy / BodyParts3D — atlas masculino detallado",
+      "sex": "male",
+      "coverage": "Cuerpo masculino completo, sistemas por separado",
+      "structures": 3478,
+      "license": "CC BY-SA 4.0",
+      "attribution": "Z-Anatomy, derived from BodyParts3D (The Database Center for Life Science, DBCLS); adapted meshes distributed by Anatria3D, Nurkan1, under CC BY-SA 4.0. Preserve upstream NOTICE and LICENSE.",
+      "source_repository": "https://github.com/Nurkan1/Anatria-3D",
+      "source_path": "public/anatomy",
+      "manifest_url": "https://raw.githubusercontent.com/Nurkan1/Anatria-3D/main/public/anatomy/manifest.json",
+      "status": "source_verified; staged separately; not yet activated in the viewer",
+      "license_notice_url": "https://raw.githubusercontent.com/Nurkan1/Anatria-3D/main/public/anatomy/NOTICE",
+      "license_file_url": "https://raw.githubusercontent.com/Nurkan1/Anatria-3D/main/public/anatomy/LICENSE",
+      "models": [
+        [
+          "articular_male.glb",
+          1541408,
+          "fc5fbcf78c8a3ea545604b188debb3fa2a379dc4"
+        ],
+        [
+          "cardiovascular_male.glb",
+          7217588,
+          "fd9f9e198e2e629dac0d8fa1c106cc600574529d"
+        ],
+        [
+          "digestive_male.glb",
+          929984,
+          "ac31e9bddc3ca3a61ec0cdf928a86d2104ab9497"
+        ],
+        [
+          "endocrine_male.glb",
+          39824,
+          "7c45c35e90ac49f2224725f186bbb57616a46fd5"
+        ],
+        [
+          "lymphatic_male.glb",
+          509592,
+          "3524fb1eb8c01374556ade172f88840d1b25db16"
+        ],
+        [
+          "muscular_male.glb",
+          11972116,
+          "a35cb3ac37663f5f33c068dd2a3ac24148de2bcd"
+        ],
+        [
+          "nervous_male.glb",
+          8535424,
+          "a026490cca352ddc6589c54cf2509acdb9a2ee0c"
+        ],
+        [
+          "regional_male.glb",
+          765860,
+          "ad17d8f7979eef281c2bbf526010138c66637531"
+        ],
+        [
+          "renal_male.glb",
+          59040,
+          "6cfb98a5caae58094b7010159a74b1b3fefbbded"
+        ],
+        [
+          "reproductive_male.glb",
+          63600,
+          "fcb959920590416247610f7d03549d2e8401bdb6"
+        ],
+        [
+          "respiratory_male.glb",
+          585232,
+          "ad5205652b415af92bd05b805781039d82dceebc"
+        ],
+        [
+          "skeletal_male.glb",
+          2823900,
+          "97085e2979cfe6fabc8d0b864d7e94b05f314e60"
+        ],
+        [
+          "visceral_male.glb",
+          1700280,
+          "36d85f9387d3db8d4f401f2af3905e22bf251809"
+        ]
+      ]
+    },
+    {
+      "id": "hubmap_hra_female",
+      "name": "HuBMAP / Human Reference Atlas — órganos femeninos de referencia",
+      "sex": "female",
+      "coverage": "Tronco, abdomen, pelvis, mama, órganos y vasos de referencia; no es un cuerpo femenino completo",
+      "structures": 264,
+      "license": "CC BY 4.0",
+      "attribution": "Human Reference Atlas 3D Reference Organ Library, HuBMAP Consortium / NIH, derived from the Visible Human Female dataset of the U.S. National Library of Medicine. CC BY 4.0.",
+      "source_repository": "https://github.com/Nurkan1/Anatria-3D",
+      "manifest_url": "https://raw.githubusercontent.com/Nurkan1/Anatria-3D/main/public/anatomy/manifest_female.json",
+      "manifest_git_blob_sha1": "04ec7ca15a4ab7f4a8a6783b5b0cdf4a50c36faa",
+      "license_notice_url": "https://raw.githubusercontent.com/Nurkan1/Anatria-3D/main/public/anatomy/NOTICE",
+      "license_file_url": "https://raw.githubusercontent.com/Nurkan1/Anatria-3D/main/public/anatomy/LICENSE",
+      "status": "source_verified; staged separately; not yet activated in the viewer",
+      "models": [
+        [
+          "cardiovascular_female.glb",
+          448900,
+          "5e73d16a4d89f7ca9894bc84fb6fba33160b2168"
+        ],
+        [
+          "digestive_female.glb",
+          476856,
+          "e1019c7d6bebb45f56a82b2ea19b614a195748ce"
+        ],
+        [
+          "integumentary_female.glb",
+          2183908,
+          "b4e32bcfd731a77011b3554c4df5161af69658e8"
+        ],
+        [
+          "lymphatic_female.glb",
+          42572,
+          "a84c94f279443476ab7e79da240cc3d617cfa858"
+        ],
+        [
+          "renal_female.glb",
+          617164,
+          "15bfcaedc672238bf51d7f0d2719ddd5519cea88"
+        ],
+        [
+          "reproductive_female.glb",
+          428960,
+          "9a61f6726ccd6b7ee799b807b216a7fadd31ed30"
+        ],
+        [
+          "skeletal_female.glb",
+          1356072,
+          "cf3cf17bed013dbd998c1d36c27a4b789436785a"
+        ]
+      ]
+    },
+    {
+      "id": "voxel_man_sio",
+      "name": "VOXEL-MAN — Segmented Internal Organs of the Visible Human Male",
+      "sex": "male",
+      "coverage": "Torso desde cuello hasta muslos superiores; más de 200 objetos anatómicos etiquetados",
+      "structures": 232,
+      "license": "CC BY 4.0",
+      "attribution": "Segmented Internal Organs of the Visible Human Male dataset by Karl Heinz Höhne, Bernhard Pflesser, Andreas Pommert, Martin Riemer, Thomas Schiemann, Rainer Schubert, Udo Schumacher and Ulf Tiede (DOI: 10.5281/zenodo.15882019), VOXEL-MAN project, licensed CC BY 4.0; based on the Visible Human Male of the U.S. National Library of Medicine.",
+      "source_url": "https://doi.org/10.5281/zenodo.15882019",
+      "download_url": "https://zenodo.org/records/15882019/files/VOXEL-MAN_segmented-internal-organs.zip",
+      "format": "TIFF cryosections, CT and 16-bit label volume; not a ready-to-import polygon GLB",
+      "status": "license_verified; volume source identified; surface extraction and mesh alignment still required"
+    }
+  ]
+}
