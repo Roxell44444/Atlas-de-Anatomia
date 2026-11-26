@@ -80,5 +80,63 @@ func _run_validation() -> void:
 		print("OK modelo ", scenario["mode"], ": ", expected_keys.size(), " estructuras seleccionables con malla en jerarquía.")
 		model.free()
 
-	print("VALIDACIÓN DE MODELOS CORRECTA: masculino, femenino y catálogo local.")
+	# Validate all external atlas index entries against their imported source meshes.
+	var external_scenarios := [
+		{"id": "z_anatomy_male", "catalog_path": "res://data/external_atlas_catalog_male_zanatomy.json", "expected": 3478},
+		{"id": "hubmap_hra_female", "catalog_path": "res://data/external_atlas_catalog_female_hra.json", "expected": 264}
+	]
+	for external_scenario in external_scenarios:
+		var external_data: Variant = JSON.parse_string(FileAccess.get_file_as_string(str(external_scenario["catalog_path"])))
+		if not external_data is Dictionary:
+			push_error("FALLO: índice externo ilegible: " + str(external_scenario["id"]))
+			quit(1)
+			return
+		var external_structures: Array = external_data.get("structures", [])
+		if external_structures.size() != int(external_scenario["expected"]):
+			push_error("FALLO: recuento de estructuras inesperado en " + str(external_scenario["id"]))
+			quit(1)
+			return
+		var by_file: Dictionary = {}
+		for external_entry in external_structures:
+			var filename := str(external_entry.get("mesh_file", ""))
+			if not by_file.has(filename):
+				by_file[filename] = []
+			by_file[filename].append(external_entry)
+		var checked := 0
+		for filename in by_file:
+			var model_path := "res://assets/external_atlases/" + str(external_scenario["id"]) + "/" + str(filename).replace(".glb", ".godot.glb")
+			var external_packed := ResourceLoader.load(model_path) as PackedScene
+			if external_packed == null:
+				push_error("FALLO: no se pudo cargar el GLB " + model_path)
+				quit(1)
+				return
+			var external_model := external_packed.instantiate()
+			var external_nodes: Dictionary = {}
+			var external_stack: Array[Node] = [external_model]
+			while not external_stack.is_empty():
+				var external_node: Node = external_stack.pop_back()
+				external_nodes[str(external_node.name).to_lower()] = external_node
+				for external_child in external_node.get_children():
+					external_stack.append(external_child)
+			for external_entry in by_file[filename]:
+				var node_name := str(external_entry.get("node_name", "")).to_lower()
+				if not external_nodes.has(node_name):
+					push_error("FALLO: nodo anatómico ausente: " + node_name + " en " + filename)
+					external_model.free()
+					quit(1)
+					return
+				var anatomy_node: Node = external_nodes[node_name]
+				var render_meshes := anatomy_node.find_children("*", "MeshInstance3D", true, false)
+				if anatomy_node is MeshInstance3D:
+					render_meshes.append(anatomy_node)
+				if render_meshes.is_empty():
+					push_error("FALLO: nodo sin geometría: " + node_name)
+					external_model.free()
+					quit(1)
+					return
+				checked += 1
+			external_model.free()
+		print("OK atlas ", external_scenario["id"], ": ", checked, " nodos anatómicos con malla.")
+
+	print("VALIDACIÓN DE MODELOS CORRECTA: modelos base, Z-Anatomy y HuBMAP.")
 	quit(0)
