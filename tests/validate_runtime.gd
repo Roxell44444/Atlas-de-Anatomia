@@ -115,7 +115,7 @@ func _run_validation() -> void:
 			var external_stack: Array[Node] = [external_model]
 			while not external_stack.is_empty():
 				var external_node: Node = external_stack.pop_back()
-				external_nodes[str(external_node.name).to_lower().replace(" ", "").replace(".", "").replace("_", "").replace("-", "")] = external_node
+				external_nodes[str(external_node.name).to_lower().replace(" ", "").replace(".", "").replace("_", "").replace("-", "").replace("+", "").replace("(", "").replace(")", "")] = external_node
 				for external_child in external_node.get_children():
 					external_stack.append(external_child)
 			for external_entry in by_file[filename]:
