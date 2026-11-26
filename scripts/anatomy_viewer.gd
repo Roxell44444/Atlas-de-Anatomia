@@ -363,7 +363,7 @@ func _load_catalog_key_index() -> void:
 
 func _normalize_node_name(value: String) -> String:
 	var normalized := value.to_lower()
-	for character in [" ", ".", "_", "-", "'", "(", ")", ",", "/"]:
+	for character in [" ", ".", "_", "-", "+", "'", "(", ")", ",", "/"]:
 		normalized = normalized.replace(character, "")
 	return normalized
 
