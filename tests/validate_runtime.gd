@@ -119,7 +119,7 @@ func _run_validation() -> void:
 				for external_child in external_node.get_children():
 					external_stack.append(external_child)
 			for external_entry in by_file[filename]:
-				var node_name := str(external_entry.get("node_name", "")).to_lower().replace(" ", "").replace(".", "").replace("_", "").replace("-", "")
+				var node_name := str(external_entry.get("node_name", "")).to_lower().replace(" ", "").replace(".", "").replace("_", "").replace("-", "").replace("+", "").replace("(", "").replace(")", "")
 				if not external_nodes.has(node_name):
 					push_error("FALLO: nodo anatómico ausente: " + node_name + " en " + filename)
 					external_model.free()
