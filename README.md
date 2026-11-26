@@ -40,14 +40,16 @@ Los nombres y la indexación de las 263 entradas están disponibles sin conexió
 
 El flujo `.github/workflows/android-build.yml` realiza estos pasos:
 
-1. Valida el catálogo, los sistemas y las fichas con sus licencias.
-2. Descarga los GLB masculino y femenino y comprueba su tamaño y hash.
-3. Registra extensiones Khronos, descomprime meshopt y desquantiza la geometría para preparar el formato GLB.
-4. Importa el proyecto con Godot 4.7.2.
-5. Comprueba que las mallas esperadas se pueden localizar en ambos modelos.
-6. Exporta una APK Android de depuración y la publica como artefacto.
+1. Valida el catálogo local, los sistemas y las fichas con sus licencias.
+2. Descarga, verifica y prepara los modelos externos Z-Anatomy y HuBMAP; simplifica su geometría para móviles y crea paquetes ZIP independientes.
+3. Publica los paquetes externos en la rama `atlas-model-assets`, sin mezclarlos con el código ni con las licencias de otras fuentes.
+4. Descarga y verifica los modelos base masculino y femenino.
+5. Importa los recursos con Godot 4.7.2 y valida los nodos anatómicos y sus mallas.
+6. Prueba la descarga de ambos paquetes, la extracción ZIP y la reconstrucción GLTF en tiempo de ejecución.
+7. Retira los paquetes externos del APK de instalación y vuelve a importar solo los recursos base.
+8. Exporta la APK Android de depuración y la publica como artefacto.
 
-Las pruebas de ejecución inspeccionan la jerarquía importada de cada GLB: una estructura se considera seleccionable cuando su clave anatómica identifica un nodo que contiene una o más mallas descendientes. La exportación de Android y la publicación del artefacto solo se ejecutan después de superar la importación, la comprobación de los dos modelos y el arranque del proyecto. Una ejecución fallida no produce una APK válida.
+La aplicación instala primero el atlas base. Al seleccionar Z-Anatomy o HuBMAP, descarga el paquete correspondiente una sola vez y lo guarda en el almacenamiento local de la aplicación. Después puede cargarlo sin conexión. La prueba de CI comprueba la descarga y la reconstrucción de ambos paquetes.
 
 ## Atlas externos y licencias independientes
 
@@ -57,21 +59,27 @@ Se incorporó un registro verificable de tres fuentes externas en `data/third_pa
 - HuBMAP / Human Reference Atlas: 264 estructuras del tronco femenino, siete GLB por sistema, CC BY 4.0. No es un cuerpo femenino completo.
 - VOXEL-MAN / Visible Human Male: 232 objetos de torso, CC BY 4.0; la fuente original es un volumen TIFF etiquetado, no una malla lista para importar.
 
-El flujo CI descarga y verifica hashes, manifiestos y licencias de los GLB de Z-Anatomy/HRA en un directorio temporal. Esto confirma la procedencia e integridad de los archivos, pero **todavía no los activa en el visor ni los empaqueta en la APK**. Se requiere descompresión Draco, correspondencia de nombres, alineación espacial y pruebas de selección. VOXEL-MAN requiere además extracción de superficies desde el volumen etiquetado.
+El selector del visor permite elegir el modelo base, Z-Anatomy masculino o HuBMAP femenino. Los catálogos externos se pueden buscar y filtrar por sistema; cada estructura enlaza con el nombre del nodo 3D del modelo de origen. El visor conserva los materiales originales de estos atlas y centra automáticamente el modelo.
 
-Los tres atlas se mantienen separados: Z-Anatomy es CC BY-SA 4.0; HRA y VOXEL-MAN son CC BY 4.0. No se fusionan ni se relicencian como una sola obra.
+Los paquetes descargables están publicados en la rama `atlas-model-assets`:
+- Z-Anatomy masculino: 3.478 estructuras, 13 GLB por sistema, paquete ZIP de aproximadamente 88,9 MB, CC BY-SA 4.0.
+- HuBMAP femenino: 264 estructuras, siete GLB por sistema, paquete ZIP de aproximadamente 26,3 MB, CC BY 4.0.
+
+Los paquetes se descargan bajo demanda y se guardan en `user://external_atlases/`; una vez descargados, su carga no necesita conexión. No se incluyen en la APK para mantener razonable su tamaño. Cada paquete conserva sus avisos de licencia y atribución. Las fuentes no se fusionan ni se relicencian como una sola obra.
+
+VOXEL-MAN sigue pendiente: sus 232 objetos proceden de un volumen Visible Human etiquetado y requieren extracción de superficies y validación espacial antes de incorporarse al visor.
 
 
 ## Estado y límites actuales
 
 - El proyecto Godot y su interfaz inicial ya están en el repositorio.
-- Los modelos binarios no se guardan en Git: se descargan y verifican durante la compilación y quedan empaquetados en la APK si el flujo finaliza correctamente.
-- El visor reconoce las claves anatómicas en la jerarquía importada y crea colisiones en sus mallas descendientes. La prueba de CI confirmó 128 estructuras seleccionables en el cuerpo masculino y 133 en el femenino. La interacción táctil, las capas y el rendimiento todavía requieren prueba en un teléfono Android real.
+- Los modelos base masculino y femenino se incluyen en la APK. Los atlas externos no se incluyen: sus paquetes se descargan cuando el usuario los selecciona y quedan guardados para uso offline.
+- La prueba de CI confirmó 128 estructuras seleccionables del modelo base masculino y 133 del femenino, además de la correspondencia de los 3.478 nodos Z-Anatomy y los 264 nodos HuBMAP con geometría 3D.
+- La descarga, extracción ZIP y reconstrucción GLTF en tiempo de ejecución se prueban automáticamente para ambos paquetes externos.
+- APK Android de depuración generada y validada por CI el 26 de noviembre de 2026: ejecución [45896481734](https://github.com/Roxell44444/Atlas-de-Anatomia/actions/runs/45896481734), artefacto `atlas-anatomia-android-debug`, APK de aproximadamente 90 MB. El artefacto temporal se conserva durante 14 días.
 - Hay 25 fichas profundas con fuente y atribución CC BY 4.0. Las demás entradas del índice continúan pendientes de documentación anatómica profunda.
-- El paquete Visible Human previo contiene 20 mallas óseas piloto, no un esqueleto completo.
-- La aplicación principal está diseñada para funcionar offline cuando los recursos descargados estén empaquetados. Tutor Gemini requiere conexión y un backend seguro; el modo local solo busca en el catálogo.
-- **APK de depuración móvil generada y validada por CI el 24 de noviembre de 2026.** La ejecución [45489466787](https://github.com/Roxell44444/Atlas-de-Anatomia/actions/runs/45489466787) terminó en verde y publicó `atlas-anatomia-android-debug` (retención hasta el 8 de diciembre de 2026). Incluye iconos Android personalizados, los dos modelos 3D y los datos locales.
-- La orientación vertical y los iconos se comprobaron dentro del paquete APK; el visor importó ambos modelos y superó las pruebas automáticas. Todavía falta probar la experiencia visual, los gestos y el rendimiento en un teléfono Android físico. El tutor generativo Gemini tampoco está conectado: la búsqueda local funciona sin red y la generación requiere backend y conexión.
+- VOXEL-MAN aún no está integrado; el paquete Visible Human previo contiene 20 mallas óseas piloto, no un esqueleto completo.
+- La interfaz está orientada a móvil y el proyecto configura orientación vertical. Todavía falta validar gestos, calidad visual y rendimiento en un teléfono Android físico. Tutor Gemini no está conectado: la búsqueda local funciona sin red y la generación requiere backend y conexión.
 
 ## Regla de calidad
 
