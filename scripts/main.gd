@@ -537,7 +537,10 @@ func _refresh_list() -> void:
 	if selected_key in visible_keys:
 		var index := visible_keys.find(selected_key)
 		item_list.select(index)
-		_update_detail(catalog.get_entry(selected_key))
+		_update_detail(catalog.get_entry(selected_key) if active_atlas_id == "base" else _find_external_entry(selected_key))
+	elif active_atlas_id != "base":
+		var atlas_name := "Z-Anatomy" if active_atlas_id == "z_anatomy_male" else "HuBMAP / Human Reference Atlas"
+		_set_detail_text("[b]" + atlas_name + "[/b]\n\n" + str(matches.size()) + " estructuras en el filtro actual. Selecciona una para ver su nombre, sistema, nodo 3D y atribución.")
 	elif active_system == "all":
 		_set_detail_text("Selecciona una estructura en la lista o tócala en el modelo 3D.\n\nEl índice local contiene " + str(catalog.entries.size()) + " entradas, entre estructuras de los modelos y entradas informativas sin malla 3D.")
 	else:
