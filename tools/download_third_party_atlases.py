@@ -86,7 +86,7 @@ def main() -> None:
             validate_glb(data, filename)
             decoded_path = source_dir / (filename.replace(".glb", ".godot.glb"))
             subprocess.run(
-                ["node", str(ROOT / "tools" / "decode_glb.mjs"), str(source_dir / filename), str(decoded_path)],
+                ["node", str(ROOT / "tools" / "decode_glb.mjs"), str(source_dir / filename), str(decoded_path), "0.25"],
                 cwd=ROOT,
                 check=True,
             )
@@ -106,7 +106,8 @@ def main() -> None:
             "license": source["license"],
             "structures": actual_count,
             "models_verified": len(source["models"]),
-            "bytes": sum(int(model[1]) for model in source["models"]),
+            "source_bytes": sum(int(model[1]) for model in source["models"]),
+            "optimized_bytes": sum((source_dir / model[0].replace(".glb", ".godot.glb")).stat().st_size for model in source["models"]),
             "status": "downloaded_and_hash_verified_but_not_yet_enabled_in_viewer"
         })
     (DEST / "verification-summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
