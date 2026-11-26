@@ -27,6 +27,8 @@ var right_dragging := false
 var screen_dragging := false
 var catalog_keys: Dictionary = {}
 var source_system_by_key: Dictionary = {}
+var external_node_to_key: Dictionary = {}
+var external_atlas_id := ""
 
 func _ready() -> void:
 	_load_catalog_key_index()
@@ -72,6 +74,9 @@ func _build_world() -> void:
 
 func load_body(mode: String) -> bool:
 	_clear_model()
+	external_atlas_id = ""
+	external_node_to_key.clear()
+	_load_catalog_key_index()
 	var path: String = MODEL_PATHS.get(mode, MODEL_PATHS["male"])
 	if not ResourceLoader.exists(path):
 		model_status_changed.emit(
@@ -101,6 +106,79 @@ func load_body(mode: String) -> bool:
 	)
 	return true
 
+func load_external_atlas(atlas_id: String) -> bool:
+	_clear_model()
+	external_atlas_id = atlas_id
+	catalog_keys.clear()
+	source_system_by_key.clear()
+	external_node_to_key.clear()
+	var catalog_path := "res://data/external_atlas_catalog_male_zanatomy.json" if atlas_id == "z_anatomy_male" else "res://data/external_atlas_catalog_female_hra.json"
+	if not FileAccess.file_exists(catalog_path):
+		model_status_changed.emit("No se encontró el índice del atlas externo.", false)
+		return false
+	var parsed: Variant = JSON.parse_string(FileAccess.get_file_as_string(catalog_path))
+	if not parsed is Dictionary:
+		model_status_changed.emit("El índice del atlas externo está dañado.", false)
+		return false
+	var structures: Array = parsed.get("structures", [])
+	var model_files: Dictionary = {}
+	for item in structures:
+		if not item is Dictionary:
+			continue
+		var key := str(item.get("key", ""))
+		var node_name := str(item.get("node_name", ""))
+		if key.is_empty() or node_name.is_empty():
+			continue
+		catalog_keys[key] = true
+		external_node_to_key[node_name.to_lower()] = key
+		source_system_by_key[key] = _external_layer_id(str(item.get("system_id", "")))
+		var mesh_file := str(item.get("mesh_file", ""))
+		if not mesh_file.is_empty():
+			model_files[mesh_file] = true
+	current_model = Node3D.new()
+	current_model.name = "ExternalAtlas_" + atlas_id
+	pivot.add_child(current_model)
+	var loaded_count := 0
+	for filename in model_files:
+		var path := "res://assets/external_atlases/" + atlas_id + "/" + str(filename).replace(".glb", ".godot.glb")
+		if not ResourceLoader.exists(path):
+			model_status_changed.emit("Falta el modelo " + str(filename) + " del atlas externo.", false)
+			_clear_model()
+			return false
+		var packed := load(path) as PackedScene
+		if packed == null:
+			model_status_changed.emit("No se pudo importar " + str(filename) + ".", false)
+			_clear_model()
+			return false
+		var instance := packed.instantiate()
+		if instance is Node3D:
+			current_model.add_child(instance)
+		else:
+			var wrapper := Node3D.new()
+			wrapper.add_child(instance)
+			current_model.add_child(wrapper)
+		loaded_count += 1
+	_index_model(true)
+	model_status_changed.emit("Atlas " + ("Z-Anatomy" if atlas_id == "z_anatomy_male" else "HuBMAP") + " cargado: " + str(meshes_by_key.size()) + " estructuras indexadas en " + str(loaded_count) + " modelos.", true)
+	return true
+
+func _external_layer_id(source_id: String) -> String:
+	match source_id:
+		"skeletal":
+			return "skeleton"
+		"muscular":
+			return "muscles"
+		"cardiovascular":
+			return "vessels"
+		"nervous":
+			return "nerves"
+		"integumentary":
+			return "skin"
+		"articular":
+			return "skeleton"
+		_:
+			return "organs"
+
 func _mode_label(mode: String) -> String:
 	return "femenino" if mode == "female" else "masculino"
 
@@ -113,7 +191,7 @@ func _clear_model() -> void:
 	system_nodes.clear()
 	mesh_systems.clear()
 
-func _index_model() -> void:
+func _index_model(preserve_source_materials: bool = false) -> void:
 	if current_model == null:
 		return
 	for system_id in SYSTEM_IDS:
@@ -145,7 +223,8 @@ func _index_model() -> void:
 		if not assigned_system.is_empty():
 			mesh_systems[key] = assigned_system
 		# Explicit tissue palette because the supplied GLBs import nearly white.
-		mesh_instance.material_override = _anatomy_material(key, assigned_system)
+		if not preserve_source_materials:
+			mesh_instance.material_override = _anatomy_material(key, assigned_system)
 
 		mesh_instance.create_trimesh_collision()
 		for child in mesh_instance.get_children():
@@ -216,6 +295,8 @@ func _find_catalog_key(node: Node) -> String:
 	var cursor: Node = node
 	while cursor != null:
 		var candidate := str(cursor.name).to_lower()
+		if external_node_to_key.has(candidate):
+			return str(external_node_to_key[candidate])
 		if _is_catalog_structure(candidate):
 			return candidate
 		if cursor == current_model:
@@ -224,6 +305,8 @@ func _find_catalog_key(node: Node) -> String:
 	return ""
 
 func _load_catalog_key_index() -> void:
+	catalog_keys.clear()
+	source_system_by_key.clear()
 	var file := FileAccess.open("res://data/anatomy_catalog_es.json", FileAccess.READ)
 	if file == null:
 		push_error("No se pudo abrir el índice local de estructuras.")
