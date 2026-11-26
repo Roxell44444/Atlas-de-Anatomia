@@ -123,6 +123,9 @@ jobs:
           rm -rf assets/external_atlases .godot/imported
           godot --headless --editor --path . --import
 
+      - name: Validate optional atlas download, ZIP extraction and runtime GLTF loading
+        run: godot --headless --path . --script res://tests/validate_pack_download.gd
+
       - name: Run project startup validation
         run: godot --headless --path . --quit
 
