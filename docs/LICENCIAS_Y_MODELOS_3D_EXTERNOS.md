@@ -38,8 +38,16 @@ Los tres atlas no comparten necesariamente origen, escala, orientación, anatom�
 6. selección táctil y colisiones;
 7. rendimiento y memoria en Android.
 
-Mientras no pasen esas comprobaciones, se conservan como recursos separados y se muestra claramente qué atlas/fuente está activo. Los modelos Z-Anatomy (CC BY-SA 4.0) y HRA/VOXEL-MAN (CC BY 4.0) nunca se fusionan en un único archivo derivado.
+Los modelos se mantienen como atlas separados, con selector visible. Z-Anatomy y HRA no se superponen ni se fusionan en un solo cuerpo porque su cobertura, origen, orientación y licencia son distintos. Cada uno conserva sus materiales y atribución.
+
+## Distribución offline
+
+Los paquetes preparados se publican en la rama `atlas-model-assets` del repositorio:
+- `packs/z_anatomy_male.zip` — 88.951.779 bytes, Z-Anatomy, CC BY-SA 4.0.
+- `packs/hubmap_hra_female.zip` — 26.262.344 bytes, Human Reference Atlas, CC BY 4.0.
+
+La aplicación descarga el paquete seleccionado, extrae los GLB preparados en el almacenamiento privado `user://external_atlases/` y carga sus escenas mediante `GLTFDocument`. El primer uso necesita internet; los siguientes pueden funcionar sin conexión. Los paquetes no se incluyen en la APK para evitar que el instalador pese más de lo necesario. Cada ZIP conserva `NOTICE` y `LICENSE`.
 
 ## Estado
 
-El registro de fuentes y licencias está en `data/third_party_anatomy_sources.json`. El pipeline verifica descargas y hashes de los recursos Z-Anatomy/HRA antes de cualquier importación en Godot. La activación en el visor y la extracción de superficies VOXEL-MAN siguen siendo tareas pendientes y no se consideran completadas.
+El registro de fuentes y licencias está en `data/third_party_anatomy_sources.json`. CI verifica los hashes de los archivos originales, convierte y simplifica las mallas, comprueba los 3.478 nodos Z-Anatomy y los 264 nodos HRA y prueba la descarga, extracción y carga GLTF de ambos paquetes. VOXEL-MAN está identificado y su licencia documentada, pero la extracción de superficies y la alineación espacial siguen pendientes.
