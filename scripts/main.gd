@@ -12,12 +12,16 @@ var active_system := "all"
 var search_text := ""
 var selected_key := ""
 var visible_keys: Array[String] = []
+var active_atlas_id := "base"
+var external_entries: Array[Dictionary] = []
+var external_catalog: Dictionary = {}
 
 var item_list: ItemList
 var details: RichTextLabel
 var model_status: Label
 var search_box: LineEdit
 var system_dropdown: OptionButton
+var atlas_dropdown: OptionButton
 var male_button: Button
 var female_button: Button
 var viewport: SubViewport
@@ -133,6 +137,20 @@ func _build_interface() -> void:
 	_style_button(female_button, false)
 	female_button.pressed.connect(func(): _set_mode("female", true))
 	mode_row.add_child(female_button)
+
+	atlas_dropdown = OptionButton.new()
+	atlas_dropdown.custom_minimum_size = Vector2(0, 46)
+	atlas_dropdown.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	atlas_dropdown.add_theme_color_override("font_color", Color("#183247"))
+	atlas_dropdown.add_theme_stylebox_override("normal", _make_card_style(Color.WHITE, Color("#d7e1e8"), 12))
+	atlas_dropdown.add_item("Modelo anatómico base")
+	atlas_dropdown.set_item_metadata(0, "base")
+	atlas_dropdown.add_item("Z-Anatomy · atlas masculino")
+	atlas_dropdown.set_item_metadata(1, "z_anatomy_male")
+	atlas_dropdown.add_item("HuBMAP · órganos femeninos")
+	atlas_dropdown.set_item_metadata(2, "hubmap_hra_female")
+	atlas_dropdown.item_selected.connect(_on_atlas_changed)
+	layout.add_child(atlas_dropdown)
 
 	search_box = LineEdit.new()
 	search_box.placeholder_text = "Buscar órgano, hueso, músculo…"
@@ -319,10 +337,102 @@ func _populate_system_filter() -> void:
 	system_dropdown.clear()
 	system_dropdown.add_item("Todos los sistemas")
 	system_dropdown.set_item_metadata(0, "all")
-	for system in catalog.systems:
-		var system_id := str(system.get("id", ""))
-		system_dropdown.add_item(str(system.get("name_es", system_id)))
-		system_dropdown.set_item_metadata(system_dropdown.item_count - 1, system_id)
+	if active_atlas_id != "base":
+		for system in external_catalog.get("systems", []):
+			var system_id := str(system.get("system", ""))
+			system_dropdown.add_item(_external_system_label(system_id))
+			system_dropdown.set_item_metadata(system_dropdown.item_count - 1, system_id)
+	else:
+		for system in catalog.systems:
+			var system_id := str(system.get("id", ""))
+			system_dropdown.add_item(str(system.get("name_es", system_id)))
+			system_dropdown.set_item_metadata(system_dropdown.item_count - 1, system_id)
+	system_dropdown.select(0)
+	active_system = "all"
+
+func _external_system_label(system_id: String) -> String:
+	var labels := {
+		"articular": "Articulaciones",
+		"cardiovascular": "Vasos y corazón",
+		"digestive": "Sistema digestivo",
+		"endocrine": "Sistema endocrino",
+		"integumentary": "Piel",
+		"lymphatic": "Sistema linfático",
+		"muscular": "Músculos",
+		"nervous": "Sistema nervioso",
+		"renal": "Sistema urinario",
+		"reproductive": "Sistema reproductor",
+		"respiratory": "Sistema respiratorio",
+		"skeletal": "Esqueleto",
+		"visceral": "Órganos internos"
+	}
+	return str(labels.get(system_id, system_id.capitalize()))
+
+func _on_atlas_changed(index: int) -> void:
+	var atlas_id := str(atlas_dropdown.get_item_metadata(index))
+	if atlas_id == active_atlas_id:
+		return
+	_load_selected_atlas(atlas_id)
+
+func _load_selected_atlas(atlas_id: String) -> void:
+	active_atlas_id = atlas_id
+	selected_key = ""
+	external_entries.clear()
+	external_catalog.clear()
+	if atlas_id == "base":
+		_populate_system_filter()
+		if viewer != null:
+			viewer.load_body(mode)
+		_refresh_list()
+		return
+	if (atlas_id == "z_anatomy_male" and mode != "male") or (atlas_id == "hubmap_hra_female" and mode != "female"):
+		active_atlas_id = "base"
+		atlas_dropdown.select(0)
+		_populate_system_filter()
+		if viewer != null:
+			viewer.load_body(mode)
+		_refresh_list()
+		return
+	var path := "res://data/external_atlas_catalog_male_zanatomy.json" if atlas_id == "z_anatomy_male" else "res://data/external_atlas_catalog_female_hra.json"
+	if not FileAccess.file_exists(path):
+		model_status.text = "El índice del atlas externo no está disponible."
+		return
+	var parsed: Variant = JSON.parse_string(FileAccess.get_file_as_string(path))
+	if not parsed is Dictionary:
+		model_status.text = "No se pudo leer el índice del atlas externo."
+		return
+	external_catalog = parsed
+	for source_entry in parsed.get("structures", []):
+		if not source_entry is Dictionary:
+			continue
+		var names: Dictionary = {
+			"es": str(source_entry.get("names", {}).get("es", "")),
+			"en": str(source_entry.get("names", {}).get("en", "")),
+			"la": str(source_entry.get("names", {}).get("la", ""))
+		}
+		if names["es"].is_empty():
+			names["es"] = names["en"]
+		external_entries.append({
+			"key": str(source_entry.get("key", "")),
+			"names": names,
+			"label": names["en"],
+			"system": str(source_entry.get("system_id", "")),
+			"atlas_system_id": str(source_entry.get("system_id", "")),
+			"sex": mode,
+			"external_mesh_file": str(source_entry.get("mesh_file", "")),
+			"external_node_name": str(source_entry.get("node_name", "")),
+			"external_atlas_id": atlas_id
+		})
+	_populate_system_filter()
+	if viewer != null:
+		viewer.load_external_atlas(atlas_id)
+	_refresh_list()
+
+func _find_external_entry(key: String) -> Dictionary:
+	for entry in external_entries:
+		if str(entry.get("key", "")) == key:
+			return entry
+	return {}
 
 func _load_progress() -> void:
 	if progress.load(SAVE_PATH) == OK:
@@ -338,9 +448,19 @@ func _set_mode(next_mode: String, save: bool) -> void:
 	mode = next_mode
 	male_button.text = "✓ Masculino" if mode == "male" else "Masculino"
 	female_button.text = "✓ Femenino" if mode == "female" else "Femenino"
+	if active_atlas_id == "z_anatomy_male" and mode != "male":
+		active_atlas_id = "base"
+		atlas_dropdown.select(0)
+	if active_atlas_id == "hubmap_hra_female" and mode != "female":
+		active_atlas_id = "base"
+		atlas_dropdown.select(0)
 	if viewer != null:
-		viewer.load_body(mode)
+		if active_atlas_id == "base":
+			viewer.load_body(mode)
+		else:
+			viewer.load_external_atlas(active_atlas_id)
 		_apply_default_layers()
+	_populate_system_filter()
 	_refresh_list()
 	if selected_key in visible_keys:
 		if viewer != null:
@@ -385,11 +505,25 @@ func _on_system_changed(index: int) -> void:
 	_refresh_list()
 
 func _refresh_list() -> void:
-	if item_list == null or catalog == null or catalog.entries.is_empty():
+	if item_list == null or catalog == null:
 		return
 	item_list.clear()
 	visible_keys.clear()
-	var matches: Array[Dictionary] = catalog.filter_entries(mode, active_system, search_text)
+	var matches: Array[Dictionary] = []
+	if active_atlas_id == "base":
+		if catalog.entries.is_empty():
+			return
+		matches = catalog.filter_entries(mode, active_system, search_text)
+	else:
+		var needle := search_text.strip_edges().to_lower()
+		for entry in external_entries:
+			if active_system != "all" and str(entry.get("system", "")) != active_system:
+				continue
+			var names: Dictionary = entry.get("names", {})
+			var haystack := (str(entry.get("key", "")) + " " + str(names.get("es", "")) + " " + str(names.get("en", "")) + " " + str(names.get("la", ""))).to_lower()
+			if not needle.is_empty() and not haystack.contains(needle):
+				continue
+			matches.append(entry)
 	for entry in matches:
 		var key := str(entry.get("key", ""))
 		var display: String = catalog.get_name(entry)
@@ -440,10 +574,10 @@ func _on_viewer_structure_selected(key: String) -> void:
 	_select_structure(key, false)
 
 func _select_structure(key: String, update_viewer: bool) -> void:
-	if not catalog.has_key(key):
+	var entry: Dictionary = catalog.get_entry(key) if active_atlas_id == "base" else _find_external_entry(key)
+	if entry.is_empty():
 		return
 	selected_key = key
-	var entry: Dictionary = catalog.get_entry(key)
 	if update_viewer and viewer != null:
 		viewer.select_structure(key)
 	_update_detail(entry)
@@ -452,6 +586,9 @@ func _select_structure(key: String, update_viewer: bool) -> void:
 	_save_progress()
 
 func _update_detail(entry: Dictionary) -> void:
+	if active_atlas_id != "base":
+		_update_external_detail(entry)
+		return
 	var key := str(entry.get("key", ""))
 	var names: Dictionary = entry.get("names", {})
 	var detail: Dictionary = catalog.get_detail(key)
@@ -492,6 +629,21 @@ func _update_detail(entry: Dictionary) -> void:
 			output += "\n\n[color=#91a7c3]Punto de referencia: no es una malla independiente en esta fuente.[/color]"
 		else:
 			output += "\n\n[color=#e6bd76]La malla no se ha localizado en el modelo actual.[/color]"
+	details.clear()
+	details.append_text(output)
+
+func _update_external_detail(entry: Dictionary) -> void:
+	var names: Dictionary = entry.get("names", {})
+	var title := str(names.get("es", names.get("en", entry.get("key", "Estructura"))))
+	var output := "[font_size=19][b]" + _escape_bbcode(title) + "[/b][/font_size]\n"
+	output += "[color=#91a7c3]" + _escape_bbcode(str(names.get("la", ""))) + " · " + _escape_bbcode(str(names.get("en", ""))) + "[/color]\n\n"
+	output += "[b]Sistema:[/b] " + _escape_bbcode(_external_system_label(str(entry.get("system", "")))) + "\n"
+	output += "[b]Atlas:[/b] " + ("Z-Anatomy / BodyParts3D" if active_atlas_id == "z_anatomy_male" else "HuBMAP / Human Reference Atlas") + "\n"
+	output += "[b]Clave:[/b] " + _escape_bbcode(str(entry.get("key", ""))) + "\n"
+	output += "[b]Nodo 3D:[/b] " + _escape_bbcode(str(entry.get("external_node_name", ""))) + "\n\n"
+	output += "[color=#79d6ad]Estructura indexada en el atlas de origen. La geometría conserva los materiales originales de la fuente.[/color]\n\n"
+	output += "[b]Licencia:[/b] " + _escape_bbcode(str(external_catalog.get("license", ""))) + "\n"
+	output += "[b]Atribución:[/b] " + _escape_bbcode(str(external_catalog.get("attribution", "")))
 	details.clear()
 	details.append_text(output)
 
