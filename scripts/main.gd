@@ -448,6 +448,8 @@ func _set_mode(next_mode: String, save: bool) -> void:
 	mode = next_mode
 	male_button.text = "✓ Masculino" if mode == "male" else "Masculino"
 	female_button.text = "✓ Femenino" if mode == "female" else "Femenino"
+	atlas_dropdown.set_item_disabled(1, mode != "male")
+	atlas_dropdown.set_item_disabled(2, mode != "female")
 	if active_atlas_id == "z_anatomy_male" and mode != "male":
 		active_atlas_id = "base"
 		atlas_dropdown.select(0)
@@ -643,6 +645,7 @@ func _update_external_detail(entry: Dictionary) -> void:
 	output += "[b]Sistema:[/b] " + _escape_bbcode(_external_system_label(str(entry.get("system", "")))) + "\n"
 	output += "[b]Atlas:[/b] " + ("Z-Anatomy / BodyParts3D" if active_atlas_id == "z_anatomy_male" else "HuBMAP / Human Reference Atlas") + "\n"
 	output += "[b]Clave:[/b] " + _escape_bbcode(str(entry.get("key", ""))) + "\n"
+	output += "[b]Nombre original (EN):[/b] " + _escape_bbcode(str(names.get("en", ""))) + "\n"
 	output += "[b]Nodo 3D:[/b] " + _escape_bbcode(str(entry.get("external_node_name", ""))) + "\n\n"
 	output += "[color=#79d6ad]Estructura indexada en el atlas de origen. La geometría conserva los materiales originales de la fuente.[/color]\n\n"
 	output += "[b]Licencia:[/b] " + _escape_bbcode(str(external_catalog.get("license", ""))) + "\n"
