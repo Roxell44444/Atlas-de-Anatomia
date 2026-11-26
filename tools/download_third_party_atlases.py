@@ -91,9 +91,16 @@ def main() -> None:
                 check=True,
             )
             validate_glb(decoded_path.read_bytes(), decoded_path.name)
-        # Conservar los avisos/licencias junto a cada atlas.
+            # Stage only the converted GLB in the Godot project; keep source and temp files outside.
+            runtime_dir = ROOT / "assets" / "external_atlases" / source["id"]
+            runtime_dir.mkdir(parents=True, exist_ok=True)
+            (runtime_dir / decoded_path.name).write_bytes(decoded_path.read_bytes())
+        # Keep the upstream license notices next to the staged runtime assets.
         for name, url in (("NOTICE", source["license_notice_url"]), ("LICENSE", source["license_file_url"])):
-            write_verified(url, source_dir / name)
+            notice_data = write_verified(url, source_dir / name)
+            runtime_dir = ROOT / "assets" / "external_atlases" / source["id"]
+            runtime_dir.mkdir(parents=True, exist_ok=True)
+            (runtime_dir / name).write_bytes(notice_data)
         summary.append({
             "id": source["id"],
             "license": source["license"],
