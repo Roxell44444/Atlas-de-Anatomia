@@ -159,8 +159,43 @@ func load_external_atlas(atlas_id: String) -> bool:
 			current_model.add_child(wrapper)
 		loaded_count += 1
 	_index_model(true)
+	_fit_external_model_to_camera()
 	model_status_changed.emit("Atlas " + ("Z-Anatomy" if atlas_id == "z_anatomy_male" else "HuBMAP") + " cargado: " + str(meshes_by_key.size()) + " estructuras indexadas en " + str(loaded_count) + " modelos.", true)
 	return true
+
+func _fit_external_model_to_camera() -> void:
+	if current_model == null or camera == null:
+		return
+	var found := false
+	var minimum := Vector3(INF, INF, INF)
+	var maximum := Vector3(-INF, -INF, -INF)
+	for value in current_model.find_children("*", "MeshInstance3D", true, false):
+		var mesh_instance := value as MeshInstance3D
+		if mesh_instance.mesh == null:
+			continue
+		var bounds := mesh_instance.get_aabb()
+		var low := bounds.position
+		var high := bounds.position + bounds.size
+		for x in [low.x, high.x]:
+			for y in [low.y, high.y]:
+				for z in [low.z, high.z]:
+					var point := current_model.to_local(mesh_instance.to_global(Vector3(x, y, z)))
+					minimum = minimum.min(point)
+					maximum = maximum.max(point)
+					found = true
+	if not found:
+		return
+	var center := (minimum + maximum) * 0.5
+	var dimensions := maximum - minimum
+	current_model.position -= center
+	var largest_dimension := maxf(dimensions.x, maxf(dimensions.y, dimensions.z))
+	var half_fov := deg_to_rad(camera.fov * 0.5)
+	distance = clampf((largest_dimension * 0.5) / tan(half_fov) * 1.22, 1.4, 12.0)
+	camera.position = Vector3(0.0, 0.0, distance)
+	camera.look_at(Vector3.ZERO, Vector3.UP)
+	yaw = 0.0
+	pitch = 0.0
+	pivot.rotation = Vector3.ZERO
 
 func _external_layer_id(source_id: String) -> String:
 	match source_id:
