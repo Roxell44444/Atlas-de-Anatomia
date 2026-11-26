@@ -9,6 +9,7 @@ import subprocess
 import sys
 import tempfile
 import urllib.request
+import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -110,6 +111,22 @@ def main() -> None:
             "optimized_bytes": sum((source_dir / model[0].replace(".glb", ".godot.glb")).stat().st_size for model in source["models"]),
             "status": "downloaded_and_hash_verified_but_not_yet_enabled_in_viewer"
         })
+    # Publishable, compressed packs: users download only the atlas they choose.
+    pack_dir = ROOT / "build" / "model-packs"
+    pack_dir.mkdir(parents=True, exist_ok=True)
+    for source in registry["sources"]:
+        if source["id"] == "voxel_man_sio":
+            continue
+        source_dir = DEST / source["id"]
+        pack_path = pack_dir / (source["id"] + ".zip")
+        with zipfile.ZipFile(pack_path, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
+            for item in sorted(source_dir.iterdir()):
+                if item.name.endswith(".godot.glb") or item.name in ("NOTICE", "LICENSE"):
+                    archive.write(item, arcname=item.name)
+        for row in summary:
+            if row["id"] == source["id"]:
+                row["pack_bytes"] = pack_path.stat().st_size
+                break
     (DEST / "verification-summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
     print(json.dumps(summary, indent=2))
 
