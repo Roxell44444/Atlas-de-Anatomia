@@ -1,15 +1,17 @@
 import { NodeIO } from '@gltf-transform/core';
 import { EXTMeshoptCompression, KHRONOS_EXTENSIONS } from '@gltf-transform/extensions';
-import { dequantize } from '@gltf-transform/functions';
-import { MeshoptDecoder } from 'meshoptimizer';
+import { dequantize, dedup, prune, simplify, weld } from '@gltf-transform/functions';
+import { MeshoptDecoder, MeshoptSimplifier } from 'meshoptimizer';
 import draco3d from 'draco3dgltf';
 
-const [inputPath, outputPath] = process.argv.slice(2);
+const [inputPath, outputPath, simplifyRatioText] = process.argv.slice(2);
+const simplifyRatio = Number(simplifyRatioText || 0);
 if (!inputPath || !outputPath) {
   throw new Error('Uso: node tools/decode_glb.mjs entrada.glb salida.glb');
 }
 
 await MeshoptDecoder.ready;
+await MeshoptSimplifier.ready;
 const dracoDecoder = await draco3d.createDecoderModule();
 const io = new NodeIO()
   .registerExtensions([...KHRONOS_EXTENSIONS, EXTMeshoptCompression])
@@ -22,6 +24,14 @@ for (const extension of document.getRoot().listExtensionsUsed()) {
   }
 }
 await document.transform(dequantize());
+if (simplifyRatio > 0) {
+  await document.transform(
+    weld(),
+    simplify({ simplifier: MeshoptSimplifier, ratio: simplifyRatio, error: 0.0001 }),
+    prune(),
+    dedup(),
+  );
+}
 
 const remaining = document.getRoot().listExtensionsUsed()
   .map((extension) => extension.extensionName);
