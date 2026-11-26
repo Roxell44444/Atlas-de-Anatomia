@@ -30,10 +30,16 @@ var catalog_keys: Dictionary = {}
 var source_system_by_key: Dictionary = {}
 var external_node_to_key: Dictionary = {}
 var external_atlas_id := ""
+var external_download_atlas_id := ""
+var external_pack_request: HTTPRequest
 
 func _ready() -> void:
 	_load_catalog_key_index()
 	_build_world()
+	external_pack_request = HTTPRequest.new()
+	external_pack_request.timeout = 600.0
+	external_pack_request.request_completed.connect(_on_external_pack_download_completed)
+	add_child(external_pack_request)
 	highlight_material = StandardMaterial3D.new()
 	highlight_material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
 	highlight_material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
@@ -74,6 +80,9 @@ func _build_world() -> void:
 	camera.look_at(Vector3.ZERO, Vector3.UP)
 
 func load_body(mode: String) -> bool:
+	if external_pack_request != null and external_pack_request.get_http_client_status() != HTTPClient.STATUS_DISCONNECTED:
+		external_pack_request.cancel_request()
+	external_download_atlas_id = ""
 	_clear_model()
 	external_atlas_id = ""
 	external_node_to_key.clear()
@@ -137,33 +146,82 @@ func load_external_atlas(atlas_id: String) -> bool:
 		var mesh_file := str(item.get("mesh_file", ""))
 		if not mesh_file.is_empty():
 			model_files[mesh_file] = true
+	var runtime_directory := "user://external_atlases/" + atlas_id + "/"
+	for filename in model_files:
+		var runtime_path := runtime_directory + str(filename).replace(".glb", ".godot.glb")
+		if not FileAccess.file_exists(runtime_path):
+			_begin_external_pack_download(atlas_id)
+			return false
 	current_model = Node3D.new()
 	current_model.name = "ExternalAtlas_" + atlas_id
 	pivot.add_child(current_model)
 	var loaded_count := 0
 	for filename in model_files:
-		var path := "res://assets/external_atlases/" + atlas_id + "/" + str(filename).replace(".glb", ".godot.glb")
-		if not ResourceLoader.exists(path):
-			model_status_changed.emit("Falta el modelo " + str(filename) + " del atlas externo.", false)
+		var path := runtime_directory + str(filename).replace(".glb", ".godot.glb")
+		var gltf_document := GLTFDocument.new()
+		var gltf_state := GLTFState.new()
+		var load_error := gltf_document.append_from_file(path, gltf_state)
+		if load_error != OK:
+			model_status_changed.emit("No se pudo leer el modelo local " + str(filename) + ".", false)
 			_clear_model()
 			return false
-		var packed := load(path) as PackedScene
-		if packed == null:
-			model_status_changed.emit("No se pudo importar " + str(filename) + ".", false)
+		var instance := gltf_document.generate_scene(gltf_state)
+		if instance == null:
+			model_status_changed.emit("No se pudo reconstruir la geometría de " + str(filename) + ".", false)
 			_clear_model()
 			return false
-		var instance := packed.instantiate()
-		if instance is Node3D:
-			current_model.add_child(instance)
-		else:
-			var wrapper := Node3D.new()
-			wrapper.add_child(instance)
-			current_model.add_child(wrapper)
+		current_model.add_child(instance)
 		loaded_count += 1
 	_index_model(true)
 	_fit_external_model_to_camera()
-	model_status_changed.emit("Atlas " + ("Z-Anatomy" if atlas_id == "z_anatomy_male" else "HuBMAP") + " cargado: " + str(meshes_by_key.size()) + " estructuras indexadas en " + str(loaded_count) + " modelos.", true)
+	model_status_changed.emit("Atlas " + ("Z-Anatomy" if atlas_id == "z_anatomy_male" else "HuBMAP") + " cargado sin conexión: " + str(meshes_by_key.size()) + " estructuras indexadas en " + str(loaded_count) + " modelos.", true)
 	return true
+
+func _begin_external_pack_download(atlas_id: String) -> void:
+	if external_download_atlas_id == atlas_id and external_pack_request.get_http_client_status() != HTTPClient.STATUS_DISCONNECTED:
+		return
+	if external_pack_request.get_http_client_status() != HTTPClient.STATUS_DISCONNECTED:
+		external_pack_request.cancel_request()
+	external_download_atlas_id = atlas_id
+	var pack_directory := "user://external_atlas_packs/"
+	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(pack_directory))
+	var zip_path := pack_directory + atlas_id + ".zip"
+	external_pack_request.download_file = zip_path
+	var pack_name := "z_anatomy_male" if atlas_id == "z_anatomy_male" else "hubmap_hra_female"
+	var url := "https://raw.githubusercontent.com/Roxell44444/Atlas-de-Anatomia/atlas-model-assets/packs/" + pack_name + ".zip"
+	model_status_changed.emit("Descargando atlas " + ("Z-Anatomy" if atlas_id == "z_anatomy_male" else "HuBMAP") + ". Se guardará para usarlo sin internet.", false)
+	var error := external_pack_request.request(url)
+	if error != OK:
+		external_download_atlas_id = ""
+		model_status_changed.emit("No se pudo iniciar la descarga del atlas. Comprueba tu conexión.", false)
+
+func _on_external_pack_download_completed(result: int, response_code: int, _headers: PackedStringArray, _body: PackedByteArray) -> void:
+	var atlas_id := external_download_atlas_id
+	external_download_atlas_id = ""
+	if result != HTTPRequest.RESULT_SUCCESS or response_code < 200 or response_code >= 300:
+		model_status_changed.emit("Falló la descarga del atlas. Puedes volver a seleccionarlo para reintentar.", false)
+		return
+	var zip_path := "user://external_atlas_packs/" + atlas_id + ".zip"
+	var reader := ZIPReader.new()
+	if reader.open(zip_path) != OK:
+		model_status_changed.emit("El paquete descargado no se pudo abrir.", false)
+		return
+	var destination := "user://external_atlases/" + atlas_id + "/"
+	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(destination))
+	for file_name in reader.get_files():
+		if not (str(file_name).ends_with(".godot.glb") or str(file_name) in ["NOTICE", "LICENSE"]):
+			continue
+		var data := reader.read_file(file_name)
+		var output := FileAccess.open(destination + str(file_name).get_file(), FileAccess.WRITE)
+		if output == null:
+			reader.close()
+			model_status_changed.emit("No se pudo guardar un archivo del atlas descargado.", false)
+			return
+		output.store_buffer(data)
+		output.close()
+	reader.close()
+	if external_atlas_id == atlas_id:
+		load_external_atlas(atlas_id)
 
 func _fit_external_model_to_camera() -> void:
 	if current_model == null or camera == null:
