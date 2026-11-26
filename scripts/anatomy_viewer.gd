@@ -130,7 +130,7 @@ func load_external_atlas(atlas_id: String) -> bool:
 		if key.is_empty() or node_name.is_empty():
 			continue
 		catalog_keys[key] = true
-		external_node_to_key[node_name.to_lower()] = key
+		external_node_to_key[_normalize_node_name(node_name)] = key
 		source_system_by_key[key] = _external_layer_id(str(item.get("system_id", "")))
 		var mesh_file := str(item.get("mesh_file", ""))
 		if not mesh_file.is_empty():
@@ -329,7 +329,7 @@ func _organ_color(key: String) -> Color:
 func _find_catalog_key(node: Node) -> String:
 	var cursor: Node = node
 	while cursor != null:
-		var candidate := str(cursor.name).to_lower()
+		var candidate := _normalize_node_name(str(cursor.name))
 		if external_node_to_key.has(candidate):
 			return str(external_node_to_key[candidate])
 		if _is_catalog_structure(candidate):
@@ -357,6 +357,12 @@ func _load_catalog_key_index() -> void:
 			var model_mapping := str(item.get("model_mapping_status", ""))
 			if model_mapping != "info_only_no_mesh" and model_mapping != "anchor_only_no_independent_mesh":
 				source_system_by_key[key] = str(item.get("system", ""))
+
+func _normalize_node_name(value: String) -> String:
+	var normalized := value.to_lower()
+	for character in [" ", ".", "_", "-", "'", "(", ")", ",", "/"]:
+		normalized = normalized.replace(character, "")
+	return normalized
 
 func _is_catalog_structure(key: String) -> bool:
 	return catalog_keys.has(key)
