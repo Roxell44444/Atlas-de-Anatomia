@@ -23,6 +23,7 @@ var highlight_material: StandardMaterial3D
 var yaw := 0.0
 var pitch := 0.0
 var distance := 2.85
+var focus_distance := 2.85
 var right_dragging := false
 var screen_dragging := false
 var catalog_keys: Dictionary = {}
@@ -76,6 +77,7 @@ func load_body(mode: String) -> bool:
 	_clear_model()
 	external_atlas_id = ""
 	external_node_to_key.clear()
+	focus_distance = 2.85
 	_load_catalog_key_index()
 	var path: String = MODEL_PATHS.get(mode, MODEL_PATHS["male"])
 	if not ResourceLoader.exists(path):
@@ -191,6 +193,7 @@ func _fit_external_model_to_camera() -> void:
 	var largest_dimension := maxf(dimensions.x, maxf(dimensions.y, dimensions.z))
 	var half_fov := deg_to_rad(camera.fov * 0.5)
 	distance = clampf((largest_dimension * 0.5) / tan(half_fov) * 1.22, 1.4, 12.0)
+	focus_distance = distance
 	camera.position = Vector3(0.0, 0.0, distance)
 	camera.look_at(Vector3.ZERO, Vector3.UP)
 	yaw = 0.0
@@ -468,6 +471,6 @@ func _pick(screen_position: Vector2) -> void:
 func focus_body() -> void:
 	yaw = 0.0
 	pitch = 0.0
-	distance = 2.85
+	distance = focus_distance
 	pivot.rotation = Vector3.ZERO
 	camera.position.z = distance
